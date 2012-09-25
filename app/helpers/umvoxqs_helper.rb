@@ -1,0 +1,2 @@
+module UmvoxqsHelper
+end

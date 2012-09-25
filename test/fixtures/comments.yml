@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  questionId: 1
+  username: MyString
+  userId: 1
+  comment: MyString
+  postDate: 2012-07-22
+
+two:
+  questionId: 1
+  username: MyString
+  userId: 1
+  comment: MyString
+  postDate: 2012-07-22

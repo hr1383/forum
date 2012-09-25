@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  question: MyString
+  description: MyString
+  company: MyString
+  address: MyString
+  scenario: MyString
+  compensation: MyString
+
+two:
+  user_id: 1
+  question: MyString
+  description: MyString
+  company: MyString
+  address: MyString
+  scenario: MyString
+  compensation: MyString

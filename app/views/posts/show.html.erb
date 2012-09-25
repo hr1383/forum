@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<table border ="1">
+  <tr>
+    <td rowspan="3">
+      <p>
+        <b>  <%= @post.question %></b> <br/>
+        Complaint#<%=  @post.id %> &nbsp;&nbsp;&nbsp;     Filed At <%=@post.created_at.strftime("%d %b %y")  %>  &nbsp;&nbsp;&nbsp;   Last Updated <%= @post.updated_at.strftime("%d %b %y") %></br>
+         </br>
+         <%= @post.description %></br></br></br>
+
+         Posted By <%= User.find(@post.user_id).firstname   %>
+      </p>
+    </td>
+    <td>
+        Complaint Status:<%= @post.status %>
+        The email was sent on xxx-xxx-xxxx
+    </td>
+  <tr>
+    <td>
+      Share this on 
+       Facebook &nbsp;&nbsp;twitter
+    </td>
+  </tr>  
+  </tr>
+  <tr>
+    <td>
+      Service Info
+      Company <% @post.company %>
+      Category: 
+      <% if !@post.category.nil? -%>
+        <%  Category.all.each do |category|  -%>
+          <%if  @post.category.include?(category.id.to_s) %>
+            <%= category.name %>
+          <% end -%>
+        <% end -%>
+      <% end -%>
+    </td>
+  </tr>
+</table>
+
+
+<br/><br/>
+<% unless session[:user] == nil %>
+ <% session[:user].firstname %>
+<% end %>
+  <table border ="1"><tr><td>
+  <%= form_for [@post,Comment.new] , :remote=> true do |f| %>
+        <%= f.text_field :comment %>
+        <%= f.submit 'Add Comment' %>
+<% end %>      
+</td></tr></table>
+<span id="comments_count"><%= pluralize(@post.comments.count, "Comment") %></span>
+<div id="comment-notice"></div>
+<br/>
+
+<div id="comments">
+  <%= render :partial => @post.comments, :locals => { :list => true } %>
+</div>
+
+<hr />
+

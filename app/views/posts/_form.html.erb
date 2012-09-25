@@ -1,0 +1,127 @@
+<%= form_tag("/locations/search" , :remote=> true) do  %>
+<table>
+  <tr>
+  <th>Company</th>
+  <th>City</th>
+  <th>Country</th>
+  <th>ZipCode</th>
+  </tr>
+  <tr>
+    <td><%= text_field_tag :company %></td>
+    <td><%= text_field_tag :city %></td>
+    <td><%= text_field_tag :country %></td>
+    <td><%= text_field_tag :zipcode %></td>
+     <td><%= submit_tag 'search' %></td>
+  </tr>
+</table>
+<% end %>   
+<div id="locations">
+</div>
+<%= form_for @post,:html =>{:multipart => true} do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this umvoxq from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div id="finallocations">
+</div>     
+<div class="field">
+   <%= f.radio_button :posttype, 'Question', :checked => true %> 
+  <%= label :posttype_question, 'Question' %>
+  <%= f.radio_button :posttype, 'Complaint' %>
+  <%= label :posttype_complaint, 'Complaint' %>
+  <%= f.radio_button :posttype, 'Complement' %>
+  <%= label :posttype_complement, 'Complement' %>
+</div>
+
+
+<div class="field">
+  <b><%= f.label :status %> </b>
+    <%= f.select("status", options_for_select([['Open', 'Open'],
+                 ['Resolved', 'Resolved']], '1')) %>
+</div>
+       
+  <div class="field">
+    <b><%= f.label :question %><br /></b>
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
+    <b>  <%= f.label :description %><br /></b>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <b> <%= f.label :category %><br /></b>
+    <%= f.collection_select :category, Category.all, :name, :name %>
+  </div>
+  <div class="field">
+    <b> <%= f.label :company %><br /></b>
+    <%= f.text_field :company %>
+  </div>
+  
+
+  <div class="field">
+    <b><%= f.label :address %><br /></b>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <b> <%= f.label :scenario %><br /></b>
+      <% Scenarios.all.each do |scenario| -%>
+      <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
+      <%= label_tag :scenario, scenario.name -%>
+  <% end -%>
+  </div>
+  <div class="field">
+    <b><%= f.label :compensation %><br /></b>
+     <% Compensation.all.each do |compensation| -%>
+      <%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
+      <%= label_tag :compensation, compensation.name -%>
+      <% end %>
+  </div>
+
+<%= f.fields_for :detailinfos do |detail_form| %>
+<div class="field">
+   <%= label_tag "Account Details" %><br/>
+  <%= detail_form.text_field :accountnumber %>
+</div>
+<div class="field">
+<%= label_tag "Reference Number" %><br/>
+  <%= detail_form.text_field :referencenumber %>
+</div>
+<div class="field">
+<%= label_tag "Details about" %><br/>
+  <%= detail_form.text_area :description %>
+</div>  
+<% end  %>
+
+<h4>File Upload</h4>
+
+  <%= f.fields_for :assets do |asset_fields| %>
+          <% if asset_fields.object.new_record? %>
+                  <p><%= asset_fields.file_field :image %></p>
+          <% end %>
+  <% end %>
+
+  <h4>Show Old Images</h4>
+
+  <%= f.fields_for :assets do |asset_fields| %>
+
+          <% unless asset_fields.object.new_record? %>
+                  <%= link_to image_tag(asset_fields.object.image.url(:thumb)), 
+                                                                  asset_fields.object.image.url(:original) %>
+
+          <% end %>
+  <% end %>
+
+<%= f.hidden_field :user_id  %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+  
+ 

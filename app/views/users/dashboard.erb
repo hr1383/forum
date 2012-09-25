@@ -1,0 +1,49 @@
+    <h3>Welcome <%= (session[:user]).firstname%></h3>
+    <p>
+      File A Complaint
+    </p>
+    <% if session[:user] %>
+    <table>
+      <tr>
+        <table>
+          <th>Recently Resolved</th>
+          <% if @totalclose.size >0 %>
+
+          <% else %>
+          <tr><td>Waiting for first.</td></tr>
+          <%  end %>
+        </table>
+      </tr>
+        <table>
+          <th>Latest Vox</th>
+          <% if @totalopen.size >0 %>
+          <tr>
+            <table border="1px solid black" border-collapse="collapse">
+               <% @totalopen.each do |post| %>
+                <tr>
+                  <td> 
+                    <b><%= post.question %></b>
+                  </td>
+                  <td>
+                    <%= post.posttype %>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <%= post.description %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>0 backers | <%= post.comments.size %> comments</td>
+                  <td><%= post.created_at %>  </td>
+                </tr>
+               <% end %>
+            </table>
+          </tr>
+          <% else %>
+          <tr><td>Waiting for first.</td></tr>
+          <%  end %>
+        </table>
+        <% end %>
+
+    </table>   

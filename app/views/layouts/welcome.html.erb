@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Umvox</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= form_tag ({:controller=> "welcome", :action=> "login"}) do %>
+            
+            <div id="signin_button">
+                <%= image_submit_tag  ("/assets/facebooklogin.png") %>
+            </div>
+        <% end %>
+<%= yield %>
+
+</body>
+</html>
+

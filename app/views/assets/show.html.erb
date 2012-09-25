@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Post:</b>
+  <%= @asset.post %>
+</p>
+
+<p>
+  <b>Filename:</b>
+  <%= @asset.filename %>
+</p>
+
+<p>
+  <b>Contenttype:</b>
+  <%= @asset.contenttype %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @asset.size %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @asset.width %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @asset.height %>
+</p>
+
+<p>
+  <b>Thumbnail:</b>
+  <%= @asset.thumbnail %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @asset.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>

@@ -1,0 +1,23 @@
+<div id="locations" class="locations" style="overflow: auto">
+  <table  id="thetable">
+    <tbody>
+      <%  if @locations.is_a? Array %>
+          <%  @locations.each do |location| %>
+          <tr>
+            <td><%=location.name%></td>
+            <td><%= location.address %> </td>
+            <td><%= location.tel %>
+            <td><%= location.postcode %></td>
+            <td><%= link_to "Select" ,{:action => "select",:name =>location.name,:address=>location.address, :tel => location.tel ,:postcode =>location.postcode}, :remote => true %></td>
+          </tr>
+        <% end %>
+    <% else %>
+    
+          <tr><td><b><%= label :company1, 'Company', @locations.name %></b></td></tr>
+          <tr><td><%= @locations.address%> </td></tr>
+          <tr><td><%= @locations.postcode%> </td></tr>
+          <tr><td><%= @locations.tel%> </td></tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

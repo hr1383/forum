@@ -1,0 +1,35 @@
+<h1>Listing umvoxqs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Question</th>
+    <th>Description</th>
+    <th>Company</th>
+    <th>Address</th>
+    <th>Scenario</th>
+    <th>Compensation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @umvoxqs.each do |umvoxq| %>
+  <tr>
+    <td><%= umvoxq.user_id %></td>
+    <td><%= umvoxq.question %></td>
+    <td><%= umvoxq.description %></td>
+    <td><%= umvoxq.company %></td>
+    <td><%= umvoxq.address %></td>
+    <td><%= umvoxq.scenario %></td>
+    <td><%= umvoxq.compensation %></td>
+    <td><%= link_to 'Show', umvoxq %></td>
+    <td><%= link_to 'Edit', edit_umvoxq_path(umvoxq) %></td>
+    <td><%= link_to 'Destroy', umvoxq, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Umvoxq', new_umvoxq_path %>

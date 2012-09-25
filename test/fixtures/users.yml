@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  firstname: MyString
+  lastname: MyString
+  emaild: MyString
+  city: MyString
+  country: MyString
+  state: MyString
+  dob: 2012-06-08
+  isemailvalidated: false
+
+two:
+  id: 
+  firstname: MyString
+  lastname: MyString
+  emaild: MyString
+  city: MyString
+  country: MyString
+  state: MyString
+  dob: 2012-06-08
+  isemailvalidated: false
