@@ -1,5 +1,15 @@
 Umvox::Application.routes.draw do
 
+  resources :email_stats
+  
+  resources :company_emails
+    
+  resources :email do
+    collection do
+      post :sendmail
+      get :sendmail
+    end
+  end
 #root :to=>"welcome#index"
  resources :welcome do
    collection do

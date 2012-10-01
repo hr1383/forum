@@ -17,6 +17,7 @@
 <% end %>   
 <div id="locations">
 </div>
+
 <%= form_for @post,:html =>{:multipart => true} do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -31,6 +32,10 @@
   <% end %>
 <div id="finallocations">
 </div>     
+ <div class="field">
+    <b> <%= f.text_field :company,:id=>"post_company" %><br /></b>
+    
+  </div>
 <div class="field">
    <%= f.radio_button :posttype, 'Question', :checked => true %> 
   <%= label :posttype_question, 'Question' %>
@@ -59,10 +64,7 @@
     <b> <%= f.label :category %><br /></b>
     <%= f.collection_select :category, Category.all, :name, :name %>
   </div>
-  <div class="field">
-    <b> <%= f.label :company %><br /></b>
-    <%= f.text_field :company %>
-  </div>
+ 
   
 
   <div class="field">
@@ -70,20 +72,25 @@
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <b> <%= f.label :scenario %><br /></b>
-      <% Scenarios.all.each do |scenario| -%>
-      <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
-      <%= label_tag :scenario, scenario.name -%>
-  <% end -%>
+     <% if !@post.scenario.nil? -%>
+      <b> <%= f.label :scenario %><br /></b>
+        <% Scenarios.all.each do |scenario| -%>
+        <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
+        <%= label_tag :scenario, scenario.name -%>
+      <% end %>
+   <% end %> 
   </div>
   <div class="field">
-    <b><%= f.label :compensation %><br /></b>
-     <% Compensation.all.each do |compensation| -%>
-      <%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
-      <%= label_tag :compensation, compensation.name -%>
-      <% end %>
+     <% if !@post.compensation.nil? -%>
+      <b><%= f.label :compensation %><br /></b>
+       <% Compensation.all.each do |compensation| -%>
+        <%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
+        <%= label_tag :compensation, compensation.name -%>
+        <% end %>
+    <% end %>
   </div>
 
+<div class="account">
 <%= f.fields_for :detailinfos do |detail_form| %>
 <div class="field">
    <%= label_tag "Account Details" %><br/>
@@ -98,7 +105,7 @@
   <%= detail_form.text_area :description %>
 </div>  
 <% end  %>
-
+</div>
 <h4>File Upload</h4>
 
   <%= f.fields_for :assets do |asset_fields| %>
