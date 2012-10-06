@@ -30,7 +30,8 @@ $('#location_select').live('click', function(event){
     alert($(this).attr('data'));
     var data =$(this).attr('data');
 //    data= data.replace("%","<br/>");
-    $("#post_company").html("Company<br/>"+data);
+    $("#lbl_company").html("Company<br/>"+data)
+    $("#post_company").val(data);
     $("#locations").empty();
     
 });
