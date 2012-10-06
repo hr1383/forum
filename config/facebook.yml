@@ -7,4 +7,4 @@ test:
 production:
   app_id: 125615304246694
   secret_key: 3c6ef569f1b5c5c6526f99cb33cd32a5
-  callback_url: http://enigmatic-badlands-8436.herokuapp.com
+  callback_url: http://enigmatic-badlands-8436.herokuapp.com/
