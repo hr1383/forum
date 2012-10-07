@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     puts params[:user]
     @user1 = User.new(params[:user])
     if @user1.save
-      saveduser = User.find_all_by_fb_id(params[:user][:fbid])
+      saveduser = User.find_all_by_fbid(params[:user][:fbid])
       unless saveduser.first.nil?
         session[:user] = saveduser.first
       end
