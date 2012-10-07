@@ -1,0 +1,5 @@
+<p>Send email on <%= Time.now.strftime("%m/%d/%Y") %>
+  
+<%= form_tag ({:controller=> "email", :action=> "send"}) do %>
+   <%= submit_tag   %>
+ <% end %>  

@@ -6722,3 +6722,29 @@ Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/act
 
 Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-06 02:01:12 -0700
 Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20120608082736)
+Migrating to AddColumnToUser (20120626013204)
+Migrating to AddColumnToUserToken (20120629055003)
+Migrating to UpdateUserTable (20120629062004)
+Migrating to CreateUmvoxs (20120629082017)
+Migrating to CreateScenarios (20120629082122)
+Migrating to CreateCompensations (20120629082137)
+Migrating to DeleteColumnFromUser (20120629083759)
+Migrating to CreateUmvoxqs (20120629085936)
+Migrating to AddColumnStatusToUmvoxq (20120709063828)
+Migrating to AddColumnCategoryToUmvox (20120711170534)
+Migrating to CreateCategories (20120711171401)
+Migrating to AddcolumnToUserFbId (20120719080244)
+Migrating to AddRemoveColumnToUser (20120719081343)
+Migrating to CreateComments (20120722213618)
+Migrating to AddForeignKeyToComment (20120722225720)
+Migrating to CreatePosts (20120802071221)
+Migrating to CreateDetailinfos (20120806073043)
+Migrating to CreateAssets (20120807083850)
+Migrating to AddLocationTableForTemp (20120823184307)
+Migrating to CreateCompanyEmails (20120925073347)
+Migrating to CreateEmailStats (20120925083149)
+Migrating to DropLocationAndCreateLocations (20121007064952)
+  [1m[35m (0.2ms)[0m  DROP TABLE `location`
+Mysql::Error: Unknown table 'location': DROP TABLE `location`
