@@ -8,7 +8,7 @@
 
   Scenarios.delete_all
    Category.delete_all
-   Compnesation.delete_all
+   Compensation.delete_all
    
    scenarios = Scenarios.create([{ name: 'Billing' }, { name: 'Delay' },{ name: 'Damage' },{ name: 'Discrimination' },{ name: 'Poor Service' }])
    categories = Category.create([{ name: 'Online Store' },{ name: 'Customer Service' }])
