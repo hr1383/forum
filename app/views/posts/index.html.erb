@@ -11,7 +11,13 @@
 <% @openumvox.each do |post| %>
 
   <tr>
+    <% if post.posttype == 'Question' %>
     <td><h4>Question: <%= post.question %></h4></td>
+    <% elsif  post.posttype == 'Complaint' %>
+      <td><h4>Complaint: <%= post.question %></h4></td>
+    <% else %>  
+      <td><h4>Complement: <%= post.question %></h4></td>
+    <% end %>  
   </tr>
   <tr>
     <td>Description: <%= post.description %></td>
