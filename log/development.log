@@ -7062,3 +7062,38 @@ Migrating to RenameColumnComments (20121007155609)
   [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.5ms)[0m  INSERT INTO `scenarios` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)  [["created_at", Mon, 08 Oct 2012 06:30:50 UTC +00:00], ["name", "Delay"], ["updated_at", Mon, 08 Oct 2012 06:30:50 UTC +00:00]]
   [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (20.9ms)[0m  [1mINSERT INTO `scenarios` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Billing"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `scenarios` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Delay"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `scenarios` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Damage"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `scenarios` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Discrimination"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `scenarios` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Poor Service"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Online Store"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Customer Service"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `compensations` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Apology"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `compensations` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Compnesation"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `compensations` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Improvement"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `compensations` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00], ["name", "Refund"], ["updated_at", Mon, 08 Oct 2012 07:05:15 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `scenarios`[0m
