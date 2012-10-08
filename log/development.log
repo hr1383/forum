@@ -6961,3 +6961,104 @@ ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
 Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20120608082736)
+Migrating to AddColumnToUser (20120626013204)
+Migrating to AddColumnToUserToken (20120629055003)
+Migrating to UpdateUserTable (20120629062004)
+Migrating to CreateUmvoxs (20120629082017)
+Migrating to CreateScenarios (20120629082122)
+Migrating to CreateCompensations (20120629082137)
+Migrating to DeleteColumnFromUser (20120629083759)
+Migrating to CreateUmvoxqs (20120629085936)
+Migrating to AddColumnStatusToUmvoxq (20120709063828)
+Migrating to AddColumnCategoryToUmvox (20120711170534)
+Migrating to CreateCategories (20120711171401)
+Migrating to AddcolumnToUserFbId (20120719080244)
+Migrating to AddRemoveColumnToUser (20120719081343)
+Migrating to CreateComments (20120722213618)
+Migrating to AddForeignKeyToComment (20120722225720)
+Migrating to CreatePosts (20120802071221)
+Migrating to CreateDetailinfos (20120806073043)
+Migrating to CreateAssets (20120807083850)
+Migrating to AddLocationTableForTemp (20120823184307)
+Migrating to CreateCompanyEmails (20120925073347)
+Migrating to CreateEmailStats (20120925083149)
+Migrating to DropLocationAndCreateLocations (20121007064952)
+  [1m[35m (0.2ms)[0m  DROP TABLE `location`
+Mysql::Error: Unknown table 'location': DROP TABLE `location`
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20120608082736)
+Migrating to AddColumnToUser (20120626013204)
+Migrating to AddColumnToUserToken (20120629055003)
+Migrating to UpdateUserTable (20120629062004)
+Migrating to CreateUmvoxs (20120629082017)
+Migrating to CreateScenarios (20120629082122)
+Migrating to CreateCompensations (20120629082137)
+Migrating to DeleteColumnFromUser (20120629083759)
+Migrating to CreateUmvoxqs (20120629085936)
+Migrating to AddColumnStatusToUmvoxq (20120709063828)
+Migrating to AddColumnCategoryToUmvox (20120711170534)
+Migrating to CreateCategories (20120711171401)
+Migrating to AddcolumnToUserFbId (20120719080244)
+Migrating to AddRemoveColumnToUser (20120719081343)
+Migrating to CreateComments (20120722213618)
+Migrating to AddForeignKeyToComment (20120722225720)
+Migrating to CreatePosts (20120802071221)
+Migrating to CreateDetailinfos (20120806073043)
+Migrating to CreateAssets (20120807083850)
+Migrating to AddLocationTableForTemp (20120823184307)
+Migrating to CreateCompanyEmails (20120925073347)
+Migrating to CreateEmailStats (20120925083149)
+Migrating to DropLocationAndCreateLocations (20121007064952)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20120608082736)
+Migrating to AddColumnToUser (20120626013204)
+Migrating to AddColumnToUserToken (20120629055003)
+Migrating to UpdateUserTable (20120629062004)
+Migrating to CreateUmvoxs (20120629082017)
+Migrating to CreateScenarios (20120629082122)
+Migrating to CreateCompensations (20120629082137)
+Migrating to DeleteColumnFromUser (20120629083759)
+Migrating to CreateUmvoxqs (20120629085936)
+Migrating to AddColumnStatusToUmvoxq (20120709063828)
+Migrating to AddColumnCategoryToUmvox (20120711170534)
+Migrating to CreateCategories (20120711171401)
+Migrating to AddcolumnToUserFbId (20120719080244)
+Migrating to AddRemoveColumnToUser (20120719081343)
+Migrating to CreateComments (20120722213618)
+Migrating to AddForeignKeyToComment (20120722225720)
+Migrating to CreatePosts (20120802071221)
+Migrating to CreateDetailinfos (20120806073043)
+Migrating to CreateAssets (20120807083850)
+Migrating to AddLocationTableForTemp (20120823184307)
+Migrating to CreateCompanyEmails (20120925073347)
+Migrating to CreateEmailStats (20120925083149)
+Migrating to DropLocationAndCreateLocations (20121007064952)
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20121007064952')
+Migrating to RenameColumnComments (20121007155609)
+  [1m[36m (2.0ms)[0m  [1mDROP TABLE `comments`[0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `post_id` int(11), `username` varchar(255), `userId` int(11), `comment` varchar(255), `postDate` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121007155609')[0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `assets`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36m (0.2ms)[0m  [1mSHOW KEYS FROM `comments`[0m
+  [1m[35m (0.2ms)[0m  SHOW KEYS FROM `company_emails`
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `compensations`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `detailinfos`
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `email_stats`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `locations`
+  [1m[36m (0.2ms)[0m  [1mSHOW KEYS FROM `posts`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `scenarios`
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `umvoxqs`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `umvoxs`
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (14.1ms)[0m  [1mINSERT INTO `scenarios` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)[0m  [["created_at", Mon, 08 Oct 2012 06:30:50 UTC +00:00], ["name", "Billing"], ["updated_at", Mon, 08 Oct 2012 06:30:50 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `scenarios` (`created_at`, `name`, `updated_at`) VALUES (?, ?, ?)  [["created_at", Mon, 08 Oct 2012 06:30:50 UTC +00:00], ["name", "Delay"], ["updated_at", Mon, 08 Oct 2012 06:30:50 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m

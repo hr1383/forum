@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+   scenarios = Scenarios.create([{ name: 'Billing' }, { name: 'Delay' },{ name: 'Damage' },{ name: 'Discrimination' },{ name: 'Poor Service' }])
+   categories = Category.create([{ name: 'Online Store' },{ name: 'Customer Service' }])
+   compnesation= Compnesation.create([{ name: 'Apology' },{ name: 'Compnesation' },{ name: 'Improvement' },{ name: 'Refund' }])
