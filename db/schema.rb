@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007155609) do
+ActiveRecord::Schema.define(:version => 20121009064410) do
 
   create_table "assets", :force => true do |t|
     t.integer  "post_id"
@@ -131,7 +131,6 @@ ActiveRecord::Schema.define(:version => 20121007155609) do
     t.string   "city"
     t.string   "country"
     t.string   "state"
-    t.date     "dob"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"

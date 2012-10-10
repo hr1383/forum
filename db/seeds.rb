@@ -12,6 +12,6 @@
    
    scenarios = Scenarios.create([{ name: 'Billing' }, { name: 'Delay' },{ name: 'Damage' },{ name: 'Discrimination' },{ name: 'Poor Service' }])
    categories = Category.create([{ name: 'Online Store' },{ name: 'Customer Service' }])
-   compnesation= Compensation.create([{ name: 'Apology' },{ name: 'Compnesation' },{ name: 'Improvement' },{ name: 'Refund' }])
+   compnesation= Compensation.create([{ name: 'Apology' },{ name: 'Compensation' },{ name: 'Improvement' },{ name: 'Refund' }])
    
    

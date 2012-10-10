@@ -66,12 +66,6 @@
     <%= f.collection_select :category, Category.all, :name, :name %>
   </div>
  
-  
-
-  <div class="field">
-    <b><%= f.label :address %><br /></b>
-    <%= f.text_field :address %>
-  </div>
   <div class="field">
      <% if !@post.scenario.nil? -%>
       <b> <%= f.label :scenario %><br /></b>
