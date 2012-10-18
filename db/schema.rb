@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121009064410) do
+ActiveRecord::Schema.define(:version => 20121015013729) do
 
   create_table "assets", :force => true do |t|
     t.integer  "post_id"
@@ -39,6 +39,20 @@ ActiveRecord::Schema.define(:version => 20121009064410) do
     t.datetime "updated_at"
   end
 
+  create_table "companies", :force => true do |t|
+    t.integer  "post_id"
+    t.string   "name"
+    t.string   "address"
+    t.string   "phonenumber"
+    t.string   "city"
+    t.string   "category"
+    t.string   "zipcode"
+    t.string   "email"
+    t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "company_emails", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -54,8 +68,6 @@ ActiveRecord::Schema.define(:version => 20121009064410) do
 
   create_table "detailinfos", :force => true do |t|
     t.integer  "post_id"
-    t.string   "accountnumber"
-    t.string   "referencenumber"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -67,14 +79,21 @@ ActiveRecord::Schema.define(:version => 20121009064410) do
     t.datetime "lastsent"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "call"
   end
 
   create_table "locations", :force => true do |t|
-    t.string "address"
-    t.string "category"
-    t.string "name"
-    t.string "postcode"
-    t.string "tel"
+    t.integer  "post_id"
+    t.string   "name"
+    t.string   "address"
+    t.string   "tel"
+    t.string   "city"
+    t.string   "category"
+    t.string   "zipcode"
+    t.string   "email"
+    t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", :force => true do |t|
@@ -136,6 +155,8 @@ ActiveRecord::Schema.define(:version => 20121009064410) do
     t.string   "username"
     t.string   "fb_id"
     t.string   "fbid"
+    t.integer  "email_count", :default => 10
+    t.boolean  "admin"
   end
 
 end

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Postid:</b>
+  <%= @email_stat.postId %>
+</p>
+
+<p>
+  <b>Counter:</b>
+  <%= @email_stat.counter %>
+</p>
+
+<p>
+  <b>Lastsent:</b>
+  <%= @email_stat.lastsent %>
+</p>
+
+
+<%= link_to 'Edit', edit_email_stat_path(@email_stat) %> |
+<%= link_to 'Back', email_stats_path %>

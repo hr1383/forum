@@ -1,17 +1,18 @@
-<div id="locations" class="locations" style="overflow: auto">
+<p>called 3 times</p>
   <table  id="thetable">
     <tbody>
       <%  if @locations.is_a? Array %>
+        <tr><td><%= @locations.size %></td></tr>
           <%  @locations.each do |location| %>
           <tr>
             <td><%=location.name%></td>
             <td><%= location.address %> </td>
-            <td><%= location.tel %>
-            <td><%= location.postcode %></td>
-            <td><%= link_to "Select" ,"#",:id=>"location_select",:data => location.name+"<br/>"+location.address+"<br\>"+location.tel+"<br>"+location.postcode %></td>
+            <td><%= location.zipcode %></td>
+            <td><%= link_to "Select" ,"#",:id=>"location_select",:name => location.name,:address=>location.address,:phone=>location.tel,:zipcode=>location.zipcode,:category=>location.category,:website=>location.website,:city=>location.city %></td>
           </tr>
         <% end %>
+      <% else %>
+          <tr><td>No results found</td></tr>
     <% end %>
     </tbody>
   </table>
-</div>

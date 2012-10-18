@@ -6,8 +6,8 @@ Umvox::Application.routes.draw do
     
   resources :email do
     collection do
-      post :sendmail
-      get :sendmail
+      post :sendmail,:saveconfig
+      get :sendmail,:configmail
     end
   end
 #root :to=>"welcome#index"

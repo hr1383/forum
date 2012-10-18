@@ -1,0 +1,29 @@
+<%= form_for(@email_stat) do |f| %>
+  <% if @email_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@email_stat.errors.count, "error") %> prohibited this email_stat from being saved:</h2>
+
+      <ul>
+      <% @email_stat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :postId %><br />
+    <%= f.number_field :postId %>
+  </div>
+  <div class="field">
+    <%= f.label :counter %><br />
+    <%= f.number_field :counter %>
+  </div>
+  <div class="field">
+    <%= f.label :lastsent %><br />
+    <%= f.datetime_select :lastsent %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

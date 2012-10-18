@@ -5,8 +5,16 @@
   <tr>
     <td rowspan="3">
       <p>
-        <b>  <%= @post.question %></b> <br/>
-        Complaint#<%=  @post.id %> &nbsp;&nbsp;&nbsp;     Filed At <%=@post.created_at.strftime("%d %b %y")  %>  &nbsp;&nbsp;&nbsp;   Last Updated <%= @post.updated_at.strftime("%d %b %y") %></br>
+        
+        <% unless @post.locations.nil? %>
+          <% @post.locations.each do | location| %>
+          <%= location.name %>, <%= location.address %><br/>
+          <%= location.city %> <%= location.zipcode %>
+          <% end %>
+          <br/>
+         <% end %>
+          <b> <%=@post.posttype %>: <%= @post.question %></b> <br/>
+           Filed At <%=@post.created_at.strftime("%d %b %y")  %>  &nbsp;&nbsp;&nbsp;   Last Updated <%= @post.updated_at.strftime("%d %b %y") %></br>
          </br>
          <%= @post.description %></br></br></br>
          <% @post.assets.each  do |asset_fields| %>

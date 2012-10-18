@@ -17,6 +17,29 @@
 <% end %>   
 <div id="locations">
 </div>
+<p>Do you want to enter Address  <%=  check_box :new_address,:address  %></p>
+<div class="full_add" style="display:none">
+  <table>
+    <tr>
+      <td> Name <%= text_field :full_add, :name%> </td>
+      <td> Address <%= text_field :full_add, :address%> </td>
+    </tr>
+     <tr>
+      <td> City <%= text_field :full_add, :city%> </td>
+      <td> Telephone <%= text_field :full_add, :tel%> </td>
+    </tr>
+    <tr>
+      <td> Category <%= text_field :full_add, :category%> </td>
+      <td> Zipcode <%= text_field :full_add, :zipcode%> </td>
+    </tr>
+    <tr>
+      <td> Email <%= text_field :full_add, :email%> </td>
+      <td> Website <%= text_field :full_add, :website%> </td>
+    </tr>
+    
+  </table>
+  <p><%= button_tag :save,:id=>"btn_new_addr" %>
+</div>
 
 <%= form_for @post,:html =>{:multipart => true} do |f| %>
   <% if @post.errors.any? %>
@@ -54,7 +77,7 @@
 </div>
        
   <div class="field">
-    <b><%= f.label :question %><br /></b>
+    <b><%= f.label :question,:id=>"lbl_question" %><br /></b>
     <%= f.text_field :question %>
   </div>
   <div class="field">
@@ -87,17 +110,10 @@
 
 <div class="account">
 <%= f.fields_for :detailinfos do |detail_form| %>
+
 <div class="field">
-   <%= label_tag "Account Details" %><br/>
-  <%= detail_form.text_field :accountnumber %>
-</div>
-<div class="field">
-<%= label_tag "Reference Number" %><br/>
-  <%= detail_form.text_field :referencenumber %>
-</div>
-<div class="field">
-<%= label_tag "Details about" %><br/>
-  <%= detail_form.text_area :description %>
+<%= label_tag "Enter other details which you want to share with company and not have public" %><br/>
+  <%= detail_form.text_area :description,:value => "my default value" %>
 </div>  
 <% end  %>
 </div>
@@ -121,6 +137,19 @@
   <% end %>
 
 <%= f.hidden_field :user_id  %>
+
+<%= f.fields_for :locations do|location_form|  %>
+  <%= location_form.hidden_field :name %>
+  <%= location_form.hidden_field :address %>
+  <%= location_form.hidden_field :tel %>
+  <%= location_form.hidden_field :city %>
+  <%= location_form.hidden_field :category %>
+  <%= location_form.hidden_field :zipcode %>
+  <%= location_form.hidden_field :email %>
+  <%= location_form.hidden_field :website %>
+  
+<% end %>
+ 
   <div class="actions">
     <%= f.submit %>
   </div>

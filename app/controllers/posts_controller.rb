@@ -37,6 +37,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    puts @post.locations.class
   end
 
   # GET /posts/new
@@ -45,13 +46,14 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.scenario=[]
     @post.compensation=[]
-    @locations = []
+#    @locations = []
 #    @post.category=[]
     unless session[:user].nil?
       @post.user_id=session[:user].id
-      puts "seeting user id"
+      puts "setting user id"
     end
     @post.detailinfos.build
+    @post.locations.build
     3.times {@post.assets.build}
     respond_to do |format|
       format.html # new.html.erb
@@ -71,10 +73,13 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
-
+    
     respond_to do |format|
-      if @post.save
-        format.html { redirect_to '/posts',method: :get, notice: 'post was successfully created.' }
+    if @post.save
+    session[:postid]=@post.id
+    puts session
+    puts '------------------'
+        format.html { redirect_to :controller => 'email',:action=>'configmail' }
         format.json { render json: @post, status: :created, location: @post }
       else
         format.html { render action: "new" }

@@ -86,24 +86,6 @@ class UsersController < ApplicationController
   
   def dashboard
     @post = Post.new
-#    @post.scenario=[]
-#    @post.compensation=[]
-#    @post.category=[]
-#    puts "-------- session user"
-#    puts session[:user]
-#    puts "------- end session user"
-#    @question  = Post.find(32)
-#    @comments = @question.comments
-#    puts "%%%%%%%%%%%%%%"
-#    puts @comments.first.comment
-#    puts '%%%%%%%%%%%%'
-#    if !session[:user].nil?
-#      @post.user_id = session[:user].id
-#      puts session[:user].id
-#      puts @post.user_id
-#    end
-#    puts @post
-
     puts "-w-w-w-w-w-w-"
     @totalclose = @post.find_latest_closed
     puts "----------"

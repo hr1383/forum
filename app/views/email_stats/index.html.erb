@@ -1,0 +1,27 @@
+<h1>Listing email_stats</h1>
+
+<table>
+  <tr>
+    <th>Postid</th>
+    <th>Counter</th>
+    <th>Lastsent</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @email_stats.each do |email_stat| %>
+  <tr>
+    <td><%= email_stat.postId %></td>
+    <td><%= email_stat.counter %></td>
+    <td><%= email_stat.lastsent %></td>
+    <td><%= link_to 'Show', email_stat %></td>
+    <td><%= link_to 'Edit', edit_email_stat_path(email_stat) %></td>
+    <td><%= link_to 'Destroy', email_stat, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Email stat', new_email_stat_path %>
