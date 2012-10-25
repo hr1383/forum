@@ -1,5 +1,30 @@
 <p>Send email on <%= Time.now.strftime("%m/%d/%Y") %>
-  
-<%= form_tag ({:controller=> "email", :action=> "send"}) do %>
-   <%= submit_tag   %>
- <% end %>  
+ 
+  <% unless @successEmailList.nil? %>
+    <% @successEmailList.each do |email| %>
+      <p>Sucessfully Sent email to <%= email %>  </p>
+    <% end %>
+  <% end %>
+  <table>
+  <tr>
+    <th>Postid</th>
+    <th>Counter</th>
+    <th>Lastsent</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @emailStatList.each do |email_stat| %>
+  <tr>
+    <td><%= email_stat.postId %></td>
+    <td><%= email_stat.counter %></td>
+    <td><%= email_stat.lastsent %></td>
+  </tr>
+<% end %>
+</table>
+
+<p>Email will be sent for counter > 0 and if last email sent was 2 days old</p>
+<%= form_tag ({:controller=> "email", :action=> "sendmail"}) do %>
+   <%= submit_tag  'Send mail' %>
+ <% end %> 

@@ -37,7 +37,6 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-    puts @post.locations.class
   end
 
   # GET /posts/new

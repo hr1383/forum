@@ -18,6 +18,16 @@
         <%= submit_tag "All Umvox" %>
       <% end %>
     </td>
+    <td>
+      <%= form_tag("/users/dashboard", :method=>:get) do %>
+        <%= submit_tag "Dashboard" %>
+      <% end %>
+    </td>
+    <td>
+      <%= form_tag("/email/viewmail", :method=>:get) do %>
+        <%= submit_tag "Send email" %>
+      <% end %>
+    </td>
     <td><% if !session['user'] %>
             
          <%= form_tag ({:controller=> "users", :action=> "signin"}) do %>

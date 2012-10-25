@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121015013729) do
+ActiveRecord::Schema.define(:version => 20121023071103) do
 
   create_table "assets", :force => true do |t|
     t.integer  "post_id"
@@ -69,6 +69,14 @@ ActiveRecord::Schema.define(:version => 20121015013729) do
   create_table "detailinfos", :force => true do |t|
     t.integer  "post_id"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "email_histories", :force => true do |t|
+    t.integer  "postid"
+    t.integer  "emailstatid"
+    t.datetime "lastsent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

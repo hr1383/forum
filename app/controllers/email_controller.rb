@@ -1,9 +1,25 @@
 class EmailController < ApplicationController
 
   def sendmail
-    post = Post.all  
-    user = session[:user]
-    SupportEmailer.support_contact(user).deliver
+    emailStatList = EmailStat.find(:all,:conditions=>["(DATE(lastsent) < ? or lastsent IS NULL) and counter > 0", 1.from_now.to_date - 1])
+    @successEmailList =[]
+    unless emailStatList.nil?
+      emailStatList.each do |email|
+        post = Post.find(email.postId)
+        unless post.locations[0].email.nil? and post.locations[0].empty?
+          puts "sending email "
+          puts post.locations[0].email
+          SupportEmailer.sendmail(post,post.locations[0],User.find(post.user_id)).deliver
+          email[:counter] = email.counter-1
+          email[:lastsent] = Time.now()
+          email.save
+          @successEmailList.push(post.locations[0].email)
+        end
+      end
+    end
+    @emailStatList = EmailStat.where("counter > 0")
+    render "email/index"    
+    
   end
   
   def configmail
@@ -19,5 +35,10 @@ class EmailController < ApplicationController
       emailstat[:call] = params[:call]
       emailstat.save
       redirect_to '/users/dashboard'
+  end
+  
+  def viewmail
+    @emailStatList = EmailStat.where("counter > 0")
+    render "email/index"
   end
 end
