@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>This is regarding the disconsent raised by <%= @user.firstname %> <%= @user.lastname %>
+    User has posted in our forum a <%= @post.posttype %> as follows:
+    <p><%= @post.description %></p>
+    <p>This event happened at </p>
+    <p><%= @location.name %></p>
+    <p><%= @location.address %></p>
+    <p><%= @location.city %> </p>
+    <%#*<p><%= @location.country %> </p>%>
+  </body>
+</html>

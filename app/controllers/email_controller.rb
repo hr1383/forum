@@ -6,8 +6,7 @@ class EmailController < ApplicationController
     unless emailStatList.nil?
       emailStatList.each do |email|
         post = Post.find(email.postId)
-        puts post.id
-        puts post.locations[0].email.nil? 
+       unless post.posttype != 'Compliment' 
         unless post.locations[0].email.nil? 
           puts "sending email "
           puts post.locations[0].email
@@ -17,6 +16,7 @@ class EmailController < ApplicationController
           email.save
           @successEmailList.push(post.locations[0].email)
         end
+       end
       end
     end
     @emailStatList = EmailStat.where("counter > 0")
