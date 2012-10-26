@@ -5,22 +5,26 @@
       <p>Sucessfully Sent email to <%= email %>  </p>
     <% end %>
   <% end %>
-  <table>
+  <table border="1">
   <tr>
-    <th>Postid</th>
+    <th>Question</th>
     <th>Counter</th>
     <th>Lastsent</th>
-    <th></th>
+    <th>Email</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @emailStatList.each do |email_stat| %>
+  <% post = Post.find(email_stat.postId) %>
+  <% if post.posttype == 'Question' %>
   <tr>
-    <td><%= email_stat.postId %></td>
+    <td><%= post.question %></td>
     <td><%= email_stat.counter %></td>
     <td><%= email_stat.lastsent %></td>
+    <td><%= post.locations[0].email %> </td>
   </tr>
+  <%  end %>
 <% end %>
 </table>
 

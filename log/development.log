@@ -19814,3 +19814,526 @@ Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-25 02:03:14 -0700
 Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2012-10-26 00:32:39 -0700
+  Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/users/dashboard
+Completed 302 Found in 0ms
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-10-26 00:32:40 -0700
+  Processing by UsersController#dashboard as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 117[0m
+Rendered users/dashboard.erb within layouts/application (140.2ms)
+Rendered shared/_dashboard_button_login.erb (3.1ms)
+Completed 200 OK in 204ms (Views: 184.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:32:40 -0700
+Served asset /application.css - 200 OK (30ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:32:40 -0700
+Served asset /jquerytablescroll.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:32:40 -0700
+Served asset /application.js - 200 OK (17ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:32:40 -0700
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:32:40 -0700
+Served asset /jquerytablescroll.js - 200 OK (2ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-10-26 00:32:45 -0700
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[35mEmailStat Load (0.3ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)
+Rendered email/index.html.erb within layouts/application (9.5ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:32:45 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-10-26 00:41:03 -0700
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[36mEmailStat Load (0.5ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (12.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 115]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+Rendered email/index.html.erb within layouts/application (44.8ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 54ms (Views: 35.8ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:41:04 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-10-26 00:43:00 -0700
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[36mEmailStat Load (0.3ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (76.9ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 85ms (Views: 77.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:43:00 -0700
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-10-26 00:49:11 -0700
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[35mEmailStat Load (0.3ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 114]]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 115]]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 118]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118
+Rendered email/index.html.erb within layouts/application (75.2ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:49:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:49:12 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:49:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:49:12 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:49:12 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-10-26 00:52:11 -0700
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[36mEmailStat Load (0.4ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+Rendered email/index.html.erb within layouts/application (140.1ms)
+Completed 500 Internal Server Error in 145ms
+
+ActionView::Template::Error (undefined method `_' for #<#<Class:0x00000103ae8590>:0x00000103a7b198>):
+    7:   <% end %>
+    8: 
+    9: <p>Email will be sent for counter > 0 and if last email sent was 2 days old</p>
+    10: <%= form _ tag ({:controller=> "email", :action=> "sendmail"}) do %>
+    11:     <table border="1">
+    12:   <tr>
+    13:     <th>Question</th>
+  app/views/email/index.html.erb:10:in `_app_views_email_index_html_erb___424877491056243803_2178141880'
+  app/controllers/email_controller.rb:42:in `viewmail'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.6ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-10-26 00:52:24 -0700
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[35mEmailStat Load (0.3ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 114]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 115]]
+  [1m[35mLocation Load (0.5ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 118]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118
+Rendered email/index.html.erb within layouts/application (76.0ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 85ms (Views: 76.7ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:52:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:52:24 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:52:24 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:52:24 -0700
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:52:24 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-10-26 00:52:45 -0700
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[36mEmailStat Load (0.4ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (75.8ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 84ms (Views: 76.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:52:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:52:45 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:52:45 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:52:45 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:52:45 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/email/sendmail" for 127.0.0.1 at 2012-10-26 00:52:59 -0700
+  Processing by EmailController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYbAJJmoNdXE0iGAAtsPRMVJZ8NvbcKQ7wzY8JYldFc=", "commit"=>"Send mail"}
+  [1m[35mEmailStat Load (0.3ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE ((DATE(lastsent) < '2012-10-25' or lastsent IS NULL) and counter > 0)
+  [1m[36mEmailStat Load (0.4ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (74.2ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 85ms (Views: 76.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:53:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:53:00 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:53:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:53:00 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:53:00 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/email/sendmail" for 127.0.0.1 at 2012-10-26 00:55:50 -0700
+  Processing by EmailController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYbAJJmoNdXE0iGAAtsPRMVJZ8NvbcKQ7wzY8JYldFc=", "commit"=>"Send mail"}
+  [1m[35mEmailStat Load (0.3ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE ((DATE(lastsent) < '2012-10-25' or lastsent IS NULL) and counter > 0)
+  [1m[36mEmailStat Load (0.3ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (73.6ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 85ms (Views: 75.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:55:50 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:55:50 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:55:50 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:55:50 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:55:50 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/email/sendmail" for 127.0.0.1 at 2012-10-26 00:56:26 -0700
+  Processing by EmailController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYbAJJmoNdXE0iGAAtsPRMVJZ8NvbcKQ7wzY8JYldFc=", "commit"=>"Send mail"}
+  [1m[35mEmailStat Load (0.3ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE ((DATE(lastsent) < '2012-10-25' or lastsent IS NULL) and counter > 0)
+  [1m[36mEmailStat Load (0.3ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (42.7ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 54ms (Views: 45.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:56:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:56:26 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:56:26 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:56:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:56:26 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/email/sendmail" for 127.0.0.1 at 2012-10-26 00:57:01 -0700
+  Processing by EmailController#sendmail as HTML
+  [1m[35mEmailStat Load (0.4ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE ((DATE(lastsent) < '2012-10-25' or lastsent IS NULL) and counter > 0)
+  [1m[36mEmailStat Load (0.4ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (230.8ms)
+Completed 500 Internal Server Error in 238ms
+
+ActionView::Template::Error (undefined method `_' for #<#<Class:0x0000010284c800>:0x000001027ebb68>):
+    29: </table>
+    30: 
+    31: <p>Email will be sent for counter > 0 and if last email sent was 2 days old</p>
+    32: <%= form _ tag ({:controller=> "email", :action=> "sendmail"}) do %>
+    33:    <%= submit_tag  'Send mail' %>
+    34:  <% end %> 
+  app/views/email/index.html.erb:32:in `_app_views_email_index_html_erb___424877491056243803_2168323480'
+  app/controllers/email_controller.rb:23:in `sendmail'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.5ms)
+
+
+Started GET "/email/sendmail" for 127.0.0.1 at 2012-10-26 00:57:13 -0700
+  Processing by EmailController#sendmail as HTML
+  [1m[35mEmailStat Load (0.4ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE ((DATE(lastsent) < '2012-10-25' or lastsent IS NULL) and counter > 0)
+  [1m[36mEmailStat Load (0.4ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (71.6ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 83ms (Views: 73.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:57:14 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:57:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:57:14 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:57:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:57:14 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/email/sendmail" for 127.0.0.1 at 2012-10-26 00:57:17 -0700
+  Processing by EmailController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYbAJJmoNdXE0iGAAtsPRMVJZ8NvbcKQ7wzY8JYldFc=", "commit"=>"Send mail"}
+  [1m[35mEmailStat Load (0.4ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE ((DATE(lastsent) < '2012-10-25' or lastsent IS NULL) and counter > 0)
+  [1m[36mEmailStat Load (0.4ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (72.2ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 83ms (Views: 74.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:57:17 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:57:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:57:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:57:17 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:57:17 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-10-26 00:58:39 -0700
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[35mEmailStat Load (0.4ms)[0m  SELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 114]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 115]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 118]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118
+Rendered email/index.html.erb within layouts/application (44.9ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 53ms (Views: 45.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-10-26 00:58:39 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-10-26 00:58:39 -0700
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-10-26 00:58:39 -0700
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-10-26 00:58:39 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-10-26 00:58:39 -0700
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)

@@ -6,7 +6,9 @@ class EmailController < ApplicationController
     unless emailStatList.nil?
       emailStatList.each do |email|
         post = Post.find(email.postId)
-        unless post.locations[0].email.nil? and post.locations[0].empty?
+        puts post.id
+        puts post.locations[0].email.nil? 
+        unless post.locations[0].email.nil? 
           puts "sending email "
           puts post.locations[0].email
           SupportEmailer.sendmail(post,post.locations[0],User.find(post.user_id)).deliver
