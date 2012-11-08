@@ -1,6 +1,6 @@
   development:
-    access_key_id: AKIAIQ6FZVBCHSPSSYRA
-    secret_code: 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
+    access_key_id: 
+    secret_code: 
   production:
-    access_key_id: AKIAIQ6FZVBCHSPSSYRA
-    secret_code: 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
+    access_key_id:
+    secret_code: 

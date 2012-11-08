@@ -1,25 +1,42 @@
 class EmailController < ApplicationController
 
   def sendmail
-    emailStatList = EmailStat.find(:all,:conditions=>["(DATE(lastsent) < ? or lastsent IS NULL) and counter > 0", 1.from_now.to_date - 1])
-    @successEmailList =[]
-    unless emailStatList.nil?
-      emailStatList.each do |email|
-        post = Post.find(email.postId)
-       if post.posttype != 'Compliment' 
-        unless post.locations[0].email.nil? 
-          puts "sending email "
-          puts post.locations[0].email
-          SupportEmailer.sendmail(post,post.locations[0],User.find(post.user_id)).deliver
-          email[:counter] = email.counter-1
-          email[:lastsent] = Time.now()
-          email.save
+#    emailStatList = EmailStat.find(:all,:conditions=>["(DATE(lastsent) < ? or lastsent IS NULL) and counter > 0", 1.from_now.to_date - 1])
+   @successEmailList =[]
+    params[:arr].each do |p|
+       map = p[1]
+       if map[:email].eql?(map[:oldemail])
+         postid=map[:postid]
+         post = Post.find(postid)
+         puts post.locations.first
+         post.locations[0].email=map[:email]
+         post.locations[0].save
+       end  
+       if map[:email] != ''
+         emailstat = EmailStat.where(:postId=>map[:postid]).first
+         SupportEmailer.sendmail(post,post.locations[0],User.find(post.user_id)).deliver
+          emailstat[:counter] = emailstat.counter-1
+          emailstat[:lastsent] = Time.now()
+          emailstat.save
           @successEmailList.push(post.locations[0].email)
-        end
+       end   
        end
-      end
-    end
-    @emailStatList = EmailStat.where("counter > 0")
+   
+#    unless emailStatList.nil?
+#      emailStatList.each do |email|
+#        unless post.locations[0].email.nil? 
+#          puts "sending email "
+#          puts post.locations[0].email
+#          SupportEmailer.sendmail(post,post.locations[0],User.find(post.user_id)).deliver
+#          email[:counter] = email.counter-1
+#          email[:lastsent] = Time.now()
+#          email.save
+#          @successEmailList.push(post.locations[0].email)
+#        end
+#       end
+#      end
+#    end
+    @email_stats = EmailStat.where("counter > 0")
     render "email/index"    
     
   end
@@ -28,6 +45,7 @@ class EmailController < ApplicationController
    @postId=session[:postid]
    user = User.find(session[:user][:id])
    @count = user.email_count
+   @postType= Post.find(@postId).posttype
   end
   
   def saveconfig
@@ -40,7 +58,7 @@ class EmailController < ApplicationController
   end
   
   def viewmail
-    @emailStatList = EmailStat.where("counter > 0")
+    @email_stats = EmailStat.where("counter > 0")
     render "email/index"
   end
 end

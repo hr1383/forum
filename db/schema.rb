@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121023071103) do
+ActiveRecord::Schema.define(:version => 20121105160208) do
 
   create_table "assets", :force => true do |t|
     t.integer  "post_id"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20121023071103) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "call"
+    t.string   "post_type"
   end
 
   create_table "locations", :force => true do |t|
@@ -121,32 +122,6 @@ ActiveRecord::Schema.define(:version => 20121023071103) do
 
   create_table "scenarios", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "umvoxqs", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "question"
-    t.string   "description"
-    t.string   "company"
-    t.string   "address"
-    t.string   "scenario"
-    t.string   "compensation"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "status"
-    t.string   "category"
-  end
-
-  create_table "umvoxs", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "question"
-    t.string   "description"
-    t.string   "company"
-    t.string   "address"
-    t.string   "scenario"
-    t.string   "compensation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

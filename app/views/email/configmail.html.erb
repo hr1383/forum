@@ -1,5 +1,4 @@
 <%= form_tag ({:controller=> "email", :action=> "saveconfig"}) do %>
-<%= @postId %>
 <%= hidden_field_tag 'postId',@postId %>
  Set the number of email you wish to send. You have total <%= @count %> emails left.
  <p><%= text_field_tag 'counter','3' %></p>
@@ -11,3 +10,5 @@
  <%= submit_tag 'Save'  %>
  
 <% end %>
+ 
+ 

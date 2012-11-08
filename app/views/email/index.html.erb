@@ -5,30 +5,36 @@
       <p>Sucessfully Sent email to <%= email %>  </p>
     <% end %>
   <% end %>
-  <table border="1">
+  
+
+<p>Email will be sent for counter > 0 and if last email sent was 2 days old</p>
+<%= form_tag ({:controller=> "email", :action=> "sendmail"}) do |f|%>
+<table border="1">
   <tr>
+    <th>PostType</th>
     <th>Question</th>
     <th>Counter</th>
     <th>Lastsent</th>
     <th>Email</th>
-    <th></th>
-    <th></th>
   </tr>
 
-<% @emailStatList.each do |email_stat| %>
+<% @email_stats.each do |email_stat| %>
   <% post = Post.find(email_stat.postId) %>
   <% if post.posttype == 'Question' %>
+  <% email =post.locations[0].email %>
   <tr>
+    <td>Question</td>
     <td><%= post.question %></td>
-    <td><%= email_stat.counter %></td>
+    <td><%=  email_stat.counter%></td>
     <td><%= email_stat.lastsent %></td>
-    <td><%= post.locations[0].email %> </td>
+    <td><%=  text_field_tag 'email',email,:name=>"arr[email_stat_#{email_stat.postId}][email]"%></td>
+    <td><%= check_box_tag "arr[email_stat_#{email_stat.postId}][isSend]",1,:name=>"arr[email_stat_#{email_stat.postId}][isSend]" %></td>
+    <%= hidden_field_tag "arr[email_stat_#{email_stat.postId}][postid]", email_stat.postId %>
+    <%= hidden_field_tag "arr[email_stat_#{email_stat.postId}][oldemail]", email %>
   </tr>
   <%  end %>
 <% end %>
 </table>
-
-<p>Email will be sent for counter > 0 and if last email sent was 2 days old</p>
-<%= form_tag ({:controller=> "email", :action=> "sendmail"}) do %>
-   <%= submit_tag  'Send mail' %>
+  <%= submit_tag  'Send mail' %>
  <% end %> 
+

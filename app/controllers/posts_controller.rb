@@ -76,11 +76,13 @@ class PostsController < ApplicationController
     respond_to do |format|
     if @post.save
     session[:postid]=@post.id
-    puts session
-    puts '------------------'
+      if @post.posttype == 'Question'
         format.html { redirect_to :controller => 'email',:action=>'configmail' }
         format.json { render json: @post, status: :created, location: @post }
       else
+        format.html {redirect_to :controller=>'users',:action=>"dashboard"}
+      end  
+    else
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
