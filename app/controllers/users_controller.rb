@@ -86,16 +86,12 @@ class UsersController < ApplicationController
   
   def dashboard
     @post = Post.new
-    puts "-w-w-w-w-w-w-"
     @totalclose = @post.find_latest_closed
-    puts "----------"
-    puts @totalclose.size
-    puts "----------"
     @totalopen = @post.find_latest_open
-    
-    puts "----------"
-    puts @totalopen.size
-    puts "----------"
+    unless session[:user].nil?
+      user = session[:user]
+      @isadmin = user.admin
+    end
   end
   
   def myprofile

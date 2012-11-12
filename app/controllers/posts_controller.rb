@@ -63,9 +63,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
-    puts "scenario is "
-    puts @post.scenario
-    puts "scenario ends"
+    @isadmin=User.find(session[:user].id).admin
   end
 
   # POST /posts
@@ -83,6 +81,12 @@ class PostsController < ApplicationController
         format.html {redirect_to :controller=>'users',:action=>"dashboard"}
       end  
     else
+      if @post.scenario.nil?
+        @post.scenario=[]
+      end
+      if @post.compensation.nil?
+        @post.compensation=[]
+      end  
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end

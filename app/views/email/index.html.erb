@@ -12,10 +12,12 @@
 <table border="1">
   <tr>
     <th>PostType</th>
+    <th>Company</th>
     <th>Question</th>
     <th>Counter</th>
     <th>Lastsent</th>
     <th>Email</th>
+    <th>Send?</th>
   </tr>
 
 <% @email_stats.each do |email_stat| %>
@@ -24,6 +26,7 @@
   <% email =post.locations[0].email %>
   <tr>
     <td>Question</td>
+    <td>post.locations.first.name</td>
     <td><%= post.question %></td>
     <td><%=  email_stat.counter%></td>
     <td><%= email_stat.lastsent %></td>

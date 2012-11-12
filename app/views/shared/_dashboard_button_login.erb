@@ -24,8 +24,10 @@
       <% end %>
     </td>
     <td>
+      <% if !@isadmin.nil? and @isadmin  %>
       <%= form_tag("/email/viewmail", :method=>:get) do %>
         <%= submit_tag "Send email" %>
+      <% end %>
       <% end %>
     </td>
     <td><% if !session['user'] %>

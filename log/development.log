@@ -26417,3 +26417,1661 @@ Served asset /application.js - 304 Not Modified (14ms)
 
 Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-08 01:30:47 -0800
 Served asset /jquerytablescroll.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-10 00:29:31 -0800
+  Processing by UsersController#dashboard as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118[0m
+Rendered users/dashboard.erb within layouts/application (120.2ms)
+Rendered shared/_dashboard_button_login.erb (3.1ms)
+Completed 200 OK in 210ms (Views: 164.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:29:32 -0800
+Served asset /application.css - 200 OK (22ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:29:32 -0800
+Served asset /jquerytablescroll.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:29:32 -0800
+Served asset /application.js - 200 OK (21ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:29:32 -0800
+Served asset /jquerytablescroll.js - 200 OK (2ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:29:32 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2012-11-10 00:29:35 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.3ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.2ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (34.5ms)
+Rendered posts/new.html.erb within layouts/application (36.0ms)
+Rendered shared/_dashboard_button_login.erb (2.1ms)
+Completed 200 OK in 142ms (Views: 35.6ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:29:35 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-10 00:30:17 -0800
+  Processing by UsersController#dashboard as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118[0m
+Rendered users/dashboard.erb within layouts/application (25.9ms)
+Rendered shared/_dashboard_button_login.erb (2.1ms)
+Completed 200 OK in 77ms (Views: 30.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:30:18 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:30:18 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:30:18 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:30:18 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:30:18 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2012-11-10 00:36:40 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.2ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.2ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (27.4ms)
+Rendered posts/new.html.erb within layouts/application (28.2ms)
+Rendered shared/_dashboard_button_login.erb (2.1ms)
+Completed 200 OK in 117ms (Views: 31.6ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:36:40 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:36:40 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:36:40 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:36:40 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:36:40 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:36:43 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/_form.html.erb (15.0ms)
+Rendered posts/new.html.erb within layouts/application (15.7ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 84ms (Views: 20.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:36:43 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:36:43 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:36:43 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:36:43 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:36:43 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:37:03 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/_form.html.erb (14.4ms)
+Rendered posts/new.html.erb within layouts/application (15.2ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 81ms (Views: 20.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:37:04 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:37:04 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:37:04 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:37:04 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:37:04 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:37:11 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "scenario"=>["2"], "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.2ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+Rendered posts/_form.html.erb (50.5ms)
+Rendered posts/new.html.erb within layouts/application (51.4ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 90ms (Views: 55.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:37:11 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:37:11 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:37:11 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:37:11 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:37:11 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2012-11-10 00:41:17 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.3ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.2ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (29.1ms)
+Rendered posts/new.html.erb within layouts/application (30.0ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 119ms (Views: 32.9ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:41:17 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:41:17 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:41:17 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:41:17 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:41:17 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:41:22 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCategory Load (30.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.2ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+Rendered posts/_form.html.erb (68.7ms)
+Rendered posts/new.html.erb within layouts/application (69.2ms)
+Completed 500 Internal Server Error in 103ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?):
+    92:   <div class="field">
+    93:       <b> <%= f.label :scenario %><br /></b>
+    94:         <% Scenarios.all.each do |scenario| -%>
+    95:         <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
+    96:         <%= label_tag :scenario, scenario.name -%>
+    97:    <% end %> 
+    98:   </div>
+  app/views/posts/_form.html.erb:95:in `block (2 levels) in _app_views_posts__form_html_erb___2907528122468215401_2201532300'
+  app/views/posts/_form.html.erb:94:in `each'
+  app/views/posts/_form.html.erb:94:in `block in _app_views_posts__form_html_erb___2907528122468215401_2201532300'
+  app/views/posts/_form.html.erb:44:in `_app_views_posts__form_html_erb___2907528122468215401_2201532300'
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb__776995478750202685_2200327740'
+  app/controllers/posts_controller.rb:86:in `block (2 levels) in create'
+  app/controllers/posts_controller.rb:76:in `create'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:43:03 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/_form.html.erb (16.1ms)
+Rendered posts/new.html.erb within layouts/application (16.9ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 56ms (Views: 22.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:43:03 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:43:03 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:43:03 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:43:03 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:43:03 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2012-11-10 00:43:06 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.2ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (29.2ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (56.6ms)
+Rendered posts/new.html.erb within layouts/application (57.6ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 145ms (Views: 32.0ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:43:06 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:43:06 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:43:06 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:43:07 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:43:07 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:43:10 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/_form.html.erb (14.5ms)
+Rendered posts/new.html.erb within layouts/application (15.3ms)
+Rendered shared/_dashboard_button_login.erb (2.2ms)
+Completed 200 OK in 54ms (Views: 21.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:43:10 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:43:10 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:43:10 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:43:10 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:43:10 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2012-11-10 00:43:45 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.2ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.3ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (28.9ms)
+Rendered posts/new.html.erb within layouts/application (29.8ms)
+Rendered shared/_dashboard_button_login.erb (31.2ms)
+Completed 200 OK in 146ms (Views: 62.3ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:43:45 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:43:45 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:43:45 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:43:46 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:43:46 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:43:48 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.2ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+Rendered posts/_form.html.erb (19.0ms)
+Rendered posts/new.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?):
+    93:      <%# if !@post.scenario.nil? -%>
+    94:       <b> <%= f.label :scenario %><br /></b>
+    95:         <% Scenarios.all.each do |scenario| -%>
+    96:         <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
+    97:         <%= label_tag :scenario, scenario.name -%>
+    98:       <%# end %>
+    99:    <% end %> 
+  app/views/posts/_form.html.erb:96:in `block (2 levels) in _app_views_posts__form_html_erb___2907528122468215401_2169506120'
+  app/views/posts/_form.html.erb:95:in `each'
+  app/views/posts/_form.html.erb:95:in `block in _app_views_posts__form_html_erb___2907528122468215401_2169506120'
+  app/views/posts/_form.html.erb:44:in `_app_views_posts__form_html_erb___2907528122468215401_2169506120'
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb__776995478750202685_2200327740'
+  app/controllers/posts_controller.rb:86:in `block (2 levels) in create'
+  app/controllers/posts_controller.rb:76:in `create'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.2ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:50:07 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 62ms
+
+NoMethodError (undefined method `ni?' for nil:NilClass):
+  app/controllers/posts_controller.rb:83:in `block in create'
+  app/controllers/posts_controller.rb:73:in `create'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.6ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-11-10 00:50:29 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yc9O/taKPYjAMDyJqJCp+T7s52Qk7u5gxVpDWv3hJ0M=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "category"=>"Online Store", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "locations_attributes"=>{"0"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}}, "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.3ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.2ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (30.0ms)
+Rendered posts/new.html.erb within layouts/application (30.9ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 100ms (Views: 33.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 00:50:30 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 00:50:30 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 00:50:30 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 00:50:30 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 00:50:30 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-11-10 10:49:49 -0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 4[0m
+Rendered posts/index.html.erb within layouts/application (81.8ms)
+Rendered shared/_dashboard_button_login.erb (2.7ms)
+Completed 200 OK in 156ms (Views: 91.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 10:49:49 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 10:49:49 -0800
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 10:49:49 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 10:49:49 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 10:49:49 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/dashboard?utf8=%E2%9C%93&commit=Dashboard" for 127.0.0.1 at 2012-11-10 10:49:54 -0800
+  Processing by UsersController#dashboard as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Dashboard"}
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118
+Rendered users/dashboard.erb within layouts/application (55.1ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 74ms (Views: 58.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 10:49:54 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 10:49:54 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 10:49:54 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 10:49:54 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 10:49:54 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/dashboard?utf8=%E2%9C%93&commit=Dashboard" for 127.0.0.1 at 2012-11-10 10:50:15 -0800
+  Processing by UsersController#dashboard as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Dashboard"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118[0m
+Rendered users/dashboard.erb within layouts/application (24.5ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 74ms (Views: 58.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 10:50:15 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 10:50:15 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 10:50:15 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 10:50:15 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 10:50:15 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/dashboard?utf8=%E2%9C%93&commit=Dashboard" for 127.0.0.1 at 2012-11-10 10:50:18 -0800
+  Processing by UsersController#dashboard as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Dashboard"}
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118
+Rendered users/dashboard.erb within layouts/application (25.6ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 45ms (Views: 29.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 10:50:18 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 10:50:18 -0800
+Served asset /jquerytablescroll.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 10:50:18 -0800
+Served asset /defaults.js - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 10:50:18 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 10:50:18 -0800
+Served asset /jquerytablescroll.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/dashboard?utf8=%E2%9C%93&commit=Dashboard" for 127.0.0.1 at 2012-11-10 10:51:22 -0800
+  Processing by UsersController#dashboard as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Dashboard"}
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/users_controller.rb:93:in `dashboard'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2012-11-10 10:51:44 -0800
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.erb within layouts/welcome (0.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 10:51:44 -0800
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 10:51:44 -0800
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/facebooklogin.png" for 127.0.0.1 at 2012-11-10 10:51:44 -0800
+Served asset /facebooklogin.png - 200 OK (1ms)
+
+
+Started POST "/welcome/login" for 127.0.0.1 at 2012-11-10 10:51:46 -0800
+  Processing by WelcomeController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "x"=>"10", "y"=>"5"}
+Redirected to https://graph.facebook.com/oauth/authorize?client_id=151026538323899&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fwelcome%2Fcallback%2F&scope=friends_checkins
+Completed 302 Found in 14ms
+
+
+Started GET "/welcome/callback/?code=AQDj-YKRQCosfXHrkNzI9FHcG3zFhrMD0F352RB8Fe1ZGVdjX09W8P42ppRwOteaI-1PlaAuzJFOgKYKBus5-wJ73rbLbAW4eoyJbChOjJIAfg8fcBCUksYJSnhusAbKeRlz6f60ohwHZxdVSjqDmHyZIwXhKUK8aSoh1CqoaQ7UMyYOsHMMglF7Xkvs_vLDHpCwy9TMXAFfxuWus2jj6pA3" for 127.0.0.1 at 2012-11-10 10:51:50 -0800
+  Processing by WelcomeController#callback as HTML
+  Parameters: {"code"=>"AQDj-YKRQCosfXHrkNzI9FHcG3zFhrMD0F352RB8Fe1ZGVdjX09W8P42ppRwOteaI-1PlaAuzJFOgKYKBus5-wJ73rbLbAW4eoyJbChOjJIAfg8fcBCUksYJSnhusAbKeRlz6f60ohwHZxdVSjqDmHyZIwXhKUK8aSoh1CqoaQ7UMyYOsHMMglF7Xkvs_vLDHpCwy9TMXAFfxuWus2jj6pA3"}
+Redirected to http://localhost:3000/users/signin
+Completed 302 Found in 811ms
+
+
+Started GET "/users/signin" for 127.0.0.1 at 2012-11-10 10:51:50 -0800
+  Processing by UsersController#signin as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`fbid` = '659276550'[0m
+Redirected to http://localhost:3000/users/dashboard
+Completed 302 Found in 364ms
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-10 10:51:51 -0800
+  Processing by UsersController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118
+Rendered users/dashboard.erb within layouts/application (54.1ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 73ms (Views: 57.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-10 10:51:51 -0800
+Served asset /jquerytablescroll.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 10:51:51 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-10 10:51:51 -0800
+Served asset /jquerytablescroll.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 10:51:51 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 10:51:51 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-10 10:52:55 -0800
+  Processing by UsersController#dashboard as HTML
+Completed 500 Internal Server Error in 13ms
+
+TypeError (can't convert nil into String):
+  app/controllers/users_controller.rb:95:in `+'
+  app/controllers/users_controller.rb:95:in `dashboard'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.3ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-10 10:53:11 -0800
+  Processing by UsersController#dashboard as HTML
+Completed 500 Internal Server Error in 50ms
+
+TypeError (can't convert true into String):
+  app/controllers/users_controller.rb:95:in `+'
+  app/controllers/users_controller.rb:95:in `dashboard'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.7ms)
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-10 10:53:26 -0800
+  Processing by UsersController#dashboard as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118[0m
+Rendered users/dashboard.erb within layouts/application (16.7ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 73ms (Views: 20.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-10 10:53:26 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-10 10:53:26 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-10 10:53:26 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-10 11:03:46 -0800
+  Processing by UsersController#dashboard as HTML
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError (undefined method `find_latest_open' for #<Post:0x00000105ff6cd8>):
+  app/controllers/users_controller.rb:90:in `dashboard'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.3ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20120608082736)
+Migrating to AddColumnToUser (20120626013204)
+Migrating to AddColumnToUserToken (20120629055003)
+Migrating to UpdateUserTable (20120629062004)
+Migrating to CreateUmvoxs (20120629082017)
+Migrating to CreateScenarios (20120629082122)
+Migrating to CreateCompensations (20120629082137)
+Migrating to DeleteColumnFromUser (20120629083759)
+Migrating to CreateUmvoxqs (20120629085936)
+Migrating to AddColumnStatusToUmvoxq (20120709063828)
+Migrating to AddColumnCategoryToUmvox (20120711170534)
+Migrating to CreateCategories (20120711171401)
+Migrating to AddcolumnToUserFbId (20120719080244)
+Migrating to AddRemoveColumnToUser (20120719081343)
+Migrating to CreateComments (20120722213618)
+Migrating to AddForeignKeyToComment (20120722225720)
+Migrating to CreatePosts (20120802071221)
+Migrating to CreateDetailinfos (20120806073043)
+Migrating to CreateAssets (20120807083850)
+Migrating to AddLocationTableForTemp (20120823184307)
+Migrating to CreateCompanyEmails (20120925073347)
+Migrating to CreateEmailStats (20120925083149)
+Migrating to DropLocationAndCreateLocations (20121007064952)
+Migrating to RenameColumnComments (20121007155609)
+Migrating to DropColumnDob (20121009064410)
+Migrating to DropColumnDetailinfo (20121010065345)
+Migrating to CreateCompanies (20121010074235)
+Migrating to DropLocation2 (20121010080155)
+Migrating to AddColumnUser (20121014230119)
+Migrating to AddColumEmailStat (20121015013729)
+Migrating to CreateEmailHistories (20121023071103)
+Migrating to AddColumnCommentType (20121111202250)
+  [1m[35m (10.8ms)[0m  ALTER TABLE `comments` ADD `type` varchar(255) DEFAULT 'comment'
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121111202250')[0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `assets`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `comments`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `companies`
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `company_emails`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `compensations`
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `detailinfos`[0m
+  [1m[35m (0.3ms)[0m  SHOW KEYS FROM `email_histories`
+  [1m[36m (0.2ms)[0m  [1mSHOW KEYS FROM `email_stats`[0m
+  [1m[35m (0.2ms)[0m  SHOW KEYS FROM `locations`
+  [1m[36m (0.2ms)[0m  [1mSHOW KEYS FROM `posts`[0m
+  [1m[35m (0.1ms)[0m  SHOW KEYS FROM `scenarios`
+  [1m[36m (0.1ms)[0m  [1mSHOW KEYS FROM `users`[0m
+
+
+Started GET "/welcome" for 127.0.0.1 at 2012-11-11 12:28:06 -0800
+  Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/users/dashboard
+Completed 302 Found in 0ms
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-11 12:28:07 -0800
+  Processing by UsersController#dashboard as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118[0m
+Rendered users/dashboard.erb within layouts/application (106.7ms)
+Rendered shared/_dashboard_button_login.erb (3.0ms)
+Completed 200 OK in 202ms (Views: 177.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-11 12:28:07 -0800
+Served asset /jquerytablescroll.css - 200 OK (6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:28:07 -0800
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-11 12:28:07 -0800
+Served asset /jquerytablescroll.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:28:07 -0800
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:28:07 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&all=true&commit=All+Umvox" for 127.0.0.1 at 2012-11-11 12:28:14 -0800
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "all"=>"true", "commit"=>"All Umvox"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT `posts`.* FROM `posts` 
+Rendered posts/index.html.erb within layouts/application (96.4ms)
+Rendered shared/_dashboard_button_login.erb (1.6ms)
+Completed 200 OK in 158ms (Views: 103.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:28:14 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:28:14 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:28:14 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/posts/66/edit" for 127.0.0.1 at 2012-11-11 12:28:27 -0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", "66"]]
+  [1m[35mUser Load (11.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.2ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.3ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+  [1m[35mDetailinfo Load (0.3ms)[0m  SELECT `detailinfos`.* FROM `detailinfos` WHERE `detailinfos`.`post_id` = 66
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 66[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 66
+Rendered posts/_form.html.erb (103.3ms)
+Rendered posts/edit.html.erb within layouts/application (104.7ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 138ms (Views: 103.6ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:28:27 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:28:27 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:28:27 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/posts/119" for 127.0.0.1 at 2012-11-11 12:28:51 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"119"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", "119"]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 119
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 119[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 119[0m
+Rendered collection (0.0ms)
+Rendered posts/show.html.erb within layouts/application (94.5ms)
+Rendered shared/_dashboard_button_login.erb (1.6ms)
+Completed 200 OK in 104ms (Views: 95.3ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:28:51 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:28:51 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:28:51 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/8" for 127.0.0.1 at 2012-11-11 12:29:14 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", "8"]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 8[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 8
+Rendered posts/show.html.erb within layouts/application (42.4ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (Couldn't find User without an ID):
+    21:                   <%= link_to image_tag(asset_fields.image.url(:thumb)),asset_fields.image.url(:original) %>
+    22:         <% end %>
+    23: 
+    24:          Posted By <%= User.find(@post.user_id).firstname   %>
+    25:       </p>
+    26:     </td>
+    27:     <td>
+  app/views/posts/show.html.erb:24:in `_app_views_posts_show_html_erb___2438720790002646604_2206374120'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.5ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/posts/9" for 127.0.0.1 at 2012-11-11 12:29:20 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 9
+  [1m[36mAsset Load (0.2ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 9[0m
+Rendered posts/show.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (Couldn't find User without an ID):
+    21:                   <%= link_to image_tag(asset_fields.image.url(:thumb)),asset_fields.image.url(:original) %>
+    22:         <% end %>
+    23: 
+    24:          Posted By <%= User.find(@post.user_id).firstname   %>
+    25:       </p>
+    26:     </td>
+    27:     <td>
+  app/views/posts/show.html.erb:24:in `_app_views_posts_show_html_erb___2438720790002646604_2206374120'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (38.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.6ms)
+
+
+Started GET "/posts/8" for 127.0.0.1 at 2012-11-11 12:29:34 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", "8"]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 8[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 8
+Rendered posts/show.html.erb within layouts/application (52.1ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (Couldn't find User without an ID):
+    21:                   <%= link_to image_tag(asset_fields.image.url(:thumb)),asset_fields.image.url(:original) %>
+    22:         <% end %>
+    23: 
+    24:          Posted By <%= User.find(@post.user_id).firstname   %>
+    25:       </p>
+    26:     </td>
+    27:     <td>
+  app/views/posts/show.html.erb:24:in `_app_views_posts_show_html_erb___2438720790002646604_2206374120'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.2ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started POST "/welcome/logout" for 127.0.0.1 at 2012-11-11 12:32:09 -0800
+  Processing by WelcomeController#logout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "commit"=>"Logout"}
+Rendered welcome/index.erb within layouts/welcome (0.2ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:32:09 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:32:09 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebooklogin.png" for 127.0.0.1 at 2012-11-11 12:32:09 -0800
+Served asset /facebooklogin.png - 200 OK (1ms)
+
+
+Started POST "/welcome/login" for 127.0.0.1 at 2012-11-11 12:32:13 -0800
+  Processing by WelcomeController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "x"=>"34", "y"=>"7"}
+Redirected to https://graph.facebook.com/oauth/authorize?client_id=151026538323899&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fwelcome%2Fcallback%2F&scope=friends_checkins
+Completed 302 Found in 6ms
+
+
+Started GET "/welcome/callback/?code=AQA7MsAsBVxA-Y1d1LADgxbfYdEJsgHo8zl4D6wr0cZ13jpeZrcLu_HX16nYcbqG7EY3GFqLke1zBn0_4XlCDQYn_WD7-9l_5BfsxCBNwQJPyEgDVKW_crYCpavk1UVSS60z_hD7GApGPnTmXF7JZV90A7OItEWFX5d4qtmFsQBKPUxgb-SJzxawROUob-ZCkmxQAK4Mq8y9vpI2HvXd-hhI" for 127.0.0.1 at 2012-11-11 12:32:14 -0800
+  Processing by WelcomeController#callback as HTML
+  Parameters: {"code"=>"AQA7MsAsBVxA-Y1d1LADgxbfYdEJsgHo8zl4D6wr0cZ13jpeZrcLu_HX16nYcbqG7EY3GFqLke1zBn0_4XlCDQYn_WD7-9l_5BfsxCBNwQJPyEgDVKW_crYCpavk1UVSS60z_hD7GApGPnTmXF7JZV90A7OItEWFX5d4qtmFsQBKPUxgb-SJzxawROUob-ZCkmxQAK4Mq8y9vpI2HvXd-hhI"}
+Redirected to http://localhost:3000/users/signin
+Completed 302 Found in 290ms
+
+
+Started GET "/users/signin" for 127.0.0.1 at 2012-11-11 12:32:14 -0800
+  Processing by UsersController#signin as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`fbid` = '659276550'[0m
+Redirected to http://localhost:3000/users/dashboard
+Completed 302 Found in 348ms
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-11 12:32:15 -0800
+  Processing by UsersController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118
+Rendered users/dashboard.erb within layouts/application (45.2ms)
+Rendered shared/_dashboard_button_login.erb (2.1ms)
+Completed 200 OK in 72ms (Views: 49.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:32:15 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:32:15 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:32:15 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/email/viewmail?utf8=%E2%9C%93&commit=Send+email" for 127.0.0.1 at 2012-11-11 12:32:21 -0800
+  Processing by EmailController#viewmail as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Send email"}
+  [1m[36mEmailStat Load (0.3ms)[0m  [1mSELECT `email_stats`.* FROM `email_stats` WHERE (counter > 0)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 112]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 112[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 114]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 114[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 115]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 115[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 118]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 118[0m
+Rendered email/index.html.erb within layouts/application (78.4ms)
+Rendered shared/_dashboard_button_login.erb (1.7ms)
+Completed 200 OK in 88ms (Views: 79.6ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:32:21 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:32:21 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:32:21 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2012-11-11 12:32:44 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.2ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.3ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (25.8ms)
+Rendered posts/new.html.erb within layouts/application (26.9ms)
+Rendered shared/_dashboard_button_login.erb (1.7ms)
+Completed 200 OK in 114ms (Views: 30.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:32:44 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:32:44 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:32:44 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/locations/search" for 127.0.0.1 at 2012-11-11 12:33:10 -0800
+  Processing by LocationsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "company"=>"starbucks", "city"=>"Los Angeles", "country"=>"", "zipcode"=>"", "commit"=>"search"}
+Rendered collection (0.0ms)
+Rendered locations/search.js.erb (0.7ms)
+Completed 200 OK in 870ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/locations/search" for 127.0.0.1 at 2012-11-11 12:33:11 -0800
+  Processing by LocationsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "company"=>"starbucks", "city"=>"Los Angeles", "country"=>"", "zipcode"=>"", "commit"=>"search"}
+Rendered collection (0.0ms)
+Rendered locations/search.js.erb (0.3ms)
+Completed 200 OK in 455ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/locations/search" for 127.0.0.1 at 2012-11-11 12:33:12 -0800
+  Processing by LocationsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "company"=>"starbucks", "city"=>"Los Angeles", "country"=>"", "zipcode"=>"", "commit"=>"search"}
+Rendered collection (0.0ms)
+Rendered locations/search.js.erb (0.2ms)
+Completed 200 OK in 356ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/locations/search" for 127.0.0.1 at 2012-11-11 12:33:23 -0800
+  Processing by LocationsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "company"=>"starbucks", "city"=>"Los Angeles", "country"=>"usa", "zipcode"=>"90034", "commit"=>"search"}
+Rendered collection (0.0ms)
+Rendered locations/search.js.erb (0.3ms)
+Completed 200 OK in 399ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/locations/search" for 127.0.0.1 at 2012-11-11 12:33:34 -0800
+  Processing by LocationsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "company"=>"starbucks", "city"=>"Los Angeles", "country"=>"USA", "zipcode"=>"90034", "commit"=>"search"}
+Rendered collection (0.0ms)
+Rendered locations/search.js.erb (0.3ms)
+Completed 200 OK in 512ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2012-11-11 12:35:46 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.3ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.2ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (27.8ms)
+Rendered posts/new.html.erb within layouts/application (28.5ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 118ms (Views: 31.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:35:46 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:35:46 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:35:46 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&commit=My+Umvox" for 127.0.0.1 at 2012-11-11 12:38:48 -0800
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"My Umvox"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 4
+Rendered posts/index.html.erb within layouts/application (112.3ms)
+Rendered shared/_dashboard_button_login.erb (1.7ms)
+Completed 200 OK in 144ms (Views: 119.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:38:49 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:38:49 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:38:49 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/119" for 127.0.0.1 at 2012-11-11 12:39:05 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"119"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", "119"]]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 119
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 119[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 119[0m
+Rendered collection (0.0ms)
+Rendered posts/show.html.erb within layouts/application (90.8ms)
+Rendered shared/_dashboard_button_login.erb (1.7ms)
+Completed 200 OK in 100ms (Views: 91.4ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:39:05 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:39:05 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:39:05 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/119" for 127.0.0.1 at 2012-11-11 12:39:10 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"119"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", "119"]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 119[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 119
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 119
+Rendered collection (0.0ms)
+Rendered posts/show.html.erb within layouts/application (89.4ms)
+Rendered shared/_dashboard_button_login.erb (1.7ms)
+Completed 200 OK in 99ms (Views: 89.7ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:39:10 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:39:10 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:39:10 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/119/edit" for 127.0.0.1 at 2012-11-11 12:39:38 -0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"119"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", "119"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.3ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.3ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+  [1m[35mDetailinfo Load (0.3ms)[0m  SELECT `detailinfos`.* FROM `detailinfos` WHERE `detailinfos`.`post_id` = 119
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 119[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 119
+Rendered posts/_form.html.erb (93.6ms)
+Rendered posts/edit.html.erb within layouts/application (94.6ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 115ms (Views: 93.5ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:39:39 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:39:39 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:39:39 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/posts/119" for 127.0.0.1 at 2012-11-11 12:39:48 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"119"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", "119"]]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 119
+  [1m[36mAsset Load (0.3ms)[0m  [1mSELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 119[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 119[0m
+Rendered collection (0.0ms)
+Rendered posts/show.html.erb within layouts/application (88.2ms)
+Rendered shared/_dashboard_button_login.erb (1.7ms)
+Completed 200 OK in 97ms (Views: 88.5ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:39:48 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:39:48 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:39:48 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/119/edit" for 127.0.0.1 at 2012-11-11 12:41:44 -0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"119"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", "119"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.3ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.3ms)[0m  SELECT `compensations`.* FROM `compensations` 
+  [1m[36mDetailinfo Load (0.3ms)[0m  [1mSELECT `detailinfos`.* FROM `detailinfos` WHERE `detailinfos`.`post_id` = 119[0m
+  [1m[35mAsset Load (0.3ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 119
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 119[0m
+Rendered posts/_form.html.erb (92.9ms)
+Rendered posts/edit.html.erb within layouts/application (94.0ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 115ms (Views: 93.3ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:41:44 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:41:44 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:41:44 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/119" for 127.0.0.1 at 2012-11-11 12:49:22 -0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"119"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", "119"]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 119[0m
+  [1m[35mAsset Load (0.4ms)[0m  SELECT `assets`.* FROM `assets` WHERE `assets`.`post_id` = 119
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 119
+Rendered collection (0.0ms)
+Rendered posts/show.html.erb within layouts/application (92.7ms)
+Rendered shared/_dashboard_button_login.erb (1.7ms)
+Completed 200 OK in 102ms (Views: 91.6ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 12:49:23 -0800
+Served asset /defaults.js - 404 Not Found (34ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 12:49:23 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 12:49:23 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/welcome/logout" for 127.0.0.1 at 2012-11-11 13:09:22 -0800
+  Processing by WelcomeController#logout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "commit"=>"Logout"}
+Rendered welcome/index.erb within layouts/welcome (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 13:09:23 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 13:09:23 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/welcome/login" for 127.0.0.1 at 2012-11-11 13:09:41 -0800
+  Processing by WelcomeController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ApuXLYjj0Qzzb1kjusXi+RZGB8vIasbOb14wkcLqZg0=", "x"=>"72", "y"=>"8"}
+WARNING: Can't verify CSRF token authenticity
+Redirected to https://graph.facebook.com/oauth/authorize?client_id=151026538323899&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fwelcome%2Fcallback%2F&scope=friends_checkins
+Completed 302 Found in 1ms
+
+
+Started GET "/welcome/callback/?code=AQAlk_KsQPH1NVcBoymggM7VXI-m2J0DyDtzeK-HTgicwxAEEubgoSR3ikBhl71Jon4WuYmOnsOMkoaLfWq6EH4R8HY_kU1Y4RQIyGM4IP8gCKlc10VSG42syuC87QgWOp6-5ITvmH2oZCSa4JGTEnNaT_h79ZAVKT_JM8EDgruWmZta8L_GQVLpINl86hf0t5EWI1H3CPpjK-hn0-m-DSXu" for 127.0.0.1 at 2012-11-11 13:09:42 -0800
+  Processing by WelcomeController#callback as HTML
+  Parameters: {"code"=>"AQAlk_KsQPH1NVcBoymggM7VXI-m2J0DyDtzeK-HTgicwxAEEubgoSR3ikBhl71Jon4WuYmOnsOMkoaLfWq6EH4R8HY_kU1Y4RQIyGM4IP8gCKlc10VSG42syuC87QgWOp6-5ITvmH2oZCSa4JGTEnNaT_h79ZAVKT_JM8EDgruWmZta8L_GQVLpINl86hf0t5EWI1H3CPpjK-hn0-m-DSXu"}
+Redirected to http://localhost:3000/users/signin
+Completed 302 Found in 252ms
+
+
+Started GET "/users/signin" for 127.0.0.1 at 2012-11-11 13:09:43 -0800
+  Processing by UsersController#signin as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`fbid` = '659276550'[0m
+Redirected to http://localhost:3000/users/dashboard
+Completed 302 Found in 348ms
+
+
+Started GET "/users/dashboard" for 127.0.0.1 at 2012-11-11 13:09:43 -0800
+  Processing by UsersController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Closed') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 119[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 118
+Rendered users/dashboard.erb within layouts/application (17.8ms)
+Rendered shared/_dashboard_button_login.erb (2.0ms)
+Completed 200 OK in 77ms (Views: 22.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-11-11 13:09:43 -0800
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquerytablescroll.css" for 127.0.0.1 at 2012-11-11 13:09:43 -0800
+Served asset /jquerytablescroll.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 13:09:43 -0800
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 13:09:43 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/jquerytablescroll.js" for 127.0.0.1 at 2012-11-11 13:09:43 -0800
+Served asset /jquerytablescroll.js - 200 OK (0ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2012-11-11 13:33:00 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.4ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.3ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (28.2ms)
+Rendered posts/new.html.erb within layouts/application (29.1ms)
+Rendered shared/_dashboard_button_login.erb (1.8ms)
+Completed 200 OK in 118ms (Views: 31.6ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-11-11 13:33:00 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-11 13:33:00 -0800
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/locations/search" for 127.0.0.1 at 2012-11-11 17:27:39 -0800
+  Processing by LocationsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZgIBYZFbWs2XYMEao4wFpjF/pdH9IDCyAgF80uQJ2Qs=", "company"=>"starbucks", "city"=>"Los Angeles", "country"=>"USA", "zipcode"=>"90034", "commit"=>"search"}
+Rendered collection (0.0ms)
+Rendered locations/search.js.erb (0.2ms)
+Completed 200 OK in 768ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/locations/search" for 127.0.0.1 at 2012-11-11 17:29:47 -0800
+  Processing by LocationsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZgIBYZFbWs2XYMEao4wFpjF/pdH9IDCyAgF80uQJ2Qs=", "company"=>"starbucks", "city"=>"Los Angeles", "country"=>"US", "zipcode"=>"90034", "commit"=>"search"}
+Rendered locations/_location.erb (1.8ms)
+Rendered locations/search.js.erb (3.4ms)
+Completed 200 OK in 720ms (Views: 8.0ms | ActiveRecord: 0.8ms)
