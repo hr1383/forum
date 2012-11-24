@@ -1,0 +1,13 @@
+ <%= form_tag ({:controller=> "users", :action=> "signin"}) do %>
+            <div class="signin_field">
+                <label for="user_login">Username:</label>
+                <%= text_field "user", "username", :size => 20 %>
+            </div>
+            <div class="signin_field">
+                <label for="user_password">Password:</label>
+                <%= password_field "user", "password", :size => 20 %>
+            </div>
+            <div id="signin_button">
+                <%= submit_tag "Login" %>&nbsp;&nbsp;
+            </div>
+        <% end %>
