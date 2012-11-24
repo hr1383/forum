@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
 layout "welcome"
 def index
     if session['user']
-      redirect_to "/users/dashboard"
+      redirect_to "/members/dashboard"
     end
 end
 
@@ -23,9 +23,7 @@ def logout
   
  def callback
 		session['access_token'] = session['oauth'].get_access_token(params[:code])
-    puts "got session token"
-    puts session['access_token']
-    redirect_to '/users/signin'
+    redirect_to '/members/signin'
 	end
 
 end

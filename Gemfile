@@ -11,6 +11,7 @@ gem 'koala'
 gem 'paperclip'
 gem 'aws-s3'
 gem 'aws-sdk'
+gem 'devise','~>1.4.3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -24,6 +25,7 @@ group :production do
 end
 gem 'jquery-rails'
 gem 'factual-api'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

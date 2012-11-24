@@ -59,7 +59,11 @@
   <table border ="1"><tr><td>
   <%= form_for [@post,Comment.new] , :remote=> true do |f| %>
         <%= f.text_field :comment %>
-        <%= f.submit 'Add Comment' %>
+        <p><%= f.check_box  :is_backer %>
+           <%= label :is_backer, "Backer" %>
+            <%= f.submit 'Add Comment' %>
+          </p>
+      
 <% end %>      
 </td></tr></table>
 <span id="comments_count"><%= pluralize(@post.comments.count, "Comment") %></span>

@@ -10,11 +10,11 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :detailinfos, allow_destroy: true
   accepts_nested_attributes_for :assets, allow_destroy: true
   
-  def find_latest_closed
-    Post.where("status=?",'Closed').order("updated_at DESC").limit(2)
+  def self.latest_closed
+    where("status=?",'Closed').order("updated_at DESC").limit(2)
   end
   
-  def find_latest_open
-    Post.where("status=?",'Open').order("updated_at DESC").limit(2)
+  def self.latest_open
+    where("status=?",'Open').order("updated_at DESC").limit(2)
   end
 end

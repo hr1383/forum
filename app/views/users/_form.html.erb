@@ -1,5 +1,5 @@
 <h3>User Details</h3>
-<%= form_for(@user) do |f| %>
+<%= form_for @user,:url => { :action => "updateprofile" } do |f| %>
   <%#= f.error_messages %>
 
 <table>
@@ -16,8 +16,8 @@
   <td><%= f.text_field :lastname %></td>
 </tr>
 <tr>
-  <td><%= f.label :emaild %></td>  
-  <td><%= f.text_field :emaild %></td>
+  <td><%= f.label :email %></td>  
+  <td><%= f.text_field :email %></td>
 <tr>  
   <td><%= f.label :city %></td>
   <td><%= f.text_field :city %></td>
@@ -31,6 +31,7 @@
   <td> <%= f.text_field :state %></td>
 </tr>
   <%= f.hidden_field :fbid  %>
+  <%=  f.hidden_field :id %>
  </table> 
   <%= f.submit %>
 <% end %>

@@ -1,16 +1,18 @@
 Umvox::Application.routes.draw do
 
+  devise_for :users, :controllers => {:registrations => 'registrations'}
+
   resources :email_stats
   
   resources :company_emails
-    
+
   resources :email do
     collection do
       post :sendmail,:saveconfig
       get :sendmail,:configmail,:viewmail
     end
   end
-#root :to=>"welcome#index"
+root :to => "members#signin"
  resources :welcome do
    collection do
     post :logout, :login
@@ -27,10 +29,11 @@ Umvox::Application.routes.draw do
  resources :posts do
    resources :comments
  end   
-  resources :users do
+  resources :members do
   collection do
-    get   :filldetails,:signin,:dashboard
-    post :signin, :myprofile,:logout,:login
+    get   :filldetails,:dashboard,:signin
+    post  :myprofile,:logout,:login,:signin
+    put :updateprofile
   end
 end
 #  resources :assets

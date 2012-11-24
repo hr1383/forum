@@ -30,9 +30,10 @@
       <% end %>
       <% end %>
     </td>
-    <td><% if !session['user'] %>
+    <td>
+    <% if !session['user'] %>
             
-         <%= form_tag ({:controller=> "users", :action=> "signin"}) do %>
+         <%= form_tag ("/users/sign_up") do %>
             
             <div id="signin_button">
                 <%= image_submit_tag  ("/assets/facebooklogin.png") %>
@@ -44,10 +45,10 @@
               <%= submit_tag "Logout" %>
           <% end %>
       </td>
-    <% end %>
+    <% end %> 
     </td>
     <td>
-       <%= form_tag ({:controller=>"users", :action=>"myprofile"}) do %>
+       <%= form_tag ("/members/myprofile") do %>
           <%= submit_tag "My Profile" %>
       <% end %>
     </td>

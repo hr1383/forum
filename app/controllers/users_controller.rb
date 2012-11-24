@@ -11,6 +11,7 @@ class UsersController < ApplicationController
  
   
   def filldetails
+    
     if session['access_token']
       @graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  @graph.get_object("me")
@@ -26,13 +27,8 @@ class UsersController < ApplicationController
       end  
       @user.fbid=userinfo['id']
       @user.emaild = userinfo['email']
-      session[:user] = @user
-           @post = Post.new
-           @post.scenario=[]
-           @post.compensation=[]
-      puts "-------"     
-      puts session
-      puts "------"
+    else
+      @user = current_user
     end
   end
   
@@ -52,11 +48,9 @@ class UsersController < ApplicationController
   end
 
   def signin
-    puts "--------------"
-    puts session['access_token']
-    puts '--------------'
-    puts session['user']
-    puts "--------------"
+    
+    puts current_user.nil?
+    puts "current user nil"
     if !session['access_token'].nil?
       graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  graph.get_object("me")
@@ -70,24 +64,26 @@ class UsersController < ApplicationController
           redirect_to '/users/filldetails'
         else
            session[:user] = userObj.first
-#           @post = Post.new
-#           @post.scenario=[]
-#           @post.category=[]
-#           @post.compensation=[]
-#           @post.user_id = session[:user].id
            redirect_to "/users/dashboard"
            
         end
       end
-    else
-      redirect_to '/users/login'
+    elsif !current_user.nil?
+      if session[:new_user] != true
+        session[:user] = current_user
+        redirect_to "/users/dashboard"
+      else
+        @user = current_user
+        redirect_to '/users/filldetails'
+      end
     end
+     #eeror
   end
   
   def dashboard
-    @post = Post.new
-    @totalclose = @post.find_latest_closed
-    @totalopen = @post.find_latest_open
+    
+    @totalclose = Post.latest_closed
+    @totalopen = Post.latest_open
     unless session[:user].nil?
       user = session[:user]
       @isadmin = user.admin
@@ -103,4 +99,34 @@ class UsersController < ApplicationController
       @totalclosed = closeUmvox.length unless closeUmvox.nil?
     end
   end
+  
+  def updateprofile
+     user = User.find(params[:user][:id])
+     user.firstname=params[:user][:firstname]
+     user.username = params[:user][:username]
+     user.lastname = params[:user][:lastname]
+     user.email = params[:user][:email]
+     user.city = params[:user][:city]
+     user.state = params[:user][:state]
+     user.fbid = params[:user][:fbid]
+     begin 
+      user.save!
+      session[:user] = user
+     rescue ActiveRecord::RecordNotSaved => e
+        user.errors.full_messages
+     end
+     redirect_to "/users/dashboard"
+  end
 end
+
+
+#if @user1.save
+#        saveduser = User.find_all_by_fbid(params[:user][:fbid])
+#        unless saveduser.first.nil?
+#          session[:user] = saveduser.first
+#        end
+#        puts "user saved "
+#        redirect_to "/users/dashboard"
+#      else
+#        puts "error while saving user"
+#      end
