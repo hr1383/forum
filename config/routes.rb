@@ -27,6 +27,9 @@ root :to => "members#signin"
     end
   end
  resources :posts do
+   collection do
+     get :search
+   end
    resources :comments
  end   
   resources :members do

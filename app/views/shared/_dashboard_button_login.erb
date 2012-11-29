@@ -22,13 +22,13 @@
     </td>
     <td>
       <% if session['user'] %>
-        <%= form_tag("/users/dashboard", :method=>:get) do %>
+        <%= form_tag("/members/dashboard", :method=>:get) do %>
           <%= submit_tag "Dashboard" %>
         <% end %>
       <% end %>
     </td>
     <td>
-      <% if !@isadmin.nil? and @isadmin  %>
+      <% if session[:user] and session[:user].admin == true  %>
       <%= form_tag("/email/viewmail", :method=>:get) do %>
         <%= submit_tag "Send email" %>
       <% end %>

@@ -13,7 +13,9 @@
                 <%= image_submit_tag  ("/assets/facebooklogin.png") %>
             </div>
         <% end %>
- <%= link_to "Sign Up" , new_user_registration_path %>
+ <%= link_to "Sign In" , new_user_session_path %>
+  
+  <%#= render :partial => "devise/shared/links" %>
 <%= yield %>
 
 </body>

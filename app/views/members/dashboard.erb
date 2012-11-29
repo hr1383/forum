@@ -1,13 +1,22 @@
     <h3>Welcome <%= (session[:user]).firstname%></h3>
-    <p>
-      File A Complaint
-    </p>
+    <p>What is the matter ? </p>
+    <%= form_tag("/posts/search", :method=>:get) do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+      <% unless @posts.nil? %>
+       <% @posts.each do |post| %>
+      <p><%= render "displaypost", :post=>post %>  </p>
+       <% end %>
+      <% end %>
     <% if session[:user] %>
     <table>
       <tr>
         <table>
           <th>Recently Resolved</th>
-          <% if @totalclose.size >0 %>
+          <% if (!@totalclose.nil? and @totalclose.size >0) %>
 
           <% else %>
           <tr><td>Waiting for first.</td></tr>
@@ -16,7 +25,7 @@
       </tr>
         <table>
           <th>Latest Vox</th>
-          <% if @totalopen.size >0 %>
+          <% if (!@totalopen.nil? and @totalopen.size >0) %>
           <tr>
             <table border="1px solid black" border-collapse="collapse">
                <% @totalopen.each do |post| %>

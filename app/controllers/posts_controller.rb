@@ -119,5 +119,15 @@ class PostsController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def search
+    @search = Post.search do
+    fulltext params[:search]
+  end
+  @posts = @search.results
+  puts @posts.size
+  puts @posts.nil?
+    render "/members/dashboard"
+  end
 
 end
