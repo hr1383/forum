@@ -7,8 +7,10 @@
       <% end %>
     </td>
     <td>
+      <% if session['user'] %>
        <%= form_tag("/posts", :method=>:get) do %>
         <%= submit_tag "My Umvox" %>
+      <% end %>
       <% end %>
      </td>
       
@@ -19,8 +21,10 @@
       <% end %>
     </td>
     <td>
-      <%= form_tag("/users/dashboard", :method=>:get) do %>
-        <%= submit_tag "Dashboard" %>
+      <% if session['user'] %>
+        <%= form_tag("/users/dashboard", :method=>:get) do %>
+          <%= submit_tag "Dashboard" %>
+        <% end %>
       <% end %>
     </td>
     <td>
@@ -33,10 +37,10 @@
     <td>
     <% if !session['user'] %>
             
-         <%= form_tag ("/users/sign_up") do %>
+         <%= form_tag("/welcome", :method=>:get) do %>
             
             <div id="signin_button">
-                <%= image_submit_tag  ("/assets/facebooklogin.png") %>
+                <%= submit_tag "Sign In" %>
             </div>
         <% end %>
        <% else %>
@@ -48,8 +52,10 @@
     <% end %> 
     </td>
     <td>
-       <%= form_tag ("/members/myprofile") do %>
-          <%= submit_tag "My Profile" %>
+      <% if session['user'] %>
+         <%= form_tag ("/members/myprofile") do %>
+            <%= submit_tag "My Profile" %>
+        <% end %>
       <% end %>
     </td>
   </tr>

@@ -42,14 +42,14 @@ class CommentsController < ApplicationController
     puts params[:comment]
     puts params[:post_id]
         #throw error if not valid
-    unless session[:user].nil?
       @post = Post.find(params[:post_id])
       unless @post.nil?
           @comment = @post.comments.build(params[:comment])
-          @comment.username = session[:user][:username]
-          @comment.userId = session[:user][:id]
+          if session[:user] != nil
+            @comment.username = session[:user][:username]
+            @comment.userId = session[:user][:id]
+          end  
       end
-    end
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @post, notice: 'Comment was successfully created.' }

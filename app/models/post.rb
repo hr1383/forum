@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
   belongs_to :users
   attr_accessible :assets_attributes,:posttype, :status, :question, :description, :category, :company, :address, :detailinfos_attributes,  :user_id,:scenario,:compensation,:locations_attributes
   validates_presence_of :description, :posttype, :status,:category,:scenario, :compensation
+  attr_accessor :url
   has_many :comments , :autosave => true
   has_many :detailinfos
   has_many :assets
@@ -16,5 +17,8 @@ class Post < ActiveRecord::Base
   
   def self.latest_open
     where("status=?",'Open').order("updated_at DESC").limit(2)
+  end
+  def urlValue
+     Facebook::CALLBACK_URL+id.to_s
   end
 end

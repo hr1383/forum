@@ -55,17 +55,57 @@
 <br/><br/>
 <% unless session[:user] == nil %>
  <% session[:user].firstname %>
-<% end %>
-  <table border ="1"><tr><td>
-  <%= form_for [@post,Comment.new] , :remote=> true do |f| %>
-        <%= f.text_field :comment %>
-        <p><%= f.check_box  :is_backer %>
-           <%= label :is_backer, "Backer" %>
-            <%= f.submit 'Add Comment' %>
-          </p>
-      
-<% end %>      
-</td></tr></table>
+
+    <table border ="1"><tr><td>
+    <%= form_for [@post,Comment.new] , :remote=> true do |f| %>
+          <%= f.text_field :comment %>
+          <p><%= f.check_box  :is_backer %>
+             <%= label :is_backer, "Backer" %>
+              <%= f.submit 'Add Comment' %>
+            </p>
+     </td></tr></table>   
+    <% end %>
+ <% else %>         
+  
+    <%= form_for [@post,Comment.new] , :remote=> true do |f| %>
+    <table>
+        <tr><td>
+             Name:
+          </td><td>
+             <%= f.text_field :name %>
+          </td>
+        </tr>
+        <tr><td>
+            Email:
+          </td><td>
+             <%= f.text_field :email %>
+          </td>
+        </tr>
+        <tr><td>
+            Comment:
+          </td>
+          <td>
+              <%= f.text_field :comment %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                 <%= label :is_backer, "Backer" %>
+          </td>
+          <td><%= f.check_box  :is_backer %>
+          </td>
+        </tr>
+        <tr><td>
+                  <%= f.submit 'Add Comment' %>
+          </td>
+       </tr>         
+      </table> 
+     <% end %>       
+     
+   
+<% end %>          
+
+<%= render "/shared/tweet_button" %>
 <span id="comments_count"><%= pluralize(@post.comments.count, "Comment") %></span>
 <div id="comment-notice"></div>
 <br/>

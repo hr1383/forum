@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121082740) do
+ActiveRecord::Schema.define(:version => 20121126143049) do
 
   create_table "assets", :force => true do |t|
     t.integer  "post_id"
@@ -37,8 +37,10 @@ ActiveRecord::Schema.define(:version => 20121121082740) do
     t.date     "postDate"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type",       :default => "comment"
     t.boolean  "is_backer"
+    t.string   "comment_type", :default => "comment"
+    t.string   "name"
+    t.string   "email"
   end
 
   create_table "companies", :force => true do |t|
