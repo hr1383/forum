@@ -1,0 +1,53 @@
+<p>
+<table border ="1">
+  <tr>
+    <td rowspan="3">
+      <p>
+        
+        <% unless post.locations.nil? %>
+          <% post.locations.each do | location| %>
+          <%= location.name %>, <%= location.address %><br/>
+          <%= location.city %> <%= location.zipcode %>
+          <% end %>
+          <br/>
+         <% end %>
+          <b> <%=post.posttype %>: <%= post.question %></b> <br/>
+           Filed At <%=post.created_at.strftime("%d %b %y")  %>  &nbsp;&nbsp;&nbsp;   Last Updated <%= post.updated_at.strftime("%d %b %y") %></br>
+         </br>
+         <%= post.description %></br></br></br>
+         <% post.assets.each  do |asset_fields| %>
+                  <%= link_to image_tag(asset_fields.image.url(:thumb)),asset_fields.image.url(:original) %>
+        <% end %>
+
+         Posted By <%= User.find(post.user_id).firstname   %>
+      </p>
+    </td>
+    <td>
+        Complaint Status:<%= post.status %>
+        The email was sent on xxx-xxx-xxxx  
+    </td>
+  <tr>
+    <td>
+      Share this on 
+       Facebook &nbsp;&nbsp;twitter
+    </td>
+  </tr>  
+  </tr>
+  <tr>
+    <td>
+      Service Info
+      Company <% post.company %>
+      Category: 
+      <% if !post.category.nil? -%>
+        <%  Category.all.each do |category|  -%>
+          <%if  post.category.include?(category.id.to_s) %>
+            <%= category.name %>
+          <% end -%>
+        <% end -%>
+      <% end -%>
+    </td>
+  </tr>
+</table>
+
+
+<br/><br/>
