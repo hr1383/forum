@@ -125,9 +125,6 @@ class PostsController < ApplicationController
     fulltext params[:search]
   end
   @posts = @search.results
-  puts @posts.size
-  puts @posts.nil?
-    render "/members/dashboard"
   end
 
 end

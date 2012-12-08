@@ -8,9 +8,7 @@
 //= require jquery_ujs
 //= require_tree .
 
-//$(document).ready(function() {
-//  $('full_add').hide();
-//});
+
 $(function() {
 $("#post_posttype_question").change(function() {
          $(".account").show();

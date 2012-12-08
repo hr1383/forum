@@ -15,28 +15,13 @@ class LocationsController < ApplicationController
    else 
     result =  factual.table("places").filters("name" => {"$bw" => company},"locality" => city,"country" =>country,"postcode" => zipcode).rows 
    end
-#   if  company !="" 
-#     puts "inside company"
-#     puts company
-#     result = result.filters("name" => {"$bw" => company})
-#   end
-#   if city != ""
-#     result = result.filters("locality" => city)
-#   end
-#   if country !=""  
-#     result = result.filters("country" =>country)   
-#   end     
-#   if zipcode != ""
-#    result = result.filters("postcode" => zipcode)
-#   end 
-#    result =  result.rows 
-   
     @locations = Array.new
     result.each do |resultobj|
       location = Location.new
       location.setValues(resultobj)
       puts "---------------"
         puts location.name
+        puts location.category
       puts "---------------"
      @locations.push(location)
     end

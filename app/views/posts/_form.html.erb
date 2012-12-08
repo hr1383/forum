@@ -1,4 +1,45 @@
-<%= form_tag("/locations/search" , :remote=> true) do  %>
+<% content_for :head do %>
+ <script type="text/javascript">
+
+$().ready(function() {
+	$("#companyForm").validate({
+          errorLabelContainer: "#errorbox",
+            <%#*wrapper: "p",%>
+            errorClass: "error",
+		rules: {
+			company: "required",
+                        city: "required",
+                        country: "required"
+			
+		},
+		messages: {
+			company: "Company is required field<br/>",
+                        city: "City is required field<br/>",
+                        country: "Country is required field<br/>"
+                },
+                <%#*errorPlacement: function(error, element) {%>
+                        <%#*error.appendTo($('#errorbox'));%>
+                <%#*}%>
+                  
+                  invalidHandler: function(form, validator) {
+                $("#errorbox").show();
+            },
+            unhighlight: function(element, errorClass) {
+                if (this.numberOfInvalids() == 0) {
+                    $("#errorbox").hide();
+                }
+                $(element).removeClass(errorClass);
+            }    
+
+	});
+});
+
+
+</script>
+<% end %>
+
+<div id="errorbox" name="errorbox"></div>
+<%= form_tag("/locations/search" , :remote=> true, :id=>"companyForm", :name=>"companyForm") do  %>
 <table>
   <tr>
   <th>Company</th>
@@ -11,7 +52,7 @@
     <td><%= text_field_tag :city %></td>
     <td><%= text_field_tag :country %></td>
     <td><%= text_field_tag :zipcode %></td>
-     <td><%= submit_tag 'search' %></td>
+     <td><%= submit_tag 'search', :id=>'btnfindAddress', :name=>"btnfindAddress"%></td>
   </tr>
 </table>
 <% end %>   

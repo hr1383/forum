@@ -1,0 +1,14 @@
+<p>Whats the matter ?</p>
+<%= form_tag("/posts/search", :method=>:get) do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+      <% if  !@posts.nil? %>
+         <% @posts.each do |post| %>
+          <p><%= render "displaypost", :post=>post %>  </p>
+        <% end %>
+      <% else %>
+        <p> No Results Found</p>
+      <% end %>

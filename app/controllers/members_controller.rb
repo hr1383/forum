@@ -51,6 +51,7 @@ class MembersController < ApplicationController
     
     puts current_user.nil?
     puts "current user nil"
+    puts session[:new_user]
     if !session['access_token'].nil?
       graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  graph.get_object("me")
@@ -79,7 +80,6 @@ class MembersController < ApplicationController
         redirect_to '/members/filldetails'
       end
     end
-     #eeror
   end
   
   def dashboard

@@ -6,11 +6,6 @@
         <%= submit_tag "Search", :name => nil %>
       </p>
     <% end %>
-      <% unless @posts.nil? %>
-       <% @posts.each do |post| %>
-      <p><%= render "displaypost", :post=>post %>  </p>
-       <% end %>
-      <% end %>
     <% if session[:user] %>
     <table>
       <tr>
