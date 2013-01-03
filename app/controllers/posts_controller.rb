@@ -78,7 +78,7 @@ class PostsController < ApplicationController
         format.html { redirect_to :controller => 'email',:action=>'configmail' }
         format.json { render json: @post, status: :created, location: @post }
       else
-        format.html {redirect_to :controller=>'users',:action=>"dashboard"}
+        format.html {redirect_to :controller=>'members',:action=>"dashboard"}
       end  
     else
       if @post.scenario.nil?
@@ -99,6 +99,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     respond_to do |format|
       if @post.update_attributes(params[:post])
+        @post.assets.each do |asset|
+          puts "ubsisdsdAAAAAAAAAA"
+          asset.save
+        end
         format.html { redirect_to @post, notice: 'post was successfully updated.' }
         format.json { head :ok }
       else

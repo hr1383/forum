@@ -1,4 +1,4 @@
-<p>
+
 <table border ="1">
   <tr>
     <td rowspan="3">
@@ -24,12 +24,16 @@
     </td>
     <td>
         Complaint Status:<%= post.status %>
-        The email was sent on xxx-xxx-xxxx  
+        <% emailStat = EmailStat.find_by_postId(post.id) %>
+        <% unless emailStat.nil? %>
+        
+          The email was sent on  <%= emailStat.lastsent %>
+        <% end %>
     </td>
   <tr>
     <td>
       Share this on 
-       Facebook &nbsp;&nbsp;twitter
+       Facebook &nbsp;&nbsp;<%= render "/shared/tweet_button" %>
     </td>
   </tr>  
   </tr>

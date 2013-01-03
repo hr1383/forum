@@ -2,7 +2,6 @@
 
 <%= render "displaypost", :post=>@post %>         
 
-<%= render "/shared/tweet_button" %>
 <span id="comments_count"><%= pluralize(@post.comments.count, "Comment") %></span>
 <div id="comment-notice"></div>
 <br/>

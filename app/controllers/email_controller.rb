@@ -54,7 +54,7 @@ class EmailController < ApplicationController
       emailstat[:counter] = params[:counter]
       emailstat[:call] = params[:call]
       emailstat.save
-      redirect_to '/users/dashboard'
+      redirect_to '/members/dashboard'
   end
   
   def viewmail

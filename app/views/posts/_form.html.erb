@@ -1,154 +1,109 @@
-<% content_for :head do %>
- <script type="text/javascript">
-
-$().ready(function() {
-	$("#companyForm").validate({
-          errorLabelContainer: "#errorbox",
-            <%#*wrapper: "p",%>
-            errorClass: "error",
-		rules: {
-			company: "required",
-                        city: "required",
-                        country: "required"
-			
-		},
-		messages: {
-			company: "Company is required field<br/>",
-                        city: "City is required field<br/>",
-                        country: "Country is required field<br/>"
-                },
-                <%#*errorPlacement: function(error, element) {%>
-                        <%#*error.appendTo($('#errorbox'));%>
-                <%#*}%>
-                  
-                  invalidHandler: function(form, validator) {
-                $("#errorbox").show();
-            },
-            unhighlight: function(element, errorClass) {
-                if (this.numberOfInvalids() == 0) {
-                    $("#errorbox").hide();
-                }
-                $(element).removeClass(errorClass);
-            }    
-
-	});
-});
-
-
-</script>
-<% end %>
-
-<div id="errorbox" name="errorbox"></div>
-<%= form_tag("/locations/search" , :remote=> true, :id=>"companyForm", :name=>"companyForm") do  %>
-<table>
-  <tr>
-  <th>Company</th>
-  <th>City</th>
-  <th>Country</th>
-  <th>ZipCode</th>
-  </tr>
-  <tr>
-    <td><%= text_field_tag :company %></td>
-    <td><%= text_field_tag :city %></td>
-    <td><%= text_field_tag :country %></td>
-    <td><%= text_field_tag :zipcode %></td>
-     <td><%= submit_tag 'search', :id=>'btnfindAddress', :name=>"btnfindAddress"%></td>
-  </tr>
-</table>
-<% end %>   
-<div id="locations">
-</div>
-<p>Do you want to enter Address  <%=  check_box :new_address,:address  %></p>
-<div class="full_add" style="display:none">
-  <table>
-    <tr>
-      <td> Name <%= text_field :full_add, :name%> </td>
-      <td> Address <%= text_field :full_add, :address%> </td>
-    </tr>
-     <tr>
-      <td> City <%= text_field :full_add, :city%> </td>
-      <td> Telephone <%= text_field :full_add, :tel%> </td>
-    </tr>
-    <tr>
-      <td> Category <%= text_field :full_add, :category%> </td>
-      <td> Zipcode <%= text_field :full_add, :zipcode%> </td>
-    </tr>
-    <tr>
-      <td> Email <%= text_field :full_add, :email%> </td>
-      <td> Website <%= text_field :full_add, :website%> </td>
-    </tr>
-    
-  </table>
-  <p><%= button_tag :save,:id=>"btn_new_addr" %>
-</div>
 
 <%= form_for @post,:html =>{:multipart => true} do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this umvoxq from being saved:</h2>
-
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <div id="divstep1">     
+     <div class="field">
+        <b> <%= f.hidden_field :company,:id=>"post_company" %><br /></b>
+      </div>
+    <div class="field">
+       <%= f.radio_button :posttype, 'Question', :checked => true %> 
+      <%= label :posttype_question, 'Question' %>
+      <%= f.radio_button :posttype, 'Complaint' %>
+      <%= label :posttype_complaint, 'Complaint' %>
+      <%= f.radio_button :posttype, 'Complement' %>
+      <%= label :posttype_complement, 'Complement' %>
     </div>
-  <% end %>
-<div id="finallocations">
-</div>     
- <div class="field">
-   <b> <%= label :lbl_company,'',:id=>"lbl_company" %></b>
-    <b> <%= f.hidden_field :company,:id=>"post_company" %><br /></b>
-    
-  </div>
-<div class="field">
-   <%= f.radio_button :posttype, 'Question', :checked => true %> 
-  <%= label :posttype_question, 'Question' %>
-  <%= f.radio_button :posttype, 'Complaint' %>
-  <%= label :posttype_complaint, 'Complaint' %>
-  <%= f.radio_button :posttype, 'Complement' %>
-  <%= label :posttype_complement, 'Complement' %>
-</div>
 
 
-<div class="field">
-  <b><%= f.label :status %> </b>
-    <%= f.select("status", options_for_select([['Open', 'Open'],
-                 ['Resolved', 'Resolved']], '1')) %>
-</div>
-       
-  <div class="field">
-    <b><%= f.label :question,:id=>"lbl_question" %><br /></b>
-    <%= f.text_field :question %>
-  </div>
-  <div class="field">
-    <b>  <%= f.label :description %><br /></b>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <b> <%= f.label :category %><br /></b>
-    <%= f.collection_select :category, Category.all, :name, :name %>
-  </div>
- 
-  <div class="field">
-     <% if !@post.scenario.nil? -%>
-      <b> <%= f.label :scenario %><br /></b>
-        <% Scenarios.all.each do |scenario| -%>
-        <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
-        <%= label_tag :scenario, scenario.name -%>
-      <% end %>
-   <% end %> 
-  </div>
-  <div class="field">
-     <% if !@post.compensation.nil? -%>
-      <b><%= f.label :compensation %><br /></b>
-       <% Compensation.all.each do |compensation| -%>
-        <%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
-        <%= label_tag :compensation, compensation.name -%>
+    <div class="field">
+      <b><%= f.label :status %> </b>
+        <%= f.select("status", options_for_select([['Open', 'Open'],
+                     ['Resolved', 'Resolved']], '1')) %>
+    </div>
+
+      <div class="field">
+        <b><%= f.label :question,:id=>"lbl_question" %><br /></b>
+        <%= f.text_field :question %>
+      </div>
+      <div class="field">
+        <b>  <%= f.label :description %><br /></b>
+        <%= f.text_area :description %>
+      </div>
+      <div class="field">
+        <b> <%= f.label :category %><br /></b>
+        <%= f.collection_select :category, Category.all, :name, :name %>
+      </div>
+
+      <div class="field">
+         <% if !@post.scenario.nil? -%>
+          <b> <%= f.label :scenario %><br /></b>
+            <% Scenarios.all.each do |scenario| -%>
+            <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
+            <%= label_tag :scenario, scenario.name -%>
+          <% end %>
+       <% end %> 
+      </div>
+      <div class="field">
+         <% if !@post.compensation.nil? -%>
+          <b><%= f.label :compensation %><br /></b>
+           <% Compensation.all.each do |compensation| -%>
+            <%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
+            <%= label_tag :compensation, compensation.name -%>
+            <% end %>
         <% end %>
-    <% end %>
-  </div>
+      </div>
+<%#*end of step1%>
+  <p><%=button_tag "Continue to next Step", :id=>"btnStep1", :remote=>"true" %></p>
+</div>
 
+<div id="divstep2" style="display:none">
+  
+   <div class="field">
+      <b> <%= f.hidden_field :company,:id=>"post_company" %><br /></b>
+    </div>
+    <table>
+      <tr>
+      <th>Company</th>
+      <th>City</th>
+      <th>ZipCode</th>
+      </tr>
+      <tr>
+        <td><%= text_field_tag :company %></td>
+        <td><%= text_field_tag :city %></td>
+        <td><%= text_field_tag :zipcode %></td>
+         <td><%= submit_tag 'search', :id=>'btnfindAddress', :name=>"btnfindAddress"%></td>
+      </tr>
+    </table>
+   <div id="finallocations">
+     <b> <%= label :lbl_company,'',:id=>"lbl_company" %></b>
+  </div>  
+  <div id="newAddress">
+    <p>Do you want to enter Address  <%=  check_box :new_address,:address  %></p>
+    <div class="full_add" style="display:none">
+      <table>
+        <tr>
+          <td> Name <%= text_field :full_add, :name%> </td>
+          <td> Address <%= text_field :full_add, :address%> </td>
+        </tr>
+         <tr>
+          <td> City <%= text_field :full_add, :city%> </td>
+          <td> Zipcode <%= text_field :full_add, :zipcode%> </td>
+        </tr>
+        <tr>
+          <td> Email <%= text_field :full_add, :email%> </td>
+          <td> Website <%= text_field :full_add, :website%> </td>
+        </tr>
+
+      </table>
+      <p><%= button_tag :save,:id=>"btn_new_addr" %>
+    </div>
+  </div>
+  <div id="locationform"></div>
+  <div id="locations">
+  </div>
+<p><%=button_tag "Continue to next Step", :id=>"btnStep2", :remote=>"true" %></p>
+<%#*end of step2%>
+</div>
+<div id="divstep3" style="display:none">
 <div class="account">
 <%= f.fields_for :detailinfos do |detail_form| %>
 
@@ -194,6 +149,7 @@ $().ready(function() {
   <div class="actions">
     <%= f.submit %>
   </div>
+</div> 
 <% end %>
   
  

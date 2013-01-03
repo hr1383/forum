@@ -22,8 +22,8 @@ root :to => "members#signin"
 
   resources :locations do
     collection do
+      get :select,:search
       post :search
-      get :select
     end
   end
  resources :posts do

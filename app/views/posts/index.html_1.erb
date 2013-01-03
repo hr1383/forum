@@ -1,35 +1,60 @@
-<h1>Listing umvoxqs</h1>
+<html>
+  
+  <body>
+    <p id="notice"><%= notice %></p>
+    <h1>Listing Umvoxs</h1>
 
-<table>
+    <h2>Open Umvox</h2>  
+ 
+   
+<table border="0" style="border-width: 1px; border-color:#000000; border-style: solid;" width="100%" >   
+<% @openumvox.each do |post| %>
+
   <tr>
-    <th>User</th>
-    <th>Question</th>
-    <th>Description</th>
-    <th>Company</th>
-    <th>Address</th>
-    <th>Scenario</th>
-    <th>Compensation</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <% if post.posttype == 'Question' %>
+    <td><h4>Question: <%= post.question %></h4></td>
+    <% elsif  post.posttype == 'Complaint' %>
+      <td><h4>Complaint: <%= post.question %></h4></td>
+    <% else %>  
+      <td><h4>Complement: <%= post.question %></h4></td>
+    <% end %>  
+  </tr>
+  <tr>
+    <td>Description: <%= post.description %></td>
+  </tr>
+  <tr>
+    <td><%= link_to 'Show', post %></td>
+    <% if session['user']  && session[:user].id == post.user_id%>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <% if session[:user] != nil && session[:user].admin == 1 %>
+        <td><%= link_to 'Destroy', umvoxq, confirm: 'Are you sure?', method: :delete %></td>
+      <%end%>
+    <% end %>  
   </tr>
 
-<% @umvoxqs.each do |umvoxq| %>
-  <tr>
-    <td><%= umvoxq.user_id %></td>
-    <td><%= umvoxq.question %></td>
-    <td><%= umvoxq.description %></td>
-    <td><%= umvoxq.company %></td>
-    <td><%= umvoxq.address %></td>
-    <td><%= umvoxq.scenario %></td>
-    <td><%= umvoxq.compensation %></td>
-    <td><%= link_to 'Show', umvoxq %></td>
-    <td><%= link_to 'Edit', edit_umvoxq_path(umvoxq) %></td>
-    <td><%= link_to 'Destroy', umvoxq, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
 <% end %>
-</table>
+</table>    
+<h2>Close Umvox</h2>  
+
+<% @closeumvox.each do |post| %>
+<table border="0" style="border-width: 1px; border-color:#000000; border-style: solid;" width="100%" >      
+  <tr>
+    <td><h4>Question: <%= post.question %></h4></td>
+  </tr>
+  <tr>
+    <td>Description: <%= post.description %></td>
+  </tr>
+  <tr>
+    <td><%= link_to 'Show', post %></td>
+    <%#*<td><%= link_to 'Destroy', umvoxq, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+  </table>    
+</br>
+<% end %>
 
 <br />
 
-<%= link_to 'New Umvoxq', new_umvoxq_path %>
+<%= link_to 'New Umvoxq', new_post_path %>
+  </body>
+  
+</html>

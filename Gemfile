@@ -14,6 +14,7 @@ gem 'aws-sdk'
 gem 'devise','~>1.4.3'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem 'client_side_validations'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

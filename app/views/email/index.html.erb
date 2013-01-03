@@ -26,7 +26,7 @@
   <% email =post.locations[0].email %>
   <tr>
     <td>Question</td>
-    <td>post.locations.first.name</td>
+    <td><%=  post.locations.first.name %></td>
     <td><%= post.question %></td>
     <td><%=  email_stat.counter%></td>
     <td><%= email_stat.lastsent %></td>

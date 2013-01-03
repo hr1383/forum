@@ -12,7 +12,9 @@
         <table>
           <th>Recently Resolved</th>
           <% if (!@totalclose.nil? and @totalclose.size >0) %>
-
+             <% @totalclose.each do |post| %>
+              <%= render "displaydashboardpost", :post=>post %>            
+            <% end %>
           <% else %>
           <tr><td>Waiting for first.</td></tr>
           <%  end %>
@@ -26,20 +28,7 @@
                <% @totalopen.each do |post| %>
                 <tr>
                   <td> 
-                    <b><%= post.question %></b>
-                  </td>
-                  <td>
-                    <%= post.posttype %>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">
-                    <%= post.description %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>0 backers | <%= post.comments.size %> comments</td>
-                  <td><%= post.created_at %>  </td>
+                     <%= render "displaydashboardpost", :post=>post %>            
                 </tr>
                <% end %>
             </table>
