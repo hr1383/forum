@@ -58364,3 +58364,24 @@ Served asset /application.css - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-02 23:49:36 -0800
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Umvox" for 127.0.0.1 at 2013-01-03 03:13:51 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Umvox"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.3ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.2ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (32.7ms)
+Rendered posts/new.html.erb within layouts/application (57.4ms)
+Rendered shared/_dashboard_button_login.erb (3.0ms)
+Completed 200 OK in 303ms (Views: 130.7ms | ActiveRecord: 11.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-03 03:13:52 -0800
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-03 03:13:52 -0800
+Compiled application.js  (45ms)  (pid 7899)
+Served asset /application.js - 200 OK (88ms)

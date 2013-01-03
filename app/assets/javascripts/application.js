@@ -147,6 +147,25 @@ $("#btnStep1").click(function() {
 //    $("#post_question").attr("disabled",true);
 //    $("#post_description").attr("disabled",true);
 //    $("#post_scenario_").attr("disabled",true);
+var badwords = new Array("shit","fuck","ass","asshole");
+var badwordsset = {};
+var badwordsArray=[];
+for(i=0;i<badwords.length;i++){
+    badwordsset[badwords[i]]=true;
+}
+var found = false;
+var badArray={};
+var descriptionValue = $("#post_description").val().split(" ");
+for(i=0;i<descriptionValue.length;i++){
+    if(badwordsset.hasOwnProperty(descriptionValue[i])){
+        found = true;
+        badwordsArray.push(descriptionValue[i]);
+    }
+}
+if(found){
+    alert("Text contains obsecene words." +badwordsArray);
+    return false;
+}
     $("#divstep2").show();
 //    $('#divestep2').scrollIntoView();
     return false;
