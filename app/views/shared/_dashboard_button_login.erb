@@ -35,6 +35,11 @@
       <% end %>
     </td>
     <td>
+      <% if session['user'] %>
+         <%= link_to session['user'].username, "/members/myprofile" %>
+      <% end %>
+    </td>
+    <td>
     <% if !session['user'] %>
             
          <%= form_tag("/welcome", :method=>:get) do %>
@@ -45,18 +50,9 @@
         <% end %>
        <% else %>
         <td>
-           <%= form_tag ({:controller=>"welcome", :action=>"logout"}) do %>
-              <%= submit_tag "Logout" %>
-          <% end %>
+           <%= link_to "Logout","/welcome/logout" %>
       </td>
     <% end %> 
-    </td>
-    <td>
-      <% if session['user'] %>
-         <%= form_tag ("/members/myprofile") do %>
-            <%= submit_tag "My Profile" %>
-        <% end %>
-      <% end %>
     </td>
   </tr>
   

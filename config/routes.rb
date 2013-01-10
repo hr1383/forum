@@ -34,8 +34,8 @@ root :to => "members#signin"
  end   
   resources :members do
   collection do
-    get   :filldetails,:dashboard,:signin
-    post  :myprofile,:logout,:login,:signin
+    get   :filldetails,:dashboard,:signin,:myprofile
+    post  :logout,:login,:signin
     put :updateprofile
   end
 end
