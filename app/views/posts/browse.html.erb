@@ -30,13 +30,14 @@
       <% end %>
    <% end %>     
   <%  if @returnsearch != true %>       
-   <p><b>Can't find , check out the directory below.</b></p>       
-   <table>     
-   <% Category.all.each do |category| -%>
-     <tr>
-       <td><%= link_to category.name,"/" %>
-         <p><%=   category.description %></p></td>
-     </tr>
-   <% end %>
-   </table>
+     <p><b>Can't find , check out the directory below.</b></p>       
+     <table>     
+     <% Category.all.each do |category| -%>
+       <tr>
+         <td><%= link_to category.name,"/" %>
+           <p><%=   category.description %></p></td>
+       </tr>
+     <% end %>
+     </table>  
+   <% end %>  
 </div>
