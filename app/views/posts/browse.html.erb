@@ -1,0 +1,43 @@
+
+<div>
+  <p>Browse Vox</p>
+  <%= form_tag("/posts/browse", :method=>:get) do %>
+      <p>
+        <%= hidden_field_tag :type,"location" %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+      
+     <%  if @returnsearch == true %> 
+      <% unless  @locationGroupByName.nil?%>
+      <table border="1">
+        <% @locationGroupByName.keys.each do |key| %>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Total Vox</th>
+          </tr>
+          <tr>
+            <td><p><b><%= @locationGroupByName[key][2]  %></b></p><%=  key %></td>
+            <td><%= @locationGroupByName[key][1] %></td>
+            <td><%= @locationGroupByName[key][0] %></td>
+          </tr>
+        <% end %>
+      </table>
+      <% else %>
+        <p> No Results Found</p>
+      <% end %>
+   <% end %>     
+  <%  if @returnsearch != true %>       
+   <p><b>Can't find , check out the directory below.</b></p>       
+   <table>     
+   <% Category.all.each do |category| -%>
+     <tr>
+       <td><%= link_to category.name,"/" %>
+         <p><%=   category.description %></p></td>
+     </tr>
+   <% end %>
+   </table>
+   <%  if @returnsearch == true %> 
+</div>

@@ -29,11 +29,6 @@
         <%= f.text_area :description %>
       </div>
       <div class="field">
-        <b> <%= f.label :category %><br /></b>
-        <%= f.collection_select :category, Category.all, :name, :name %>
-      </div>
-
-      <div class="field">
          <% if !@post.scenario.nil? -%>
           <b> <%= f.label :scenario %><br /></b>
             <% Scenarios.all.each do |scenario| -%>
@@ -91,6 +86,9 @@
         <tr>
           <td> Email <%= text_field :full_add, :email%> </td>
           <td> Website <%= text_field :full_add, :website%> </td>
+        </tr>
+        <tr>
+          <td>Category <%= select_tag "Category", options_from_collection_for_select(Category.all, "name", "name") %></td>
         </tr>
 
       </table>

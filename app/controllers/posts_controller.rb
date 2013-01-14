@@ -125,10 +125,44 @@ class PostsController < ApplicationController
   end
   
   def search
-    @search = Post.search do
-    fulltext params[:search]
+      @search = Post.search do
+        fulltext params[:search]
+      end
+      @posts = @search.results
   end
-  @posts = @search.results
-  end
+  
 
+  def browse
+    unless params[:type].nil?
+      #:type is always location
+     @search = Location.search do
+       fulltext params[:search]
+     end
+     
+     locations = @search.results
+     
+     @locationGroupByName={}
+    unless locations.nil?
+     locations.each do |location|
+       if @locationGroupByName[location.address].nil?
+         @locationGroupByName[location.address] = [1,location.category,location.name]
+         puts @locationGroupByName
+       else
+         someObj = @locationGroupByName[location.address]
+         someObj[0] = someObj[0].to_i+1
+         @locationGroupByName[location.address] = someObj
+         puts @locationGroupByName
+       end
+     end
+   end
+   puts @locationGroupByName
+#     @posts = Array.new
+#     unless locations.nil?
+#       locations.each do |location|
+#         @posts.push(Post.find(location.post_id))
+#       end
+       @returnsearch =true
+#    end
+    end
+  end  
 end

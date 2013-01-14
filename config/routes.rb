@@ -28,7 +28,8 @@ root :to => "members#signin"
   end
  resources :posts do
    collection do
-     get :search
+     get :search,:browse
+     post :browse
    end
    resources :comments
  end   

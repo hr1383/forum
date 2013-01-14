@@ -79,9 +79,10 @@ $("#btn_new_addr").click(function() {
          $("#post_locations_attributes_0_zipcode").val($("#full_add_zipcode").val());
          $("#post_locations_attributes_0_email").val($("#full_add_email").val());
          $("#post_locations_attributes_0_website").val($("#full_add_website").val());
-//         $("#post_locations_attributes_0_category").val($("#full_add_category").val());
+         $("#post_locations_attributes_0_category").val($("#Category").val());
+         alert($("#post_locations_attributes_0_category").val());
         var output = $("#post_locations_attributes_0_name").val()+"<br/>"+$("#post_locations_attributes_0_address").val()+"<br/>"+
-                      $("#post_locations_attributes_0_city")+"<br/>"+$("#post_locations_attributes_0_zipcode").val()+"<br/>";
+                      $("#post_locations_attributes_0_city")+"<br/>"+$("#post_locations_attributes_0_zipcode").val()+"<br/>"+$("#post_locations_attributes_0_category").val();
         
          $("#lbl_company").html("Company"+output);
          return false;
