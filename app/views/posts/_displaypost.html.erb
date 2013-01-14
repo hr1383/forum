@@ -42,7 +42,7 @@
       Service Info
       Company <% post.company %>
       Category: 
-      <% if !post.locations.first.category.nil? -%>
+      <% unless post.locations.first.category.nil? -%>
         <%= post.locations.first.category %>
       <% end -%>
     </td>

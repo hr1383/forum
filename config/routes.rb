@@ -15,8 +15,8 @@ Umvox::Application.routes.draw do
 root :to => "members#signin"
  resources :welcome do
    collection do
-    post :logout, :login
-    get  :callback
+    post  :login
+    get  :callback,:logout
    end
  end
 
