@@ -11,14 +11,14 @@
         <%= submit_tag "Browse Vox" %>
       <% end %>
     </td>
-    <%#*<td>%>
-      <%# if session['user'] %>
-       <%#= form_tag("/posts", :method=>:get) do %>
-        <%#= submit_tag "My Umvox" %>
-      <%# end %>
-      <%# end %>
-     <%#*</td>%>
-      
+    <td>
+      <% if session['user'] %>
+       <%= form_tag("/posts", :method=>:get) do %>
+        <%= submit_tag "My Umvox" %>
+      <% end %>
+      <% end %>
+     </td>
+     <% end %> 
     <%#*<td>%>
       <%#= form_tag("/posts", :method=>:get) do %>
         <%#= hidden_field_tag "all", 'true'%>  
