@@ -80,11 +80,15 @@ class MembersController < ApplicationController
   end
   
   def dashboard
-    @graph = Koala::Facebook::API.new(session["access_token"])
-    
-    
-    checkinlist = @graph.get_connections('me','checkins')
+    graph = Koala::Facebook::API.new(session["access_token"])
+    puts session["access_token"]
+    puts "session token"
+    puts graph
+    puts "graph_object"
+    checkinlist = graph.get_connections('me','checkins')
     puts checkinlist
+    puts checkinlist.size
+    puts "checking list"
     @checkinarr = Array.new
     unless checkinlist.nil?
       checkinlist.each do |checkin|
