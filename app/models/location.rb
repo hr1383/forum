@@ -1,9 +1,9 @@
 class Location < ActiveRecord::Base
-  belongs_to :posts
+  belongs_to :post
   searchable do
   text :name
 end
-#  attr_accessor :address,:category,:name,:zipcode,:tel,:city,:email,:website
+#  attr_accessible :address,:category,:name,:zipcode,:tel,:city,:email,:website
   def setValues(result)
     puts result
     self.address = result["address"]

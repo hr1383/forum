@@ -43,7 +43,7 @@
       Company <% post.company %>
       Category: 
       <% unless post.locations.first.category.nil? -%>
-        <%= post.locations.first.category %>
+        <%= post.location.category %>
       <% end -%>
     </td>
   </tr>

@@ -42,17 +42,25 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
+    puts params
     @post = Post.new
     @post.scenario=[]
     @post.compensation=[]
-#    @locations = []
-#    @post.category=[]
     unless session[:user].nil?
       @post.user_id=session[:user].id
       puts "setting user id"
     end
     @post.detailinfos.build
-    @post.locations.build
+    unless params[:name].nil? and params[:addr].nil?
+      loc = Location.new
+      loc.address = params[:addr].nil? ? "" :params[:addr]
+      loc.name = params[:name].nil? ? "" :params[:name]
+      loc.zipcode = params[:zip].nil? ? "" : params[:zip]
+      loc.city = params[:city].nil? ? "" : params[:city]
+      @post.location=loc
+    else
+      @post.build_location
+    end
     3.times {@post.assets.build}
     respond_to do |format|
       format.html # new.html.erb

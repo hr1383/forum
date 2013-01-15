@@ -38,20 +38,20 @@ $("#post_posttype_complaint").change(function() {
 });
 $(function(){
 $('#location_select').live('click', function(event){
-    event.preventDefault();
-    alert("hello");
-    data = $(this).attr('name')+"<br/>"+$(this).attr('address')+"<br/>"+$(this).attr('phone')+"<br/>"
-    alert(data);
-$("#lbl_company").html("Company<br/>"+data)
-         $("#post_locations_attributes_0_name").val($(this).attr('name'));
-         $("#post_locations_attributes_0_address").val($(this).attr('address'));
-         $("#post_locations_attributes_0_tel").val($(this).attr('phone'));
-         $("#post_locations_attributes_0_city").val($(this).attr('city'));
-         $("#post_locations_attributes_0_zipcode").val($(this).attr('zipcode'));
-         $("#post_locations_attributes_0_email").val($(this).attr('email'));
-         $("#post_locations_attributes_0_website").val($(this).attr('website'));
-         $("#post_locations_attributes_0_category").val($(this).attr('category'));
+            event.preventDefault();
+            data = $(this).attr('name')+"<br/>"+$(this).attr('address')+"<br/>"+$(this).attr('phone')+"<br/>"
+         $("#lbl_company").html("Company<br/>"+data)
+         $("#post_location_attributes_name").val($(this).attr('name'));
+         alert($("#post_location_attributes_name").val());
+         $("#post_location_attributes_address").val($(this).attr('address'));
+         $("#post_location_attributes_tel").val($(this).attr('phone'));
+         $("#post_location_attributes_city").val($(this).attr('city'));
+         $("#post_location_attributes_zipcode").val($(this).attr('zipcode'));
+         $("#post_location_attributes_email").val($(this).attr('email'));
+         $("#post_location_attributes_website").val($(this).attr('website'));
+         $("#post_location_attributes_category").val($(this).attr('category'));
     $("#locations").empty();
+    alert($("#post_location_attributes_name").val());
     
 });
 });
@@ -72,17 +72,17 @@ $(function() {
 $("#btn_new_addr").click(function() {
     alert("inside")
          name= $("#full_add_name").val();
-         $("#post_locations_attributes_0_name").val(name);
-         $("#post_locations_attributes_0_address").val($("#full_add_address").val());
+         $("#post_location_attributes_name").val(name);
+         $("#post_location_attributes_address").val($("#full_add_address").val());
 //         $("#post_locations_attributes_0_tel").val($("#full_add_tel").val());
-         $("#post_locations_attributes_0_city").val($("#full_add_city").val());
-         $("#post_locations_attributes_0_zipcode").val($("#full_add_zipcode").val());
-         $("#post_locations_attributes_0_email").val($("#full_add_email").val());
-         $("#post_locations_attributes_0_website").val($("#full_add_website").val());
-         $("#post_locations_attributes_0_category").val($("#Category").val());
-         alert($("#post_locations_attributes_0_category").val());
-        var output = $("#post_locations_attributes_0_name").val()+"<br/>"+$("#post_locations_attributes_0_address").val()+"<br/>"+
-                      $("#post_locations_attributes_0_city")+"<br/>"+$("#post_locations_attributes_0_zipcode").val()+"<br/>"+$("#post_locations_attributes_0_category").val();
+         $("#post_location_attributes_city").val($("#full_add_city").val());
+         $("#post_location_attributes_zipcode").val($("#full_add_zipcode").val());
+         $("#post_location_attributes_email").val($("#full_add_email").val());
+         $("#post_location_attributes_website").val($("#full_add_website").val());
+         $("#post_location_attributes_category").val($("#Category").val());
+         alert($("#post_location_attributes_category").val());
+        var output = $("#post_location_attributes_name").val()+"<br/>"+$("#post_location_attributes_address").val()+"<br/>"+
+                      $("#post_location_attributes_city")+"<br/>"+$("#post_location_attributes_zipcode").val()+"<br/>"+$("#post_location_attributes_category").val();
         
          $("#lbl_company").html("Company"+output);
          return false;

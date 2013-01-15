@@ -53,14 +53,11 @@ class MembersController < ApplicationController
     puts "current user nil"
     puts session[:new_user]
     if !session['access_token'].nil?
-      graph = Koala::Facebook::API.new(session["access_token"])
-      userinfo =  graph.get_object("me")
+      @graph = Koala::Facebook::API.new(session["access_token"])
+      userinfo =  @graph.get_object("me")
       fb_id=userinfo['id']
-      puts "fbId is " + fb_id.to_s
       if fb_id
        userObj = User.find_all_by_fbid(fb_id.to_s)  
-       puts 'user_obj ' +userObj.first.to_s
-       puts userObj.first.nil?
         if userObj.first.nil?
           redirect_to '/members/filldetails'
         else
@@ -83,7 +80,28 @@ class MembersController < ApplicationController
   end
   
   def dashboard
+    @graph = Koala::Facebook::API.new(session["access_token"])
+    puts @graph.get_connections('me','checkins')
     
+    checkinlist = @graph.get_connections('me','checkins')
+    @checkinarr = Array.new
+    unless checkinlist.nil?
+      checkinlist.each do |checkin|
+        place = checkin["place"]
+        puts place
+        puts place["address"]
+        loc = Location.new
+        loc.name = place["name"]
+        location = place["location"]
+        unless location.nil?
+          loc.city = location["city"]
+          loc.address = location["street"]
+          loc.zipcode = location["zip"]
+          puts loc
+        end
+        @checkinarr << loc
+      end
+    end
     @totalclose = Post.latest_closed
     @totalopen = Post.latest_open
     unless session[:user].nil?

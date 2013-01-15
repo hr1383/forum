@@ -52,9 +52,14 @@
 
 <div id="divstep2" style="display:none">
   
-   <div class="field">
-      <b> <%= f.hidden_field :company,:id=>"post_company" %><br /></b>
-    </div>
+   <%#*<div class="field">%>
+     
+      <%#*<b> <%= f.hidden_field :company,:id=>"post_company" %>
+  <%#*<br /></b>%>
+    <%#*</div>%>
+  <% unless @post.location.nil? and @post.location.name.nil? %>
+  <b><%= @post.location.name %><br/><%=@post.location.address %><br/><%=@post.location.city %><br/> <%=@post.location.zipcode %></b>
+  <% else %>
     <table>
       <tr>
       <th>Company</th>
@@ -95,6 +100,8 @@
       <p><%= button_tag :save,:id=>"btn_new_addr" %>
     </div>
   </div>
+  <%#end of unless%>
+ <% end %> 
   <div id="locationform"></div>
   <div id="locations">
   </div>
@@ -132,7 +139,7 @@
 
 <%= f.hidden_field :user_id  %>
 
-<%= f.fields_for :locations do|location_form|  %>
+<%= f.fields_for :location do|location_form|  %>
   <%= location_form.hidden_field :name %>
   <%= location_form.hidden_field :address %>
   <%= location_form.hidden_field :tel %>

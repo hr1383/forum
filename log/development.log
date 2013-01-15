@@ -62428,3 +62428,1729 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Wel
   
 
 Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (13.4ms)
+
+
+Started GET "/welcome/logout" for 127.0.0.1 at 2013-01-14 19:47:37 -0800
+  Processing by WelcomeController#logout as HTML
+Rendered welcome/index.erb within layouts/welcome (13.7ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 19:47:37 -0800
+Served asset /application.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 19:47:37 -0800
+Served asset /application.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/facebooklogin.png" for 127.0.0.1 at 2013-01-14 19:47:37 -0800
+Served asset /facebooklogin.png - 304 Not Modified (1ms)
+
+
+Started POST "/welcome/login" for 127.0.0.1 at 2013-01-14 19:47:44 -0800
+  Processing by WelcomeController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "x"=>"52", "y"=>"18"}
+Redirected to https://graph.facebook.com/oauth/authorize?client_id=151026538323899&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fwelcome%2Fcallback%2F&scope=friends_checkins
+Completed 302 Found in 7ms
+
+
+Started GET "/welcome/callback/?code=AQArrhCJeT7AT6y7H_v1Ufdf7dnlsG0hPmWEr5CpKG7-QxUbkVpQWUgc_o6dTZqDK609qMovGs4TK0Tz1UgR7AgdIbdERy1AHsRm6HkNCq9ZO3zzFFbz0FBlW-S_WitBqa6vKEhH5nVhG_xbqTcZw41kXJsFN1a9tJ5JRblKLfyhmCfB3c2dJBN40D8dtT0xUYuKJp8cXoPk-oV56677Fwuy" for 127.0.0.1 at 2013-01-14 19:47:47 -0800
+  Processing by WelcomeController#callback as HTML
+  Parameters: {"code"=>"AQArrhCJeT7AT6y7H_v1Ufdf7dnlsG0hPmWEr5CpKG7-QxUbkVpQWUgc_o6dTZqDK609qMovGs4TK0Tz1UgR7AgdIbdERy1AHsRm6HkNCq9ZO3zzFFbz0FBlW-S_WitBqa6vKEhH5nVhG_xbqTcZw41kXJsFN1a9tJ5JRblKLfyhmCfB3c2dJBN40D8dtT0xUYuKJp8cXoPk-oV56677Fwuy"}
+Redirected to http://localhost:3000/members/signin
+Completed 302 Found in 822ms
+
+
+Started GET "/members/signin" for 127.0.0.1 at 2013-01-14 19:47:48 -0800
+  Processing by MembersController#signin as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`fbid` = '659276550'[0m
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 394ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 19:47:49 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (78.9ms)
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.6ms)
+Rendered members/dashboard.erb within layouts/application (97.3ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 165ms (Views: 99.1ms | ActiveRecord: 7.3ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 19:47:49 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 19:47:49 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/welcome/logout" for 127.0.0.1 at 2013-01-14 19:47:51 -0800
+  Processing by WelcomeController#logout as HTML
+Rendered welcome/index.erb within layouts/welcome (0.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 19:47:51 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 19:47:51 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebooklogin.png" for 127.0.0.1 at 2013-01-14 19:47:52 -0800
+Served asset /facebooklogin.png - 304 Not Modified (0ms)
+
+
+Started GET "/welcome/login" for 127.0.0.1 at 2013-01-14 20:02:06 -0800
+
+AbstractController::ActionNotFound (The action 'show' could not be found for WelcomeController):
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (41.7ms)
+
+
+Started POST "/welcome/login" for 127.0.0.1 at 2013-01-14 20:02:15 -0800
+  Processing by WelcomeController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "x"=>"22", "y"=>"9"}
+Redirected to https://graph.facebook.com/oauth/authorize?client_id=151026538323899&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fwelcome%2Fcallback%2F&scope=user_checkins
+Completed 302 Found in 6ms
+
+
+Started GET "/welcome/callback/?code=AQAk1991KaQ-WxfaLLTD6cml05VaLjzQTbcITseyWbJs4PnqxB4xNEc2s20TMWNhC-oTjsvk9In1JYOM8g19z07joacK2IdFuxi8su4dGZtqQx6JhSVtdsh3HD9JfvugHyddE6t-0Z-vTGHvaVshBcnXBW4wvyB0OfqllV_ESYn25snQ5neQ9ZXzNzMZdb29d4P_dPBCWWvCjY7tlt7jHTJ4" for 127.0.0.1 at 2013-01-14 20:02:19 -0800
+  Processing by WelcomeController#callback as HTML
+  Parameters: {"code"=>"AQAk1991KaQ-WxfaLLTD6cml05VaLjzQTbcITseyWbJs4PnqxB4xNEc2s20TMWNhC-oTjsvk9In1JYOM8g19z07joacK2IdFuxi8su4dGZtqQx6JhSVtdsh3HD9JfvugHyddE6t-0Z-vTGHvaVshBcnXBW4wvyB0OfqllV_ESYn25snQ5neQ9ZXzNzMZdb29d4P_dPBCWWvCjY7tlt7jHTJ4"}
+Redirected to http://localhost:3000/members/signin
+Completed 302 Found in 707ms
+
+
+Started GET "/members/signin" for 127.0.0.1 at 2013-01-14 20:02:20 -0800
+  Processing by MembersController#signin as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`fbid` = '659276550'[0m
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 299ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 20:02:21 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (100.8ms)
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (2.0ms)
+Rendered members/dashboard.erb within layouts/application (119.0ms)
+Rendered shared/_dashboard_button_login.erb (2.1ms)
+Completed 200 OK in 191ms (Views: 126.9ms | ActiveRecord: 7.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 20:02:21 -0800
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 20:02:21 -0800
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/welcome/logout" for 127.0.0.1 at 2013-01-14 20:03:18 -0800
+  Processing by WelcomeController#logout as HTML
+Rendered welcome/index.erb within layouts/welcome (0.2ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 20:03:18 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 20:03:18 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebooklogin.png" for 127.0.0.1 at 2013-01-14 20:03:18 -0800
+Served asset /facebooklogin.png - 304 Not Modified (1ms)
+
+
+Started POST "/welcome/login" for 127.0.0.1 at 2013-01-14 20:03:20 -0800
+  Processing by WelcomeController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "x"=>"41", "y"=>"6"}
+Redirected to https://graph.facebook.com/oauth/authorize?client_id=151026538323899&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fwelcome%2Fcallback%2F&scope=user_checkins
+Completed 302 Found in 0ms
+
+
+Started GET "/welcome/callback/?code=AQAk6m7z_LGAq-ZLXoKd-4moyLsgkC4hWTgFJCSMdLzRvcyxb-j2MvfMeo_Ajk_gXpCqOzY8zj9b5NbTZqHlZIZzA8sudEXLbI9fo2C00T5jJT7mNsGS3mMPublGIviJulb73FLGUF5x5pXD0KoLI6gJoiT87Ncjqtao8-BQkN7cDUO6LBx6eHeL0xaJW-fehyNJWdDkkPmQPu_PjB0-cjt4" for 127.0.0.1 at 2013-01-14 20:03:21 -0800
+  Processing by WelcomeController#callback as HTML
+  Parameters: {"code"=>"AQAk6m7z_LGAq-ZLXoKd-4moyLsgkC4hWTgFJCSMdLzRvcyxb-j2MvfMeo_Ajk_gXpCqOzY8zj9b5NbTZqHlZIZzA8sudEXLbI9fo2C00T5jJT7mNsGS3mMPublGIviJulb73FLGUF5x5pXD0KoLI6gJoiT87Ncjqtao8-BQkN7cDUO6LBx6eHeL0xaJW-fehyNJWdDkkPmQPu_PjB0-cjt4"}
+Redirected to http://localhost:3000/members/signin
+Completed 302 Found in 740ms
+
+
+Started GET "/members/signin" for 127.0.0.1 at 2013-01-14 20:03:21 -0800
+  Processing by MembersController#signin as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`fbid` = '659276550'[0m
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 2925ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 20:03:24 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (58.2ms)
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.6ms)
+Rendered members/dashboard.erb within layouts/application (65.6ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 100ms (Views: 66.3ms | ActiveRecord: 6.8ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 20:03:25 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 20:03:25 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 20:20:11 -0800
+  Processing by MembersController#dashboard as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `get_connections' for nil:NilClass):
+  app/controllers/members_controller.rb:83:in `dashboard'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (49.6ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.8ms)
+
+
+Started GET "/welcome/logout" for 127.0.0.1 at 2013-01-14 20:20:23 -0800
+  Processing by WelcomeController#logout as HTML
+Rendered welcome/index.erb within layouts/welcome (0.0ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 20:20:23 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 20:20:23 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/facebooklogin.png" for 127.0.0.1 at 2013-01-14 20:20:23 -0800
+Served asset /facebooklogin.png - 304 Not Modified (0ms)
+
+
+Started POST "/welcome/login" for 127.0.0.1 at 2013-01-14 20:20:25 -0800
+  Processing by WelcomeController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "x"=>"59", "y"=>"9"}
+Redirected to https://graph.facebook.com/oauth/authorize?client_id=151026538323899&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fwelcome%2Fcallback%2F&scope=user_checkins
+Completed 302 Found in 0ms
+
+
+Started GET "/welcome/callback/?code=AQAX68abubvTcJUziPA4oewk3Xl54wXlCgH0SPk-tm4m9SK704jW3LbpCrantEO5eTG5vIhaJ-hsbytw0oJpXV-ia_BvNmJFPjqqa6ezGXOC6IDnx0SbprMHX7HVDaFhHcxjdVAqLxVWRJkHVtidrtWo65qaiuA_Kb0G74wlNFWgpNpNthXkS2El4qMZ2wHhZPSAD4mI45jBXyYSZvGXqji8" for 127.0.0.1 at 2013-01-14 20:20:26 -0800
+  Processing by WelcomeController#callback as HTML
+  Parameters: {"code"=>"AQAX68abubvTcJUziPA4oewk3Xl54wXlCgH0SPk-tm4m9SK704jW3LbpCrantEO5eTG5vIhaJ-hsbytw0oJpXV-ia_BvNmJFPjqqa6ezGXOC6IDnx0SbprMHX7HVDaFhHcxjdVAqLxVWRJkHVtidrtWo65qaiuA_Kb0G74wlNFWgpNpNthXkS2El4qMZ2wHhZPSAD4mI45jBXyYSZvGXqji8"}
+Redirected to http://localhost:3000/members/signin
+Completed 302 Found in 838ms
+
+
+Started GET "/members/signin" for 127.0.0.1 at 2013-01-14 20:20:27 -0800
+  Processing by MembersController#signin as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`fbid` = '659276550'[0m
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 428ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 20:20:28 -0800
+  Processing by MembersController#dashboard as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `get_connections' for nil:NilClass):
+  app/controllers/members_controller.rb:83:in `dashboard'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (49.6ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 20:21:38 -0800
+  Processing by MembersController#dashboard as HTML
+Completed 500 Internal Server Error in 6467ms
+
+NameError (undefined local variable or method `checkinglist' for #<MembersController:0x00000103e7f208>):
+  app/controllers/members_controller.rb:89:in `dashboard'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.3ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 20:21:58 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (14.3ms)
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.6ms)
+Rendered members/dashboard.erb within layouts/application (21.5ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 4385ms (Views: 23.2ms | ActiveRecord: 7.3ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 20:22:03 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 20:22:03 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 23:16:35 -0800
+  Processing by MembersController#dashboard as HTML
+ERROR: compiling _app_views_members_dashboard_erb__807708995286698434_2187068460 RAISED /Users/hrastogi/rails-project/forum/app/views/members/dashboard.erb:32: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/hrastogi/rails-project/forum/app/views/members/dashboard.erb:34: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_members_dashboard_erb__807708995286698434_2187068460(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "members/dashboard";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('    <h3>Welcome ');@output_buffer.append= ( (session[:user]).firstname);@output_buffer.safe_concat('</h3>
+    <p>What is the matter ? </p>
+    ');@output_buffer.append=  form_tag("/posts/search", :method=>:get) do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <p>
+         ');@output_buffer.append= ( hidden_field_tag :type,"post" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        ');@output_buffer.append= ( text_field_tag :search, params[:search] );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        ');@output_buffer.append= ( submit_tag "Search", :name => nil );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </p>
+');     end 
+     if session[:user] 
+     if (!@totalclose.nil? and @totalclose.size >0) 
+@output_buffer.safe_concat('                <th>Recently Resolved</th>  
+            <table>
+');              @totalclose.each do |post| 
+@output_buffer.safe_concat('              <tr><td> ');@output_buffer.append= ( render "displaydashboardpost", :post=>post );@output_buffer.safe_concat(' </td></tr>           
+');             end 
+@output_buffer.safe_concat('            </table>  
+');      end 
+     if (!@totalopen.nil? and @totalopen.size >0) 
+@output_buffer.safe_concat('          <p>Latest Vox</p>
+          <table border="1px solid black" border-collapse="collapse">
+');              @totalopen.each do |post| 
+@output_buffer.safe_concat('              <tr>
+                <td> 
+                   ');@output_buffer.append= ( render "displaydashboardpost", :post=>post );@output_buffer.safe_concat('            
+');@output_buffer.safe_concat('                </td>  
+              </tr>
+');              end 
+@output_buffer.safe_concat('          </table>
+');     end 
+@output_buffer.safe_concat('    </table>   ');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/hrastogi/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/sunspot_rails-1.3.3/lib/sunspot/rails/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:416:in `_run__3001954187608197059__process_action__1637971342698500744__callbacks'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/client_side_validations-3.2.1/lib/client_side_validations/middleware.rb:21:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.6/lib/warden/manager.rb:35:in `block in call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.6/lib/warden/manager.rb:34:in `catch'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.6/lib/warden/manager.rb:34:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/etag.rb:23:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/conditionalget.rb:25:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/sendfile.rb:101:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/methodoverride.rb:24:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/runtime.rb:17:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/lock.rb:15:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/content_length.rb:14:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.1.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.3.8/lib/rack/handler/webrick.rb:59:in `service'
+/Users/hrastogi/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/hrastogi/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/hrastogi/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered members/dashboard.erb within layouts/application (25.6ms)
+Completed 500 Internal Server Error in 4420ms
+
+ActionView::Template::Error (/Users/hrastogi/rails-project/forum/app/views/members/dashboard.erb:32: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/hrastogi/rails-project/forum/app/views/members/dashboard.erb:34: syntax error, unexpected $end, expecting keyword_end):
+    29:           </table>
+    30:     <% end %>
+    31:     </table>   
+  
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 23:17:26 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148[0m
+Rendered members/_displaydashboardpost.html.erb (13.7ms)
+  [1m[35mLocation Load (0.2ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147[0m
+Rendered members/_displaydashboardpost.html.erb (1.5ms)
+Rendered members/dashboard.erb within layouts/application (21.6ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 4301ms (Views: 23.6ms | ActiveRecord: 6.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 23:17:30 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 23:17:30 -0800
+Served asset /application.js - 304 Not Modified (35ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 23:38:02 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (13.3ms)
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (2.0ms)
+Rendered members/dashboard.erb within layouts/application (59.8ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 4363ms (Views: 61.5ms | ActiveRecord: 6.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 23:38:07 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 23:38:07 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 23:40:50 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148[0m
+Rendered members/_displaydashboardpost.html.erb (13.7ms)
+  [1m[35mLocation Load (0.2ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147[0m
+Rendered members/_displaydashboardpost.html.erb (1.4ms)
+Rendered members/dashboard.erb within layouts/application (23.0ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 3922ms (Views: 24.9ms | ActiveRecord: 6.8ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 23:40:54 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 23:40:54 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 23:43:00 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (14.1ms)
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.6ms)
+Rendered members/dashboard.erb within layouts/application (22.8ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 3740ms (Views: 24.6ms | ActiveRecord: 6.9ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 23:43:04 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 23:43:04 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 23:43:37 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148[0m
+Rendered members/_displaydashboardpost.html.erb (14.1ms)
+  [1m[35mLocation Load (0.2ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147[0m
+Rendered members/_displaydashboardpost.html.erb (1.5ms)
+Rendered members/dashboard.erb within layouts/application (23.6ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 5627ms (Views: 24.7ms | ActiveRecord: 7.4ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 23:43:43 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 23:43:43 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-14 23:44:22 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (48.1ms)
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.5ms)
+Rendered members/dashboard.erb within layouts/application (57.8ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 15728ms (Views: 60.7ms | ActiveRecord: 7.1ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-14 23:44:38 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-14 23:44:38 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:11:20 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148[0m
+Rendered members/_displaydashboardpost.html.erb (13.9ms)
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147[0m
+Rendered members/_displaydashboardpost.html.erb (1.5ms)
+Rendered members/dashboard.erb within layouts/application (24.2ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 4097ms (Views: 26.2ms | ActiveRecord: 6.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:11:25 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:11:25 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:13:27 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (13.5ms)
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.4ms)
+Rendered members/dashboard.erb within layouts/application (23.0ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 3612ms (Views: 25.1ms | ActiveRecord: 6.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:13:31 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:13:31 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:14:00 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148[0m
+Rendered members/_displaydashboardpost.html.erb (14.3ms)
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147[0m
+Rendered members/_displaydashboardpost.html.erb (1.6ms)
+Rendered members/dashboard.erb within layouts/application (24.2ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 4568ms (Views: 59.4ms | ActiveRecord: 7.3ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:14:05 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:14:05 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:17:53 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (13.7ms)
+  [1m[36mLocation Load (34.1ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (35.9ms)
+Rendered members/dashboard.erb within layouts/application (59.7ms)
+Completed 500 Internal Server Error in 3819ms
+
+ActionView::Template::Error (Missing partial members/list_category, application/list_category with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/Users/hrastogi/rails-project/forum/app/views"
+  * "/Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.9/app/views"
+):
+    71:               <% end %>
+    72:           </td>
+    73:           <td>
+    74:             <%= render "list_category" %>
+    75:           </td>
+    76:         </tr>   
+    77:     <% end %>
+  app/views/members/dashboard.erb:74:in `_app_views_members_dashboard_erb__807708995286698434_2179250260'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:19:14 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148[0m
+Rendered members/_displaydashboardpost.html.erb (13.7ms)
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147[0m
+Rendered members/_displaydashboardpost.html.erb (1.6ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (65.4ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 3774ms (Views: 66.6ms | ActiveRecord: 7.4ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:19:18 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:19:18 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:20:41 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148[0m
+Rendered members/_displaydashboardpost.html.erb (13.6ms)
+  [1m[35mLocation Load (0.3ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147[0m
+Rendered members/_displaydashboardpost.html.erb (1.7ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (30.7ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 3692ms (Views: 31.3ms | ActiveRecord: 8.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:20:44 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:20:44 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:34:41 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148[0m
+Rendered members/_displaydashboardpost.html.erb (14.1ms)
+  [1m[35mLocation Load (0.2ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147[0m
+Rendered members/_displaydashboardpost.html.erb (1.5ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (31.8ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 4177ms (Views: 32.7ms | ActiveRecord: 8.1ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:34:45 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:34:45 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-01-15 00:35:01 -0800
+  Processing by PostsController#new as HTML
+  [1m[36mScenarios Load (0.2ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.2ms)[0m  SELECT `compensations`.* FROM `compensations` 
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/_form.html.erb (30.3ms)
+Rendered posts/new.html.erb within layouts/application (31.1ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 150ms (Views: 32.6ms | ActiveRecord: 10.3ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:35:01 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:35:01 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:54:54 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (14.1ms)
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (2.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (31.9ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 3752ms (Views: 32.6ms | ActiveRecord: 10.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:54:58 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:54:58 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:55:19 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (49.0ms)
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.5ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (64.8ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 4769ms (Views: 66.0ms | ActiveRecord: 10.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:55:23 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:55:23 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:55:35 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (14.1ms)
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.7ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (66.3ms)
+Rendered shared/_dashboard_button_login.erb (1.2ms)
+Completed 200 OK in 3284ms (Views: 67.6ms | ActiveRecord: 10.3ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:55:38 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:55:38 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 00:55:54 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 148 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 148
+Rendered members/_displaydashboardpost.html.erb (14.1ms)
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 147 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 147
+Rendered members/_displaydashboardpost.html.erb (1.6ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (30.4ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 3915ms (Views: 31.1ms | ActiveRecord: 10.2ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:55:58 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:55:58 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?name=Killer%20Cafe" for 127.0.0.1 at 2013-01-15 00:56:19 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"name"=>"Killer Cafe"}
+  [1m[35mScenarios Load (0.2ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.2ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/_form.html.erb (29.5ms)
+Rendered posts/new.html.erb within layouts/application (30.0ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 133ms (Views: 31.3ms | ActiveRecord: 10.1ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 00:56:20 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 00:56:20 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Vox" for 127.0.0.1 at 2013-01-15 01:37:48 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Vox"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mScenarios Load (0.2ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.3ms)[0m  SELECT `compensations`.* FROM `compensations` 
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/_form.html.erb (31.5ms)
+Rendered posts/new.html.erb within layouts/application (54.5ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 324ms (Views: 123.7ms | ActiveRecord: 11.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 01:37:49 -0800
+Served asset /application.css - 304 Not Modified (51ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 01:37:49 -0800
+Served asset /application.js - 304 Not Modified (23ms)
+
+
+Started GET "/locations/search?business_name=starbucks&business_city=los%20angeles&business_country=undefined&business_zipcode=90007" for 127.0.0.1 at 2013-01-15 01:52:14 -0800
+  Processing by LocationsController#search as */*
+  Parameters: {"business_name"=>"starbucks", "business_city"=>"los angeles", "business_country"=>"undefined", "business_zipcode"=>"90007"}
+Completed 200 OK in 2149ms (Views: 1.6ms | ActiveRecord: 0.7ms | Solr: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-01-15 01:52:30 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "post"=>{"company"=>"", "posttype"=>"Complaint", "status"=>"Open", "question"=>"this is a test post for new location", "description"=>"can locaad", "scenario"=>["4"], "compensation"=>["Apology"], "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "location_attributes"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}, "company"=>"starbucks", "city"=>"los angeles", "zipcode"=>"90007", "new_address"=>{"address"=>"0"}, "full_add"=>{"name"=>"", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"", "website"=>""}, "Category"=>"Online Store", "commit"=>"Create Post"}
+WARNING: Can't mass-assign protected attributes: location_attributes
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (53.2ms)[0m  [1mINSERT INTO `posts` (`address`, `company`, `compensation`, `created_at`, `description`, `posttype`, `question`, `scenario`, `status`, `updated_at`, `user_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", nil], ["company", ""], ["compensation", ["Apology"]], ["created_at", Tue, 15 Jan 2013 09:52:30 UTC +00:00], ["description", "can locaad"], ["posttype", "Complaint"], ["question", "this is a test post for new location"], ["scenario", ["4"]], ["status", "Open"], ["updated_at", Tue, 15 Jan 2013 09:52:30 UTC +00:00], ["user_id", 4]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `detailinfos` (`created_at`, `description`, `post_id`, `updated_at`) VALUES (?, ?, ?, ?)  [["created_at", Tue, 15 Jan 2013 09:52:30 UTC +00:00], ["description", "my default value"], ["post_id", 149], ["updated_at", Tue, 15 Jan 2013 09:52:30 UTC +00:00]]
+  [1m[32mSOLR Request (8.6ms)[0m  [ path=#<RSolr::Client:0x00000107d03f10> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Post 149</field><field name="type">Post</field><field name="type">ActiveRecord::Base</field><field name="class_name">Post</field><field boost="5" name="question_text">this is a test post for new location</field><field name="description_text">can locaad</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/members/dashboard
+  [1m[32mSOLR Request (44.7ms)[0m  [ path=#<RSolr::Client:0x00000107d03f10> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><commit/>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+Completed 302 Found in 193ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 01:52:30 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+Rendered members/_displaydashboardpost.html.erb (67.7ms)
+Rendered members/dashboard.erb within layouts/application (74.5ms)
+Completed 500 Internal Server Error in 4057ms
+
+ActionView::Template::Error (undefined method `locations' for #<Post:0x000001049d35f0>):
+    1: <p><%=post.locations.first.category %> <b> 
+    2: <%#= post.locations.first.name %>  </b></p>
+    3:                     <p><%= post.question %></p>
+    4:                       <% backer= 0 %>
+  app/views/members/_displaydashboardpost.html.erb:1:in `_app_views_members__displaydashboardpost_html_erb__4357519979960508578_2186149360'
+  app/views/members/dashboard.erb:29:in `block in _app_views_members_dashboard_erb___2821532727777013636_2186524940'
+  app/views/members/dashboard.erb:26:in `_app_views_members_dashboard_erb___2821532727777013636_2186524940'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Vox" for 127.0.0.1 at 2013-01-15 01:57:40 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Vox"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mScenarios Load (0.4ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.5ms)[0m  SELECT `compensations`.* FROM `compensations` 
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/_form.html.erb (27.8ms)
+Rendered posts/new.html.erb within layouts/application (28.3ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 125ms (Views: 29.7ms | ActiveRecord: 9.2ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 01:57:40 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 01:57:40 -0800
+Compiled application.js  (10ms)  (pid 32561)
+Served asset /application.js - 200 OK (25ms)
+
+
+Started GET "/locations/search?business_name=starbucks&business_city=los%20angeles&business_country=undefined&business_zipcode=90034" for 127.0.0.1 at 2013-01-15 01:58:03 -0800
+  Processing by LocationsController#search as */*
+  Parameters: {"business_name"=>"starbucks", "business_city"=>"los angeles", "business_country"=>"undefined", "business_zipcode"=>"90034"}
+Completed 200 OK in 3244ms (Views: 1.9ms | ActiveRecord: 0.7ms | Solr: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-01-15 01:58:18 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "post"=>{"company"=>"", "posttype"=>"Complement", "status"=>"Open", "question"=>",,l,lklklklkl", "description"=>"klk", "scenario"=>["2"], "compensation"=>["Apology"], "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "location_attributes"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}, "company"=>"starbucks", "city"=>"los angeles", "zipcode"=>"90034", "new_address"=>{"address"=>"0"}, "full_add"=>{"name"=>"", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"", "website"=>""}, "Category"=>"Online Store", "commit"=>"Create Post"}
+WARNING: Can't mass-assign protected attributes: location_attributes
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `posts` (`address`, `company`, `compensation`, `created_at`, `description`, `posttype`, `question`, `scenario`, `status`, `updated_at`, `user_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", nil], ["company", ""], ["compensation", ["Apology"]], ["created_at", Tue, 15 Jan 2013 09:58:18 UTC +00:00], ["description", "klk"], ["posttype", "Complement"], ["question", ",,l,lklklklkl"], ["scenario", ["2"]], ["status", "Open"], ["updated_at", Tue, 15 Jan 2013 09:58:18 UTC +00:00], ["user_id", 4]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `detailinfos` (`created_at`, `description`, `post_id`, `updated_at`) VALUES (?, ?, ?, ?)  [["created_at", Tue, 15 Jan 2013 09:58:18 UTC +00:00], ["description", "my default value"], ["post_id", 150], ["updated_at", Tue, 15 Jan 2013 09:58:18 UTC +00:00]]
+  [1m[32mSOLR Request (4.8ms)[0m  [ path=#<RSolr::Client:0x00000107b8bd18> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Post 150</field><field name="type">Post</field><field name="type">ActiveRecord::Base</field><field name="class_name">Post</field><field boost="5" name="question_text">,,l,lklklklkl</field><field name="description_text">klk</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/members/dashboard
+  [1m[32mSOLR Request (8.8ms)[0m  [ path=#<RSolr::Client:0x00000107b8bd18> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><commit/>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+Completed 302 Found in 71ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 01:58:18 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+Rendered members/_displaydashboardpost.html.erb (8.4ms)
+Rendered members/dashboard.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 3726ms
+
+ActionView::Template::Error (undefined method `locations' for #<Post:0x00000107975970>):
+    1: <p><%=post.locations.first.category %> <b> 
+    2: <%#= post.locations.first.name %>  </b></p>
+    3:                     <p><%= post.question %></p>
+    4:                       <% backer= 0 %>
+  app/views/members/_displaydashboardpost.html.erb:1:in `_app_views_members__displaydashboardpost_html_erb__4357519979960508578_2186149360'
+  app/views/members/dashboard.erb:29:in `block in _app_views_members_dashboard_erb___2821532727777013636_2212501140'
+  app/views/members/dashboard.erb:26:in `_app_views_members_dashboard_erb___2821532727777013636_2212501140'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Vox" for 127.0.0.1 at 2013-01-15 02:01:44 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Vox"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mScenarios Load (0.2ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.3ms)[0m  SELECT `compensations`.* FROM `compensations` 
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/_form.html.erb (28.4ms)
+Rendered posts/new.html.erb within layouts/application (28.9ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 127ms (Views: 30.3ms | ActiveRecord: 9.4ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:01:44 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:01:44 -0800
+Compiled application.js  (10ms)  (pid 32561)
+Served asset /application.js - 200 OK (25ms)
+
+
+Started GET "/locations/search?business_name=starbucks&business_city=los%20angeles&business_country=undefined&business_zipcode=90034" for 127.0.0.1 at 2013-01-15 02:02:06 -0800
+  Processing by LocationsController#search as */*
+  Parameters: {"business_name"=>"starbucks", "business_city"=>"los angeles", "business_country"=>"undefined", "business_zipcode"=>"90034"}
+Completed 200 OK in 1431ms (Views: 1.9ms | ActiveRecord: 0.7ms | Solr: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-01-15 02:02:16 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"asd", "description"=>"sdfsdf", "scenario"=>["3"], "compensation"=>["Improvement"], "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "location_attributes"=>{"name"=>"", "address"=>"", "tel"=>"", "city"=>"", "category"=>"", "zipcode"=>"", "email"=>"", "website"=>""}}, "company"=>"starbucks", "city"=>"los angeles", "zipcode"=>"90034", "new_address"=>{"address"=>"0"}, "full_add"=>{"name"=>"", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"", "website"=>""}, "Category"=>"Online Store", "commit"=>"Create Post"}
+WARNING: Can't mass-assign protected attributes: location_attributes
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `posts` (`address`, `company`, `compensation`, `created_at`, `description`, `posttype`, `question`, `scenario`, `status`, `updated_at`, `user_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", nil], ["company", ""], ["compensation", ["Improvement"]], ["created_at", Tue, 15 Jan 2013 10:02:16 UTC +00:00], ["description", "sdfsdf"], ["posttype", "Question"], ["question", "asd"], ["scenario", ["3"]], ["status", "Open"], ["updated_at", Tue, 15 Jan 2013 10:02:16 UTC +00:00], ["user_id", 4]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `detailinfos` (`created_at`, `description`, `post_id`, `updated_at`) VALUES (?, ?, ?, ?)  [["created_at", Tue, 15 Jan 2013 10:02:16 UTC +00:00], ["description", "my default value"], ["post_id", 151], ["updated_at", Tue, 15 Jan 2013 10:02:16 UTC +00:00]]
+  [1m[32mSOLR Request (5.4ms)[0m  [ path=#<RSolr::Client:0x00000107bd1250> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Post 151</field><field name="type">Post</field><field name="type">ActiveRecord::Base</field><field name="class_name">Post</field><field boost="5" name="question_text">asd</field><field name="description_text">sdfsdf</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/email/configmail
+  [1m[32mSOLR Request (9.7ms)[0m  [ path=#<RSolr::Client:0x00000107bd1250> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><commit/>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+Completed 302 Found in 73ms
+
+
+Started GET "/email/configmail" for 127.0.0.1 at 2013-01-15 02:02:16 -0800
+  Processing by EmailController#configmail as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 151]]
+Rendered email/configmail.html.erb within layouts/application (1.3ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 7.2ms | ActiveRecord: 4.0ms | Solr: 15.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:02:16 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:02:16 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/email/saveconfig" for 127.0.0.1 at 2013-01-15 02:02:19 -0800
+  Processing by EmailController#saveconfig as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "postId"=>"151", "counter"=>"3", "commit"=>"Save"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `email_stats` (`call`, `counter`, `created_at`, `lastsent`, `postId`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?)[0m  [["call", nil], ["counter", 3], ["created_at", Tue, 15 Jan 2013 10:02:19 UTC +00:00], ["lastsent", nil], ["postId", 151], ["updated_at", Tue, 15 Jan 2013 10:02:19 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 11ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 02:02:19 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2[0m
+Rendered members/_displaydashboardpost.html.erb (8.0ms)
+Rendered members/dashboard.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 4146ms
+
+ActionView::Template::Error (undefined method `locations' for #<Post:0x0000010794a2e8>):
+    1: <p><%=post.locations.first.category %> <b> 
+    2: <%#= post.locations.first.name %>  </b></p>
+    3:                     <p><%= post.question %></p>
+    4:                       <% backer= 0 %>
+  app/views/members/_displaydashboardpost.html.erb:1:in `_app_views_members__displaydashboardpost_html_erb__4357519979960508578_2186149360'
+  app/views/members/dashboard.erb:29:in `block in _app_views_members_dashboard_erb___2821532727777013636_2212501140'
+  app/views/members/dashboard.erb:26:in `_app_views_members_dashboard_erb___2821532727777013636_2212501140'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 02:03:39 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 151 LIMIT 1[0m
+Rendered members/_displaydashboardpost.html.erb (10.1ms)
+Rendered members/dashboard.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 3858ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    1: <p><%=post.location.category %> <b> 
+    2: <%#= post.locations.first.name %>  </b></p>
+    3:                     <p><%= post.question %></p>
+    4:                       <% backer= 0 %>
+  app/views/members/_displaydashboardpost.html.erb:1:in `_app_views_members__displaydashboardpost_html_erb__4357519979960508578_2212193260'
+  app/views/members/dashboard.erb:29:in `block in _app_views_members_dashboard_erb___2821532727777013636_2212501140'
+  app/views/members/dashboard.erb:26:in `_app_views_members_dashboard_erb___2821532727777013636_2212501140'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 02:17:06 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+Rendered members/dashboard.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 5768ms
+
+ActionView::Template::Error (undefined method `zip' for #<Location:0x00000107b5c6f8>):
+    47:                        <% i=i+1 %>
+    48:                     <% end %>
+    49:                 <div>
+    50:                   <p><%= link_to loc.name,"/posts/new?name=#{loc.name}&addr=#{loc.address}&zip=#{loc.zip}&city=#{loc.city}" %><br/>
+    51:                      <%= loc.address %>, <%= loc.city %>
+    52:                   </p>   
+    53:                 </div>
+  app/views/members/dashboard.erb:50:in `block in _app_views_members_dashboard_erb___2821532727777013636_2212501140'
+  app/views/members/dashboard.erb:43:in `each'
+  app/views/members/dashboard.erb:43:in `_app_views_members_dashboard_erb___2821532727777013636_2212501140'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 02:21:59 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count 
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (45.5ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 4340ms (Views: 48.9ms | ActiveRecord: 4.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:22:03 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:22:03 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Vox" for 127.0.0.1 at 2013-01-15 02:22:13 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Vox"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mScenarios Load (0.3ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.2ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/_form.html.erb (61.9ms)
+Rendered posts/new.html.erb within layouts/application (62.5ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 165ms (Views: 64.0ms | ActiveRecord: 10.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:22:14 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:22:14 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Vox" for 127.0.0.1 at 2013-01-15 02:23:20 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Vox"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mScenarios Load (0.4ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.3ms)[0m  SELECT `compensations`.* FROM `compensations` 
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/_form.html.erb (61.3ms)
+Rendered posts/new.html.erb within layouts/application (61.9ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 161ms (Views: 63.1ms | ActiveRecord: 10.2ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:23:20 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:23:20 -0800
+Compiled application.js  (11ms)  (pid 32561)
+Served asset /application.js - 200 OK (61ms)
+
+
+Started GET "/locations/search?business_name=starbucks&business_city=los%20angeles&business_country=undefined&business_zipcode=90007" for 127.0.0.1 at 2013-01-15 02:23:45 -0800
+  Processing by LocationsController#search as */*
+  Parameters: {"business_name"=>"starbucks", "business_city"=>"los angeles", "business_country"=>"undefined", "business_zipcode"=>"90007"}
+Completed 200 OK in 495ms (Views: 1.5ms | ActiveRecord: 0.6ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Vox" for 127.0.0.1 at 2013-01-15 02:26:50 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Vox"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mScenarios Load (0.3ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.3ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/_form.html.erb (61.9ms)
+Rendered posts/new.html.erb within layouts/application (62.4ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 164ms (Views: 64.0ms | ActiveRecord: 9.9ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:26:50 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:26:50 -0800
+Compiled application.js  (10ms)  (pid 32561)
+Served asset /application.js - 200 OK (60ms)
+
+
+Started GET "/locations/search?business_name=starbucks&business_city=los%20angeles&business_country=undefined&business_zipcode=90034" for 127.0.0.1 at 2013-01-15 02:27:09 -0800
+  Processing by LocationsController#search as */*
+  Parameters: {"business_name"=>"starbucks", "business_city"=>"los angeles", "business_country"=>"undefined", "business_zipcode"=>"90034"}
+Completed 200 OK in 699ms (Views: 1.9ms | ActiveRecord: 1.0ms | Solr: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-01-15 02:27:19 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"pkkp", "description"=>"nnn", "scenario"=>["3"], "compensation"=>["Improvement"], "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "location_attributes"=>{"name"=>"Starbucks Coffee", "address"=>"9824 National Blvd", "tel"=>"(310) 839-1483", "city"=>"Los Angeles", "category"=>"", "zipcode"=>"90034", "email"=>"", "website"=>"http://www.starbucks.com"}}, "company"=>"starbucks", "city"=>"los angeles", "zipcode"=>"90034", "new_address"=>{"address"=>"0"}, "full_add"=>{"name"=>"", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"", "website"=>""}, "Category"=>"Online Store", "commit"=>"Create Post"}
+WARNING: Can't mass-assign protected attributes: location_attributes
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `posts` (`address`, `company`, `compensation`, `created_at`, `description`, `posttype`, `question`, `scenario`, `status`, `updated_at`, `user_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", nil], ["company", ""], ["compensation", ["Improvement"]], ["created_at", Tue, 15 Jan 2013 10:27:19 UTC +00:00], ["description", "nnn"], ["posttype", "Question"], ["question", "pkkp"], ["scenario", ["3"]], ["status", "Open"], ["updated_at", Tue, 15 Jan 2013 10:27:19 UTC +00:00], ["user_id", 4]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `detailinfos` (`created_at`, `description`, `post_id`, `updated_at`) VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 15 Jan 2013 10:27:19 UTC +00:00], ["description", "my default value"], ["post_id", 152], ["updated_at", Tue, 15 Jan 2013 10:27:19 UTC +00:00]]
+  [1m[32mSOLR Request (5.7ms)[0m  [ path=#<RSolr::Client:0x0000010794de70> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Post 152</field><field name="type">Post</field><field name="type">ActiveRecord::Base</field><field name="class_name">Post</field><field boost="5" name="question_text">pkkp</field><field name="description_text">nnn</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/email/configmail
+  [1m[32mSOLR Request (10.2ms)[0m  [ path=#<RSolr::Client:0x0000010794de70> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><commit/>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+Completed 302 Found in 40ms
+
+
+Started GET "/email/configmail" for 127.0.0.1 at 2013-01-15 02:27:19 -0800
+  Processing by EmailController#configmail as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 152]]
+Rendered email/configmail.html.erb within layouts/application (0.8ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 6.5ms | ActiveRecord: 3.4ms | Solr: 16.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:27:20 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:27:20 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/email/saveconfig" for 127.0.0.1 at 2013-01-15 02:27:23 -0800
+  Processing by EmailController#saveconfig as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "postId"=>"152", "counter"=>"3", "commit"=>"Save"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `email_stats` (`call`, `counter`, `created_at`, `lastsent`, `postId`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?)  [["call", nil], ["counter", 3], ["created_at", Tue, 15 Jan 2013 10:27:23 UTC +00:00], ["lastsent", nil], ["postId", 152], ["updated_at", Tue, 15 Jan 2013 10:27:23 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 11ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 02:27:23 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 152 LIMIT 1[0m
+Rendered members/_displaydashboardpost.html.erb (9.2ms)
+Rendered members/dashboard.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 3308ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    1: <p><%=post.location.category %> <b> 
+    2: <%#= post.locations.first.name %>  </b></p>
+    3:                     <p><%= post.question %></p>
+    4:                       <% backer= 0 %>
+  app/views/members/_displaydashboardpost.html.erb:1:in `_app_views_members__displaydashboardpost_html_erb__4357519979960508578_2212193260'
+  app/views/members/dashboard.erb:29:in `block in _app_views_members_dashboard_erb___2821532727777013636_2186348040'
+  app/views/members/dashboard.erb:26:in `_app_views_members_dashboard_erb___2821532727777013636_2186348040'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&commit=File+Vox" for 127.0.0.1 at 2013-01-15 02:30:03 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"File Vox"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mScenarios Load (0.3ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.2ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/_form.html.erb (27.8ms)
+Rendered posts/new.html.erb within layouts/application (28.3ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 126ms (Views: 30.2ms | ActiveRecord: 9.2ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:30:03 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:30:03 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/locations/search?business_name=starbucks&business_city=los%20angeles&business_country=undefined&business_zipcode=90034" for 127.0.0.1 at 2013-01-15 02:30:14 -0800
+  Processing by LocationsController#search as */*
+  Parameters: {"business_name"=>"starbucks", "business_city"=>"los angeles", "business_country"=>"undefined", "business_zipcode"=>"90034"}
+Completed 200 OK in 516ms (Views: 2.0ms | ActiveRecord: 0.6ms | Solr: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-01-15 02:31:31 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "location_attributes"=>{"name"=>"Starbucks", "address"=>"3118 S Sepulveda Blvd", "tel"=>"(310) 477-8717", "city"=>"Los Angeles", "category"=>"", "zipcode"=>"90034", "email"=>"", "website"=>"http://www.starbucks.com"}}, "company"=>"starbucks", "city"=>"los angeles", "zipcode"=>"90034", "new_address"=>{"address"=>"0"}, "full_add"=>{"name"=>"", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"", "website"=>""}, "Category"=>"Online Store", "commit"=>"Create Post"}
+WARNING: Can't mass-assign protected attributes: location_attributes
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `posts` (`address`, `company`, `compensation`, `created_at`, `description`, `posttype`, `question`, `scenario`, `status`, `updated_at`, `user_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", nil], ["company", ""], ["compensation", nil], ["created_at", Tue, 15 Jan 2013 10:31:31 UTC +00:00], ["description", ""], ["posttype", "Question"], ["question", ""], ["scenario", nil], ["status", "Open"], ["updated_at", Tue, 15 Jan 2013 10:31:31 UTC +00:00], ["user_id", 4]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `detailinfos` (`created_at`, `description`, `post_id`, `updated_at`) VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 15 Jan 2013 10:31:31 UTC +00:00], ["description", "my default value"], ["post_id", 153], ["updated_at", Tue, 15 Jan 2013 10:31:31 UTC +00:00]]
+  [1m[32mSOLR Request (5.9ms)[0m  [ path=#<RSolr::Client:0x00000106767030> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Post 153</field><field name="type">Post</field><field name="type">ActiveRecord::Base</field><field name="class_name">Post</field><field boost="5" name="question_text"></field><field name="description_text"></field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/email/configmail
+  [1m[32mSOLR Request (10.7ms)[0m  [ path=#<RSolr::Client:0x00000106767030> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><commit/>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+Completed 302 Found in 40ms
+
+
+Started GET "/email/configmail" for 127.0.0.1 at 2013-01-15 02:31:31 -0800
+  Processing by EmailController#configmail as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 153]]
+Rendered email/configmail.html.erb within layouts/application (0.8ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 6.5ms | ActiveRecord: 3.1ms | Solr: 16.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:31:31 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:31:31 -0800
+Compiled application.js  (10ms)  (pid 32561)
+Served asset /application.js - 200 OK (25ms)
+
+
+Started GET "/locations/search?business_name=starbucks&business_city=los%20angeles&business_country=undefined&business_zipcode=90034" for 127.0.0.1 at 2013-01-15 02:45:06 -0800
+  Processing by LocationsController#search as */*
+  Parameters: {"business_name"=>"starbucks", "business_city"=>"los angeles", "business_country"=>"undefined", "business_zipcode"=>"90034"}
+Completed 200 OK in 626ms (Views: 1.9ms | ActiveRecord: 0.9ms | Solr: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-01-15 02:45:17 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"mmm", "description"=>"m,mm", "scenario"=>["2"], "compensation"=>["Compensation"], "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "location_attributes"=>{"name"=>"Starbucks Coffee", "address"=>"8985 Venice Blvd", "tel"=>"(310) 558-0407", "city"=>"Los Angeles", "category"=>"", "zipcode"=>"90034", "email"=>"", "website"=>"http://www.starbucks.com"}}, "company"=>"starbucks", "city"=>"los angeles", "zipcode"=>"90034", "new_address"=>{"address"=>"0"}, "full_add"=>{"name"=>"", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"", "website"=>""}, "Category"=>"Online Store", "commit"=>"Create Post"}
+WARNING: Can't mass-assign protected attributes: location_attributes
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `posts` (`address`, `company`, `compensation`, `created_at`, `description`, `posttype`, `question`, `scenario`, `status`, `updated_at`, `user_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", nil], ["company", ""], ["compensation", ["Compensation"]], ["created_at", Tue, 15 Jan 2013 10:45:17 UTC +00:00], ["description", "m,mm"], ["posttype", "Question"], ["question", "mmm"], ["scenario", ["2"]], ["status", "Open"], ["updated_at", Tue, 15 Jan 2013 10:45:17 UTC +00:00], ["user_id", 4]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `detailinfos` (`created_at`, `description`, `post_id`, `updated_at`) VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 15 Jan 2013 10:45:17 UTC +00:00], ["description", "my default value"], ["post_id", 154], ["updated_at", Tue, 15 Jan 2013 10:45:17 UTC +00:00]]
+  [1m[32mSOLR Request (6.2ms)[0m  [ path=#<RSolr::Client:0x0000010273fe58> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Post 154</field><field name="type">Post</field><field name="type">ActiveRecord::Base</field><field name="class_name">Post</field><field boost="5" name="question_text">mmm</field><field name="description_text">m,mm</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/email/configmail
+  [1m[32mSOLR Request (12.3ms)[0m  [ path=#<RSolr::Client:0x0000010273fe58> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><commit/>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+Completed 302 Found in 78ms
+
+
+Started GET "/email/configmail" for 127.0.0.1 at 2013-01-15 02:45:17 -0800
+  Processing by EmailController#configmail as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 154]]
+Rendered email/configmail.html.erb within layouts/application (1.0ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 79ms (Views: 6.6ms | ActiveRecord: 3.4ms | Solr: 18.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:45:17 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:45:17 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/email/saveconfig" for 127.0.0.1 at 2013-01-15 02:45:21 -0800
+  Processing by EmailController#saveconfig as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "postId"=>"154", "counter"=>"3", "commit"=>"Save"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `email_stats` (`call`, `counter`, `created_at`, `lastsent`, `postId`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?)  [["call", nil], ["counter", 3], ["created_at", Tue, 15 Jan 2013 10:45:21 UTC +00:00], ["lastsent", nil], ["postId", 154], ["updated_at", Tue, 15 Jan 2013 10:45:21 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 10ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 02:45:21 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 154 LIMIT 1[0m
+Rendered members/_displaydashboardpost.html.erb (10.0ms)
+Rendered members/dashboard.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 4066ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    1: <p><%=post.location.category %> <b> 
+    2: <%#= post.locations.first.name %>  </b></p>
+    3:                     <p><%= post.question %></p>
+    4:                       <% backer= 0 %>
+  app/views/members/_displaydashboardpost.html.erb:1:in `_app_views_members__displaydashboardpost_html_erb__4357519979960508578_2212193260'
+  app/views/members/dashboard.erb:29:in `block in _app_views_members_dashboard_erb___2821532727777013636_2186348040'
+  app/views/members/dashboard.erb:26:in `_app_views_members_dashboard_erb___2821532727777013636_2186348040'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/locations/search?business_name=starbucks&business_city=los%20angeles&business_country=undefined&business_zipcode=90034" for 127.0.0.1 at 2013-01-15 02:46:18 -0800
+  Processing by LocationsController#search as */*
+  Parameters: {"business_name"=>"starbucks", "business_city"=>"los angeles", "business_country"=>"undefined", "business_zipcode"=>"90034"}
+Completed 200 OK in 269ms (Views: 1.9ms | ActiveRecord: 0.6ms | Solr: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-01-15 02:46:26 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"mmm", "description"=>"m,mm", "scenario"=>["2"], "compensation"=>["Compensation"], "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "location_attributes"=>{"name"=>"Starbucks Coffee", "address"=>"8985 Venice Blvd", "tel"=>"(310) 558-0407", "city"=>"Los Angeles", "category"=>"", "zipcode"=>"90034", "email"=>"", "website"=>"http://www.starbucks.com"}}, "company"=>"starbucks", "city"=>"los angeles", "zipcode"=>"90034", "new_address"=>{"address"=>"0"}, "full_add"=>{"name"=>"", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"", "website"=>""}, "Category"=>"Online Store", "commit"=>"Create Post"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `posts` (`address`, `company`, `compensation`, `created_at`, `description`, `posttype`, `question`, `scenario`, `status`, `updated_at`, `user_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", nil], ["company", ""], ["compensation", ["Compensation"]], ["created_at", Tue, 15 Jan 2013 10:46:26 UTC +00:00], ["description", "m,mm"], ["posttype", "Question"], ["question", "mmm"], ["scenario", ["2"]], ["status", "Open"], ["updated_at", Tue, 15 Jan 2013 10:46:26 UTC +00:00], ["user_id", 4]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `detailinfos` (`created_at`, `description`, `post_id`, `updated_at`) VALUES (?, ?, ?, ?)  [["created_at", Tue, 15 Jan 2013 10:46:26 UTC +00:00], ["description", "my default value"], ["post_id", 155], ["updated_at", Tue, 15 Jan 2013 10:46:26 UTC +00:00]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `locations` (`address`, `category`, `city`, `created_at`, `email`, `name`, `post_id`, `tel`, `updated_at`, `website`, `zipcode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "8985 Venice Blvd"], ["category", ""], ["city", "Los Angeles"], ["created_at", Tue, 15 Jan 2013 10:46:26 UTC +00:00], ["email", ""], ["name", "Starbucks Coffee"], ["post_id", 155], ["tel", "(310) 558-0407"], ["updated_at", Tue, 15 Jan 2013 10:46:26 UTC +00:00], ["website", "http://www.starbucks.com"], ["zipcode", "90034"]]
+  [1m[32mSOLR Request (6.6ms)[0m  [ path=#<RSolr::Client:0x00000104c729f0> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Location 79</field><field name="type">Location</field><field name="type">ActiveRecord::Base</field><field name="class_name">Location</field><field name="name_text">Starbucks Coffee</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[32mSOLR Request (2.4ms)[0m  [ path=#<RSolr::Client:0x00000104c729f0> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Post 155</field><field name="type">Post</field><field name="type">ActiveRecord::Base</field><field name="class_name">Post</field><field boost="5" name="question_text">mmm</field><field name="description_text">m,mm</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/email/configmail
+  [1m[32mSOLR Request (12.0ms)[0m  [ path=#<RSolr::Client:0x00000104c729f0> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><commit/>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+Completed 302 Found in 62ms
+
+
+Started GET "/email/configmail" for 127.0.0.1 at 2013-01-15 02:46:26 -0800
+  Processing by EmailController#configmail as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1  [["id", 155]]
+Rendered email/configmail.html.erb within layouts/application (0.8ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 80ms (Views: 6.4ms | ActiveRecord: 3.3ms | Solr: 21.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:46:26 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:46:26 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/email/saveconfig" for 127.0.0.1 at 2013-01-15 02:51:48 -0800
+  Processing by EmailController#saveconfig as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "postId"=>"155", "counter"=>"3", "commit"=>"Save"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `email_stats` (`call`, `counter`, `created_at`, `lastsent`, `postId`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?)  [["call", nil], ["counter", 3], ["created_at", Tue, 15 Jan 2013 10:51:48 UTC +00:00], ["lastsent", nil], ["postId", 155], ["updated_at", Tue, 15 Jan 2013 10:51:48 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 10ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 02:51:49 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 155 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 155
+Rendered members/_displaydashboardpost.html.erb (14.7ms)
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 154 LIMIT 1[0m
+Rendered members/_displaydashboardpost.html.erb (1.1ms)
+Rendered members/dashboard.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 3370ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    1: <p><%=post.location.category %> <b> 
+    2: <%#= post.locations.first.name %>  </b></p>
+    3:                     <p><%= post.question %></p>
+    4:                       <% backer= 0 %>
+  app/views/members/_displaydashboardpost.html.erb:1:in `_app_views_members__displaydashboardpost_html_erb__4357519979960508578_2212193260'
+  app/views/members/dashboard.erb:29:in `block in _app_views_members_dashboard_erb___2821532727777013636_2186348040'
+  app/views/members/dashboard.erb:26:in `_app_views_members_dashboard_erb___2821532727777013636_2186348040'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 02:52:21 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 155 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 155
+Rendered members/_displaydashboardpost.html.erb (49.0ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (61.1ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 4191ms (Views: 62.3ms | ActiveRecord: 9.1ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 02:52:25 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 02:52:25 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?name=Killer%20Cafe&addr=4213%20Admiralty%20Way&zip=90292&city=Marina%20del%20Rey" for 127.0.0.1 at 2013-01-15 03:03:43 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"name"=>"Killer Cafe", "addr"=>"4213 Admiralty Way", "zip"=>"90292", "city"=>"Marina del Rey"}
+Completed 500 Internal Server Error in 231ms
+
+NameError (undefined local variable or method `param' for #<PostsController:0x00000104cf85c8>):
+  app/controllers/posts_controller.rb:56:in `new'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/posts/new?name=Killer%20Cafe&addr=4213%20Admiralty%20Way&zip=90292&city=Marina%20del%20Rey" for 127.0.0.1 at 2013-01-15 03:04:17 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"name"=>"Killer Cafe", "addr"=>"4213 Admiralty Way", "zip"=>"90292", "city"=>"Marina del Rey"}
+Completed 500 Internal Server Error in 83ms
+
+NoMethodError (undefined method `locations=' for #<Post:0x000001048da6d0>):
+  app/controllers/posts_controller.rb:60:in `new'
+
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/hrastogi/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/posts/new?name=Killer%20Cafe&addr=4213%20Admiralty%20Way&zip=90292&city=Marina%20del%20Rey" for 127.0.0.1 at 2013-01-15 03:04:29 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"name"=>"Killer Cafe", "addr"=>"4213 Admiralty Way", "zip"=>"90292", "city"=>"Marina del Rey"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mScenarios Load (0.4ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.2ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/_form.html.erb (64.1ms)
+Rendered posts/new.html.erb within layouts/application (64.6ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 133ms (Views: 66.0ms | ActiveRecord: 9.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 03:04:30 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 03:04:30 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-01-15 03:04:50 -0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "post"=>{"company"=>"", "posttype"=>"Question", "status"=>"Open", "question"=>"", "description"=>"", "detailinfos_attributes"=>{"0"=>{"description"=>"my default value"}}, "user_id"=>"4", "location_attributes"=>{"name"=>"Killer Cafe", "address"=>"4213 Admiralty Way", "tel"=>"", "city"=>"Marina del Rey", "category"=>"", "zipcode"=>"90292", "email"=>"", "website"=>""}}, "company"=>"", "city"=>"", "zipcode"=>"", "new_address"=>{"address"=>"0"}, "full_add"=>{"name"=>"", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"", "website"=>""}, "Category"=>"Online Store", "commit"=>"Create Post"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `posts` (`address`, `company`, `compensation`, `created_at`, `description`, `posttype`, `question`, `scenario`, `status`, `updated_at`, `user_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", nil], ["company", ""], ["compensation", nil], ["created_at", Tue, 15 Jan 2013 11:04:50 UTC +00:00], ["description", ""], ["posttype", "Question"], ["question", ""], ["scenario", nil], ["status", "Open"], ["updated_at", Tue, 15 Jan 2013 11:04:50 UTC +00:00], ["user_id", 4]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `detailinfos` (`created_at`, `description`, `post_id`, `updated_at`) VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 15 Jan 2013 11:04:50 UTC +00:00], ["description", "my default value"], ["post_id", 156], ["updated_at", Tue, 15 Jan 2013 11:04:50 UTC +00:00]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `locations` (`address`, `category`, `city`, `created_at`, `email`, `name`, `post_id`, `tel`, `updated_at`, `website`, `zipcode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "4213 Admiralty Way"], ["category", ""], ["city", "Marina del Rey"], ["created_at", Tue, 15 Jan 2013 11:04:50 UTC +00:00], ["email", ""], ["name", "Killer Cafe"], ["post_id", 156], ["tel", ""], ["updated_at", Tue, 15 Jan 2013 11:04:50 UTC +00:00], ["website", ""], ["zipcode", "90292"]]
+  [1m[32mSOLR Request (7.2ms)[0m  [ path=#<RSolr::Client:0x00000107c8afc0> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Location 80</field><field name="type">Location</field><field name="type">ActiveRecord::Base</field><field name="class_name">Location</field><field name="name_text">Killer Cafe</field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[32mSOLR Request (2.1ms)[0m  [ path=#<RSolr::Client:0x00000107c8afc0> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><add><doc><field name="id">Post 156</field><field name="type">Post</field><field name="type">ActiveRecord::Base</field><field name="class_name">Post</field><field boost="5" name="question_text"></field><field name="description_text"></field></doc></add>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/email/configmail
+  [1m[32mSOLR Request (13.6ms)[0m  [ path=#<RSolr::Client:0x00000107c8afc0> parameters={data: [1m[1m<?xml version="1.0" encoding="UTF-8"?><commit/>[0m, headers: [1m[1m{"Content-Type"=>"text/xml"}[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, path: [1m[1mupdate[0m, uri: [1m[1mhttp://localhost:8982/solr/update?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+Completed 302 Found in 101ms
+
+
+Started GET "/email/configmail" for 127.0.0.1 at 2013-01-15 03:04:50 -0800
+  Processing by EmailController#configmail as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = ? LIMIT 1[0m  [["id", 156]]
+Rendered email/configmail.html.erb within layouts/application (0.8ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 80ms (Views: 6.6ms | ActiveRecord: 3.4ms | Solr: 22.9ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 03:04:50 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 03:04:50 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?name=The%20Penthouse&addr=1111%20Second%20Street&zip=90403&city=Santa%20Monica" for 127.0.0.1 at 2013-01-15 03:14:34 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"name"=>"The Penthouse", "addr"=>"1111 Second Street", "zip"=>"90403", "city"=>"Santa Monica"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mScenarios Load (0.2ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.3ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (55.3ms)
+Rendered posts/new.html.erb within layouts/application (55.8ms)
+Rendered shared/_dashboard_button_login.erb (1.0ms)
+Completed 200 OK in 157ms (Views: 59.1ms | ActiveRecord: 8.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 03:14:35 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 03:14:35 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?name=The%20Penthouse&addr=1111%20Second%20Street&zip=90403&city=Santa%20Monica" for 127.0.0.1 at 2013-01-15 03:16:22 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"name"=>"The Penthouse", "addr"=>"1111 Second Street", "zip"=>"90403", "city"=>"Santa Monica"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mScenarios Load (0.2ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.3ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (22.2ms)
+Rendered posts/new.html.erb within layouts/application (22.8ms)
+Rendered shared/_dashboard_button_login.erb (0.8ms)
+Completed 200 OK in 123ms (Views: 25.8ms | ActiveRecord: 8.4ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 03:16:22 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 03:16:22 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new?name=The%20Penthouse&addr=1111%20Second%20Street&zip=90403&city=Santa%20Monica" for 127.0.0.1 at 2013-01-15 03:19:58 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"name"=>"The Penthouse", "addr"=>"1111 Second Street", "zip"=>"90403", "city"=>"Santa Monica"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mScenarios Load (0.2ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.3ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (56.0ms)
+Rendered posts/new.html.erb within layouts/application (56.5ms)
+Rendered shared/_dashboard_button_login.erb (0.9ms)
+Completed 200 OK in 160ms (Views: 59.5ms | ActiveRecord: 8.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 03:19:59 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 03:19:59 -0800
+Served asset /application.js - 304 Not Modified (2ms)
