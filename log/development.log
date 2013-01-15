@@ -64154,3 +64154,59 @@ Served asset /application.css - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 03:19:59 -0800
 Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/welcome/logout" for 127.0.0.1 at 2013-01-15 10:53:20 -0800
+  Processing by WelcomeController#logout as HTML
+Rendered welcome/index.erb within layouts/welcome (14.4ms)
+Completed 200 OK in 85ms (Views: 84.4ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-01-15 10:53:21 -0800
+Served asset /application.css - 200 OK (21ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 10:53:21 -0800
+Served asset /application.js - 200 OK (29ms)
+
+
+Started GET "/assets/facebooklogin.png" for 127.0.0.1 at 2013-01-15 10:53:21 -0800
+Served asset /facebooklogin.png - 200 OK (1ms)
+
+
+Started POST "/welcome/login" for 127.0.0.1 at 2013-01-15 10:53:22 -0800
+  Processing by WelcomeController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lItx8wMHETdxeq4aDDJHocx8VgXl0IrFcvLfPPx7W6A=", "x"=>"47", "y"=>"14"}
+Redirected to https://graph.facebook.com/oauth/authorize?client_id=151026538323899&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fwelcome%2Fcallback%2F&scope=user_checkins
+Completed 302 Found in 7ms
+
+
+Started GET "/welcome/callback/?code=AQBUx5LFbWQZfzSVv4H6ZnTXEgYIMP1f-pj01TKusO8YZmkgzpHwEJsIePeAY1w1YxoZZThqRYGzDFMVzx17zkNLuoYkAwO3f4KJDiJbOazHxSY5Z4TgYEso0wbHum9oU-KBhu6mkiSpNyWWJHtuppKOH3s0K28jhSvT7ofcTSegMh08XOJkzCdQkmwidPRzChkU74jGdtN5dtI-W-QtUay_" for 127.0.0.1 at 2013-01-15 10:53:24 -0800
+  Processing by WelcomeController#callback as HTML
+  Parameters: {"code"=>"AQBUx5LFbWQZfzSVv4H6ZnTXEgYIMP1f-pj01TKusO8YZmkgzpHwEJsIePeAY1w1YxoZZThqRYGzDFMVzx17zkNLuoYkAwO3f4KJDiJbOazHxSY5Z4TgYEso0wbHum9oU-KBhu6mkiSpNyWWJHtuppKOH3s0K28jhSvT7ofcTSegMh08XOJkzCdQkmwidPRzChkU74jGdtN5dtI-W-QtUay_"}
+Redirected to http://localhost:3000/members/signin
+Completed 302 Found in 750ms
+
+
+Started GET "/members/signin" for 127.0.0.1 at 2013-01-15 10:53:25 -0800
+  Processing by MembersController#signin as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`fbid` = '659276550'[0m
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 477ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-01-15 10:53:26 -0800
+  Processing by MembersController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Resolved') LIMIT 2) subquery_for_count 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM `posts` WHERE (status='Open') LIMIT 2) subquery_for_count [0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (status='Open') ORDER BY updated_at DESC LIMIT 2
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 156 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 156
+Rendered members/_displaydashboardpost.html.erb (102.8ms)
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 155 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 155
+Rendered members/_displaydashboardpost.html.erb (1.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (127.7ms)
+Rendered shared/_dashboard_button_login.erb (1.9ms)
+Completed 200 OK in 5127ms (Views: 129.7ms | ActiveRecord: 8.3ms | Solr: 0.0ms)
