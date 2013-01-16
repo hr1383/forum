@@ -138,7 +138,7 @@ Devise.setup do |config|
   # config.unlock_in = 1.hour
 
   # ==> Configuration for :recoverable
-  #
+    #
   # Defines which key will be used when recovering the password for an account
   # config.reset_password_keys = [ :email ]
 
