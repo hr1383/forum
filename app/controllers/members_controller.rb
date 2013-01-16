@@ -26,7 +26,7 @@ class MembersController < ApplicationController
         @user.dob =Date.strptime(userinfo['birthday'], '%m/%d/%Y')
       end  
       @user.fbid=userinfo['id']
-      @user.emaild = userinfo['email']
+      @user.email = userinfo['email']
     else
       @user = current_user
     end
@@ -52,6 +52,8 @@ class MembersController < ApplicationController
     puts current_user.nil?
     puts "current user nil"
     puts session[:new_user]
+    puts current_user
+    
     if !session['access_token'].nil?
       @graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  @graph.get_object("me")
@@ -73,38 +75,33 @@ class MembersController < ApplicationController
         puts "after sigin"
         redirect_to "/members/dashboard"
       else
-        @user = current_user
+#        @user = current_user
         redirect_to '/members/filldetails'
       end
     end
   end
   
   def dashboard
-    graph = Koala::Facebook::API.new(session["access_token"])
-    puts session["access_token"]
-    puts "session token"
-    puts graph
-    puts "graph_object"
-    checkinlist = graph.get_connections('me','checkins')
-    puts checkinlist
-    puts checkinlist.size
-    puts "checking list"
     @checkinarr = Array.new
-    unless checkinlist.nil?
-      checkinlist.each do |checkin|
-        place = checkin["place"]
-        puts place
-        loc = Location.new
-        loc.name = place["name"]
-        location = place["location"]
-        unless location.nil?
-          loc.city = location["city"]
-          loc.address = location["street"]
-          loc.zipcode = location["zip"]
-          puts loc
+    if (session["access_token"])
+        graph = Koala::Facebook::API.new(session["access_token"])
+        checkinlist = graph.get_connections('me','checkins')
+        unless checkinlist.nil?
+          checkinlist.each do |checkin|
+            place = checkin["place"]
+            puts place
+            loc = Location.new
+            loc.name = place["name"]
+            location = place["location"]
+            unless location.nil?
+              loc.city = location["city"]
+              loc.address = location["street"]
+              loc.zipcode = location["zip"]
+              puts loc
+            end
+            @checkinarr << loc
+          end
         end
-        @checkinarr << loc
-      end
     end
     @totalclose = Post.latest_closed
     @totalopen = Post.latest_open
@@ -128,13 +125,27 @@ class MembersController < ApplicationController
   end
   
   def updateprofile
+    if  ! params[:user][:id].blank?
+      puts params
+      puts params[:user][:id].blank?
+      puts params[:user][:id].empty?
      user = User.find(params[:user][:id])
-     user.firstname=params[:user][:firstname]
+     if user.nil?
+       user = User.new
+       user.password ="qaumxvo"
+     end
+    else
+      user = User.new
+#      not the best way
+      user.password ="qaumxvo" 
+    end  
+    user.firstname=params[:user][:firstname]
      user.username = params[:user][:username]
      user.lastname = params[:user][:lastname]
      user.email = params[:user][:email]
      user.city = params[:user][:city]
      user.state = params[:user][:state]
+     user.country = params[:user][:country]
      user.fbid = params[:user][:fbid]
      begin 
       user.save!

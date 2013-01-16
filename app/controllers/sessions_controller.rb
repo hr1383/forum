@@ -6,9 +6,9 @@ class SessionsController < Devise::SessionsController
     session[:new_user] = false
   end
   
-  def create
-    super
-        puts "Inside session create"
-    session[:new_user] = false
-  end
+#  def create
+#    super
+#        puts "Inside session create"
+#    session[:new_user] = false
+#  end
 end
