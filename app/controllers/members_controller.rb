@@ -79,6 +79,8 @@ class MembersController < ApplicationController
         redirect_to '/members/filldetails'
       end
     end
+#    this is logout. its a temp solution
+    redirect_to '/welcome'
   end
   
   def dashboard

@@ -54,7 +54,9 @@
         <% end %>
        <% else %>
         <td>
-           <%= link_to "Logout","/welcome/logout" %>
+          <%= form_tag("/users/sign_out",:method=>:DELETE) do %>
+            <%= submit_tag "LogOut" %>
+          <% end %>
       </td>
     <% end %> 
     </td>
