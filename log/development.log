@@ -64210,3 +64210,47 @@ Rendered members/_displaydashboardpost.html.erb (1.5ms)
 Rendered members/dashboard.erb within layouts/application (127.7ms)
 Rendered shared/_dashboard_button_login.erb (1.9ms)
 Completed 200 OK in 5127ms (Views: 129.7ms | ActiveRecord: 8.3ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new?name=The%20Penthouse&addr=1111%20Second%20Street&zip=90403&city=Santa%20Monica" for 127.0.0.1 at 2013-01-15 19:16:29 -0800
+  Processing by PostsController#new as HTML
+  Parameters: {"name"=>"The Penthouse", "addr"=>"1111 Second Street", "zip"=>"90403", "city"=>"Santa Monica"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mScenarios Load (0.3ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.2ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (24.1ms)
+Rendered posts/new.html.erb within layouts/application (49.9ms)
+Rendered shared/_dashboard_button_login.erb (2.1ms)
+Completed 200 OK in 378ms (Views: 132.4ms | ActiveRecord: 11.1ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 19:16:29 -0800
+Served asset /application.js - 304 Not Modified (35ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-01-15 19:17:48 -0800
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (41.8ms)
+Rendered shared/_dashboard_button_login.erb (17.7ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 3.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 19:17:48 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&type=location&search=Starbucks" for 127.0.0.1 at 2013-01-15 19:18:03 -0800
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "type"=>"location", "search"=>"Starbucks"}
+  [1m[32mSOLR Request (4.6ms)[0m  [ path=#<RSolr::Client:0x00000101539ad8> parameters={data: [1m[1mfq=type%3ALocation&q=Starbucks&fl=%2A+score&qf=name_text&defType=dismax&start=0&rows=30[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, headers: [1m[1m{"Content-Type"=>"application/x-www-form-urlencoded; charset=UTF-8"}[0m, path: [1m[1mselect[0m, uri: [1m[1mhttp://localhost:8982/solr/select?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m} ]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`id` IN (71, 79)
+Rendered posts/browse.html.erb within layouts/application (0.6ms)
+Rendered shared/_dashboard_button_login.erb (21.2ms)
+Completed 200 OK in 110ms (Views: 58.9ms | ActiveRecord: 3.3ms | Solr: 4.6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-01-15 19:18:03 -0800
+Served asset /application.js - 304 Not Modified (1ms)

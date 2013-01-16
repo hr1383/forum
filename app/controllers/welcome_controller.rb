@@ -17,7 +17,7 @@ def logout
   def login
     session['oauth'] = Koala::Facebook::OAuth.new(Facebook::APP_ID, Facebook::APP_SECRET, Facebook::CALLBACK_URL + 'welcome/callback/')
     puts "login called from welcome"
-		redirect_to session['oauth'].url_for_oauth_code(:permissions =>'user_checkins')
+		redirect_to session['oauth'].url_for_oauth_code(:permissions =>'user_checkins,user_status')
   end
   
   
