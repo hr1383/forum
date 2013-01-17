@@ -58,7 +58,9 @@ class PostsController < ApplicationController
       loc.zipcode = params[:zip].nil? ? "" : params[:zip]
       loc.city = params[:city].nil? ? "" : params[:city]
       @post.location=loc
+      @haslocation=true
     else
+      @haslocation=false
       @post.build_location
     end
     3.times {@post.assets.build}

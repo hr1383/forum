@@ -57,9 +57,10 @@
       <%#*<b> <%= f.hidden_field :company,:id=>"post_company" %>
   <%#*<br /></b>%>
     <%#*</div>%>
-  <% unless @post.location.nil? and @post.location.name.nil? %>
+  <% if @haslocation  %>
   <b><%= @post.location.name %><br/><%=@post.location.address %><br/><%=@post.location.city %><br/> <%=@post.location.zipcode %></b>
   <% else %>
+  sdfsdfd
     <table>
       <tr>
       <th>Company</th>

@@ -78,9 +78,11 @@ class MembersController < ApplicationController
 #        @user = current_user
         redirect_to '/members/filldetails'
       end
-    end
-#    this is logout. its a temp solution
+    else  
+      #    this is logout. its a temp solution
     redirect_to '/welcome'
+
+    end
   end
   
   def dashboard
