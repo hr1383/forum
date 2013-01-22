@@ -39,19 +39,20 @@
             <p>No Facebook check in </p>
             <% else %>
             <p><b>Review Your Facebook Checkin</b></p>
-             <% i=0 %>
+             <%# i=0 %>
+            <table class="checkin" border="1">
               <% @checkinarr.each do |loc| %>
-                    <% if i== 6 %>
-                       <% break %>
-                    <% else %>
-                       <% i=i+1 %>
-                    <% end %>
-                <div>
-                  <p><%= link_to loc.name,"/posts/new?name=#{loc.name}&addr=#{loc.address}&zip=#{loc.zipcode}&city=#{loc.city}" %><br/>
+                    <%# if i== 6 %>
+                       <%# break %>
+                    <%# else %>
+                       <%# i=i+1 %>
+                    <%# end %>
+            <tr><td>
+            <%= link_to loc.name,"/posts/new?name=#{loc.name}&addr=#{loc.address}&zip=#{loc.zipcode}&city=#{loc.city}" %><br/>
                      <%= loc.address %>, <%= loc.city %>
-                  </p>   
-                </div>
+                </td></tr>
               <% end %>
+            </table>  
             <% end %>
           </td>
         </tr>

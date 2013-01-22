@@ -145,13 +145,17 @@ class PostsController < ApplicationController
   def browse
     unless params[:type].nil?
       #:type is always location
-     @search = Location.search do
-       fulltext params[:search]
+      if params[:type] == 'category'
+        locations = Location.find_all_by_category(params[:search]) 
+      else
+        @search = Location.search do
+         fulltext params[:search]
+        end
+        locations = @search.results
+      end
      end
      
-     locations = @search.results
-     
-     @locationGroupByName={}
+    @locationGroupByName={}
     unless locations.nil?
      locations.each do |location|
        if @locationGroupByName[location.address].nil?
@@ -165,14 +169,6 @@ class PostsController < ApplicationController
        end
      end
    end
-   puts @locationGroupByName
-#     @posts = Array.new
-#     unless locations.nil?
-#       locations.each do |location|
-#         @posts.push(Post.find(location.post_id))
-#       end
        @returnsearch =true
-#    end
-    end
-  end  
+  end
 end

@@ -2,6 +2,37 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+$(document).ready ->
+  rows = $("table.checkin").find("tr").length
+  alert rows
+  no_rec_per_page = 5
+  no_pages = Math.ceil(rows / no_rec_per_page)
+  $pagenumbers = $("<div id=\"pages\"></div>")
+  i = 0
+  while i < no_pages
+    $("<span class=\"page\">" + (i + 1) + "</span>").appendTo $pagenumbers
+    i++
+  $pagenumbers.insertAfter "table.checkin"
+  $(".page").hover (->
+    $(this).addClass "hover"
+  ), ->
+    $(this).removeClass "hover"
+
+  $("table.checkin").find("tr").hide()
+  tr = $("table.checkin tr")
+  i = 0
+
+  while i <= no_rec_per_page - 1
+    $(tr[i]).show()
+    i++
+  $("span").click (event) ->
+    $("table.checkin").find("tr").hide()
+    i = ($(this).text() - 1) * no_rec_per_page
+    while i <= $(this).text() * no_rec_per_page - 1
+      $(tr[i]).show()
+      i++
+
+
 $ ->
   $("#post_posttype_question").change ->
     $(".account").show()

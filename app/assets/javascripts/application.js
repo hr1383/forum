@@ -180,3 +180,36 @@
 //    return false;
 //});
 //});
+//$(document).ready(function() {
+//var rows=$('table.checkin').find('tr').length;
+//alert(rows);
+//var no_rec_per_page=5;
+//var no_pages= Math.ceil(rows/no_rec_per_page);
+//var $pagenumbers=$('<div id="pages"></div>');
+//for(i=0;i<no_pages;i++)
+//{
+//$('<span class="page">'+(i+1)+'</span>').appendTo($pagenumbers);
+//}
+//$pagenumbers.insertAfter('table.checkin');
+//$('.page').hover(
+//function(){
+//$(this).addClass('hover');
+//},
+//function(){
+//$(this).removeClass('hover');
+//}
+//);
+//$('table.checkin').find('tr').hide();
+//var tr=$('table.checkin tr');
+//for(var i=0;i<=no_rec_per_page-1;i++)
+//{
+//$(tr[i]).show();
+//}
+//$('span').click(function(event){
+//$('table.checkin').find('tr').hide();
+//for(i=($(this).text()-1)*no_rec_per_page;i<=$(this).text()*no_rec_per_page-1;i++)
+//{
+//$(tr[i]).show();
+//}
+//});
+//});
