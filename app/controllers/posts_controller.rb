@@ -153,6 +153,7 @@ class PostsController < ApplicationController
         end
         locations = @search.results
       end
+      @returnsearch =true
      end
      
     @locationGroupByName={}
@@ -160,15 +161,23 @@ class PostsController < ApplicationController
      locations.each do |location|
        if @locationGroupByName[location.address].nil?
          @locationGroupByName[location.address] = [1,location.category,location.name]
-         puts @locationGroupByName
        else
          someObj = @locationGroupByName[location.address]
          someObj[0] = someObj[0].to_i+1
          @locationGroupByName[location.address] = someObj
-         puts @locationGroupByName
        end
      end
    end
-       @returnsearch =true
+  end
+  
+  def list
+    locations = Location.find_all_by_address_and_name(params[:address],params[:name])
+#    locations cannot be nil
+puts params
+puts locations
+    @posts = Array.new
+    locations.each do |location|
+      @posts << Post.find(location.post_id)
+    end
   end
 end

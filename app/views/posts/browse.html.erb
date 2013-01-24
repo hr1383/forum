@@ -11,20 +11,7 @@
       
      <%  if @returnsearch == true %> 
       <% unless  @locationGroupByName.nil?%>
-      <table border="1">
-        <% @locationGroupByName.keys.each do |key| %>
-          <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Total Vox</th>
-          </tr>
-          <tr>
-            <td><p><b><%= @locationGroupByName[key][2]  %></b></p><%=  key %></td>
-            <td><%= @locationGroupByName[key][1] %></td>
-            <td><%= @locationGroupByName[key][0] %></td>
-          </tr>
-        <% end %>
-      </table>
+      <%= render "renderbrowsepostbysearch", :locationGroupByName=>@locationGroupByName %>            
       <% else %>
         <p> No Results Found</p>
       <% end %>
@@ -34,7 +21,7 @@
      <table>     
      <% Category.all.each do |category| -%>
        <tr>
-         <td><%= link_to category.name,"/" %>
+         <td><%= link_to category.name,"/posts/browse?type=category&search="+category.name %>
            <p><%=   category.description %></p></td>
        </tr>
      <% end %>

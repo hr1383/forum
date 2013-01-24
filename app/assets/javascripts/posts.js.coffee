@@ -4,7 +4,6 @@
 
 $(document).ready ->
   rows = $("table.checkin").find("tr").length
-  alert rows
   no_rec_per_page = 5
   no_pages = Math.ceil(rows / no_rec_per_page)
   $pagenumbers = $("<div id=\"pages\"></div>")
