@@ -4,11 +4,9 @@
     <td rowspan="3">
       <p>
         
-        <% unless post.locations.nil? %>
-          <% post.locations.each do | location| %>
-          <%= location.name %>, <%= location.address %><br/>
-          <%= location.city %> <%= location.zipcode %>
-          <% end %>
+        <% unless post.location.nil? %>
+          <%= post.location.name %>, <%= post.location.address %><br/>
+          <%= post.location.city %> <%= post.location.zipcode %>
           <br/>
          <% end %>
           <b> <%=post.posttype %>: <%= post.question %></b> <br/>
@@ -42,7 +40,7 @@
       Service Info
       Company <% post.company %>
       Category: 
-      <% unless post.locations.first.category.nil? -%>
+      <% unless post.location.category.nil? -%>
         <%= post.location.category %>
       <% end -%>
     </td>

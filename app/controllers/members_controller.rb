@@ -16,14 +16,12 @@ class MembersController < ApplicationController
       @graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  @graph.get_object("me")
       @user = User.new
+      puts userinfo
       @user.firstname = userinfo['first_name']
       @user.lastname = userinfo['last_name']
       @user.username = userinfo['username']
       unless userinfo['location'] == nil
         @user.city = userinfo['location']['name']
-      end  
-      unless userinfo['birthday'] == nil
-        @user.dob =Date.strptime(userinfo['birthday'], '%m/%d/%Y')
       end  
       @user.fbid=userinfo['id']
       @user.email = userinfo['email']
