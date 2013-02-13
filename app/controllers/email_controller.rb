@@ -9,7 +9,7 @@ class EmailController < ApplicationController
          post = Post.find(postid)
          puts map
          puts map[:email].eql?(map[:oldemail])
-       if map[:email].eql?(map[:oldemail])
+       if !map[:email].eql?(map[:oldemail])
          puts post.locations.first
          post.location.email=map[:email]
          post.location.save
