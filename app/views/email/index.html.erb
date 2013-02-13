@@ -23,10 +23,10 @@
 <% @email_stats.each do |email_stat| %>
   <% post = Post.find(email_stat.postId) %>
   <% if post.posttype == 'Question' %>
-  <% email =post.locations[0].email %>
+  <% email =post.location.email %>
   <tr>
     <td>Question</td>
-    <td><%=  post.locations.first.name %></td>
+    <td><%=  post.location.name %></td>
     <td><%= post.question %></td>
     <td><%=  email_stat.counter%></td>
     <td><%= email_stat.lastsent %></td>

@@ -1,0 +1,15 @@
+ <table border="1">
+        <% locationGroupByName.keys.each do |key| %>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Total Vox</th>
+          </tr>
+          <tr>
+            <%#= link_to category.name,"/posts/browse?type=category&search="+category.name %>
+            <td><p><b><%= link_to locationGroupByName[key][2],"/posts/list?address="+key+"&name="+locationGroupByName[key][2]  %></b></p><%=  key %></td>
+            <td><%=  locationGroupByName[key][1] %></td>
+            <td><%= locationGroupByName[key][0] %></td>
+          </tr>
+        <% end %>
+      </table>

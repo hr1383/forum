@@ -5,37 +5,36 @@ class EmailController < ApplicationController
    @successEmailList =[]
     params[:arr].each do |p|
        map = p[1]
-       if map[:email].eql?(map[:oldemail])
-         postid=map[:postid]
+       postid=map[:postid]
          post = Post.find(postid)
+       if map[:email].eql?(map[:oldemail])
          puts post.locations.first
-         post.locations[0].email=map[:email]
-         post.locations[0].save
+         post.location.email=map[:email]
+         post.location.save
        end  
        if map[:email] != ''
          emailstat = EmailStat.where(:postId=>map[:postid]).first
-         SupportEmailer.sendmail(post,post.locations[0],User.find(post.user_id)).deliver
+         SupportEmailer.sendmail(post,post.location,User.find(post.user_id)).deliver
           emailstat[:counter] = emailstat.counter-1
           emailstat[:lastsent] = Time.now()
           emailstat.save
-          @successEmailList.push(post.locations[0].email)
+          @successEmailList.push(post.location.email)
        end   
        end
    
-#    unless emailStatList.nil?
-#      emailStatList.each do |email|
-#        unless post.locations[0].email.nil? 
-#          puts "sending email "
-#          puts post.locations[0].email
-#          SupportEmailer.sendmail(post,post.locations[0],User.find(post.user_id)).deliver
-#          email[:counter] = email.counter-1
-#          email[:lastsent] = Time.now()
-#          email.save
-#          @successEmailList.push(post.locations[0].email)
-#        end
-#       end
-#      end
-#    end
+    unless emailStatList.nil?
+      emailStatList.each do |email|
+        unless post.location.email.nil? 
+          puts "sending email "
+          puts post.location.email
+          SupportEmailer.sendmail(post,post.location,User.find(post.user_id)).deliver
+          email[:counter] = email.counter-1
+          email[:lastsent] = Time.now()
+          email.save
+          @successEmailList.push(post.location.email)
+        end
+       end
+    end
     @email_stats = EmailStat.where("counter > 0")
     render "email/index"    
     
