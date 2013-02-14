@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Below are the details of your vox #<%=  @post.id %>:</p>
+    <p><%= @post.question %></p>
+    <p><%= @post.description %></p>
+
+    <p>Additional Details</p>
+    <%if @post.detailinfos.nil? %>
+    <p><%= @post.description %> </p>
+    <% end %>
+    
+    <p>What's next?</br>
+1. UmVox team is ready to forward your voice.</br>
+2. Share your vox and discover people who are in the same circumstance.</br>
+3. UmVox team will let you know once the addressee responds.</br>
+Check my Vox
+    </p>
+  </body>
+</html>

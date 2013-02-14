@@ -21,19 +21,6 @@ class EmailController < ApplicationController
        end   
        end
    
-#    unless emailStatList.nil?
-#      emailStatList.each do |email|
-#        unless post.location.email.nil? 
-#          puts "sending email "
-#          puts post.location.email
-#          SupportEmailer.sendmail(post,post.location,User.find(post.user_id)).deliver
-#          email[:counter] = email.counter-1
-#          email[:lastsent] = Time.now()
-#          email.save
-#          @successEmailList.push(post.location.email)
-#        end
-#       end
-#    end
     @email_stats = EmailStat.where("counter > 0")
     render "email/index"    
     

@@ -12,4 +12,10 @@ def sendmail(post,location,user)
   puts @location.email
    mail(:to => @location.email, :subject => "Registered")
 end  
+
+def createvox(post,user)
+  @post=post
+  @user=user
+   mail(:to => user.email, :subject => "Thanks for creating vox")
+end  
 end

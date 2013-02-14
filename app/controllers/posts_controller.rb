@@ -84,6 +84,7 @@ class PostsController < ApplicationController
     respond_to do |format|
     if @post.save
     session[:postid]=@post.id
+    Thread.new{SupportEmailer.createvox(@post,User.find(@post.user_id)).deliver}
       if @post.posttype == 'Question'
         format.html { redirect_to :controller => 'email',:action=>'configmail' }
         format.json { render json: @post, status: :created, location: @post }
