@@ -1,9 +1,9 @@
 
 <%= form_for @post,:html =>{:multipart => true} do |f| %>
   <div id="divstep1">     
-     <div class="field">
-        <b> <%= f.hidden_field :company,:id=>"post_company" %><br /></b>
-      </div>
+     <%#*<div class="field">%>
+        <%#*<b> <%= f.hidden_field :company,:id=>"post_company" %>
+      <%#*</div>%>
     <div class="field">
        <%= f.radio_button :posttype, 'Question', :checked => true %> 
       <%= label :posttype_question, 'Question' %>
@@ -54,7 +54,6 @@
   <% if @haslocation  %>
   <b><%= @post.location.name %><br/><%=@post.location.address %><br/><%=@post.location.city %><br/> <%=@post.location.zipcode %></b>
   <% else %>
-  sdfsdfd
     <table>
       <tr>
       <th>Company</th>
@@ -70,9 +69,12 @@
     </table>
    <div id="finallocations">
      <b> <%= label :lbl_company,'',:id=>"lbl_company" %></b>
-  </div>  
+  </div> 
+  <div class="finalcategory" style="display:none">
+    <p> Select a category <%= select_tag "Category1", options_from_collection_for_select(Category.all, "name", "name") %></p>
+  </div>
   <div id="newAddress">
-    <p>Do you want to enter Address  <%=  check_box :new_address,:address  %></p>
+    <p>Do you want to enter Address  <%=  check_box :new,:address  %></p>
     <div class="full_add" style="display:none">
       <table>
         <tr>
@@ -92,7 +94,7 @@
         </tr>
 
       </table>
-      <p><%= button_tag :save,:id=>"btn_new_addr" %>
+      <%#*<p><%= button_tag :save,:id=>"btn_new_addr" %>%>
     </div>
   </div>
   <%#end of unless%>
@@ -109,7 +111,7 @@
 
 <div class="field">
 <%= label_tag "Enter other details which you want to share with company and not have public" %><br/>
-  <%= detail_form.text_area :description,:value => "my default value" %>
+  <%= detail_form.text_area :description %>
 </div>  
 <% end  %>
 </div>

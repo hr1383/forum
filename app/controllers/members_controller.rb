@@ -84,6 +84,7 @@ class MembersController < ApplicationController
   end
   
   def dashboard
+#    puts session
     @checkinarr = Array.new
     if (session["access_token"])
         graph = Koala::Facebook::API.new(session["access_token"])
@@ -91,7 +92,6 @@ class MembersController < ApplicationController
         unless checkinlist.nil?
           checkinlist.each do |checkin|
             place = checkin["place"]
-            puts place
             loc = Location.new
             loc.name = place["name"]
             location = place["location"]
@@ -99,7 +99,6 @@ class MembersController < ApplicationController
               loc.city = location["city"]
               loc.address = location["street"]
               loc.zipcode = location["zip"]
-              puts loc
             end
             @checkinarr << loc
           end
@@ -113,7 +112,7 @@ class MembersController < ApplicationController
     end
   end
   
-  def myprofile
+  def show
     if !session[:user].nil?
       @user= session[:user]
       puts @user.to_s
@@ -126,14 +125,11 @@ class MembersController < ApplicationController
   
   def updateprofile
     if  ! params[:user][:id].blank?
-      puts params
-      puts params[:user][:id].blank?
-      puts params[:user][:id].empty?
-     user = User.find(params[:user][:id])
-     if user.nil?
-       user = User.new
-       user.password ="qaumxvo"
-     end
+       user = User.find(params[:user][:id])
+       if user.nil?
+         user = User.new
+         user.password ="qaumxvo"
+       end
     else
       user = User.new
 #      not the best way

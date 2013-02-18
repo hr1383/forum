@@ -3,17 +3,8 @@
 <head>
   <title>Umvox</title>
   <%= stylesheet_link_tag    "application" %>
-  <%#= stylesheet_link_tag    "style" %>
-  <%#= stylesheet_link_tag    "jquerytablescroll" %>
   <%= javascript_include_tag "application" %>
-  <%#= javascript_include_tag :defaults, "rails.validations", "rails.validations.custom" %>
   <%=  javascript_include_tag  "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"%>
-<%#=  javascript_include_tag  "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"%>
-<%#=  javascript_include_tag "jquery-rails.js"%>
-<%#= javascript_include_tag :defaults %>
-<%#= javascript_include_tag :jquerytablescroll %>  
-    <%#= javascript_include_tag "jquery-1.7.2.js" %>
-  <%#= javascript_include_tag "customErrorMsg.js" %>
   <%= csrf_meta_tags %>
 <script type='text/javascript' src="http://jquery.bassistance.de/validate/lib/jquery-1.7.2.js"></script>
 <script type='text/javascript' src="http://jquery.bassistance.de/validate/jquery.validate.js"></script>
@@ -21,8 +12,8 @@
 <%= yield :head  %>    
 </head>
 <body>
-   <%= render "shared/dashboard_button_login" %>
+   <%= render "shared/header" %>
 <%= yield %>
-
+<%= render "shared/footer" %>
 </body>
 </html>

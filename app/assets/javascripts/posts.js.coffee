@@ -63,20 +63,21 @@ $ ->
     data = $(this).attr("name") + "<br/>" + $(this).attr("address") + "<br/>" + $(this).attr("phone") + "<br/>"
     $("#lbl_company").html "Company<br/>" + data
     $("#post_location_attributes_name").val $(this).attr("name")
-    alert $("#post_location_attributes_name").val()
+    #alert $("#post_location_attributes_name").val()
     $("#post_location_attributes_address").val $(this).attr("address")
     $("#post_location_attributes_tel").val $(this).attr("phone")
     $("#post_location_attributes_city").val $(this).attr("city")
     $("#post_location_attributes_zipcode").val $(this).attr("zipcode")
     $("#post_location_attributes_email").val $(this).attr("email")
     $("#post_location_attributes_website").val $(this).attr("website")
-    $("#post_location_attributes_category").val $(this).attr("category")
+    #$("#post_location_attributes_category").val $(this).attr("category")
     $("#locations").empty()
-    alert $("#post_location_attributes_name").val()
+    $(".finalcategory").show()
+    #alert $("#post_location_attributes_name").val()
 
 
 $ ->
-  $("#new_address_address").change ->
+  $("#new_address").change ->
     if @checked
       $(".full_add").show()
     else
@@ -85,20 +86,16 @@ $ ->
 
 $ ->
   $("#btn_new_addr").click ->
-    alert "inside"
     name = $("#full_add_name").val()
     $("#post_location_attributes_name").val name
     $("#post_location_attributes_address").val $("#full_add_address").val()
-    
-    #         $("#post_locations_attributes_0_tel").val($("#full_add_tel").val());
     $("#post_location_attributes_city").val $("#full_add_city").val()
     $("#post_location_attributes_zipcode").val $("#full_add_zipcode").val()
     $("#post_location_attributes_email").val $("#full_add_email").val()
     $("#post_location_attributes_website").val $("#full_add_website").val()
-    $("#post_location_attributes_category").val $("#Category").val()
-    alert $("#post_location_attributes_category").val()
-    output = $("#post_location_attributes_name").val() + "<br/>" + $("#post_location_attributes_address").val() + "<br/>" + $("#post_location_attributes_city") + "<br/>" + $("#post_location_attributes_zipcode").val() + "<br/>" + $("#post_location_attributes_category").val()
-    $("#lbl_company").html "Company" + output
+    #alert $("#post_location_attributes_category").val()
+    output = $("#post_location_attributes_name").val() + "<br/>" + $("#post_location_attributes_address").val() + "<br/>" + $("#post_location_attributes_city").val() + "<br/>" + $("#post_location_attributes_zipcode").val() + "<br/>" + $("#post_location_attributes_category").val()
+    $("#lbl_company").html "Company" + "<br/>"+output
     false
 
 
@@ -129,17 +126,6 @@ $ ->
           text_result += "<td>" + value.zipcode + "</td>"
           text_result += "<td><a id=\"location_select\" name=\"" + value.name + "\" address=\"" + value.address + "\" phone=\"" + value.tel + "\" zipcode=" + value.zipcode + " website=" + value.website + " city=\"" + value.city + "\" href=\"#\">Select</a></td>"
           text_result += "</tr>"
-
-        
-        #$table.append(
-        #       $('<tr>')
-        #         .append($('<td>').text(value.name))
-        #         .append($('<td>').text(value.address))
-        #         .append($('<td>').text(value.zipcode))
-        #         .append($('<td>').append(
-        #           $('<a>').attr('name',value.name).attr('address',value.address)
-        #         )
-        #    ));
         $("#locations").html text_result
 
     
@@ -154,13 +140,6 @@ $ ->
 
 $ ->
   $("#btnStep1").click ->
-    
-    #    $("#post_posttype_question").attr("disabled",true);
-    #    $("#post_posttype_complaint").attr("disabled",true);
-    #    $("#post_posttype_complement").attr("disabled",true);
-    #    $("#post_question").attr("disabled",true);
-    #    $("#post_description").attr("disabled",true);
-    #    $("#post_scenario_").attr("disabled",true);
     badwords = new Array("shit", "fuck", "ass", "asshole")
     badwordsset = {}
     badwordsArray = []
@@ -189,6 +168,21 @@ $ ->
 $ ->
   $("#btnStep2").click ->
     $("#divstep3").show()
+    alert $("#new_address").is(':checked')
+    if $("#new_address").is(':checked') == true
+        name = $("#full_add_name").val()
+        $("#post_location_attributes_name").val name
+        $("#post_location_attributes_address").val $("#full_add_address").val()
+        $("#post_location_attributes_city").val $("#full_add_city").val()
+        $("#post_location_attributes_zipcode").val $("#full_add_zipcode").val()
+        $("#post_location_attributes_email").val $("#full_add_email").val()
+        $("#post_location_attributes_website").val $("#full_add_website").val()
+        $("#post_location_attributes_category").val $("#Category").val()
+        output = $("#post_location_attributes_name").val() + "<br/>" + $("#post_location_attributes_address").val() + "<br/>" + $("#post_location_attributes_city").val() + "<br/>" + $("#post_location_attributes_zipcode").val() + "<br/>" + $("#post_location_attributes_category").val()
+        $("#lbl_company").html "Company" + "<br/>"+output
+        $(".full_add").hide()
+    else
+        $("#post_location_attributes_category").val $("#Category1").val()
     false
 
 

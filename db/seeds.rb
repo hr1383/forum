@@ -11,7 +11,7 @@
    Compensation.delete_all
    
    scenarios = Scenarios.create([{ name: 'Billing' }, { name: 'Delay' },{ name: 'Damage' },{ name: 'Discrimination' },{ name: 'Poor Service' }])
-categories = Category.create([{ name: 'Online Store',description:'' },{ name: 'Customer Service',description:'',name:'Automotive',description:'',name:'Airlines',description:'' }])
+categories = Category.create([{ name: 'Online Store',description: '' },{ name: 'Customer Service',description: ''},{name: 'Automotive',description: ''},{name: 'Airlines',description: '' }])
    compnesation= Compensation.create([{ name: 'Apology' },{ name: 'Compensation' },{ name: 'Improvement' },{ name: 'Refund' }])
    
    

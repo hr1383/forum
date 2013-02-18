@@ -38,7 +38,7 @@
   <tr>
     <td>
       Service Info
-      Company <% post.company %>
+      Company <% post.location.name %>
       Category: 
       <% unless post.location.category.nil? -%>
         <%= post.location.category %>

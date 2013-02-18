@@ -40,7 +40,7 @@
     </td>
     <td>
       <% if session['user'] %>
-         <%= link_to session['user'].username, "/members/myprofile" %>
+         <%= link_to session['user'].username, "/members/#{session['user'].id}" %>
       <% end %>
     </td>
     <td>

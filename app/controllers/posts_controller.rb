@@ -2,11 +2,6 @@ class PostsController < ApplicationController
 
  def index
     
-    puts "--param all-----"
-    puts params[:all] =="true"
-    puts params
-    puts session
-    puts "-----end-----"
     if !params[:all].nil? and params[:all] == "true"
       puts "inside all-----"
       @posts = Post.all
@@ -85,12 +80,7 @@ class PostsController < ApplicationController
     if @post.save
     session[:postid]=@post.id
     Thread.new{SupportEmailer.createvox(@post,User.find(@post.user_id)).deliver}
-      if @post.posttype == 'Question'
-        format.html { redirect_to :controller => 'email',:action=>'configmail' }
-        format.json { render json: @post, status: :created, location: @post }
-      else
-        format.html {redirect_to :controller=>'members',:action=>"dashboard"}
-      end  
+    format.html {redirect_to :controller=>'members',:action=>"dashboard"}
     else
       if @post.scenario.nil?
         @post.scenario=[]
@@ -111,7 +101,6 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.update_attributes(params[:post])
         @post.assets.each do |asset|
-          puts "ubsisdsdAAAAAAAAAA"
           asset.save
         end
         format.html { redirect_to @post, notice: 'post was successfully updated.' }
