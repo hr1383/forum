@@ -114,8 +114,6 @@ class MembersController < ApplicationController
   end
   
   def myprofile
-    puts session
-    puts session[:user].id
     if !session[:user].nil?
       @user= session[:user]
       puts @user.to_s

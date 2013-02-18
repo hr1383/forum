@@ -4,10 +4,8 @@ class CreatePosts < ActiveRecord::Migration
       t.references :user
       t.string :posttype
       t.string :status
-      t.string :category
       t.string :question
       t.string :description
-      t.string :company
       t.string :address
       t.string :scenario
       t.string :compensation
