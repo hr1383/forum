@@ -1,5 +1,6 @@
 class EmailController < ApplicationController
 
+#  before_filter :authenticate1_user ,:all
   def sendmail
 #    emailStatList = EmailStat.find(:all,:conditions=>["(DATE(lastsent) < ? or lastsent IS NULL) and counter > 0", 1.from_now.to_date - 1])
    @successEmailList =[]
@@ -12,11 +13,11 @@ class EmailController < ApplicationController
          post.location.save
        end  
        if map[:email] != ''
-         emailstat = EmailStat.where(:postId=>map[:postid]).first
+#         emailstat = EmailStat.where(:postId=>map[:postid]).first
          SupportEmailer.sendmail(post,post.location,User.find(post.user_id)).deliver
-          emailstat[:counter] = emailstat.counter-1
-          emailstat[:lastsent] = Time.now()
-          emailstat.save
+#          emailstat[:counter] = emailstat.counter-1
+#          emailstat[:lastsent] = Time.now()
+#          emailstat.save
           @successEmailList.push(post.location.email)
        end   
        end
@@ -42,8 +43,9 @@ class EmailController < ApplicationController
       redirect_to '/members/dashboard'
   end
   
-  def viewmail
+  def view
     @email_stats = EmailStat.where("counter > 0")
+    @postlist = Post.find_all_by_posttype('Question')
     render "email/index"
   end
 end

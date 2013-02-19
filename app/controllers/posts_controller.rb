@@ -1,15 +1,12 @@
 class PostsController < ApplicationController
 
+  before_filter :authenticate1_user , :only =>[:index,:new,:destroy,:browse]
  def index
     
     if !params[:all].nil? and params[:all] == "true"
-      puts "inside all-----"
       @posts = Post.all
     else 
       if !session['user'].nil?
-        puts "---user id is -------"
-        puts session["user"].to_s
-        puts "---end user id--------"
         @posts = Post.find_all_by_user_id(session["user"].id.to_s)
       else
         puts "ERR session expired"
@@ -163,11 +160,9 @@ class PostsController < ApplicationController
   def list
     locations = Location.find_all_by_address_and_name(params[:address],params[:name])
 #    locations cannot be nil
-puts params
-puts locations
     @posts = Array.new
     locations.each do |location|
-      @posts << Post.find(location.post_id)
+      @posts << location.post
     end
   end
 end

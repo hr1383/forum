@@ -8,21 +8,21 @@ Umvox::Application.routes.draw do
 
   resources :email do
     collection do
-      post :sendmail,:saveconfig
-      get :sendmail,:configmail,:viewmail
+      post :sendmail
+      get :view
     end
   end
 root :to => "members#signin"
  resources :welcome do
    collection do
     post  :login
-    get  :callback,:logout
+    get  :callback
    end
  end
 
   resources :locations do
     collection do
-      get :select,:search
+      get :search
       post :search
     end
   end
@@ -35,9 +35,8 @@ root :to => "members#signin"
  end   
   resources :members do
   collection do
-    get   :filldetails,:dashboard,:signin,:myprofile
-    post  :logout,:login,:signin,:updateprofile
-    put :updateprofile
+    get   :filldetails,:dashboard,:signin
+    post  :updateprofile
   end
 end
 #  resources :assets

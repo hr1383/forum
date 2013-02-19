@@ -33,7 +33,7 @@
     <%#*</td>%>
     <td>
       <%# if session[:user] and session[:user].admin == true  %>
-      <%= form_tag("/email/viewmail", :method=>:get) do %>
+      <%= form_tag("/email/view", :method=>:get) do %>
         <%= submit_tag "Send email" %>
       <% end %>
       <%# end %>

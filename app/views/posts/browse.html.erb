@@ -9,14 +9,12 @@
       </p>
     <% end %>
       
-     <%  if @returnsearch == true %> 
-      <% unless  @locationGroupByName.nil?%>
+     <%  if @returnsearch && @locationGroupByName.size > 0%> 
       <%= render "renderbrowsepostbysearch", :locationGroupByName=>@locationGroupByName %>            
       <% else %>
         <p> No Results Found</p>
-      <% end %>
-   <% end %>     
-  <%  if @returnsearch != true %>       
+     <% end %>     
+  <%  if @locationGroupByName.size == 0%>       
      <p><b>Can't find , check out the directory below.</b></p>       
      <table>     
      <% Category.all.each do |category| -%>

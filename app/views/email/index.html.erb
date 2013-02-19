@@ -14,28 +14,40 @@
     <th>PostType</th>
     <th>Company</th>
     <th>Question</th>
-    <th>Counter</th>
-    <th>Lastsent</th>
+    <%#*<th>Counter</th>%>
+    <%#*<th>Lastsent</th>%>
     <th>Email</th>
     <th>Send?</th>
   </tr>
 
-<% @email_stats.each do |email_stat| %>
-  <% post = Post.find(email_stat.postId) %>
-  <% if post.posttype == 'Question' %>
+<%# @email_stats.each do |email_stat| %>
+  <%# post = Post.find(email_stat.postId) %>
+  <%# if post.posttype == 'Question' %>
+  <%# email =post.location.email %>
+  <%#*<tr>%>
+    <%#*<td>Question</td>%>
+    <%#*<td><%=  post.location.name %></td>%>
+    <%#*<td><%= post.question %></td>%>
+    <%#*<td><%=  email_stat.counter%></td>%>
+    <%#*<td><%= email_stat.lastsent %></td>%>
+    <%#*<td><%=  text_field_tag 'email',email,:name=>"arr[email_stat_#{email_stat.postId}][email]"%></td>%>
+    <%#*<td><%= check_box_tag "arr[email_stat_#{email_stat.postId}][isSend]",1,:name=>"arr[email_stat_#{email_stat.postId}][isSend]" %></td>%>
+    <%#= hidden_field_tag "arr[email_stat_#{email_stat.postId}][postid]", email_stat.postId %>
+    <%#= hidden_field_tag "arr[email_stat_#{email_stat.postId}][oldemail]", email %>
+  <%#*</tr>%>
+  <%#  end %>
+<%# end %>
+ <% @postlist.each do |post| %>
   <% email =post.location.email %>
   <tr>
     <td>Question</td>
     <td><%=  post.location.name %></td>
-    <td><%= post.question %></td>
-    <td><%=  email_stat.counter%></td>
-    <td><%= email_stat.lastsent %></td>
-    <td><%=  text_field_tag 'email',email,:name=>"arr[email_stat_#{email_stat.postId}][email]"%></td>
-    <td><%= check_box_tag "arr[email_stat_#{email_stat.postId}][isSend]",1,:name=>"arr[email_stat_#{email_stat.postId}][isSend]" %></td>
-    <%= hidden_field_tag "arr[email_stat_#{email_stat.postId}][postid]", email_stat.postId %>
-    <%= hidden_field_tag "arr[email_stat_#{email_stat.postId}][oldemail]", email %>
+    <td><%= post.question %></td>  
+    <td><%=  text_field_tag 'email',email,:name=>"arr[email_stat_#{post.id}][email]"%></td>
+      <td><%= check_box_tag "arr[email_stat_#{post.id}][isSend]",1,:name=>"arr[email_stat_#{post.id}][isSend]" %></td>
+      <%= hidden_field_tag "arr[email_stat_#{post.id}][postid]", post.id %>
+      <%= hidden_field_tag "arr[email_stat_#{post.id}][oldemail]", email %>
   </tr>
-  <%  end %>
 <% end %>
 </table>
   <%= submit_tag  'Send mail' %>

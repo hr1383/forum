@@ -8,4 +8,14 @@ class ApplicationController < ActionController::Base
     session=nil
     root_path
   end
+  
+  def authenticate1_user
+    puts "---------------"
+    puts current_user.nil?
+    puts session[:user].nil?
+    puts "--------------"
+    if (current_user.nil? && session[:user].nil?)
+      redirect_to root_path
+    end
+  end
 end

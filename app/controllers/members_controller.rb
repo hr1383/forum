@@ -1,14 +1,14 @@
 class MembersController < ApplicationController
 
-   
-  def index
-    if session['access_token']
-      @face='You are logged in! <a href="facebooks/logout">Logout</a>'
-    else
-      @face='<a href="users/login">Login</a>'
-    end
-  end  
- 
+   before_filter :authenticate1_user , :only =>[:dashboard]
+#  def index
+#    if session['access_token']
+#      @face='You are logged in! <a href="facebooks/logout">Logout</a>'
+#    else
+#      @face='<a href="users/login">Login</a>'
+#    end
+#  end  
+# 
   
   def filldetails
     
@@ -16,7 +16,6 @@ class MembersController < ApplicationController
       @graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  @graph.get_object("me")
       @user = User.new
-      puts userinfo
       @user.firstname = userinfo['first_name']
       @user.lastname = userinfo['last_name']
       @user.username = userinfo['username']
@@ -31,14 +30,12 @@ class MembersController < ApplicationController
   end
   
   def create
-    puts params[:user]
     @user1 = User.new(params[:user])
     if @user1.save
-      saveduser = User.find_all_by_fbid(params[:user][:fbid])
-      unless saveduser.first.nil?
-        session[:user] = saveduser.first
+      saveduser = User.find_by_fbid(params[:user][:fbid])
+      unless saveduser.nil?
+        session[:user] = saveduser
       end
-      puts "user saved "
       redirect_to "/members/dashboard"
     else
       puts "error while saving user"
@@ -47,30 +44,28 @@ class MembersController < ApplicationController
 
   def signin
     
-    puts current_user.nil?
-    puts "current user nil"
-    puts session[:new_user]
-    puts current_user
-    
     if !session['access_token'].nil?
       @graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  @graph.get_object("me")
+      puts "inside"
+      puts userinfo
       fb_id=userinfo['id']
       if fb_id
-       userObj = User.find_all_by_fbid(fb_id.to_s)  
-        if userObj.first.nil?
+       userObj = User.find_by_fbid(fb_id.to_s) 
+       puts userObj
+       puts "------------"
+        if userObj.nil?
           redirect_to '/members/filldetails'
         else
-           session[:user] = userObj.first
+           session[:user] = userObj
+           current_user= userObj
            redirect_to "/members/dashboard"
-           
         end
       end
     elsif !current_user.nil?
+      puts "inside2"
       if session[:new_user] != true
         session[:user] = current_user
-        puts session[:user].id
-        puts "after sigin"
         redirect_to "/members/dashboard"
       else
 #        @user = current_user
@@ -84,7 +79,6 @@ class MembersController < ApplicationController
   end
   
   def dashboard
-#    puts session
     @checkinarr = Array.new
     if (session["access_token"])
         graph = Koala::Facebook::API.new(session["access_token"])
@@ -115,7 +109,6 @@ class MembersController < ApplicationController
   def show
     if !session[:user].nil?
       @user= session[:user]
-      puts @user.to_s
       openUmvox=@user.posts.where("status=?","Open")
       closeUmvox=@user.posts.where("status=?","Closed")
       @totalopen = openUmvox.size unless openUmvox.nil?
