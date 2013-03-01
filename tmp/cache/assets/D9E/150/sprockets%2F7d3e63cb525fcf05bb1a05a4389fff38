@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1361779466.620956:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%af0df6d715101ab31fd79f82ca2fa2e8I"logical_path;
-FI"green_btn.png;
-TI"pathname;
-FI"*$root/app/assets/images/green_btn.png;
-TI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2013-02-25T13:31:39+05:30;
-FI"length;
-FI"	1651;
-FI"digest;
-F"%3aa8916ae6a76234c9a2359f86484188I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c
