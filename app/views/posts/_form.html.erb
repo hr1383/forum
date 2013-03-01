@@ -1,128 +1,217 @@
 
 <%= form_for @post,:html =>{:multipart => true} do |f| %>
-  <div id="divstep1">     
+  <div id="divstep1" class="create_vox_form cvf_step1">     
      <%#*<div class="field">%>
         <%#*<b> <%= f.hidden_field :company,:id=>"post_company" %>
       <%#*</div>%>
     <div class="field">
-       <%= f.radio_button :posttype, 'Question', :checked => true %> 
-      <%= label :posttype_question, 'Question' %>
-      <%= f.radio_button :posttype, 'Complaint' %>
-      <%= label :posttype_complaint, 'Complaint' %>
-      <%= f.radio_button :posttype, 'Complement' %>
-      <%= label :posttype_complement, 'Complement' %>
+	  <b><label style="padding:0px;">This vox is a...</label></b>
+      <span class="radio"><%= f.radio_button :posttype, 'Question', :checked => true %> 
+      <%= label :posttype_question, 'Question' %></span>
+      <span class="radio"><%= f.radio_button :posttype, 'Complaint' %>
+      <%= label :posttype_complaint, 'Complaint' %></span>
+      <span class="radio"><%= f.radio_button :posttype, 'Complement' %>
+      <%= label :posttype_complement, 'Complement' %></span>
+	  <div class="clr"></div>
     </div>
 
 
     <div class="field">
-      <b><%= f.label :status %> </b>
+      <%= f.label :status %> 
         <%= f.select("status", options_for_select([['Open', 'Open'],
                      ['Resolved', 'Resolved']], '1')) %>
     </div>
 
       <div class="field">
-        <b><%= f.label :question,:id=>"lbl_question" %><br /></b>
-        <%= f.text_field :question %>
+        <%= f.label :question,:id=>"lbl_question" %>
+        <%= f.text_field :question,:class=>"inp_text" %>
       </div>
       <div class="field">
-        <b>  <%= f.label :description %><br /></b>
-        <%= f.text_area :description %>
+        <%= f.label :description %>
+        <%= f.text_area :description,:class=>"inp_area" %>
       </div>
       <div class="field">
          <% if !@post.scenario.nil? -%>
-          <b> <%= f.label :scenario %><br /></b>
+            <div class="full"><%= f.label :scenario %></div>
             <% Scenarios.all.each do |scenario| -%>
-            <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
-            <%= label_tag :scenario, scenario.name -%>
+            <span class="check"><%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
+            <%= label_tag :scenario, scenario.name -%></span>
           <% end %>
        <% end %> 
+		<div class="clr"></div>
       </div>
       <div class="field">
          <% if !@post.compensation.nil? -%>
-          <b><%= f.label :compensation %><br /></b>
+           <div class="full"><%= f.label :compensation %></div>
            <% Compensation.all.each do |compensation| -%>
-            <%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
-            <%= label_tag :compensation, compensation.name -%>
+            <span class="check"><%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
+            <%= label_tag :compensation, compensation.name -%></span>
             <% end %>
         <% end %>
+		<div class="clr"></div>
       </div>
 <%#*end of step1%>
-  <p><%=button_tag "Continue to next Step", :id=>"btnStep1", :remote=>"true" %></p>
+	<div class="buttons">
+          <%=button_tag "Continue to next Step", :id=>"btnStep1", :class=>"step_button", :remote=>"true" %>
+        </div>
+  <div class="clr"></div>
 </div>
 
-<div id="divstep2" style="display:none">
+<div id="divstep2" class="create_vox_form cvf_step2" style="display:none;">
+<div class="form_header" style="border:0px; margin:0px;">
+<ul class="steps flr">
+	<li class="active"><a href="#">Step 1</a></li>
+	<li class="arrow"></li>
+	<li class="active"><a href="#">Step 2</a></li>
+	<li class="arrow grey"></li>
+	<li><a href="#">Step 2</a></li>
+</ul>
+</div>
+<h2>This vox is for...</h2>
   <% if @haslocation  %>
-  <b><%= @post.location.name %><br/><%=@post.location.address %><br/><%=@post.location.city %><br/> <%=@post.location.zipcode %></b>
+  <b>
+  <%= @post.location.name %><br/>
+  <%=@post.location.address %><br/>
+  <%=@post.location.city %><br/> 
+  <%=@post.location.zipcode %></b>
   <% else %>
-    <table>
-      <tr>
-      <th>Company</th>
-      <th>City</th>
-      <th>ZipCode</th>
-      </tr>
-      <tr>
-        <td><%= text_field_tag :company %></td>
-        <td><%= text_field_tag :city %></td>
-        <td><%= text_field_tag :zipcode %></td>
-         <td><%= submit_tag 'search', :id=>'btnfindAddress', :name=>"btnfindAddress"%></td>
-      </tr>
-    </table>
+    
+	<div class="grey_box">
+	<h3>Search for the addressee</h3>
+	<p>In order to inform the right personnel, please select the correct business.</p>
+	<br>
+	<div class="field company">
+		<label>Company</label> 
+		<%= text_field_tag :company %>
+	</div>
+	<div class="field">
+		<label>City</label> 
+		<%= text_field_tag :city %>
+	</div>
+    <div class="field">
+		<label>ZipCode</label> 
+		<%= text_field_tag :zipcode %>
+	</div>
+	<div class="field">
+		<label>&nbsp;</label> 
+		 <%= submit_tag 'search', :id=>'btnfindAddress', :class=>"search_btn", :name=>"btnfindAddress"%>
+	</div>
+    
+   
+    </div>
    <div id="finallocations">
-     <b> <%= label :lbl_company,'',:id=>"lbl_company" %></b>
+	 <div class="full"><%= label :lbl_company,'',:id=>"lbl_company" %></div>
   </div> 
   <div class="finalcategory" style="display:none">
     <p> Select a category <%= select_tag "Category1", options_from_collection_for_select(Category.all, "name", "name") %></p>
   </div>
   <div id="newAddress">
     <p>Do you want to enter Address  <%=  check_box :new,:address  %></p>
-    <div class="full_add" style="display:none">
-      <table>
-        <tr>
-          <td> Name <%= text_field :full_add, :name%> </td>
-          <td> Address <%= text_field :full_add, :address%> </td>
-        </tr>
-         <tr>
-          <td> City <%= text_field :full_add, :city%> </td>
-          <td> Zipcode <%= text_field :full_add, :zipcode%> </td>
-        </tr>
-        <tr>
-          <td> Email <%= text_field :full_add, :email%> </td>
-          <td> Website <%= text_field :full_add, :website%> </td>
-        </tr>
-        <tr>
-          <td>Category <%= select_tag "Category", options_from_collection_for_select(Category.all, "name", "name") %></td>
-        </tr>
-
-      </table>
-      <%#*<p><%= button_tag :save,:id=>"btn_new_addr" %>%>
+	<br>
+    <div class="full_add grey_box" style="display:none">
+		<h3>Enter the addressee info manually</h3>
+		<p>In order to inform the right personnel, please make sure the contact info is correct.</p><br>
+		<div class="field">
+			<label>Name</label> 
+			<%= text_field :full_add, :name%> 
+		</div>
+		<div class="field">
+			<label>Address</label> 
+			<%= text_field :full_add, :address%> 
+		</div>
+		<div class="field">
+			<label>City</label> 
+			<%= text_field :full_add, :city%>
+		</div>
+		<div class="field">
+			<label>Zipcode</label> 
+			<%= text_field :full_add, :zipcode%> 
+		</div>
+		<div class="field">
+			<label>Email</label> 
+			<%= text_field :full_add, :email%> 
+		</div>
+		<div class="field">
+			<label>Website</label> 
+			<%= text_field :full_add, :website%> 
+		</div>
+		<div class="field">
+			<label>Category</label> 
+			<%= select_tag "Category", options_from_collection_for_select(Category.all, "name", "name") %> 
+		</div>
+       
+       
+        
+       
+       
+       
+      
+      <%#*<p><%= button_tag :save,:id=>"btn_new_addr" %>
     </div>
+	
   </div>
   <%#end of unless%>
  <% end %> 
   <div id="locationform"></div>
   <div id="locations">
   </div>
-<p><%=button_tag "Continue to next Step", :id=>"btnStep2", :remote=>"true" %></p>
+  <div class="buttons">
+	  <%=button_tag "Continue to next Step", :id=>"btnStep2", :class=>"step_button", :remote=>"true" %>
+	</div>
+	<div class="clr"></div>
 <%#*end of step2%>
 </div>
-<div id="divstep3" style="display:none">
+<div id="divstep3" class="create_vox_form cvf_step3" style="display:none;">
+<div class="form_header" style="border:0px; margin:0px;">
+<ul class="steps flr">
+	<li class="active"><a href="#">Step 1</a></li>
+	<li class="arrow"></li>
+	<li class="active"><a href="#">Step 2</a></li>
+	<li class="arrow grey"></li>
+	<li class="active"><a href="#">Step 2</a></li>
+</ul>
+</div>
+<h2>Supporting Info</h2>
+<br>
+<p>To help the company resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behave, please fill this section out as thoroughly as possible.</p>
+<br>
+
+<p>Note: Any information you enter in this area is secure and will only be shared with the company.</p><br>
+
+
 <div class="account">
+<div class="field">
+	<label>Account #</label> 
+	<%= text_field :account, :account, :class=>"inp_text" %> 
+</div>
+<div class="field">
+	<label>Reference #</label> 
+	<%= text_field :account, :reference, :class=>"inp_text" %> 
+</div>
 <%= f.fields_for :detailinfos do |detail_form| %>
 
 <div class="field">
-<%= label_tag "Enter other details which you want to share with company and not have public" %><br/>
+<div class="full"><label>Enter other details which you want to share with company and not have public</label></div>
+<div class="inp_details">
   <%= detail_form.text_area :description %>
+</div>  
 </div>  
 <% end  %>
 </div>
-<h4>File Upload</h4>
+<br>
+<h2>File Upload</h2>
+<br>
+<h4>Images</h4>
+<p>You may upload as many images needed as long as the total size of all images is less than 2MB.<br>
+File type: .jpg, .jpeg, .gif, .png</p><br>
 
   <%= f.fields_for :assets do |asset_fields| %>
           <% if asset_fields.object.new_record? %>
                   <p><%= asset_fields.file_field :image %></p>
           <% end %>
   <% end %>
-
+  <br>
+  
   <h4>Show Old Images</h4>
 
   <%= f.fields_for :assets do |asset_fields| %>
@@ -148,10 +237,12 @@
   
 <% end %>
  
-  <div class="actions">
+  <div class="actions buttons">
     <%= f.submit %>
   </div>
+  <div class="clr"></div>
 </div> 
 <% end %>
+</div>
   
  
