@@ -1,49 +1,47 @@
-<table>
-  <tr>
-    <td><%= submit_tag "Whatis Umvox?" %></td>
-    <td>
+<div id="main">
+<div id="header">
+<div class="wrapper relative">
+<h1 class="logo"><a href="#"><img src="/assets/logo.png" alt="" title="UmVox" /></a></h1>
+<div class="menu_1">
+	<%= submit_tag "What is Umvox?" %>
+	  <span> / </span>
       <%= form_tag('/posts/new',:method=>:get) do%>
         <%= submit_tag "File Vox" %>
       <% end %>
-    </td>
-    <td>
+	  <span> / </span>
       <%= form_tag('/posts/browse',:method=>:get) do%>
         <%= submit_tag "Browse Vox" %>
       <% end %>
-    </td>
-    <td>
+      <span> / </span>
       <% if session['user'] %>
        <%= form_tag("/posts", :method=>:get) do %>
         <%= submit_tag "My Umvox" %>
       <% end %>
-     </td>
+      <span> / </span>
      <% end %> 
-    <%#*<td>%>
+    
       <%#= form_tag("/posts", :method=>:get) do %>
         <%#= hidden_field_tag "all", 'true'%>  
         <%#= submit_tag "All Umvox" %>
       <%# end %>
-    <%#*</td>%>
-    <%#*<td>%>
+      
       <%# if session['user'] %>
         <%#= form_tag("/members/dashboard", :method=>:get) do %>
           <%#= submit_tag "Dashboard" %>
         <%# end %>
       <%# end %>
-    <%#*</td>%>
-    <td>
+    
       <%# if session[:user] and session[:user].admin == true  %>
       <%= form_tag("/email/view", :method=>:get) do %>
         <%= submit_tag "Send email" %>
       <% end %>
       <%# end %>
-    </td>
-    <td>
+    </div>
+	<div class="menu_2">
       <% if session['user'] %>
          <%= link_to session['user'].username, "/members/#{session['user'].id}" %>
       <% end %>
-    </td>
-    <td>
+    
     <% if !session['user'] %>
             
          <%= form_tag("/welcome", :method=>:get) do %>
@@ -53,14 +51,15 @@
             </div>
         <% end %>
        <% else %>
-        <td>
+        
           <%= form_tag("/users/sign_out",:method=>:DELETE) do %>
             <%= submit_tag "LogOut" %>
           <% end %>
-      </td>
+      
     <% end %> 
-    </td>
-  </tr>
-  
-</table>
+    </div>
 
+</div>
+</div>
+<div class="content">
+<div class="wrapper">

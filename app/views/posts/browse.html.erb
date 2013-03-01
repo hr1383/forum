@@ -1,28 +1,53 @@
-
-<div>
-  <p>Browse Vox</p>
+<div class="left_section">
+<div class="left_header">
+<h1 class="">Browse Vox</h1>
+</div>
+<div class="browse_vox">
+  
   <%= form_tag("/posts/browse", :method=>:get) do %>
-      <p>
-        <%= hidden_field_tag :type,"location" %>
-        <%= text_field_tag :search, params[:search] %>
+    <%= hidden_field_tag :type,"location" %>
+    <div class="search_field">    
+		<%= text_field_tag :search, params[:search] %>
         <%= submit_tag "Search", :name => nil %>
-      </p>
-    <% end %>
+		<div class="clr"></div>
+    </div>
+  <% end %>
       
      <%  if @returnsearch && @locationGroupByName.size > 0%> 
       <%= render "renderbrowsepostbysearch", :locationGroupByName=>@locationGroupByName %>            
       <% else %>
-        <p> No Results Found</p>
+        <br><p> No Results Found</p>
      <% end %>     
   <%  if @locationGroupByName.size == 0%>       
-     <p><b>Can't find , check out the directory below.</b></p>       
-     <table>     
+     <p><b>Can't find , check out the directory below.</b></p>     <br><br>  
+     <ul class="browse_categories">     
      <% Category.all.each do |category| -%>
-       <tr>
-         <td><%= link_to category.name,"/posts/browse?type=category&search="+category.name %>
-           <p><%=   category.description %></p></td>
-       </tr>
+       <li>
+         <div><%= link_to category.name,"/posts/browse?type=category&search="+category.name %></div>
+           <p><%=   category.description %></p>
+       </li>
      <% end %>
-     </table>  
+     </ul>  
    <% end %>  
+</div>
+</div>
+<div class="sidebar flr">
+	<div class="brown_box">
+		<div class="head">
+			<h2>Vox on Phone</h2>
+		</div>
+		<div class="body">
+			<p>UmVox also provides a database of phone
+numbers of telemarketers, charities, political
+surveyors, SCAM artists, and other companies that
+may interrupt your day or constantly disturb you.</p><br>
+			<p>If you've received strange calls, voicemails, or
+unsolicited SMS texts, please submit the telephone
+info or support other users experienecing these
+issues. By doing this you will be protecting our
+community from harassing calls or messages.</p><br>
+			<a href="#">See Telemarketer / Phone &raquo;</a>
+
+		</div>
+	</div>
 </div>
