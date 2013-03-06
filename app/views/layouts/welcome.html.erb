@@ -7,17 +7,86 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= form_tag ({:controller=> "welcome", :action=> "login"}) do %>
+<div id="main">
+<div id="header">
+	<div class="wrapper relative">
+		<h1 class="logo"><a href="#"><img title="UmVox" alt="" src="/assets/logo.png"></a></h1>
+	</div>
+</div>
+<div class="content">
+	<div class="wrapper">
+		<div id="sign_in">
+ <h2>&nbsp;</h2>
+ <div class="sign_in_fb">
+	<%= form_tag ({:controller=> "welcome", :action=> "login"}) do %>
             
-            <div id="signin_button">
-                <%= image_submit_tag  ("/assets/facebooklogin.png") %>
-            </div>
-        <% end %>
- <%= link_to "Sign In" , new_user_session_path %>
-  
-  <%#= render :partial => "devise/shared/links" %>
+		<div id="signin_button">
+			<%= image_submit_tag  ("/assets/fb_login.png") %>
+		</div>
+	<% end %>
+	
+ </div>
+ <div class="or"><span>OR</span></div>
+ <div class="sign_in_fill">
+	<%= link_to "Sign In" , new_user_session_path, :class=> "signin" %>
+</div>
+<%#= render :partial => "devise/shared/links" %>
 <%= yield %>
+</div>
 
+</div>
+
+</div>
+<div class="clear_footer"></div>
+</div>
+<div id="footer">
+<div class="wrapper">
+<div class="footer_logo_tagline">
+<div class="logo"><a href="#"><img title="UmVox" alt="" src="/assets/logo_footer.png"></a></div>
+<div class="tagline"><img title="UmVox" alt="" src="/assets/tagline_footer.png"></div>
+</div>
+<div class="footer_links">
+	<div class="column">
+		<h3>&copy; 2013 UmVox, Inc. </h3>
+		
+	</div>
+	<div class="column">
+		<h3>What is UmVox?</h3>
+		<ul>
+			<li><a href="#">How It Works</a></li>
+			<li><a href="#">File a Vox</a></li>
+			<li><a href="#">Browse Vox</a></li>
+			<li><a href="#">Help &amp; FAQ</a></li>
+		</ul>
+	</div>
+	<div class="column">
+		<h3>Account</h3>
+		<ul>
+			<li><a href="#">Overview</a></li>
+			<li><a href="#">Go Premium</a></li>
+		</ul>
+	</div>
+	<div class="column">
+		<h3>About Us</h3>
+		<ul>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Press</a></li>
+			<li><a href="#">Jobs</a></li>
+			<li><a href="#">Terms &amp; Privacy</a></li>
+		</ul>
+	</div>
+	<div class="column">
+		<h3>Connect with UmVox</h3>
+		<ul>
+			<li><a href="#"><span class="icon"><img alt="" src="/assets/fb_icon.png"></span> Facebook</a></li>
+			<li><a href="#"><span class="icon"><img alt="" src="/assets/tweet_icon.png"></span> Twitter</a></li>
+			<li><a href="#"><span class="icon"><img alt="" src="/assets/mail_icon.png"></span> Newsletter</a></li>
+		</ul>
+	</div>
+</div>
+
+</div>
+</div>
 </body>
 </html>
 

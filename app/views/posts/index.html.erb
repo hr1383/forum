@@ -4,7 +4,7 @@
     <p id="notice"><%= notice %></p>
     <h1>Listing Umvoxs</h1>
 
-    <h2>Open Umvox</h2>  
+    <h2>Open Vox</h2>  
  
    
 <table border="0" style="border-width: 1px; border-color:#000000; border-style: solid;" width="100%" >   
@@ -34,7 +34,7 @@
 
 <% end %>
 </table>    
-<h2>Close Umvox</h2>  
+<h2>Resolved Vox</h2>  
 
 <% @closeumvox.each do |post| %>
 <table border="0" style="border-width: 1px; border-color:#000000; border-style: solid;" width="100%" >      
@@ -54,7 +54,7 @@
 
 <br />
 
-<%= link_to 'New Umvoxq', new_post_path %>
+<%= link_to 'File a Vox', new_post_path %>
   </body>
   
 </html>
