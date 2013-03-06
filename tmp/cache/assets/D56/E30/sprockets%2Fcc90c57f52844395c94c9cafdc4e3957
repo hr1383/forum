@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1361532832.8319218:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%ebeb1d85fbdb4cc614c880ec39b724fbI"logical_path;
+FI"fb_icon.png;
+TI"pathname;
+FI"($root/app/assets/images/fb_icon.png;
+TI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2013-02-22T17:00:52+05:30;
+FI"length;
+FI"	1039;
+FI"digest;
+F"%5ff99f35d63ed9de69fcbe7d92d6fc0eI"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c

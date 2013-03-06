@@ -1,0 +1,403 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1361421492.996595:@value{I"
+class:EFI"BundledAsset;
+FI"id;
+F"%4442f6ddb8e85c83888be51a7691e51aI"logical_path;
+FI"application.js;
+TI"pathname;
+FI"0$root/app/assets/javascripts/application.js;
+TI"content_type;
+FI"application/javascript;
+FI"
+mtime;
+FI"2013-02-20T18:23:39+05:30;
+FI"	body;
+FI"‚// This is a manifest file that'll be compiled into including all the files listed below.
+// Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
+// be included in the compiled file accessible from http://example.com/assets/application.js
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+
+//$(function() {
+//$("#post_posttype_question").change(function() {
+//         $(".account").show();
+//         $("#lbl_question").text("Question");
+//});
+//});
+//
+//$(function() {
+//$("#post_detailinfos_attributes_0_description").focus(function() {
+//         $(this).val('');
+//});
+//});
+//
+//$(function() {
+//$("#post_posttype_complement").change(function() {
+//         $(".account").hide();
+////         $("#lbl_question").html("Praise");
+//         $("#lbl_question").text("Praise is good for health.");
+//});
+//});
+//
+//$(function() {
+//$("#post_posttype_complaint").change(function() {
+//         $(".account").show();
+//         $("#lbl_question").text("What went wrong?");
+//});
+//});
+//$(function(){
+//$('#location_select').live('click', function(event){
+//            event.preventDefault();
+//            data = $(this).attr('name')+"<br/>"+$(this).attr('address')+"<br/>"+$(this).attr('phone')+"<br/>"
+//         $("#lbl_company").html("Company<br/>"+data)
+//         $("#post_location_attributes_name").val($(this).attr('name'));
+//         alert($("#post_location_attributes_name").val());
+//         $("#post_location_attributes_address").val($(this).attr('address'));
+//         $("#post_location_attributes_tel").val($(this).attr('phone'));
+//         $("#post_location_attributes_city").val($(this).attr('city'));
+//         $("#post_location_attributes_zipcode").val($(this).attr('zipcode'));
+//         $("#post_location_attributes_email").val($(this).attr('email'));
+//         $("#post_location_attributes_website").val($(this).attr('website'));
+//         $("#post_location_attributes_category").val($(this).attr('category'));
+//    $("#locations").empty();
+//    alert($("#post_location_attributes_name").val());
+//    
+//});
+//});
+//
+//$(function() {
+//$("#new_address_address").change(function() {
+//         if(this.checked){
+//            $(".full_add").show();
+//         }
+//         else
+//            $(".full_add").hide(); 
+//         
+//});
+//});
+//
+//
+//$(function() {
+//$("#btn_new_addr").click(function() {
+//    alert("inside")
+//         name= $("#full_add_name").val();
+//         $("#post_location_attributes_name").val(name);
+//         $("#post_location_attributes_address").val($("#full_add_address").val());
+////         $("#post_locations_attributes_0_tel").val($("#full_add_tel").val());
+//         $("#post_location_attributes_city").val($("#full_add_city").val());
+//         $("#post_location_attributes_zipcode").val($("#full_add_zipcode").val());
+//         $("#post_location_attributes_email").val($("#full_add_email").val());
+//         $("#post_location_attributes_website").val($("#full_add_website").val());
+//         $("#post_location_attributes_category").val($("#Category").val());
+//         alert($("#post_location_attributes_category").val());
+//        var output = $("#post_location_attributes_name").val()+"<br/>"+$("#post_location_attributes_address").val()+"<br/>"+
+//                      $("#post_location_attributes_city")+"<br/>"+$("#post_location_attributes_zipcode").val()+"<br/>"+$("#post_location_attributes_category").val();
+//        
+//         $("#lbl_company").html("Company"+output);
+//         return false;
+//         
+//         
+//});
+//});
+//
+//
+//$(function() {
+//$("#btnfindAddress").click(function() {
+//       var dataString = '';
+//            //built the data string that will be sent with ajax
+//            dataString += 'business_name='+$('#company').val()+'&';
+//            dataString += 'business_city='+$('#city').val()+'&';
+//            dataString += 'business_country='+$('#country').val()+'&';
+//            dataString += 'business_zipcode='+$('#zipcode').val();
+//    $.ajax({
+//    type: "GET",
+//    url: "/locations/search",
+//    contentType: "application/text; charset=utf-8",
+//    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+//    data: dataString, 
+//    success: function(data){ 
+//        var text_result="";
+//        text_result="<table  id=\"thetable\"><tbody>";
+//        $.each(data,function(index,value){
+//              text_result+="<tr>";
+//              text_result+="<td>"+value.name+"</td>";
+//              text_result+="<td>"+value.address+"</td>";
+//              text_result+="<td>"+value.zipcode+"</td>";
+//              text_result+="<td><a id=\"location_select\" name=\""+ value.name+"\" address=\""+value.address+"\" phone=\""+value.tel+"\" zipcode="+value.zipcode+" website="+value.website+" city=\""+value.city+"\" href=\"#\">Select</a></td>";
+//              text_result+="</tr>";
+//                    //$table.append(
+//                    //       $('<tr>')
+//                    //         .append($('<td>').text(value.name))
+//                    //         .append($('<td>').text(value.address))
+//                    //         .append($('<td>').text(value.zipcode))
+//                    //         .append($('<td>').append(
+//                    //           $('<a>').attr('name',value.name).attr('address',value.address)
+//                    //         )
+//                    //    ));
+//        });
+//              $('#locations').html(text_result);
+////$('#locations').html($('<div>').append($table).html());
+//
+//    }
+////    dataType: "json",
+////    success: AjaxSucceeded,
+////    error: AjaxFailed
+//});
+//
+//alert("end of hello");
+//return false;
+//});
+//});
+//
+//$(function() {
+//$("#btnStep1").click(function() {
+////    $("#post_posttype_question").attr("disabled",true);
+////    $("#post_posttype_complaint").attr("disabled",true);
+////    $("#post_posttype_complement").attr("disabled",true);
+////    $("#post_question").attr("disabled",true);
+////    $("#post_description").attr("disabled",true);
+////    $("#post_scenario_").attr("disabled",true);
+//var badwords = new Array("shit","fuck","ass","asshole");
+//var badwordsset = {};
+//var badwordsArray=[];
+//for(i=0;i<badwords.length;i++){
+//    badwordsset[badwords[i]]=true;
+//}
+//var found = false;
+//var badArray={};
+//var descriptionValue = $("#post_description").val().split(" ");
+//for(i=0;i<descriptionValue.length;i++){
+//    if(badwordsset.hasOwnProperty(descriptionValue[i])){
+//        found = true;
+//        badwordsArray.push(descriptionValue[i]);
+//    }
+//}
+//if(found){
+//    alert("Text contains obsecene words." +badwordsArray);
+//    return false;
+//}
+//    $("#divstep2").show();
+////    $('#divestep2').scrollIntoView();
+//    return false;
+//});
+//});
+//
+//
+//$(function() {
+//$("#btnStep2").click(function() {
+//    $("#divstep3").show();
+//    return false;
+//});
+//});
+//$(document).ready(function() {
+//var rows=$('table.checkin').find('tr').length;
+//alert(rows);
+//var no_rec_per_page=5;
+//var no_pages= Math.ceil(rows/no_rec_per_page);
+//var $pagenumbers=$('<div id="pages"></div>');
+//for(i=0;i<no_pages;i++)
+//{
+//$('<span class="page">'+(i+1)+'</span>').appendTo($pagenumbers);
+//}
+//$pagenumbers.insertAfter('table.checkin');
+//$('.page').hover(
+//function(){
+//$(this).addClass('hover');
+//},
+//function(){
+//$(this).removeClass('hover');
+//}
+//);
+//$('table.checkin').find('tr').hide();
+//var tr=$('table.checkin tr');
+//for(var i=0;i<=no_rec_per_page-1;i++)
+//{
+//$(tr[i]).show();
+//}
+//$('span').click(function(event){
+//$('table.checkin').find('tr').hide();
+//for(i=($(this).text()-1)*no_rec_per_page;i<=$(this).text()*no_rec_per_page-1;i++)
+//{
+//$(tr[i]).show();
+//}
+//});
+//});
+;
+FI"asset_paths;
+F[I"dC:/Ruby/Ruby193/lib/ruby/gems/1.9.1/gems/jquery-rails-2.1.4/vendor/assets/javascripts/jquery.js;
+TI"hC:/Ruby/Ruby193/lib/ruby/gems/1.9.1/gems/jquery-rails-2.1.4/vendor/assets/javascripts/jquery_ujs.js;
+TI"2$root/app/assets/javascripts/assets.js.coffee;
+FI"4$root/app/assets/javascripts/comments.js.coffee;
+FI"3$root/app/assets/javascripts/company.js.coffee;
+TI":$root/app/assets/javascripts/company_emails.js.coffee;
+TI"1$root/app/assets/javascripts/email.js.coffee;
+TI"7$root/app/assets/javascripts/email_stats.js.coffee;
+TI"1$root/app/assets/javascripts/jquery-1.7.2.js;
+TI":$root/app/assets/javascripts/jquery.form.validator.js;
+TI"4$root/app/assets/javascripts/jquery.validate.js;
+TI"8$root/app/assets/javascripts/jquery.validate.min.js;
+TI"6$root/app/assets/javascripts/jquerytablescroll.js;
+FI"5$root/app/assets/javascripts/locations.js.coffee;
+FI"3$root/app/assets/javascripts/members.js.coffee;
+TI"1$root/app/assets/javascripts/posts.js.coffee;
+FI"9$root/app/assets/javascripts/registrations.js.coffee;
+TI"4$root/app/assets/javascripts/sessions.js.coffee;
+TI"1$root/app/assets/javascripts/umvox.js.coffee;
+FI"3$root/app/assets/javascripts/umvoxqs.js.coffee;
+FI"1$root/app/assets/javascripts/users.js.coffee;
+FI"3$root/app/assets/javascripts/welcome.js.coffee;
+FI"zC:/Ruby/Ruby193/lib/ruby/gems/1.9.1/gems/client_side_validations-3.2.1/vendor/assets/javascripts/rails.validations.js;
+TI"0$root/app/assets/javascripts/application.js;
+TI"dependency_paths;
+F[{I"	path;
+FI"0$root/app/assets/javascripts/application.js;
+TI"
+mtime;
+FIu:	TimeRF€   ß:@_zoneI"India Standard Time;
+T:offsetiXMI"hexdigest;
+F"%61bbf9505511cc667e49b84be6d08e06{I"	path;
+FI"!$root/app/assets/javascripts;
+TI"
+mtime;
+FIu;ŒF€  pÖ;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%d85b9dc5be9bb446b9fe98595f233aca{I"	path;
+FI"dC:/Ruby/Ruby193/lib/ruby/gems/1.9.1/gems/jquery-rails-2.1.4/vendor/assets/javascripts/jquery.js;
+TI"
+mtime;
+FIu;ŒF€  À;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%599ff9047763976e0f7c0c7e0b206fe3{I"	path;
+FI"hC:/Ruby/Ruby193/lib/ruby/gems/1.9.1/gems/jquery-rails-2.1.4/vendor/assets/javascripts/jquery_ujs.js;
+TI"
+mtime;
+FIu;ŒF€  À;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%861287a1c945d796aa16612f1ba9b042{I"	path;
+FI"2$root/app/assets/javascripts/assets.js.coffee;
+FI"
+mtime;
+FIu;ë"€  0';I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"4$root/app/assets/javascripts/comments.js.coffee;
+FI"
+mtime;
+FIu;ë"€  0';I"India Standard Time;
+T;iXMI"hexdigest;
+F"%0868aba5d4b750d3a9421721ea3d9b9c{I"	path;
+FI"3$root/app/assets/javascripts/company.js.coffee;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI":$root/app/assets/javascripts/company_emails.js.coffee;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"1$root/app/assets/javascripts/email.js.coffee;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"7$root/app/assets/javascripts/email_stats.js.coffee;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"1$root/app/assets/javascripts/jquery-1.7.2.js;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%6f3f36f2ade31a0c2d4090e53a449766{I"	path;
+FI":$root/app/assets/javascripts/jquery.form.validator.js;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%0b859e94aae161d08b3fca5b309328e4{I"	path;
+FI"4$root/app/assets/javascripts/jquery.validate.js;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f66f1e7f2aa01370510c8731c0fabbb6{I"	path;
+FI"8$root/app/assets/javascripts/jquery.validate.min.js;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%fc33a6103b430fc7f922579db5089aec{I"	path;
+FI"6$root/app/assets/javascripts/jquerytablescroll.js;
+FI"
+mtime;
+FIu;ë"€  0';I"India Standard Time;
+T;iXMI"hexdigest;
+F"%aa93cb97adee6b090d62cf92bbd5f0c2{I"	path;
+FI"5$root/app/assets/javascripts/locations.js.coffee;
+FI"
+mtime;
+FIu;ë"€  0';I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"3$root/app/assets/javascripts/members.js.coffee;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"1$root/app/assets/javascripts/posts.js.coffee;
+FI"
+mtime;
+FIu;2F€   Ü;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%e12a5a8447cb9316e2d60700fd1741ae{I"	path;
+FI"9$root/app/assets/javascripts/registrations.js.coffee;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"4$root/app/assets/javascripts/sessions.js.coffee;
+TI"
+mtime;
+FIu;RF€   ß;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"1$root/app/assets/javascripts/umvox.js.coffee;
+FI"
+mtime;
+FIu;ë"€  0';I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"3$root/app/assets/javascripts/umvoxqs.js.coffee;
+FI"
+mtime;
+FIu;ë"€  0';I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"1$root/app/assets/javascripts/users.js.coffee;
+FI"
+mtime;
+FIu;ë"€  0';I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"3$root/app/assets/javascripts/welcome.js.coffee;
+FI"
+mtime;
+FIu;ë"€  0';I"India Standard Time;
+T;iXMI"hexdigest;
+F"%f50e3d51579225e3370988d160060f33{I"	path;
+FI"zC:/Ruby/Ruby193/lib/ruby/gems/1.9.1/gems/client_side_validations-3.2.1/vendor/assets/javascripts/rails.validations.js;
+TI"
+mtime;
+FIu;ŒF€   ;I"India Standard Time;
+T;iXMI"hexdigest;
+F"%7d8aa2ae82edb0d4bb94b03d2f90c02bI"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c
