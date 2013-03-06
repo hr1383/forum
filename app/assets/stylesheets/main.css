@@ -35,6 +35,8 @@ input, select, textarea{ outline:none;}
 .menu_1{ float:left; margin:45px 0 0 23px;}
 .menu_2{ float:right; margin:45px 0 0 0;}
 .menu_1 *{ float:left;}
+.menu_2 *{ float:left;}
+.menu_2 a{ color:#fff;}
 .menu_1 input, .menu_2 input{
 	background:none; border:0px; color:#fff; font-size:12px; cursor:pointer; 
 }
@@ -195,7 +197,7 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
 }
 #sign_in .sign_in_fill .field input[type="text"], #sign_in .sign_in_fill .field input[type="email"]{color: #545454; float: none; font-size: 15px; font-weight: normal; height: 16px; width: 454px;}
 #sign_in .sign_in_fill .field input[type="password"]{color: #545454; float: none; font-size: 15px; font-weight: normal; height: 16px; width: 300px;}
-#sign_in .sign_in_fill .field input[type="submit"]{
+#sign_in .sign_in_fill .field input[type="submit"], #sign_in .sign_in_fill .field a.signin{
 	background: url("/assets/upgrade_btn.png") no-repeat scroll 0 0 transparent;
     border: medium none;
     color: #FFFFFF;
@@ -209,6 +211,23 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
     text-align: center;
     text-shadow: 0 0 1px #9A7600;
     width: 176px;
+}
+
+.sign_in_fill a.signin{
+	background: url("/assets/upgrade_btn.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 43px;
+    line-height: 43px;
+    padding-bottom: 6px;
+    text-align: center;
+    text-shadow: 0 0 1px #9A7600;
+    width: 176px;
+	margin:0 auto;
 }
 
 #footer{ background:#5ba300 url(/assets/footer_bg_rpt.gif) repeat-x; min-height:247px;}
@@ -225,3 +244,15 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
 .footer_links .column ul li a .icon{ float:left; width:25px; text-align:center;}
 .footer_links .column ul li a .icon img{ vertical-align:middle;}
 .footer_links .column ul li a:hover{ background:none; text-decoration:underline;}
+
+#browse_search_result{ margin-top:30px;}
+#browse_search_result th{ background:#8E8F8D; color:#fff;}
+#browse_search_result th, #browse_search_result td{ padding:10px; text-align:left;}
+#browse_search_result tr:nth-child(2n) {
+    background: none;
+	color:#333333;
+}
+#browse_search_result tr:nth-child(2n+1) {
+    background: #E7E7E7;
+	color:#333333;
+}
