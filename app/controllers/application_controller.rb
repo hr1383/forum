@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     puts session[:user].nil?
     puts "--------------"
     if (current_user.nil? && session[:user].nil?)
-      redirect_to root_path
+      redirect_to "/users/sign_in"
     end
   end
 end

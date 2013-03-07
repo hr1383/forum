@@ -27,6 +27,7 @@ class MembersController < ApplicationController
     else
       @user = current_user
     end
+    return
   end
   
   def create
@@ -100,10 +101,11 @@ class MembersController < ApplicationController
     end
     @totalclose = Post.latest_closed
     @totalopen = Post.latest_open
-    unless session[:user].nil?
-      user = session[:user]
-      @isadmin = user.admin
+    if session[:user].nil?
+      session[:user] = current_user
     end
+    user = session[:user]
+      @isadmin = user.admin
   end
   
   def show

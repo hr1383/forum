@@ -1,7 +1,9 @@
 Umvox::Application.routes.draw do
 
+  root :to => "members#dashboard"
+  
   devise_for :users, :controllers => {:registrations => 'registrations',:sessions => 'sessions'} do
-    root :to => "sessions#new"
+    
   end
 
   resources :email_stats
@@ -38,7 +40,7 @@ Umvox::Application.routes.draw do
   resources :members do
   collection do
     get   :filldetails,:dashboard,:signin
-    post  :updateprofile
+    put  :updateprofile
   end
 end
 #  resources :assets
