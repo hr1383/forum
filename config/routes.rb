@@ -1,6 +1,8 @@
 Umvox::Application.routes.draw do
 
-  devise_for :users, :controllers => {:registrations => 'registrations',:sessions => 'sessions'}
+  devise_for :users, :controllers => {:registrations => 'registrations',:sessions => 'sessions'} do
+    root :to => "sessions#create"
+  end
 
   resources :email_stats
   
@@ -12,7 +14,7 @@ Umvox::Application.routes.draw do
       get :view
     end
   end
-root :to => "members#signin"
+
  resources :welcome do
    collection do
     post  :login

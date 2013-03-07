@@ -11,4 +11,10 @@ class RegistrationsController  < Devise::RegistrationsController
         render_with_scope :new
       end
   end
+  
+   protected
+    def after_sign_up_path_for(resource)
+        "/members/dashboard"
+    end
+  
 end
