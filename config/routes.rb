@@ -1,7 +1,7 @@
 Umvox::Application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => 'registrations',:sessions => 'sessions'} do
-    root :to => "sessions#create"
+    root :to => "sessions#new"
   end
 
   resources :email_stats
