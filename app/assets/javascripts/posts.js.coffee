@@ -134,7 +134,6 @@ $ ->
     #    dataType: "json",
     #    success: AjaxSucceeded,
     #    error: AjaxFailed
-    
     false
 
 
@@ -168,7 +167,6 @@ $ ->
 $ ->
   $("#btnStep2").click ->
     $("#divstep3").show()
-    
     if $("#new_address").is(':checked') == true
         name = $("#full_add_name").val()
         $("#post_location_attributes_name").val name
