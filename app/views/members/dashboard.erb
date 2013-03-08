@@ -1,5 +1,5 @@
-    <h3>Welcome <%= (session[:user]).firstname%></h3>
-    <p>What is the matter ? </p>
+﻿    <h3>Welcome <%= (session[:user]).firstname %></h3>
+    <p>What's the matter ? </p>
     <%= form_tag("/posts/search", :method=>:get) do %>
       <p>
          <%= hidden_field_tag :type,"post" %>
@@ -8,78 +8,94 @@
       </p>
     <% end %>
     <% if session[:user] %>
-      <table border ="1">
-        <tr>
-          <td>
+			<div class="left_section_part flt">
               <% if (!@totalclose.nil? and @totalclose.size >0) %>
-                <p>Recently Resolved</p>  
-                      <table>
-                       <% @totalclose.each do |post| %>
-                        <tr><td> <%= render "displaydashboardpost", :post=>post %> </td></tr>           
-                      <% end %>
-                      </table>  
-               <% else %> 
-                  <% if (!@totalopen.nil? and @totalopen.size >0) %>
-                      <p>Latest Vox</p>
-                      <% alreadydisplayed = true %>
-                      <table border="1px solid black" border-collapse="collapse">
-                         <% @totalopen.each do |post| %>
-                          <tr>
-                            <td> 
-                               <%= render "displaydashboardpost", :post=>post %>            
-                            </td>  
-                          </tr>
-                         <% end %>
-                      </table>
-                  <% end %>
-              <%  end %>
-          </td>
-          <td>
-            <% if @checkinarr.nil? %>
-            <p>No Facebook check in </p>
-            <% else %>
-            <p><b>Review Your Facebook Checkin</b></p>
-             <%# i=0 %>
-            <table class="checkin" border="1">
-              <% @checkinarr.each do |loc| %>
-                    <%# if i== 6 %>
-                       <%# break %>
-                    <%# else %>
-                       <%# i=i+1 %>
-                    <%# end %>
-            <tr><td>
-            <%= link_to loc.name,"/posts/new?name=#{loc.name}&addr=#{loc.address}&zip=#{loc.zipcode}&city=#{loc.city}" %><br/>
-                     <%= loc.address %>, <%= loc.city %>
-                </td></tr>
-              <% end %>
-            </table>  
-            <% end %>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <% if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
-                    <p>Latest Vox</p>
-                    <table border="1px solid black" border-collapse="collapse">
-                       <% @totalopen.each do |post| %>
-                        <tr>
-                          <td> 
-                             <%= render "displaydashboardpost", :post=>post %>            
-                          </td>  
-                        </tr>
-                       <% end %>
-                    </table>
-              <% end %>
-          </td>
-          <td>
-            <table>     
-              <th><td><p>Browse Vox By Category</p></td></th>
-               <% Category.all.each do |category| -%>
-                 <tr>
-                   <td><%= link_to category.name,"/" %></td>
-                 </tr>
-               <% end %>
-             </table>
-          </td>
-        </tr>   
+				<div class="main">
+					<h1 class="title">RECENTLY RESOLVED VOX</h1>
+					<div class="body">
+						<div class="main_box">
+						  <% @totalclose.each do |post| %>
+							<%= render "displaydashboardpost", :post=>post %> 
+						  <% end %>
+						</div>
+					</div>
+				</div>
+                <% else %> 
+			   
+                <% if (!@totalopen.nil? and @totalopen.size >0) %>
+                    <div class="main">
+						<h1 class="title">Latest Vox</h1>
+						<div class="body">
+							<div class="main_box">
+								<% alreadydisplayed = true %>
+								<% @totalopen.each do |post| %>
+								<%= render "displaydashboardpost", :post=>post %>            
+                          
+								<% end %>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				<%  end %>
+				
+				<% if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
+                    <div class="main">
+						<h1 class="title">Latest Vox</h1>
+						<div class="body">
+							<div class="main_box">
+                    
+								<% @totalopen.each do |post| %>
+                     
+								<%= render "displaydashboardpost", :post=>post %>            
+                     
+								<% end %>
+							</div>
+						</div>
+					</div>
+                <% end %>
+			</div>
+			<div class="sidebar flr">
+				<div class="brown_box">
+					<div class="body">
+					  <% if @checkinarr.nil? %>
+						<p>No Facebook check in </p>
+						<% else %>
+						<p><b>Review Your Facebook Checkin</b></p>
+						 <%# i=0 %>
+						
+						  <% @checkinarr.each do |loc| %>
+								<%# if i== 6 %>
+								   <%# break %>
+								<%# else %>
+								   <%# i=i+1 %>
+								<%# end %>
+					   
+						<%= link_to loc.name,"/posts/new?name=#{loc.name}&addr=#{loc.address}&zip=#{loc.zipcode}&city=#{loc.city}" %><br/>
+								 <%= loc.address %>, <%= loc.city %>
+							
+						<% end %>
+						
+						<% end %>
+					</div>
+			    </div>
+            
+				<div class="brown_box">
+					<div class="head">
+					  <h2>Browse Vox By Category</h2>
+					</div>
+					<div class="body">
+						<div class="sb_cat_links">
+							<ul>
+								<% Category.all.each do |category| -%>
+						 
+									<li><%= link_to category.name,"/" %></li>
+						 
+								<% end %>
+							</ul>
+						</div>
+					</div>
+			    </div>
+            </div>  
+          
+               
     <% end %>

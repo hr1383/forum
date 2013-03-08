@@ -23,7 +23,7 @@
     </div>
 
       <div class="field">
-        <%= f.label :question,:id=>"lbl_question" %>
+        <%= f.label :question,"Title" %>
         <%= f.text_field :question,:class=>"inp_text" %>
       </div>
       <div class="field">
@@ -42,7 +42,7 @@
       </div>
       <div class="field">
          <% if !@post.compensation.nil? -%>
-           <div class="full"><%= f.label :compensation %></div>
+           <div class="full"><label>What are you looking for?</label></div>
            <% Compensation.all.each do |compensation| -%>
             <span class="check"><%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
             <%= label_tag :compensation, compensation.name -%></span>
@@ -64,7 +64,7 @@
 	<li class="arrow"></li>
 	<li class="active"><a href="#">Step 2</a></li>
 	<li class="arrow grey"></li>
-	<li><a href="#">Step 2</a></li>
+	<li><a href="#">Step 3</a></li>
 </ul>
 </div>
 <h2>This vox is for...</h2>
@@ -81,7 +81,7 @@
 	<p>In order to inform the right personnel, please select the correct business.</p>
 	<br>
 	<div class="field company">
-		<label>Company</label> 
+		<label>Addressee</label> 
 		<%= text_field_tag :company %>
 	</div>
 	<div class="field">
@@ -106,7 +106,7 @@
     <p> Select a category <%= select_tag "Category1", options_from_collection_for_select(Category.all, "name", "name") %></p>
   </div>
   <div id="newAddress">
-    <p>Do you want to enter Address  <%=  check_box :new,:address  %></p>
+    <p>None of these? Enter the information manually.  <%=  check_box :new,:address  %></p>
 	<br>
     <div class="full_add grey_box" style="display:none">
 		<h3>Enter the addressee info manually</h3>
@@ -168,12 +168,12 @@
 	<li class="arrow"></li>
 	<li class="active"><a href="#">Step 2</a></li>
 	<li class="arrow grey"></li>
-	<li class="active"><a href="#">Step 2</a></li>
+	<li class="active"><a href="#">Step 3</a></li>
 </ul>
 </div>
 <h2>Supporting Info</h2>
 <br>
-<p>To help the company resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behave, please fill this section out as thoroughly as possible.</p>
+<p>To help the company resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behalf, please fill this section out as thoroughly as possible.</p>
 <br>
 
 <p>Note: Any information you enter in this area is secure and will only be shared with the company.</p><br>

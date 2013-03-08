@@ -1,7 +1,9 @@
 <div id="main">
 <div id="header">
 <div class="wrapper relative">
-<h1 class="logo"><a href="#"><img src="/assets/logo.png" alt="" title="UmVox" /></a></h1>
+<h1 class="logo">
+	<a href="/welcome"><img src="/assets/logo.png" alt="" title="UmVox" /></a>
+</h1>
 <div class="menu_1">
 	<%= submit_tag "What is Umvox?" %>
 	  <span> / </span>
@@ -53,7 +55,7 @@
        <% else %>
         
           <%= form_tag("/users/sign_out",:method=>:DELETE) do %>
-            <%= submit_tag "LogOut" %>
+            <%= submit_tag "(LogOut)" %>
           <% end %>
       
     <% end %> 
