@@ -1,7 +1,7 @@
 <div class="vox_entry complaint">
 	<span class="cat"></span>
 	<div class="padder">
-		<h2><span class="pre"><%=post.location.category %></span> > <%#= post.locations.first.name %></h2>
+		<h2><span class="pre"><%=post.location.category %></span> </h2>
 		<p><%= post.question %></p>
 		<div class="btm_line">
 			<div class="comment">
@@ -18,11 +18,13 @@
 				<span class="date"><%= post.created_at %></span>
 						
 			</div>
-			<a class="read_more flr" href="#">» Read More</a>
+                        <div class="read_more flr">
+                              <%= link_to  "Read More","/posts/#{post.id}" %> 
+                        </div>
 		</div>
 	</div>
-	<div class="grey">
-		<p class="updated"><strong>Update:</strong> July 21, 2012</p>
-		<p>Case resolved in compensation of $400.00.</p>
-	</div>
+	<%#*<div class="grey">%>
+		<%#*<p class="updated"><strong>Update:</strong> July 21, 2012</p>%>
+		<%#*<p>Case resolved in compensation of $400.00.</p>%>
+	<%#*</div>%>
 </div>

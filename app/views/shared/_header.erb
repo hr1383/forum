@@ -7,7 +7,7 @@
 <div class="menu_1">
 	<%= submit_tag "What is Umvox?" %>
 	  <span> / </span>
-      <% if (current_user.nil? || session[:user].nil?) %>    
+      <% if (!current_user.nil? || !session[:user].nil?) %>    
           <%= form_tag('/posts/new',:method=>:get) do%>
             <%= submit_tag "File Vox" %>
           <% end %>
