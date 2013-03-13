@@ -21,8 +21,6 @@ class PostsController < ApplicationController
         @closeumvox.push(post)
       end
     end
-    puts @openumvox
-    puts @closeumvox
   end
   
   # GET /posts/1

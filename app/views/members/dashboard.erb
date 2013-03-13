@@ -8,52 +8,52 @@
       </p>
     <% end %>
     <% if session[:user] %>
-			<div class="left_section_part flt">
-              <% if (!@totalclose.nil? and @totalclose.size >0) %>
-				<div class="main">
-					<h1 class="title">RECENTLY RESOLVED VOX</h1>
-					<div class="body">
-						<div class="main_box">
-						  <% @totalclose.each do |post| %>
-							<%= render "displaydashboardpost", :post=>post %> 
-						  <% end %>
-						</div>
-					</div>
-				</div>
-                <% else %> 
-			   
-                <% if (!@totalopen.nil? and @totalopen.size >0) %>
-                    <div class="main">
-						<h1 class="title">Latest Vox</h1>
-						<div class="body">
-							<div class="main_box">
-								<% alreadydisplayed = true %>
-								<% @totalopen.each do |post| %>
-								<%= render "displaydashboardpost", :post=>post %>            
-                          
-								<% end %>
-								<% end %>
-							</div>
-						</div>
-					</div>
-				<%  end %>
-				
-				<% if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
-                    <div class="main">
-						<h1 class="title">Latest Vox</h1>
-						<div class="body">
-							<div class="main_box">
-                    
-								<% @totalopen.each do |post| %>
-                     
-								<%= render "displaydashboardpost", :post=>post %>            
-                     
-								<% end %>
-							</div>
-						</div>
-					</div>
-                <% end %>
-			</div>
+          <div class="left_section_part flt">
+                              <% if (!@totalclose.nil? and @totalclose.size >0) %>
+                                                <div class="main">
+                                                        <h1 class="title">RECENTLY RESOLVED VOX</h1>
+                                                        <div class="body">
+                                                                <div class="main_box">
+                                                                  <% @totalclose.each do |post| %>
+                                                                        <%= render "displaydashboardpost", :post=>post %> 
+                                                                  <% end %>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                <% end %> 
+
+                                <% if (!@totalopen.nil? and @totalopen.size >0) %>
+                                    <div class="main">
+                                                                <h1 class="title">Latest Vox</h1>
+                                                                <div class="body">
+                                                                        <div class="main_box">
+                                                                                <% alreadydisplayed = true %>
+                                                                                <% @totalopen.each do |post| %>
+                                                                                <%= render "displaydashboardpost", :post=>post %>            
+
+                                                                                <% end %>
+                                                                                <% end %>
+                                                                        </div>
+                                                                </div>
+                                    </div>
+                                <%  end %>
+
+                                <% if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
+                                                        <div class="main">
+                                                                <h1 class="title">Latest Vox</h1>
+                                                                <div class="body">
+                                                                        <div class="main_box">
+
+                                                                                <% @totalopen.each do |post| %>
+
+                                                                                <%= render "displaydashboardpost", :post=>post %>            
+                                                                     </div>
+                                                                </div>
+                                                        </div>           
+
+                                <% end %>
+                                                                        
+		</div>
 			<div class="sidebar flr">
 				<div class="brown_box">
 					<div class="body">
