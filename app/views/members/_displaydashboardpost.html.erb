@@ -1,8 +1,8 @@
 <div class="vox_entry complaint">
 	<span class="cat"></span>
 	<div class="padder">
-		<h2><span class="pre"><%=post.location.category %></span> </h2>
-		<p><%= post.question %></p>
+		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span> </h2>
+		<p><%= post.description.split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
 		<div class="btm_line">
 			<div class="comment">
 				<% backer= 0 %>

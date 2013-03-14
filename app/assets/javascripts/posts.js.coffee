@@ -160,7 +160,7 @@ $ ->
       return false
     $("#divstep2").show()
     
-    #    $('#divestep2').scrollIntoView();
+    $('#company').focus();
     false
 
 
@@ -181,6 +181,7 @@ $ ->
         $(".full_add").hide()
     else
         $("#post_location_attributes_category").val $("#Category1").val()
+    $("#post_detailinfos_attributes_0_description").focus()    
     false
 
 

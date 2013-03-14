@@ -6,11 +6,11 @@
       <%#*</div>%>
     <div class="field">
 	  <b><label style="padding:0px;">This vox is a...</label></b>
-      <span class="radio"><%= f.radio_button :posttype, 'Question', :checked => true %> 
-      <%= label :posttype_question, 'Question' %></span>
-      <span class="radio"><%= f.radio_button :posttype, 'Complaint' %>
+      <span class="radio"><%= f.radio_button :posttype, 'Complaint' , :checked => true%>
       <%= label :posttype_complaint, 'Complaint' %></span>
-      <span class="radio"><%= f.radio_button :posttype, 'Complement' %>
+          <span class="radio"><%= f.radio_button :posttype, 'Question' %> 
+      <%= label :posttype_question, 'Question' %></span>
+      <span class="radio"><%= f.radio_button :posttype, 'Compliment' %>
       <%= label :posttype_complement, 'Complement' %></span>
 	  <div class="clr"></div>
     </div>
