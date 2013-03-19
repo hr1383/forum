@@ -23,9 +23,9 @@
     <td>Description: <%= post.description %></td>
   </tr>
   <tr>
-    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'View', post %></td>
     <% if session['user']  && session[:user].id == post.user_id%>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Update', edit_post_path(post) %></td>
       <% if session[:user] != nil && session[:user].admin == 1 %>
         <td><%= link_to 'Destroy', umvoxq, confirm: 'Are you sure?', method: :delete %></td>
       <%end%>
@@ -45,7 +45,7 @@
     <td>Description: <%= post.description %></td>
   </tr>
   <tr>
-    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'View', post %></td>
     <%#*<td><%= link_to 'Destroy', umvoxq, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
   </table>    

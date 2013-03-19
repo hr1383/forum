@@ -140,40 +140,58 @@
 //});
 //});
 //
-//$(function() {
-//$("#btnStep1").click(function() {
-////    $("#post_posttype_question").attr("disabled",true);
-////    $("#post_posttype_complaint").attr("disabled",true);
-////    $("#post_posttype_complement").attr("disabled",true);
-////    $("#post_question").attr("disabled",true);
-////    $("#post_description").attr("disabled",true);
-////    $("#post_scenario_").attr("disabled",true);
-//var badwords = new Array("shit","fuck","ass","asshole");
-//var badwordsset = {};
-//var badwordsArray=[];
-//for(i=0;i<badwords.length;i++){
-//    badwordsset[badwords[i]]=true;
-//}
-//var found = false;
-//var badArray={};
-//var descriptionValue = $("#post_description").val().split(" ");
-//for(i=0;i<descriptionValue.length;i++){
-//    if(badwordsset.hasOwnProperty(descriptionValue[i])){
-//        found = true;
-//        badwordsArray.push(descriptionValue[i]);
-//    }
-//}
-//if(found){
-//    alert("Text contains obsecene words." +badwordsArray);
-//    return false;
-//}
-//    $("#divstep2").show();
-////    $('#divestep2').scrollIntoView();
-//    return false;
-//});
-//});
-//
-//
+$(function() {
+$("#btnStep1").click(function() {
+
+var alltrue = true;
+if($("#post_question").val().length == 0){
+     $("#error_msg").show();
+     alltrue= false;
+}
+if($("#post_description").val().length == 0){
+     $("#error_description").show();
+     alltrue= false;
+}
+if(alltrue == false)
+    return false;
+var badwords = new Array("shit","fuck","ass","asshole");
+var badwordsset = {};
+var badwordsArray=[];
+for(i=0;i<badwords.length;i++){
+    badwordsset[badwords[i]]=true;
+}
+var found = false;
+var badArray={};
+var descriptionValue = $("#post_description").val().split(" ");
+for(i=0;i<descriptionValue.length;i++){
+    if(badwordsset.hasOwnProperty(descriptionValue[i])){
+        found = true;
+        badwordsArray.push(descriptionValue[i]);
+    }
+}
+if(found){
+    alert("Text contains obsecene words." +badwordsArray);
+    return false;
+}
+    $("#divstep2").show();
+    $("#error_question").hide();
+    $("#error_description").hide();
+//    $('#divestep2').scrollIntoView();
+    return false;
+});
+});
+
+$(function(){
+$('#post_question').keyup(function(event) {
+  $("#error_question").hide();
+})
+});
+
+$(function(){
+$('#post_description').keyup(function(event) {
+  $("#error_description").hide();
+})
+});
 //$(function() {
 //$("#btnStep2").click(function() {
 //    $("#divstep3").show();

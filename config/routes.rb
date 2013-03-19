@@ -39,9 +39,9 @@ Umvox::Application.routes.draw do
  end   
   resources :members do
   collection do
-    get   :filldetails,:dashboard,:signin
-    put  :updateprofile
-    post  :updateprofile
+    get   :filldetails,:dashboard,:signin,:contactus
+    put  :updateprofile, :support
+    post  :updateprofile,:support
   end
 end
 #  resources :assets

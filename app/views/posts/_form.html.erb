@@ -25,10 +25,15 @@
       <div class="field">
         <%= f.label :question,"Title" %>
         <%= f.text_field :question,:class=>"inp_text" %>
-      </div>
+        <div id="error_question" class="error_msg" style="display:none">
+          This is the required field
+        </div>
       <div class="field">
         <%= f.label :description %>
         <%= f.text_area :description,:class=>"inp_area" %>
+         <div id="error_description"  style="display:none">
+          This is the required field
+        </div>
       </div>
       <div class="field">
          <% if !@post.scenario.nil? -%>
@@ -75,86 +80,52 @@
   <%=@post.location.city %><br/> 
   <%=@post.location.zipcode %></b>
   <% else %>
-    
-	<div class="grey_box">
-	<h3>Search for the addressee</h3>
-	<p>In order to inform the right personnel, please select the correct business.</p>
-	<br>
-	<div class="field company">
-		<label>Addressee</label> 
-		<%= text_field_tag :company %>
-	</div>
-	<div class="field">
-		<label>City</label> 
-		<%= text_field_tag :city %>
-	</div>
-    <div class="field">
-		<label>ZipCode</label> 
-		<%= text_field_tag :zipcode %>
-	</div>
-	<div class="field">
-		<label>&nbsp;</label> 
-		 <%= submit_tag 'search', :id=>'btnfindAddress', :class=>"search_btn", :name=>"btnfindAddress"%>
-	</div>
-    
-   
-    </div>
-   <div id="finallocations">
-	 <div class="full"><%= label :lbl_company,'',:id=>"lbl_company" %></div>
-  </div> 
-  <div class="finalcategory" style="display:none">
-    <p> Select a category <%= select_tag "Category1", options_from_collection_for_select(Category.all, "name", "name") %></p>
-  </div>
+ <div class="grey_box">
   <div id="newAddress">
-    <p>None of these? Enter the information manually.  <%=  check_box :new,:address  %></p>
+    <p>Is the business online store ?  <%=  check_box :new,:address  %></p>
 	<br>
-    <div class="full_add grey_box" style="display:none">
-		<h3>Enter the addressee info manually</h3>
+  </div>      
 		<p>In order to inform the right personnel, please make sure the contact info is correct.</p><br>
+                <%= f.fields_for :location do|location_form|  %>
+                
 		<div class="field">
 			<label>Name</label> 
-			<%= text_field :full_add, :name%> 
+			<%= location_form.text_field :name%> 
 		</div>
-		<div class="field">
-			<label>Address</label> 
-			<%= text_field :full_add, :address%> 
-		</div>
-		<div class="field">
-			<label>City</label> 
-			<%= text_field :full_add, :city%>
-		</div>
-		<div class="field">
-			<label>Zipcode</label> 
-			<%= text_field :full_add, :zipcode%> 
-		</div>
+                <div id="notonline">
+                    <div class="field">
+                            <label>Address</label> 
+                            <%= location_form.text_field  :address%> 
+                    </div>
+                    <div class="field">
+                            <label>City</label> 
+                            <%= location_form.text_field  :city%>
+                    </div>
+                    <div class="field">
+                            <label>Zipcode</label> 
+                            <%= location_form.text_field  :zipcode%> 
+                    </div>
+                </div>
 		<div class="field">
 			<label>Email</label> 
-			<%= text_field :full_add, :email%> 
+			<%= location_form.text_field  :email%> 
 		</div>
 		<div class="field">
 			<label>Website</label> 
-			<%= text_field :full_add, :website%> 
+			<%= location_form.text_field :website%> 
 		</div>
 		<div class="field">
 			<label>Category</label> 
-			<%= select_tag "Category", options_from_collection_for_select(Category.all, "name", "name") %> 
+			<%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %> 
 		</div>
-       
-       
-        
-       
-       
-       
-      
-      <%#*<p><%= button_tag :save,:id=>"btn_new_addr" %>
-    </div>
-	
-  </div>
+                <% end %>
+	</div>
+  
   <%#end of unless%>
  <% end %> 
-  <div id="locationform"></div>
-  <div id="locations">
-  </div>
+  <%#*<div id="locationform"></div>%>
+  <%#*<div id="locations">%>
+  <%#*</div>%>
   <div class="buttons">
 	  <%=button_tag "Continue to next Step", :id=>"btnStep2", :class=>"step_button", :remote=>"true" %>
 	</div>
@@ -217,17 +188,17 @@ File type: .jpg, .jpeg, .gif, .png</p><br>
 
 <%= f.hidden_field :user_id  %>
 
-<%= f.fields_for :location do|location_form|  %>
-  <%= location_form.hidden_field :name %>
-  <%= location_form.hidden_field :address %>
-  <%= location_form.hidden_field :tel %>
-  <%= location_form.hidden_field :city %>
-  <%= location_form.hidden_field :category %>
-  <%= location_form.hidden_field :zipcode %>
-  <%= location_form.hidden_field :email %>
-  <%= location_form.hidden_field :website %>
+<%#= f.fields_for :location do|location_form|  %>
+  <%#= location_form.hidden_field :name %>
+  <%#= location_form.hidden_field :address %>
+  <%#= location_form.hidden_field :tel %>
+  <%#= location_form.hidden_field :city %>
+  <%#= location_form.hidden_field :category %>
+  <%#= location_form.hidden_field :zipcode %>
+  <%#= location_form.hidden_field :email %>
+  <%#= location_form.hidden_field :website %>
   
-<% end %>
+<%# end %>
  
   <div class="actions buttons">
     <%= f.submit %>

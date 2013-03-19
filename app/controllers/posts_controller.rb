@@ -38,7 +38,6 @@ class PostsController < ApplicationController
     @post.compensation=[]
     unless session[:user].nil?
       @post.user_id=session[:user].id
-      puts "setting user id"
     end
     @post.detailinfos.build
     unless params[:name].nil? and params[:addr].nil?
@@ -53,6 +52,8 @@ class PostsController < ApplicationController
       @haslocation=false
       @post.build_location
     end
+    @category = Category.all
+    @category = @category.sort! { |a,b| a.name.downcase <=> b.name.downcase }
     3.times {@post.assets.build}
     respond_to do |format|
       format.html # new.html.erb
