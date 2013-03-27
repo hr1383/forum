@@ -192,6 +192,32 @@ $('#post_description').keyup(function(event) {
   $("#error_description").hide();
 })
 });
+$(function(){
+
+    $('#user_username').blur(function(event) {
+        var dataString = "username="+$('#user_username').val();
+     $.ajax({
+            type: "GET",
+            url: "/members/userp",
+            contentType: "application/text; charset=utf-8",
+            beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+            data: dataString, 
+            success: function(data){ 
+                if (data["present"] == 'f'){
+                    $('#error_username').show();
+                    $('#user_username').focus();
+                }else{
+                    $('#error_username').hide();
+                }
+        //$('#locations').html($('<div>').append($table).html());
+
+            }
+        //    dataType: "json",
+        //    success: AjaxSucceeded,
+        //    error: AjaxFailed
+        });
+    });
+});
 //$(function() {
 //$("#btnStep2").click(function() {
 //    $("#divstep3").show();

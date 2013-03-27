@@ -1,11 +1,14 @@
 Umvox::Application.routes.draw do
 
-  root :to => "members#dashboard"
-  
   devise_for :users, :controllers => {:registrations => 'registrations',:sessions => 'sessions'} do
     
   end
 
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  root :to => "members#dashboard"
+  
+  
   resources :email_stats
   
   resources :company_emails
@@ -39,7 +42,7 @@ Umvox::Application.routes.draw do
  end   
   resources :members do
   collection do
-    get   :filldetails,:dashboard,:signin,:contactus
+    get   :filldetails,:dashboard,:signin,:contactus,:userp
     put  :updateprofile, :support
     post  :updateprofile,:support
   end

@@ -1,24 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<meta http-equiv="content-Language" content="ar" />
+<title>::Umvox::</title>
+<style type="text/css">
+body{
+font-size:12px;font-family:arial;color:#333;line-height:18px;
+}
+.opinion{background:#e7e7e7;}
+.received{font-size:19px;font-weight:bold;font-family:arial;}
+.complaint{color:#333333;font-weight:bold;border-bottom:1px solid #60635d;  padding-bottom: 18px;}
+.question{color:#c49100;font-weight:bold;font-size:16px;padding-top: 18px;}
+.answer{}
+.look_fwd{padding:24px 0 0 0;}
+.button{padding:20px 0;}
+.padd{padding-top:25px;}
+.detail{font-size:14px;text-decoration: underline;font-weight:bold;padding-top:24px;}
+</style>
+</head>
+<body>
+<center>
+    <table id="header" cellspacing="0" cellpadding="0" style="width:600px;background:#f7f3ef;">
+	    <tr style="background:#5aa200;">
+		    <td height="100" align="center"><a href="#"><img src="images/logo.png" alt="" /></a></td>
+		</tr>
+		<tr>
+		    <td>
+			   <table class="opinion" cellspacing="0" cellpadding="0" style="width:560px;border:1px solid #cbc7c4;margin:0 auto;margin-top:25px;">
+			         <tr>
+				         <td>
+				            <table cellspacing="0" cellpadding="0" style="width:520px; margin:0 auto;padding:20px 0;">
+							      <tr>
+								      <td height="40" class="received">Your vox is created!</td>
+								  
+							      </tr>
+							      <tr>
+								      <td>Dear <%= @user.firstname %>  ,</td>
+							      </tr>
+								  <tr>
+								     <td>Thank you for submitting a vox.</td>
+								  </tr>
+								  <tr>
+								     <td>Below are the details of your vox #<%= @post.id %> :</td>
+								  </tr>
+								  <tr>
+								      <td class="question"><%= @post.question %> </td>
+								  </tr>
+								  <tr>
+								      <td class="answer"> <%= @post.description %> </td>
+								  </tr>
+								   <%#*<tr>%>
+								      <%#*<td class="answer padd">I do realize that drivers are on a tight schedule but would have been much simpler to just come to%>
+<%#*front door - I was waiting for delivery and would have opened door by the time the driver arrived%>
+                                     <%#*</td>%>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <p>Below are the details of your vox #<%=  @post.id %>:</p>
-    <p><%= @post.question %></p>
-    <p><%= @post.description %></p>
+								  <%#*</tr>%>
+								  
+								  <%#*<tr>%>
+								      <%#*<td class="answer padd">I am 71 years old and am disgusted with the decrease in services - prices go up and quality of%>
+<%#*service decreases.%>
+                                     <%#*</td>%>
 
-    <p>Additional Details</p>
-    <%if @post.detailinfos.nil? %>
-    <p><%= @post.description %> </p>
-    <% end %>
-    
-    <p>What's next?</br>
-1. UmVox team is ready to forward your voice.</br>
-2. Share your vox and discover people who are in the same circumstance.</br>
-3. UmVox team will let you know once the addressee responds.</br>
-Check my Vox
-    </p>
-  </body>
+								  <%#*</tr>%>
+								  
+								  <%#*<tr>%>
+								     <%#*<td class="question" >Additional Details</td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								     <%#*<td>Order Ref #12345668981237198</td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								     <%#*<td style="border-bottom:1px solid #60635d;padding-bottom:18px;">Account #128937149719</td>%>
+								  <%#*</tr>%>
+								  <tr>
+								     <td class="question" >What's next?</td>
+								  </tr>
+								  <tr>
+								     <td>1. UmVox team is ready to forward your vox.</td>
+								  </tr>
+								  <tr>
+								     <td>2. Share your vox with other users in the same circumstances.</td>
+								  </tr>
+								  <tr>
+								     <td style="padding-bottom:45px;">3. UmVox team will let you know once the addressee responds.</td>
+								  </tr>
+								  <tr>
+								  <td align="center"><a href="#"><img src="images/check_btn.png" alt=""/></a></td>
+								  </tr>
+					        </table>
+						 </td>
+					 </tr>
+					 
+			   </table>
+			</td>
+		</tr>
+		
+		
+		  <tr>
+		     <td>
+			    <table  style="background:#5aa200; color:#fff;padding:9px 0;width:600px;margin-top:200px;">
+			       <tr>
+		              <td  style="padding-bottom:10px;" align="center">If you believe this has been sent to you in error, please safely <a style="color:#fff;" href="#">unsubscribe</a>. For more information, please see our <a style="color:#fff;" href="#">privacy policy</a></td>
+		           </tr>
+		           <tr>
+				       <td align="center">&#169; 2013 UmVox, Inc.</td>
+				   </tr>
+				   </table>
+				 </td>
+		   </tr>
+		 
+		
+		
+	</table>
+</center>
+</body>
 </html>

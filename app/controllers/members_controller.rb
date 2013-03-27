@@ -95,6 +95,7 @@ class MembersController < ApplicationController
               loc.address = location["street"]
               loc.zipcode = location["zip"]
             end
+            puts loc
             @checkinarr << loc
           end
         end
@@ -120,45 +121,62 @@ class MembersController < ApplicationController
   
   def updateprofile
     if  ! params[:user][:id].blank?
-       user = User.find(params[:user][:id])
-       if user.nil?
-         user = User.new
-         user.password ="qaumxvo"
+       @user = User.find(params[:user][:id])
+       if @user.nil?
+         @user = User.new
+         @user.password ="qaumxvo"
        end
     else
-      user = User.new
+      @user = User.new
 #      not the best way
-      user.password ="qaumxvo" 
+      @user.password ="qaumxvo" 
     end  
-    user.firstname=params[:user][:firstname]
-     user.username = params[:user][:username]
-     user.lastname = params[:user][:lastname]
-     user.email = params[:user][:email]
-     user.city = params[:user][:city]
-     user.state = params[:user][:state]
-     user.country = params[:user][:country]
-     user.fbid = params[:user][:fbid]
+    @user.firstname=params[:user][:firstname]
+     @user.username = params[:user][:username]
+     @user.lastname = params[:user][:lastname]
+     @user.email = params[:user][:email]
+     @user.city = params[:user][:city]
+     @user.state = params[:user][:state]
+     @user.country = params[:user][:country]
+     @user.fbid = params[:user][:fbid]
      begin 
-      user.save!
-      session[:user] = user
+      @user.save
+      session[:user] = @user
+      redirect_to "/members/dashboard"
      rescue ActiveRecord::RecordNotSaved => e
-        user.errors.full_messages
+        @user.errors.full_messages << "Problem while saving records."
+        redirect_to "/members/filldetails"
+     rescue ActiveRecord::RecordNotUnique => e1
+         @user.errors.full_messages << "Username already taken."
+        redirect_to "/members/filldetails"
      end
-     redirect_to "/members/dashboard"
+     
   end
   
   def contactus
     @user=session[:user]
   end
   
+  def userp
+    user = User.find_by_username(params[:username])
+    value= Hash.new
+    if !user.nil?
+      value["present"] ="f"
+    else
+      value["present"] ="t"
+    end
+    respond_to do |format|
+        format.json { render json: value }
+      end
+  end
   def support
-#     if verify_recaptcha
+     if verify_recaptcha
        Thread.new{SupportEmailer.contactus(params[:name],params[:email],params[:subject],params[:message])}
-#     else
-#        build_resource
-#        flash[:alert] = "There was an error with the recaptcha code below. Please re-enter the code and click submit."
-#        render_with_scope :contactus
-#      end
+     else
+        build_resource
+        flash[:alert] = "There was an error with the recaptcha code below. Please re-enter the code and click submit."
+        render_with_scope :contactus
+      end
   redirect_to "/members/dashboard"
   end
 end

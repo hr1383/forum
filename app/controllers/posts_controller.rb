@@ -56,7 +56,7 @@ class PostsController < ApplicationController
     @category = @category.sort! { |a,b| a.name.downcase <=> b.name.downcase }
     3.times {@post.assets.build}
     respond_to do |format|
-      format.html # new.html.erb
+      puts format
       format.json { render json: @post }
     end
   end
