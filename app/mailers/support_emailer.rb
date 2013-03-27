@@ -15,6 +15,8 @@ end
 def createvox(post,user)
   @post=post
   @user=user
+  attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
+  attachments.inline['check_btn'] = File.read("#{Rails.root.to_s + '/app/assets/images/check_btn.png'}")
    mail(:to => user.email, :subject => "Thanks for creating vox")
 end 
 
