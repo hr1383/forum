@@ -1,0 +1,13 @@
+<b><h2><%= params[:name] %></h2></b>
+<p><%= params[:address]  %></p>
+
+Total Vox <% @posts.size %>
+</br>
+<% @posts.each do |post|%>
+<table border="1">
+  <tr><td>
+  <%= render "displaydashboardpost", :post=>post %>            
+    </td></tr>
+</table>
+<% end %>
+                            
