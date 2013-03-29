@@ -1,15 +1,37 @@
- <h1 class="vox_title" ><%= params[:name] %></h1>
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Umvox</title>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="header">
+  <div class="wrapper">
+    <div class="logo"><img src="images/header_logo.png" alt="" /></div>
+    <div class="menu1"> <span class="browse">Browse Vox</span><span class="slash">/</span> <span class="submit_vox">Submit Your Vox</span> </div>
+    <div class="menu2"> <span class="my_vox">My Vox</span><span class="slash">/</span> <span class="logout">Hello Sean (Log Out)</span> </div>
+  </div>
+</div>
+<div id="container" >
+     <div class="wrapper">
+	      <div class="nav_menu">
+		      Home > Browse > Automotives > L & M Motors
+		  </div>
+		  <h1 class="vox_title" >L & M Motors</h1>
 		  <div class="address_info">
-		       <%= params[:address]  %>
-		  </div>     
+		       12201 Wilshire Blvd, Los Angeles, CA 90025<br>
+               (310)473-3106
+		  </div>
 		  <div class="left_section_part flt">
 		       <div class="main">
 			        <div class="tabs">
-					    <span class="total tab_ttl">Total voxes : <% @posts.size %></span>
+					    <span class="total tab_ttl">Total voxes : 5</span>
 						   <select class="select_box">
 						       <option>See all voxes</option>
 							   <option></option>
 						   </select>
+					     
 					</div>
 					<div class="body">
 					     <div class="main_box">
@@ -23,7 +45,7 @@
 											<span class="backers">5 backers  |  10 comments</span>
 											<span class="date">June 26, 2012</span>
 										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
+										<a class="read_more flr" href="#">» Read More</a>
 									</div>
 								</div>
 								
@@ -39,7 +61,7 @@
 											<span class="backers">5 backers  |  10 comments</span>
 											<span class="date">June 26, 2012</span>
 										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
+										<a class="read_more flr" href="#">» Read More</a>
 									</div>
 								</div>
 								
@@ -54,7 +76,7 @@
 											<span class="backers">5 backers  |  10 comments</span>
 											<span class="date">June 26, 2012</span>
 										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
+										<a class="read_more flr" href="#">» Read More</a>
 									</div>
 								</div>
 								
@@ -69,7 +91,7 @@
 											<span class="backers">5 backers  |  10 comments</span>
 											<span class="date">June 26, 2012</span>
 										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
+										<a class="read_more flr" href="#">» Read More</a>
 									</div>
 								</div>
 								
@@ -84,11 +106,15 @@
 											<span class="backers">5 backers  |  10 comments</span>
 											<span class="date">June 26, 2012</span>
 										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
+										<a class="read_more flr" href="#">» Read More</a>
 									</div>
 								</div>
+								
 							</div>
+							
+							  
 						</div>
+						
 					</div>
 			   </div>  
 			  
@@ -104,5 +130,56 @@
 				</div>
 			  </div>			 
 		  </div>
-		              
+		 
 		  <div class="clr"></div>
+	 </div>
+</div>
+
+<div id="footer">
+  <div class="wrapper">
+    <div class="footer_logo_tagline">
+      <div class="logo"><a href="#"><img src="images/logo_footer.png" alt="" title="UmVox" /></a></div>
+      <div class="tagline"><img src="images/tagline_footer.png" alt="" title="UmVox" /></div>
+    </div>
+    <div class="footer_links">
+      <div class="column">
+        <h3>&copy; 2012 UmVox, Inc. </h3>
+      </div>
+      <div class="column">
+        <h3>What is Umvox?</h3>
+        <ul>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">File a Vox</a></li>
+          <li><a href="#">Browse Vox</a></li>
+          <li><a href="#">Help & FAQ</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Account</h3>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Go Premium</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Terms & Privacy</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Connect with UmVox</h3>
+        <ul>
+          <li><a href="#"><span class="icon"><img src="/assets/fb_icon.png" alt="" /></span> Facebook</a></li>
+          <li><a href="#"><span class="icon"><img src="/assets/tweet_icon.png" alt="" /></span> Twitter</a></li>
+          <li><a href="#"><span class="icon"><img src="/assets/mail_icon.png" alt="" /></span> Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
