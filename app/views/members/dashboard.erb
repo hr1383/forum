@@ -1,66 +1,93 @@
-﻿    <h3>Welcome <%= (session[:user]).firstname %></h3>
-    <p>What's the matter ? </p>
-    <%= form_tag("/posts/search", :method=>:get) do %>
-      <p>
-         <%= hidden_field_tag :type,"post" %>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
-      </p>
-    <% end %>
-    <% if session[:user] %>
-          <div class="left_section_part flt">
-                              <% if (!@totalclose.nil? and @totalclose.size >0) %>
-                                                <div class="main">
-                                                        <h1 class="title">RECENTLY RESOLVED VOX</h1>
-                                                        <div class="body">
-                                                                <div class="main_box">
-                                                                  <% @totalclose.each do |post| %>
-                                                                        <%= render "displaydashboardpost", :post=>post %> 
-                                                                  <% end %>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                <% end %> 
+﻿<div id="main">
+<div class="content">
+	<div class="wrapper">
+		<div id="container" class="help">
+			        <div class="help_section">
+					     <h1 class="help_title">We'd like to help you get your voice heard.</h1>
+						 <h1 class="help_title normal">This vox is a...</h1>
+						 <div class="radio_btn">
+                              <input type="radio" name="" value="" />
+                              Complaint
+						 </div>
+						 <div class="radio_btn">
+                              <input type="radio" name="" value="" />
+                              Compliment
+						 </div>
+						 <div class="radio_btn">
+                              <input type="radio" name="" value="" />
+                              Question
+						 </div>
+						 <div class="box_input">
+						      <input class="box_text" type="textbox" name="" value="" placeholder="Tell us what happened.">
+						 </div>
+						 <div class="clr"></div>
+						 <div class="submit-help">
+						      <span class="note">You may find an existing vox regarding your case, become a backer!</span>
+							  <span class="sub-button">
+							    <%= form_tag('/posts/new',:method=>:get) do%>
+									<%= submit_tag "Create a Vox", :class=> "create" %>
+								  <% end %>
+							  
+							  </span>
+						 </div>
+					</div>
+		  </div>
+		  <div class="left_section_part flt">
+		       <div class="main">
+					<% if session[:user] %>
+                                                        <% if (!@totalclose.nil? and @totalclose.size >0) %>
+                                                                          <div class="main">
+                                                                                  <h1 class="title">RECENTLY RESOLVED VOX</h1>
+                                                                                  <div class="body">
+                                                                                          <div class="main_box">
+                                                                                            <% @totalclose.each do |post| %>
+                                                                                                  <%= render "/layouts/displaydashboardpost", :post=>post %> 
+                                                                                            <% end %>
+                                                                                          </div>
+                                                                                  </div>
+                                                                          </div>
+                                                          <% end %> 
 
-                                <% if (!@totalopen.nil? and @totalopen.size >0) %>
-                                    <div class="main">
-                                                                <h1 class="title">Latest Vox</h1>
-                                                                <div class="body">
-                                                                        <div class="main_box">
-                                                                                <% alreadydisplayed = true %>
-                                                                                <% @totalopen.each do |post| %>
-                                                                                <%= render "displaydashboardpost", :post=>post %>            
+                                                          <% if (!@totalopen.nil? and @totalopen.size >0) %>
+                                                              <div class="main">
+                                                                                          <h1 class="title">Latest Vox</h1>
+                                                                                          <div class="body">
+                                                                                                  <div class="main_box">
+                                                                                                          <% alreadydisplayed = true %>
+                                                                                                          <% @totalopen.each do |post| %>
+                                                                                                          <%= render "/layouts/displaydashboardpost", :post=>post %>
+                                                                                                          <% end %>
+                                                                                                          <% end %>
+                                                                                                  </div>
+                                                                                          </div>
+                                                              </div>
+                                                          <%  end %>
 
-                                                                                <% end %>
-                                                                                <% end %>
-                                                                        </div>
-                                                                </div>
-                                    </div>
-                                <%  end %>
+                                                          <% if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
+                                                                                  <div class="main">
+                                                                                          <h1 class="title">Latest Voxs</h1>
+                                                                                          <div class="body">
+                                                                                                  <div class="main_box">
 
-                                <% if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
-                                                        <div class="main">
-                                                                <h1 class="title">Latest Voxs</h1>
-                                                                <div class="body">
-                                                                        <div class="main_box">
+                                                                                                          <% @totalopen.each do |post| %>
 
-                                                                                <% @totalopen.each do |post| %>
-
-                                                                                <%= render "displaydashboardpost", :post=>post %>            
-                                                                     </div>
-                                                                </div>
-                                                        </div>           
-
-                                <% end %>
-                                                                        
-		</div>
-			<div class="sidebar flr">
-				<div class="brown_box">
-					<div class="body">
-					  <% if @checkinarr.nil? %>
+                                                                                                          <%= render "displaydashboardpost", :post=>post %>            
+                                                                                               </div>
+                                                                                          </div>
+                                                                                  </div>           
+                                                          <% end %>
+                              <% end %>
+			   </div>  
+		  </div>
+		  <div class="sidebar flr">
+			  <div class="brown_box">
+				<div class="head">
+				  <h2>Review Facebook Checkin</h2>
+				</div>
+				<div class="body">
+				  <% if @checkinarr.nil? %>
 						<p>No Facebook check in </p>
 						<% else %>
-						<p><b>Review Your Facebook Checkin</b></p>
 						 <%# i=0 %>
 						
 						  <% @checkinarr.each do |loc| %>
@@ -71,31 +98,63 @@
 								<%# end %>
 					   
 						<%= link_to loc.name,"/posts/new?name=#{loc.name}&addr=#{loc.address}&zip=#{loc.zipcode}&city=#{loc.city}" %><br/>
-								 <%= loc.address %>, <%= loc.city %>
-							
+                                                <b> <%= loc.address %>, <%= loc.city %></b>
+						<br/>	
 						<% end %>
 						
 						<% end %>
-					</div>
-			    </div>
-            
-				<div class="brown_box">
-					<div class="head">
-					  <h2>Browse Vox By Category</h2>
-					</div>
-					<div class="body">
-						<div class="sb_cat_links">
-							<ul>
-								<% Category.all.each do |category| -%>
+				</div>
+			  </div>
+			  <div class="brown_box">
+				<div class="head">
+				  <h2>BROWSE VOX CATEGORY</h2>
+				</div>
+				<div class="body">
+				  <div class="sb_cat_links">
+					<ul>
+						<% Category.all.each do |category| -%>
 						 
 									<li><%= link_to category.name,"/" %></li>
 						 
 								<% end %>
-							</ul>
-						</div>
-					</div>
-			    </div>
-            </div>  
-          
-               
-    <% end %>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <%#*<div class="brown_box">%>
+				<%#*<div class="head">%>
+				  <%#*<h2>QUICK STATS</h2>%>
+				<%#*</div>%>
+				<%#*<div class="body">%>
+					<%#*<div class="sb_quick_stats">%>
+					  <%#*<div class="row">%>
+						<%#*<span class="left">683,191</span>%>
+						<%#*<span class="right">Complaints Filed</span>%>
+					  <%#*</div>%>
+					  <%#*<div class="row">%>
+						<%#*<span class="left">29,293</span>%>
+						<%#*<span class="right">Complaints Resolved</span>%>
+					  <%#*</div>%>
+					  <%#*<div class="row">%>
+						<%#*<span class="left">31,312</span>%>
+						<%#*<span class="right">Compliments Given</span>%>
+					  <%#*</div>%>
+					  <%#*<div class="row">%>
+						<%#*<span class="left">2,231</span>%>
+						<%#*<span class="right">Questions Asked</span>%>
+					  <%#*</div>%>
+					  <%#*<div class="row">%>
+						<%#*<span class="left">1,982</span>%>
+						<%#*<span class="right">Questions Answered</span>%>
+					  <%#*</div>%>
+					<%#*</div>%>
+				<%#*</div>%>
+			  <%#*</div>%>
+		  </div>
+		  <div class="clr"></div>
+
+</div>
+
+</div>
+<div class="clear_footer"></div>
+</div>

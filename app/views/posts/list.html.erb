@@ -5,7 +5,7 @@
 		  <div class="left_section_part flt">
 		       <div class="main">
 			        <div class="tabs">
-					    <span class="total tab_ttl">Total voxes : <% @posts.size %></span>
+					    <span class="total tab_ttl">Total voxes : <%= @posts.size %></span><br/>
 						   <select class="select_box">
 						       <option>See all voxes</option>
 							   <option></option>
@@ -13,96 +13,22 @@
 					</div>
 					<div class="body">
 					     <div class="main_box">
-						    <div class="vox_entry compliment">
-								<span class="cat"></span>
-								<div class="padder">
-									<h2 class="people_title">Repairman was 2 hours late!</h2>
-									<p>ACTSPORTSITE.COM charged my credit card $6.70. Bank cannot stop the transaction, but I was able to file a complaint for unauthorized charges.</p>
-									<div class="btm_line">
-										<div class="comment">
-											<span class="backers">5 backers  |  10 comments</span>
-											<span class="date">June 26, 2012</span>
-										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
-									</div>
-								</div>
-								
-							</div>
-						 
-							<div class="vox_entry complaint">
-								<span class="cat"></span>
-								<div class="padder">
-									<h2 class="people_title">Repairman was 2 hours late!</h2>
-									<p>ACTSPORTSITE.COM charged my credit card $6.70. Bank cannot stop the transaction, but I was able to file a complaint for unauthorized charges.</p>
-									<div class="btm_line">
-										<div class="comment">
-											<span class="backers">5 backers  |  10 comments</span>
-											<span class="date">June 26, 2012</span>
-										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
-									</div>
-								</div>
-								
-							</div>
-							<div class="vox_entry complaint">
-								<span class="cat"></span>
-								<div class="padder">
-									<h2 class="people_title">The new bumper fell off one day after I got it back from the shop</h2>
-									<p>ACTSPORTSITE.COM charged my credit card $6.70. Bank cannot stop the transaction, but I was able to file a complaint for unauthorized charges.</p>
-									<div class="btm_line">
-										<div class="comment">
-											<span class="backers">5 backers  |  10 comments</span>
-											<span class="date">June 26, 2012</span>
-										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
-									</div>
-								</div>
-								
-							</div>
-							<div class="vox_entry question">
-								<span class="cat"></span>
-								<div class="padder">
-									<h2 class="people_title">Repairman was inapt for road services. Ridiculous!</h2>
-									<p>ACTSPORTSITE.COM charged my credit card $6.70. Bank cannot stop the transaction, but I was able to file a complaint for unauthorized charges.</p>
-									<div class="btm_line">
-										<div class="comment">
-											<span class="backers">5 backers  |  10 comments</span>
-											<span class="date">June 26, 2012</span>
-										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
-									</div>
-								</div>
-								
-							</div>
-							<div class="vox_entry question">
-								<span class="cat"></span>
-								<div class="padder">
-									<h2 class="people_title">Do they offer maintenance on vintage cars?</h2>
-									<p>ACTSPORTSITE.COM charged my credit card $6.70. Bank cannot stop the transaction, but I was able to file a complaint for unauthorized charges.</p>
-									<div class="btm_line">
-										<div class="comment">
-											<span class="backers">5 backers  |  10 comments</span>
-											<span class="date">June 26, 2012</span>
-										</div>
-										<a class="read_more flr" href="#">>> Read More</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-			   </div>  
+						<% @posts.each do |post|%>
+      <%= render "/layouts/displaydashboardpost", :post=>post %>            
+<% end %>
 			  
 		  </div>
-		   <div class="sidebar flr">
-			  <div class="brown_box">
-				<div class="head">
-				  <h2>Raise your voice!</h2>
-				</div>
-				<div class="body job">
-				  <p class="margin">Are they doing a good job? Let them know!</p>
-				  <a class="upgrade" href="#"><img src="images/l_m_btn.png"></a>
-				</div>
-			  </div>			 
-		  </div>
+                                        </div>
+		   <%#*<div class="sidebar flr">%>
+			  <%#*<div class="brown_box">%>
+				<%#*<div class="head">%>
+				  <%#*<h2>Raise your voice!</h2>%>
+				<%#*</div>%>
+				<%#*<div class="body job">%>
+				  <%#*<p class="margin">Are they doing a good job? Let them know!</p>%>
+				  <%#*<a class="upgrade" href="#"><img src="images/l_m_btn.png"></a>%>
+				<%#*</div>%>
+			  <%#*</div>%>			 
+		  <%#*</div>%>
 		              
-		  <div class="clr"></div>
+		  <%#*<div class="clr"></div>%>

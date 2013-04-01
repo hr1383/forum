@@ -2,21 +2,29 @@
 
 <%= render "displaypost", :post=>@post %>         
 
-<span id="comments_count"><%= pluralize(@post.comments.count, "Comment") %></span>
-<div id="comment-notice"></div>
-<br/>
+<%#*<span id="comments_count"><%= pluralize(@post.comments.count, "Comment") %>
+<%#*<div id="comment-notice"></div>%>
+<%#*<br/>%>
+<div id="main">
+<div class="content">
+	<div class="wrapper">
+		  <div class="left_section_part flt">
+		       <div class="main">
+                         <%#*<div class="body">%>
+                           <%#*<div class="main_box">%>
+                                <div class="comment_entry">
+                                <div class="padder">
+                               <div class="btm_line">
+                                 <% unless session[:user] == nil %>
 
-<% unless session[:user] == nil %>
- <% session[:user].firstname %>
-
-    <table border ="1"><tr><td>
     <%= form_for [@post,Comment.new] , :remote=> true do |f| %>
-          <%= f.text_field :comment %>
+         <div class="field">                           
+          <%= f.text_area :comment, :cols=>'70', :rows=>"5" %>
+         </div>  
           <p><%= f.check_box  :is_backer %>
              <%= label :is_backer, "Backer" %>
               <%= f.submit 'Add Comment' %>
             </p>
-     </td></tr></table>   
     <% end %>
  <% else %>         
   
@@ -55,8 +63,59 @@
       </table> 
      <% end %>       
 <% end %> 
+            <br/></br>
 <div id="comments">
   <%= render :partial => @post.comments, :locals => { :list => true } %>
+</div>            
+                                </div>
+                               </div>
+                           <%#*</div>%>
+                         <%#*</div>%>
+                      </div>  
+                    </div>
+                  </div>
+		  <div class="sidebar flr">
+			  <div class="brown_box">
+				<div class="head">
+				  <h2>Vox Status</h2>
+				</div>
+				<div class="body">
+				  <div class="sb_cat_links">
+					NA
+				  </div>
+				</div>
+			  </div>
+			  <div class="brown_box">
+				<div class="head">
+				  <h2>Backers <% if @backer >0 %> (<%=@backer %>)  <%  end %> </h2>
+				</div>
+				<div class="body">
+  					<div class="sb_quick_stats">
+                                          <% if @backername.size > 0 %>
+                                            <% @backername.each do |backer| %>
+                                          <div class="row">
+                                              <%= backer %>
+                                          </div>
+                                            <% end %>
+                                          <% else %>
+                                          <div class="row">
+                                              Be the first one to back.
+                                          </div>
+                                          <%end %>
+					</div>
+				</div>
+			  </div>
+		  </div>
+		  <div class="clr"></div>
+
 </div>
+
+</div>
+<div class="clear_footer"></div>
+</div>
+</div>
+</div>
+
+
 
 

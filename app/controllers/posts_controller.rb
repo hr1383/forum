@@ -27,6 +27,20 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @backer = 0
+    @backername=Array.new
+     if @post.comments !=nil
+       @post.comments.each do |comment|
+         if comment.is_backer
+           @backer+=1
+           if comment.username != nil
+             @backername << comment.username
+           else
+             @backername << comment.name
+           end
+         end
+       end
+     end
   end
 
   # GET /posts/new

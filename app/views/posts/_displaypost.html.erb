@@ -1,56 +1,71 @@
+﻿<div id="main">
+<div class="content">
+	<div class="wrapper">
+		  <div class="left_section_part flt">
+		       <div class="main">
+                         <h1 class="title"> <%=post.question %></h1> <br/>
+                         <div class="body">
+                           <div class="main_box">
+                             <% if post.posttype == 'Complaint' %>
+                              <div class="vox_entry complaint">
+                              <% elsif post.posttype == 'Complement' %>  
+                                <div class="vox_entry compliment">
+                              <% else %>  
+                                <div class="vox_entry question">
+                              <% end %>      
+                                  <span class="cat"></span>  
+                                <div class="padder">
+                               <div class="btm_line">
+                                 <div class="comment">
+                                   <span class="backers">#<%= post.id %> </span>
+                                   <span class="date">Created At:<%= post.created_at %> </span>
+                                 </div>
+                              </div>
+                             <p><%= post.description.to_s.force_encoding("UTF-8") %></p>
+                               <div class="btm_line">
+                                 <div class="comment">
+                                   <span class="backers">Posted By <%= User.find(post.user_id).username %>  </span>
+                                 </div>
+                              </div>
+                               </div>
+                           </div>
+                         </div>
+                      </div>  
+                    </div>
+                  </div>
+		  <div class="sidebar flr">
+			  <div class="brown_box">
+				<div class="head">
+				  <h2>Service</h2>
+				</div>
+				<div class="body">
+				  <div class="sb_cat_links">
+					Category : <%= link_to post.location.category %>
+				  </div>
+				</div>
+			  </div>
+			  <div class="brown_box">
+				<div class="head">
+				  <h2>Share this vox</h2>
+				</div>
+				<div class="body">
+					<div class="sb_quick_stats">
+					  <div class="row">
+						<label>Facebook</label>
+						<label>Twitter</label>
+					  </div>
+					</div>
+				</div>
+			  </div>
+		  </div>
+		  <div class="clr"></div>
 
-<table border ="1">
-  <tr>
-    <td rowspan="3">
-      <p>
-        
-        <% unless post.location.nil? %>
-          <%= post.location.name %>, <%= post.location.address %><br/>
-          <%= post.location.city %> <%= post.location.zipcode %>
-          <br/>
-         <% end %>
-          <b> <%=post.posttype %>: <%= post.question %></b> <br/>
-           Filed At <%=post.created_at.strftime("%d %b %y")  %>  &nbsp;&nbsp;&nbsp;   Last Updated <%= post.updated_at.strftime("%d %b %y") %></br>
-         </br>
-         <%= post.description %></br></br></br>
-         <% post.assets.each  do |asset_fields| %>
-                  <%= link_to image_tag(asset_fields.image.url(:thumb)),asset_fields.image.url(:original) %>
-        <% end %>
+</div>
 
-         Posted By <%= User.find(post.user_id).firstname   %>
-      </p>
-    </td>
-    <td>
-        Complaint Status:<%= post.status %>
-        <% emailStat = EmailStat.find_by_postId(post.id) %>
-        <% unless emailStat.nil? %>
-        
-          The email was sent on  <%= emailStat.lastsent %>
-        <% end %>
-    </td>
-  <tr>
-    <td>
-      Share this on 
-       Facebook &nbsp;&nbsp;<%= render "/shared/tweet_button",:post =>post %>
-    </td>
-  </tr>  
-  </tr>
-  <tr>
+</div>
+<div class="clear_footer1"></div>
+</div>
+</div>
+</div>
+ 
 
-  <% if false %>
-
-
-    <td>
-      Service Info
-      Company <% post.location.name %>
-      Category: 
-      <% unless post.location.category.nil? -%>
-        <%= post.location.category %>
-      <% end -%>
-    </td>
-	<% end %>
-  </tr>
-</table>
-
-
-<br/><br/>

@@ -27,7 +27,7 @@ input, select, textarea{ outline:none;}
 
 #main{ min-height:100%; margin-bottom:-247px;}
 .clear_footer{ height:247px; clear:both;}
-
+.clear_footer1{ height:147px; clear:both;}
 
 #header{ background:#5ba300 url(/assets/hdr_bg_rpt.gif) repeat-x; height:80px;}
 .logo{ float:left; margin:10px 0 0 0;}
@@ -84,6 +84,7 @@ input, select, textarea{ outline:none;}
 .steps li a{ font-size:13px; font-weight:bold; text-align:center; display:block; background:#d5d5d5; color:#858585; line-height:28px; padding:0 15px; border-radius:3px;}
 .steps li.arrow{background:url(/assets/step_arrow_grey.png) no-repeat; width:9px;}
 .steps li.active a{ color:#fff; background:#5ba300;}
+.inp_text{border-bottom:1px solid #e8e3e3; border-right:1px solid #e8e3e3; border-top:1px solid #c9c6c6; border-left:1px solid #c9c6c6; padding:8px; box-shadow:inset 1px 1px 1px #e0e0e0; border-radius:4px;width:454px;}
 
 .create_vox_form{ border-bottom:1px solid #60635D;}
 .create_vox_form input[type="text"], .create_vox_form textarea, .create_vox_form select{border-bottom:1px solid #e8e3e3; border-right:1px solid #e8e3e3; border-top:1px solid #c9c6c6; border-left:1px solid #c9c6c6; padding:8px; box-shadow:inset 1px 1px 1px #e0e0e0; border-radius:4px;}
@@ -323,6 +324,22 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
 .vox_entry .grey p{  min-height:0px;}
 .vox_entry .grey .updated{color:#707070;}
 	
+.comment_entry{ margin:0 0 10px 28px; position:relative;border:1px solid #d3d3d3; min-height:141px;}
+.comment_entry .cat{ position:absolute; left:-28px; top:-1px; width:27px; height:122px;}
+.comment_entry .padder{ padding:10px;}
+.comment_entry .field{ margin-bottom:10px;}
+.comment_entry h2{ font-size:14px; font-weight:bold; line-height:18px; margin-bottom:5px;}
+.comment_entry h2 .pre{ color:#e9aa00; font-weight:normal; text-decoration:underline;}
+.comment_entry p{}
+.comment_entry .btm_line{ overflow:hidden;}
+.comment_entry .btm_line .comment{ color:#858585; width:300px; float:left;}
+.comment_entry .btm_line .comment .backers{ float:left;}
+.comment_entry .btm_line .comment .date{ float:right;}
+.comment_entry .read_more{ color:#327e88;}
+.comment_entry .grey{ background:#d3d3d3; padding:10px;}
+.comment_entry .grey p{  min-height:0px;}
+.comment_entry .grey .updated{color:#707070;}
+
 .sb_cat_links{ padding:0 10px 0 20px;}	
 .sb_cat_links ul{ color:#3d7705; list-style:disc;}	
 .sb_cat_links ul li{ font-size:14px; line-height:22px; list-style:disc;}	
