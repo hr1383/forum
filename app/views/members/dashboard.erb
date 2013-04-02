@@ -5,30 +5,35 @@
 			        <div class="help_section">
 					     <h1 class="help_title">We'd like to help you get your voice heard.</h1>
 						 <h1 class="help_title normal">This vox is a...</h1>
-						 <div class="radio_btn">
-                              <input type="radio" name="" value="" />
-                              Complaint
-						 </div>
-						 <div class="radio_btn">
-                              <input type="radio" name="" value="" />
-                              Compliment
-						 </div>
-						 <div class="radio_btn">
-                              <input type="radio" name="" value="" />
-                              Question
-						 </div>
-						 <div class="box_input">
-						      <input class="box_text" type="textbox" name="" value="" placeholder="Tell us what happened.">
-						 </div>
-						 <div class="clr"></div>
+						 <%#*<div class="radio_btn">%>
+                              <%#*<input type="radio" name="" value="" />%>
+                              <%#*Complaint%>
+						 <%#*</div>%>
+						 <%#*<div class="radio_btn">%>
+                              <%#*<input type="radio" name="" value="" />%>
+                              <%#*Compliment%>
+						 <%#*</div>%>
+						 <%#*<div class="radio_btn">%>
+                              <%#*<input type="radio" name="" value="" />%>
+                              <%#*Question%>
+						 <%#*</div>%>
+						 <%#*<div class="clr"></div>%>
 						 <div class="submit-help">
-						      <span class="note">You may find an existing vox regarding your case, become a backer!</span>
-							  <span class="sub-button">
-							    <%= form_tag('/posts/new',:method=>:get) do%>
-									<%= submit_tag "Create a Vox", :class=> "create" %>
+						      
+							  
+							    <%= form_tag('/posts/search',:method=>:get) do%>
+                                                            
+                                                            <div class="box_input">
+                                                                        <%= hidden_field_tag :type,"post" %>
+                                                            		
+                                                                        <%= text_field_tag :search, params[:search] ,:class => "box_text", :placeholder => "Tell us what happened." %>
+                                                                                                        </div>
+                                                                          <span class="sub-button">                                 
+									<%= submit_tag "Search a Vox", :class=> "create" %>
+                                                                          </span>
+                                                                      <span class="note">You may find an existing vox regarding your case, become a backer!</span>
 								  <% end %>
 							  
-							  </span>
 						 </div>
 					</div>
 		  </div>
