@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
 #       validates_presence_of :lastname 
 #       validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me,:username, :firstname, :lastname,  :city, :country, :state, :fbid
+  attr_accessible :email, :password, :password_confirmation, :remember_me,:username, :firstname, :lastname,  :city, :country, :state, :fbid,:admin
  has_many :posts
 end
