@@ -49,7 +49,7 @@
     
     <% if !session['user'] %>
             
-         <%= form_tag("/welcome", :method=>:get) do %>
+         <%= form_tag("/users/sign_in", :method=>:get) do %>
             
             <div id="signin_button">
                 <%= submit_tag "Sign In" %>
@@ -68,3 +68,5 @@
 </div>
 <div class="content">
 <div class="wrapper">
+  
+  

@@ -8,7 +8,7 @@ Umvox::Application.routes.draw do
 
   root :to => "members#dashboard"
   
-  
+  get '/terms', :to =>"welcome#terms"
   resources :email_stats
   
   resources :company_emails

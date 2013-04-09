@@ -218,6 +218,68 @@ $(function(){
         });
     });
 });
+
+
+$(function() {
+  return $("#btnStep2").click(function() {
+    var alltrue;
+    alltrue = true;
+    if ($("#new_address").val() == 1) {
+      if ($("#post_location_attributes_name").val().length == 0) {
+        $("#error_loc_name").show();
+        alltrue = false;
+      }
+      if ($("#post_location_attributes_email").val().length == 0) {
+        $("#error_loc_email").show();
+        alltrue = false;
+      }
+      if ($("#post_location_attributes_website").val().length == 0) {
+        $("#error_loc_website").show();
+        alltrue = false;
+      }
+    }else{
+       if ($("#post_location_attributes_name").val().length == 0) {
+            $("#error_loc_name").show();
+            alltrue = false;
+       } 
+       
+       if ($("#post_location_attributes_city").val().length == 0) {
+            $("#error_loc_city").show();
+            alltrue = false;
+       } 
+        
+    }
+    if (alltrue === true) {
+      $("#divstep3").show();
+    }
+    return false;
+  });
+});
+
+
+$(function(){
+$('#post_location_attributes_name').keyup(function(event) {
+  $("#error_loc_name").hide();
+})
+});
+
+$(function(){
+$('#post_location_attributes_email').keyup(function(event) {
+  $("#error_loc_email").hide();
+})
+});
+
+$(function(){
+$('#post_location_attributes_website').keyup(function(event) {
+  $("#error_loc_website").hide();
+})
+});
+
+$(function(){
+$('#post_location_attributes_city').keyup(function(event) {
+  $("#error_loc_city").hide();
+})
+});
 //$(function() {
 //$("#btnStep2").click(function() {
 //    $("#divstep3").show();

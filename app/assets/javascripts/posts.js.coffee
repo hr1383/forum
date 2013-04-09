@@ -173,25 +173,3 @@ $ ->
 
 
 
-$ ->
-  $("#btnStep2").click ->
-    $("#divstep3").show()
-   # if $("#new_address").is(':checked') == true
-   #     name = $("#full_add_name").val()
-   #     $("#post_location_attributes_name").val name
-   #     $("#post_location_attributes_address").val $("#full_add_address").val()
-   #     $("#post_location_attributes_city").val $("#full_add_city").val()
-   #     $("#post_location_attributes_zipcode").val $("#full_add_zipcode").val()
-   #     $("#post_location_attributes_email").val $("#full_add_email").val()
-   #     $("#post_location_attributes_website").val $("#full_add_website").val()
-   #     $("#post_location_attributes_category").val $("#Category").val()
-   #     output = $("#post_location_attributes_name").val() + "<br/>" + $("#post_location_attributes_address").val() + "<br/>" + $("#post_location_attributes_city").val() + "<br/>" + $("#post_location_attributes_zipcode").val() + "<br/>" + $("#post_location_attributes_category").val()
-   #     $("#lbl_company").html "Company" + "<br/>"+output
-   #     $(".full_add").hide()
-   # else
-   #     $("#post_location_attributes_category").val $("#Category1").val()
-   # $("#post_detailinfos_attributes_0_description").focus()    
-    false
-
-
-     

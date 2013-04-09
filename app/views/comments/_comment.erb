@@ -1,6 +1,28 @@
 <%= div_for comment do %>
   <span class="dateandoptions">
-    Posted <%=comment.created_at%> ago<br />
+    <%diffObj = Time.diff(DateTime.now,comment.created_at) %>
+    Posted  <%if  diffObj[:year] > 0 %> 
+              <%=diffObj [:year] %> year
+             <% end %>
+              <%if  diffObj[:month] > 0 %> 
+              <%=diffObj [:month] %> month
+             <% end %>
+              <%if  diffObj[:week] > 0 %> 
+              <%=diffObj [:week] %> week
+             <% end %>
+              <%if  diffObj[:day] > 0 %> 
+              <%=diffObj [:day] %> day
+             <% end %>
+              <%if  diffObj[:hour] > 0 %> 
+              <%=diffObj [:hour] %> hour
+             <% end %>
+              <%if  diffObj[:minute] > 0 %> 
+              <%=diffObj [:minute] %> minute
+             <% end %>
+              <%if  diffObj[:second] > 0 %> 
+              <%=diffObj [:second] %> seconds
+             <% end %>
+    ago<br />
   </span>
       <% if comment.username != nil %>
 	<p><b><%= comment.username %></b> wrote:</p>

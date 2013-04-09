@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 
-layout "welcome"
+#layout "welcome"
 def index
     if session['user']
       redirect_to "/members/dashboard"
@@ -26,5 +26,6 @@ def logout
 		session['access_token'] = session['oauth'].get_access_token(params[:code])
     redirect_to '/members/signin'
 	end
-
+def terms
+end  
 end

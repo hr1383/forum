@@ -86,7 +86,9 @@ font-size:12px;font-family:arial;color:#333;line-height:18px;
 								     <td style="padding-bottom:45px;">3. UmVox team will let you know once the addressee responds.</td>
 								  </tr>
 								  <tr>
-								  <td align="center"><a href="#"><%= image_tag attachments['check_btn'].url %> </a></td>
+								  <td align="center">
+                                                                  
+                                                                    <%= link_to 'Check vox status',"http://enigmatic-badlands-8436.herokuapp.com/posts/#{post.id}" %></td>
 								  </tr>
 					        </table>
 						 </td>

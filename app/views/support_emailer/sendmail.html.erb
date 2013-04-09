@@ -1,9 +1,269 @@
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-  send mail to the client</body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+
+<center>
+
+    <table cellspacing="0" cellpadding="0" style="width:600px;background:#f7f3ef">
+
+	    <tr style="background:#5aa200">
+
+		    <td height="100" align="center"><a href="#0.1.3_"><img src="http://images/logo.png" alt=""></a></td>
+
+		</tr>
+
+		<tr>
+
+		    <td>
+
+			   <table cellspacing="0" cellpadding="0" style="width:560px;border:1px solid #cbc7c4;margin:0 auto;margin-top:25px">
+
+			         <tr>
+
+				         <td>
+
+				            <table cellspacing="0" cellpadding="0" style="width:520px;margin:0 auto;padding:20px 0">
+
+							      <tr>
+
+								      <td height="40">You received an opinion on UmVox.</td>
+
+								  
+
+							      </tr>
+
+							      <tr>
+
+								      <td>Dear representative of @location.name,</td>
+
+							      </tr>
+
+								  <tr>
+
+								     <td>We have received a complaint on behalf of user <%= @user.firstname %> <%=@user.lastname %></td>
+
+								  </tr>
+
+								  <tr>
+
+								      <td>Who is UmVox?</td>
+
+								  </tr>
+
+								  <tr>
+
+								      <td>UmVox provides an easy channel for people to express their complaints, compliments, and
+
+questions with companies or individuals, and helps both parties come to a resolution.</td>
+
+								  </tr>
+
+								  <tr>
+
+								     <td>Start off on the right track</td>
+
+								  </tr>
+
+								  <tr>
+
+								      <td>Please review the vox below and follow the attached link to contact this user. Once you have
+
+responded, we will follow up with this user to ensure that both parties are content with the
+
+outcome.</td>
+
+								  </tr>
+
+								  <tr>
+
+								      <td>We look forward to hear from you.</td>
+
+								  </tr>
+
+					        </table>
+
+						 </td>
+
+					 </tr>
+
+					 
+
+			   </table>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+		   <td align="center"><a href="#0.1.3_"><img src="http://images/reply_btn.png" alt=""></a></td>
+
+		</tr>
+
+		
+
+		
+
+		
+
+		
+
+		<tr>
+
+		    <td>
+
+			   <table cellspacing="0" cellpadding="0" style="width:560px;border:1px solid #cbc7c4;margin:0 auto;margin-bottom:20px">
+
+			         <tr>
+
+				         <td>
+
+				            <table cellspacing="0" cellpadding="0" style="width:520px;margin:0 auto;padding:20px 0">
+
+							      <tr>
+
+								      <td height="40">Vox #<%= @post.id %> </td>
+
+								  
+
+							      </tr>
+
+							      <tr>
+
+								      <td><%= @post.created_at %>   — by <%= @user.firstname %> <%=@user.lastname %> </td>
+
+							      </tr>
+
+								  
+
+								  <tr>
+
+								      <td><%= @post.question %> </td>
+
+								  </tr>
+
+								  <tr>
+
+								      <td><%= @post.description %>
+
+                                     </td>
+
+
+
+								  </tr>
+
+                                                                <% if @post.detailinfos != nil %>
+								  <tr>
+                                                                   
+								     <td>Additional Details</td>
+
+								  </tr>
+
+								  <tr>
+
+								     <td><%= @post.detailinfos.first.description %> </td>
+
+								  </tr>
+                                                                  <% end   %>
+                                                                  <% backers = Array.new %>
+								  <% if  @post.comments != nil %>
+                                                                     <% @post.comments.each do |comment|  %> 
+                                                                          <% if comment.is_backer %>
+                                                                            <% backers << comment.username %>
+                                                                          <% end %>
+                                                                     <% end %>
+                                                                  <% end %>
+                                                                  <%if backers.size > 0  %>
+                                                                    <tr>
+
+								     <td>Backers on This Opinion</td>
+
+								  </tr>
+
+                                                                  <% end %>
+                                                                  <%if backers.size > 0  %>
+                                                                    <% backers.each do |backer| %>
+                                                                    <tr>
+
+								     <td><%= backer %> </td>
+
+								  </tr>
+                                                                    <% end %>
+                                                                  <% end %>
+
+								  </table></td></tr>
+
+					        </table>
+
+						 </td>
+
+					 </tr>
+
+					 
+
+			   </table>
+
+			
+
+		
+
+		<table><tr>
+
+		  <td align="center"><a href="#0.1.3_"><img src="http://images/reply_btn.png" alt=""></a></td>
+
+		</tr>
+
+		
+
+		  <%#*<tr>%>
+
+		     <%#*<td>%>
+
+			    <%#*<table style="background:#5aa200;color:#fff;padding:9px 0;width:600px;margin-top:20px">%>
+
+			       <%#*<tr>%>
+
+		              <%#*<td style="padding-bottom:10px" align="center">If you believe this has been sent to you in error, please safely <a style="color:#fff" href="#0.1.3_">unsubscribe</a>. For more information, please see our <a style="color:#fff" href="#0.1.3_">privacy policy</a></td>%>
+
+		           <%#*</tr>%>
+
+		           <tr>
+
+				       <td align="center">© 2013 UmVox, Inc.</td>
+
+				   </tr>
+
+				   <%#*</table>%>
+
+				 <%#*</td>%>
+
+		   <%#*</tr>%>
+
+		 
+
+		
+
+		
+
+	</table>
+
+</center>
+
+</div>
+
+</body></html>

@@ -20,6 +20,7 @@
   </tr>
 
  <% @postlist.each do |post| %>
+  <% if post.location !=nil %>
   <% email =post.location.email %>
   <tr>
     <td>Question</td>
@@ -30,6 +31,7 @@
       <%= hidden_field_tag "arr[email_stat_#{post.id}][postid]", post.id %>
       <%= hidden_field_tag "arr[email_stat_#{post.id}][oldemail]", email %>
   </tr>
+  <% end %>
 <% end %>
 </table>
   <%= submit_tag  'Send mail' %>

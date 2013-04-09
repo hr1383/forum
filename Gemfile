@@ -17,6 +17,7 @@ gem 'sunspot_solr'
 gem 'client_side_validations'
 gem 'recaptcha', :require => 'recaptcha/rails'
 gem 'rails_admin'
+gem 'time_diff'
 #gem 'activerecord-mysql-adapter'
 # Gems used only for assets and not required
 # in production environments by default.

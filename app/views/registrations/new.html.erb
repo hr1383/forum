@@ -1,21 +1,24 @@
-<h2>Sign up</h2>
 
+<div id="sign_in">
+<div class="sign_in_fill">
+  <h2>Sign up</h2>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %></div>
+  <div class="field"><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div class="field"><%= f.label :confirm_password %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <%#= I have commented the following recaptcha tag. To enable just remove # .....Gurjeet Singh%>
   <%#= recaptcha_tags %>
-
-  <div><%= f.submit "Sign up" %></div>
+  <label>By clicking Sign Up, you agree to our <a href="/terms">Terms &Privacy</a> </label></br>
+<br/>  <div class="field"><%= f.submit "Sign up" %></div>
 <% end %>
+  <%= render :partial => "devise/shared/links" %>
+</div>
+</div>
 
-<%= render :partial => "devise/shared/links" %>

@@ -275,7 +275,7 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
 #container.help .help_section  .radio_btn{float: left;
     margin-right: 12px;
     margin-top: 20px;}
-#container.help .help_section  .box_input{margin:25px 0 0 35px; float: left;}
+#container.help .help_section  .box_input{margin:15px 0 5px 5px; float: left;}
 #container.help .help_section  .box_input .box_text{  border: 1px solid #C9C6C6;
     border-radius: 5px 5px 5px 5px;
     color: #B4B4B4;

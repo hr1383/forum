@@ -81,7 +81,7 @@
   <%=@post.location.zipcode %></b>
   <% else %>
  <div class="grey_box">
-  <div id="newAddress">
+  <div id="newAddressdiv">
     <p>Is the business online store ?  <%=  check_box :new,:address  %></p>
 	<br>
   </div>      
@@ -91,6 +91,9 @@
 		<div class="field">
 			<label>Name</label> 
 			<%= location_form.text_field :name%> 
+                        <div id="error_loc_name"  style="display:none">
+                          This is the required field
+                        </div>
 		</div>
                 <div id="notonline">
                     <div class="field">
@@ -100,6 +103,9 @@
                     <div class="field">
                             <label>City</label> 
                             <%= location_form.text_field  :city%>
+                             <div id="error_loc_city"  style="display:none">
+                              This is the required field
+                             </div>
                     </div>
                     <div class="field">
                             <label>Zipcode</label> 
@@ -109,10 +115,16 @@
 		<div class="field">
 			<label>Email</label> 
 			<%= location_form.text_field  :email%> 
+                        <div id="error_loc_email"  style="display:none">
+                          This is the required field
+                        </div>
 		</div>
 		<div class="field">
 			<label>Website</label> 
 			<%= location_form.text_field :website%> 
+                        <div id="error_loc_website"  style="display:none">
+                          This is the required field
+                        </div>
 		</div>
 		<div class="field">
 			<label>Category</label> 

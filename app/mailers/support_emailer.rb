@@ -9,14 +9,18 @@ def sendmail(post,location,user)
   @post=post
   @location = location
   @user=user
-   mail(:to => @location.email, :subject => "Registered")
+  puts "sendimail"
+  attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
+   mail(:to => @location.email, :subject => "You received an opinion on Umvox")
 end  
 
 def createvox(post,user)
   @post=post
   @user=user
+  if Rails.env.production?
+#    @url = "<a href=\"http://enigmatic-badlands-8436.herokuapp.com/posts/#{post.id}\">"
+   end
   attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
-  attachments.inline['check_btn'] = File.read("#{Rails.root.to_s + '/app/assets/images/check_btn.png'}")
    mail(:to => user.email, :subject => "Thanks for creating vox")
 end 
 
@@ -24,11 +28,6 @@ def contactus(username,email,subj,message)
   @username=username
   @email = email
   @subj=subj
-  @message = message
-  puts 'SENDING MAIL'
-  puts @username
-  puts @email
-  puts @subj
   puts @message
   mail(:to => "harshit@gogii.net", :subject => "Mail from support")
 end

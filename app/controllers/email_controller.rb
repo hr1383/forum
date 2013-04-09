@@ -12,7 +12,10 @@ class EmailController < ApplicationController
          post.location.email=map[:email]
          post.location.save
        end  
-       if map[:email] != ''
+       puts map[:email]!= ''
+       puts 1 == map[:isSend]
+       if map[:email] != '' and "1" == map[:isSend]
+         puts "inside the check"
 #         emailstat = EmailStat.where(:postId=>map[:postid]).first
          SupportEmailer.sendmail(post,post.location,User.find(post.user_id)).deliver
 #          emailstat[:counter] = emailstat.counter-1
@@ -23,6 +26,7 @@ class EmailController < ApplicationController
        end
    
     @email_stats = EmailStat.where("counter > 0")
+    @postlist = Post.find_all_by_posttype('Question')
     render "email/index"    
     
   end
