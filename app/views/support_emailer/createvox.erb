@@ -21,35 +21,36 @@ font-size:12px;font-family:arial;color:#333;line-height:18px;
 </head>
 <body>
 <center>
-    <table id="header" cellspacing="0" cellpadding="0" style="width:600px;background:#f7f3ef;">
-	    <tr style="background:#5aa200;">
-		    <td height="100" align="center"><a href="#"><%= image_tag attachments['logo'].url %></a></td>
-		</tr>
-		<tr>
-		    <td>
-			   <table class="opinion" cellspacing="0" cellpadding="0" style="width:560px;border:1px solid #cbc7c4;margin:0 auto;margin-top:25px;">
-			         <tr>
-				         <td>
-				            <table cellspacing="0" cellpadding="0" style="width:520px; margin:0 auto;padding:20px 0;">
-							      <tr>
-								      <td height="40" class="received">Your vox is created!</td>
+  Hello
+    <%#*<table id="header" cellspacing="0" cellpadding="0" style="width:600px;background:#f7f3ef;">%>
+	    <%#*<tr style="background:#5aa200;">%>
+		    <%#*<td height="100" align="center"><a href="#"><%= image_tag attachments['logo'].url ></a></td>%>
+		<%#*</tr>%>
+		<%#*<tr>%>
+		    <%#*<td>%>
+			   <%#*<table class="opinion" cellspacing="0" cellpadding="0" style="width:560px;border:1px solid #cbc7c4;margin:0 auto;margin-top:25px;">%>
+			         <%#*<tr>%>
+				         <%#*<td>%>
+				            <%#*<table cellspacing="0" cellpadding="0" style="width:520px; margin:0 auto;padding:20px 0;">%>
+							      <%#*<tr>%>
+								      <%#*<td height="40" class="received">Your vox is created!</td>%>
 								  
-							      </tr>
-							      <tr>
-								      <td>Dear <%= @user.firstname %>  ,</td>
-							      </tr>
-								  <tr>
-								     <td>Thank you for submitting a vox.</td>
-								  </tr>
-								  <tr>
-								     <td>Below are the details of your vox #<%= @post.id %> :</td>
-								  </tr>
-								  <tr>
-								      <td class="question"><%= @post.question %> </td>
-								  </tr>
-								  <tr>
-								      <td class="answer"> <%= @post.description %> </td>
-								  </tr>
+							      <%#*</tr>%>
+							      <%#*<tr>%>
+								      <%#*<td>Dear <%= @user.firstname >  ,</td>%>
+							      <%#*</tr>%>
+								  <%#*<tr>%>
+								     <%#*<td>Thank you for submitting a vox.</td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								     <%#*<td>Below are the details of your vox #<%= @post.id > :</td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								      <%#*<td class="question"><%= @post.question > </td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								      <%#*<td class="answer"> <%= @post.description > </td>%>
+								  <%#*</tr>%>
 								   <%#*<tr>%>
 								      <%#*<td class="answer padd">I do realize that drivers are on a tight schedule but would have been much simpler to just come to%>
 <%#*front door - I was waiting for delivery and would have opened door by the time the driver arrived%>
@@ -73,48 +74,48 @@ font-size:12px;font-family:arial;color:#333;line-height:18px;
 								  <%#*<tr>%>
 								     <%#*<td style="border-bottom:1px solid #60635d;padding-bottom:18px;">Account #128937149719</td>%>
 								  <%#*</tr>%>
-								  <tr>
-								     <td class="question" >What's next?</td>
-								  </tr>
-								  <tr>
-								     <td>1. UmVox team is ready to forward your vox.</td>
-								  </tr>
-								  <tr>
-								     <td>2. Share your vox with other users in the same circumstances.</td>
-								  </tr>
-								  <tr>
-								     <td style="padding-bottom:45px;">3. UmVox team will let you know once the addressee responds.</td>
-								  </tr>
-								  <tr>
-								  <td align="center">
+								  <%#*<tr>%>
+								     <%#*<td class="question" >What's next?</td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								     <%#*<td>1. UmVox team is ready to forward your vox.</td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								     <%#*<td>2. Share your vox with other users in the same circumstances.</td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								     <%#*<td style="padding-bottom:45px;">3. UmVox team will let you know once the addressee responds.</td>%>
+								  <%#*</tr>%>
+								  <%#*<tr>%>
+								  <%#*<td align="center">%>
                                                                   
-                                                                    <%= link_to 'Check vox status',"http://enigmatic-badlands-8436.herokuapp.com/posts/#{post.id}" %></td>
-								  </tr>
-					        </table>
-						 </td>
-					 </tr>
+                                                                    <%#= link_to 'Check vox status',"http://enigmatic-badlands-8436.herokuapp.com/posts/#{post.id}" ></td>
+								  <%#*</tr>%>
+					        <%#*</table>%>
+						 <%#*</td>%>
+					 <%#*</tr>%>
 					 
-			   </table>
-			</td>
-		</tr>
+			   <%#*</table>%>
+			<%#*</td>%>
+		<%#*</tr>%>
 		
 		
-		  <tr>
-		     <td>
-			    <table  style="background:#5aa200; color:#fff;padding:9px 0;width:600px;margin-top:200px;">
-			       <tr>
-		              <td  style="padding-bottom:10px;" align="center">If you believe this has been sent to you in error, please safely <a style="color:#fff;" href="#">unsubscribe</a>. For more information, please see our <a style="color:#fff;" href="#">privacy policy</a></td>
-		           </tr>
-		           <tr>
-				       <td align="center">&#169; 2013 UmVox, Inc.</td>
-				   </tr>
-				   </table>
-				 </td>
-		   </tr>
+		  <%#*<tr>%>
+		     <%#*<td>%>
+			    <%#*<table  style="background:#5aa200; color:#fff;padding:9px 0;width:600px;margin-top:200px;">%>
+			       <%#*<tr>%>
+		              <%#*<td  style="padding-bottom:10px;" align="center">If you believe this has been sent to you in error, please safely <a style="color:#fff;" href="#">unsubscribe</a>. For more information, please see our <a style="color:#fff;" href="#">privacy policy</a></td>%>
+		           <%#*</tr>%>
+		           <%#*<tr>%>
+				       <%#*<td align="center">&#169; 2013 UmVox, Inc.</td>%>
+				   <%#*</tr>%>
+				   <%#*</table>%>
+				 <%#*</td>%>
+		   <%#*</tr>%>
 		 
 		
 		
-	</table>
+	<%#*</table>%>
 </center>
 </body>
 </html>

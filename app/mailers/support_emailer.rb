@@ -17,9 +17,7 @@ end
 def createvox(post,user)
   @post=post
   @user=user
-  if Rails.env.production?
-#    @url = "<a href=\"http://enigmatic-badlands-8436.herokuapp.com/posts/#{post.id}\">"
-   end
+  puts "sending create vox"
   attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
    mail(:to => user.email, :subject => "Thanks for creating vox")
 end 
