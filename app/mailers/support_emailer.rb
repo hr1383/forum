@@ -10,7 +10,7 @@ def sendmail(post,location,user)
   @location = location
   @user=user
   puts "sendimail"
-  attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
+#  attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
    mail(:to => @location.email, :subject => "You received an opinion on Umvox")
 end  
 
@@ -18,7 +18,7 @@ def createvox(post,user)
   @post=post
   @user=user
   puts "sending create vox"
-  attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
+#  attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
    mail(:to => user.email, :subject => "Thanks for creating vox")
 end 
 
