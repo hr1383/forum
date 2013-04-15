@@ -26,7 +26,8 @@ def contactus(username,email,subj,message)
   @username=username
   @email = email
   @subj=subj
-  puts @message
+  @message = message
+  puts message
   mail(:to => "harshit@gogii.net", :subject => "Mail from support")
 end
 end

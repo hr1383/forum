@@ -224,7 +224,7 @@ $(function() {
   return $("#btnStep2").click(function() {
     var alltrue;
     alltrue = true;
-    if ($("#new_address").val() == 1) {
+    if ($("#new_address").is(':checked') == true) {
       if ($("#post_location_attributes_name").val().length == 0) {
         $("#error_loc_name").show();
         alltrue = false;

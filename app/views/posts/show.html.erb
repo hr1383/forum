@@ -81,7 +81,11 @@
 				</div>
 				<div class="body">
 				  <div class="sb_cat_links">
+                                    <% if @post.updatestatus != nil %>
+                                    <p> <%= @post.updatestatus.status %> </p>
+                                    <% else %>
 					NA
+                                    <% end %>    
 				  </div>
 				</div>
 			  </div>

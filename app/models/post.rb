@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
   has_many :detailinfos
   has_many :assets
   has_one :location
+  has_one :updatestatus
   accepts_nested_attributes_for :location, allow_destroy: true
   accepts_nested_attributes_for :detailinfos, allow_destroy: true
   accepts_nested_attributes_for :assets, allow_destroy: true

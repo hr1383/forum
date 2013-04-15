@@ -1,23 +1,28 @@
-<%= form_tag ("support") do  %>
+<div id="sign_in">
+<div class="sign_in_fill">
 
-<div class="field">
-    <%= label_tag 'name'  %><br />
-    <%= text_field_tag 'name' %>
-  </div>
+  <%= form_tag ("support") do  %>
+
   <div class="field">
-    <%= label_tag 'email' %><br />
-    <%= text_field_tag 'email' %>
-  </div>
-<div class="field">
-    <%= label_tag 'subject' %><br />
-    <%= text_field_tag 'subject' %>
-  </div>
-<div class="field">
-    <%= label_tag 'message' %><br />
-    <%= text_area_tag  'message', nil, :rows => 20, :cols =>40 %>
-  </div>
+      <%= label_tag 'name'  %><br />
+      <%= text_field_tag 'name' %>
+    </div>
+    <div class="field">
+      <%= label_tag 'email' %><br />
+      <%= text_field_tag 'email' %>
+    </div>
+  <div class="field">
+      <%= label_tag 'subject' %><br />
+      <%= text_field_tag 'subject' %>
+    </div>
+  <div class="field">
+      <%= label_tag 'message' %><br />
+      <%= text_area_tag  'message', nil, :rows => 20, :cols =>40 %>
+    </div>
 
-<div>
-  <%= submit_tag 'Send' %>
+  <div>
+    <%= submit_tag 'Send' %>
+  </div>
+  <% end %>
 </div>
-<% end %>
+</div>  

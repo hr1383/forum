@@ -1,14 +1,7 @@
 class MembersController < ApplicationController
 
    before_filter :authenticate1_user , :only =>[:dashboard]
-#  def index
-#    if session['access_token']
-#      @face='You are logged in! <a href="facebooks/logout">Logout</a>'
-#    else
-#      @face='<a href="users/login">Login</a>'
-#    end
-#  end  
-# 
+
   
   def filldetails
     
@@ -95,7 +88,6 @@ class MembersController < ApplicationController
               loc.address = location["street"]
               loc.zipcode = location["zip"]
             end
-            puts loc
             @checkinarr << loc
           end
         end
@@ -170,13 +162,13 @@ class MembersController < ApplicationController
       end
   end
   def support
-     if verify_recaptcha
+#     if verify_recaptcha
        Thread.new{SupportEmailer.contactus(params[:name],params[:email],params[:subject],params[:message])}
-     else
-        build_resource
-        flash[:alert] = "There was an error with the recaptcha code below. Please re-enter the code and click submit."
-        render_with_scope :contactus
-      end
+#     else
+#        build_resource
+#        flash[:alert] = "There was an error with the recaptcha code below. Please re-enter the code and click submit."
+#        render_with_scope :contactus
+#      end
   redirect_to "/members/dashboard"
   end
 end
