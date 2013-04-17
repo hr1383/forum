@@ -8,7 +8,7 @@
   
 
 <%= form_tag ({:controller=> "email", :action=> "sendmail"}) do |f|%>
-<table border="1">
+<table border="1" cellspacing="4" cellpadding="5">
   <tr>
     <th>PostType</th>
     <th>Company</th>
@@ -23,7 +23,7 @@
   <% if post.location !=nil %>
   <% email =post.location.email %>
   <tr>
-    <td>Question</td>
+    <td><%= post.posttype %> </td>
     <td><%=  post.location.name %></td>
     <td><%= post.question %></td>  
     <td><%=  text_field_tag 'email',email,:name=>"arr[email_stat_#{post.id}][email]"%></td>
