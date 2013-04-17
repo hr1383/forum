@@ -5,7 +5,9 @@
 	<a href="/welcome"><img src="/assets/logo.png" alt="" title="UmVox" /></a>
 </h1>
 <div class="menu_1">
-	<%= submit_tag "What is Umvox?" %>
+   <%= form_tag('/welcome/howitworks',:method=>:get) do%>
+        <%= submit_tag "What is Umvox?" %>
+      <% end %>
 	  <span> / </span>
       <% if (!current_user.nil? || !session[:user].nil?) %>    
           <%= form_tag('/posts/new',:method=>:get) do%>

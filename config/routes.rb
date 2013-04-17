@@ -23,7 +23,7 @@ Umvox::Application.routes.draw do
  resources :welcome do
    collection do
     post  :login
-    get  :callback
+    get  :callback, :howitworks
    end
  end
 
