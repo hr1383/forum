@@ -27,6 +27,11 @@ class EmailController < ApplicationController
    
     @email_stats = EmailStat.where("counter > 0")
     @postlist = Post.find_all_by_posttype('Question')
+    unless @postlist.nil?
+      @postlist.push(*Post.find_all_by_posttype('Complaint'))
+    else
+      @postlist = Post.find_all_by_posttype('Complaint')
+    end
     render "email/index"    
     
   end
