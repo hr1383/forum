@@ -1,5 +1,5 @@
 class SupportEmailer < ActionMailer::Base
-default :from => "hrsht.rastogi13@gmail.com"
+default :from => "support@umvox.com"
 
 def support_contact(user)
   mail(:to => user.emaild, :subject => "Registered")
