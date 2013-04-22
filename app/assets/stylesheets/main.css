@@ -7,10 +7,11 @@ p, ol, ul, td {
     font-family: arial,helvetica,sans-serif !important;
     font-size: 12px !important;
     line-height: 16px !important;
+    margin:0 0 0 10px;
 }
 a{ outline:none; text-decoration:none; color:#569F44;}
 a:hover{ background:none; color:#569F44; text-decoration:underline;}
-img, fieldset{ border:0px;}
+img, fieldset{ border:0px;margin-top: 10px}
 ol, ul, li{ list-style:none;}
 input, select, textarea{ outline:none;}
 
@@ -89,9 +90,10 @@ input, select, textarea{ outline:none;}
 .create_vox_form{ border-bottom:1px solid #60635D;}
 .create_vox_form input[type="text"], .create_vox_form textarea, .create_vox_form select{border-bottom:1px solid #e8e3e3; border-right:1px solid #e8e3e3; border-top:1px solid #c9c6c6; border-left:1px solid #c9c6c6; padding:8px; box-shadow:inset 1px 1px 1px #e0e0e0; border-radius:4px;}
 .create_vox_form .field{ margin-bottom:17px;}
-.create_vox_form .field label{ float:left; width:137px; color:#545454; font-size:18px; font-weight:bold; padding:6px 0;}
+.create_vox_form .field label{ float:left; width:137px; ; font-size:18px; font-weight:bold; padding:6px 0;}
 .create_vox_form .field .full { margin:0 0 10px 0;}
 .create_vox_form .field .full label{ float:none; width:auto;}
+.create_vox_form .field .error_msg{color:#ff0000;display:none;}
 .create_vox_form .full { margin:0 0 10px 0;}
 .create_vox_form .full label{ float:none; width:auto;}
 .create_vox_form .field .radio label{ float:none; width:auto;color:#545454; font-size:12px; font-weight:normal;}
@@ -106,6 +108,26 @@ input, select, textarea{ outline:none;}
     margin-bottom: 24px;
     padding-top: 24px;
 }
+create_vox_form  .left_buttons {
+    float: left;
+    margin-bottom: 24px;
+    padding-top: 24px;
+}
+.create_vox_form .left_step_button{background: url("/assets/submit_btn.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: arial;
+    height: 52px;
+    padding: 3px 0;
+    width: 275px;
+	text-shadow:0 0 1px #9a7600;
+	}
+
+        
 .create_vox_form .step_button{background: url("/assets/submit_btn.png") no-repeat scroll 0 0 transparent;
     border: medium none;
     color: #FFFFFF;

@@ -25,13 +25,13 @@
       <div class="field">
         <%= f.label :question,"Title" %>
         <%= f.text_field :question,:class=>"inp_text" %>
-        <div id="error_question" class="error_msg" style="display:none">
+        <div id="error_question"  style="display:none;color:#ff0000">
           This is the required field
         </div>
       <div class="field">
         <%= f.label :description %>
         <%= f.text_area :description,:class=>"inp_area" %>
-         <div id="error_description"  style="display:none">
+         <div id="error_description"  style="display:none;color:#ff0000">
           This is the required field
         </div>
       </div>
@@ -82,7 +82,7 @@
   <% else %>
  <div class="grey_box">
   <div id="newAddressdiv">
-    <p>Is the business online store ?  <%=  check_box :new,:address  %></p>
+    <p>Click here for online business, service or organization ?  <%=  check_box :new,:address  %></p>
 	<br>
   </div>      
 		<p>In order to inform the right personnel, please make sure the contact info is correct.</p><br>
@@ -91,7 +91,7 @@
 		<div class="field">
 			<label>Name</label> 
 			<%= location_form.text_field :name%> 
-                        <div id="error_loc_name"  style="display:none">
+                        <div id="error_loc_name"  style="display:none;color:#ff0000">
                           This is the required field
                         </div>
 		</div>
@@ -103,7 +103,7 @@
                     <div class="field">
                             <label>City</label> 
                             <%= location_form.text_field  :city%>
-                             <div id="error_loc_city"  style="display:none">
+                             <div id="error_loc_city"  style="display:none;color:#ff0000">
                               This is the required field
                              </div>
                     </div>
@@ -115,14 +115,14 @@
 		<div class="field">
 			<label>Email</label> 
 			<%= location_form.text_field  :email%> 
-                        <div id="error_loc_email"  style="display:none">
+                        <div id="error_loc_email"  style="display:none;color:#ff0000">
                           This is the required field
                         </div>
 		</div>
 		<div class="field">
 			<label>Website</label> 
 			<%= location_form.text_field :website%> 
-                        <div id="error_loc_website"  style="display:none">
+                        <div id="error_loc_website"  style="display:none;color:#ff0000">
                           This is the required field
                         </div>
 		</div>
@@ -168,7 +168,7 @@
 <div class="field">
 <div class="full"><label>Enter other details which you want to share with company and not have public</label></div>
 <div class="inp_details">
-  <%= detail_form.text_area :description %>
+  <%= detail_form.text_area :description  %>
 </div>  
 </div>  
 <% end  %>

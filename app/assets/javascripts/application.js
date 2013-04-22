@@ -145,7 +145,7 @@ $("#btnStep1").click(function() {
 
 var alltrue = true;
 if($("#post_question").val().length == 0){
-     $("#error_msg").show();
+     $("#error_question").show();
      alltrue= false;
 }
 if($("#post_description").val().length == 0){
