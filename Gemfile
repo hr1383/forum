@@ -29,6 +29,7 @@ group :assets do
 end
 group :production do
  gem 'pg'
+ gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 gem 'jquery-rails'
 gem 'factual-api'

@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
 
-   before_filter :authenticate1_user , :only =>[:dashboard]
+#   before_filter :authenticate1_user , :only =>[:dashboard]
 
   
   def filldetails
@@ -97,8 +97,6 @@ class MembersController < ApplicationController
     if session[:user].nil?
       session[:user] = current_user
     end
-    user = session[:user]
-      @isadmin = user.admin
   end
   
   def show

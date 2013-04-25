@@ -35,7 +35,7 @@ Umvox::Application.routes.draw do
   end
  resources :posts do
    collection do
-     get :search,:browse,:list
+     get :search,:browse,:list, :next
      post :browse
    end
    resources :comments

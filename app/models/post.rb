@@ -18,11 +18,11 @@ class Post < ActiveRecord::Base
 end
 
   def self.latest_closed
-    where("status=?",'Resolved').order("updated_at DESC").limit(2)
+    where("status=?",'Resolved').order("updated_at DESC").limit(5)
   end
   
   def self.latest_open
-    where("status=?",'Open').order("updated_at DESC").limit(2)
+    where("status=?",'Open').order("updated_at DESC").limit(5)
   end
   def urlValue
      Facebook::CALLBACK_URL+id.to_s
