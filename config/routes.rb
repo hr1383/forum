@@ -4,7 +4,7 @@ Umvox::Application.routes.draw do
     
   end
 
-#  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   root :to => "members#dashboard"
   
