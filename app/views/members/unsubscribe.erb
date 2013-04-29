@@ -1,0 +1,13 @@
+<%#*<div class="form_header">%>
+  Sad to see you. You will no more be able to receive email about any updates about your vox.
+  Click on Unsubscribe if you are sure.
+  <div class="independent">
+<%= form_tag('/members/unconfirm',:method=>:get) do%>
+  <%#*<div class="left_buttons">%>
+  <%= hidden_field_tag :token, params[:token] %>  
+  <%= button_tag "Unsbscribe", :class=>"left_step_button"%>
+  <%#*</div>%>
+ <% end %>
+</div>
+  
+<%#*</div>%>

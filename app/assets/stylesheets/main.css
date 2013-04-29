@@ -5,13 +5,19 @@ h1,h2,h3,h4,h5,h6{}
 p{}
 p, ol, ul, td {
     font-family: arial,helvetica,sans-serif !important;
-    font-size: 12px !important;
+    font-size: 12px ;
     line-height: 16px !important;
     margin:0 0 0 10px;
 }
+
+#howitworks
+.content p{font-family: arial,helvetica,sans-serif !important;
+    font-size: 14px ;
+    line-height: 16px ;
+    margin:0 0 0 10px;}
 a{ outline:none; text-decoration:none; color:#569F44;}
 a:hover{ background:none; color:#569F44; text-decoration:underline;}
-img, fieldset{ border:0px;margin-top: 10px}
+img, fieldset{ border:0px;}
 ol, ul, li{ list-style:none;}
 input, select, textarea{ outline:none;}
 
@@ -113,7 +119,7 @@ create_vox_form  .left_buttons {
     margin-bottom: 24px;
     padding-top: 24px;
 }
-.create_vox_form .left_step_button{background: url("/assets/submit_btn.png") no-repeat scroll 0 0 transparent;
+.independent .left_step_button{background: url("/assets/submit_btn.png") no-repeat scroll 0 0 transparent;
     border: medium none;
     color: #FFFFFF;
     cursor: pointer;
@@ -121,9 +127,9 @@ create_vox_form  .left_buttons {
     font-size: 12px;
     font-weight: bold;
     font-family: arial;
-    height: 52px;
+    height: 40px;
     padding: 3px 0;
-    width: 275px;
+    width: 200px;
 	text-shadow:0 0 1px #9a7600;
 	}
 
@@ -209,7 +215,7 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
 #sign_in .or span{ padding:0 10px; font-style:italic; background:#F2F3EE;}
 #sign_in .sign_in_fill{}
 #sign_in .sign_in_fill .field{}
-#sign_in .sign_in_fill .field label{ color: #545454; float: left; font-size: 17px; font-weight: normal; padding: 10px 0; width: 137px;}
+#sign_in .sign_in_fill .field label{ color: #545454; float: left; font-size: 17px; font-weight: normal; padding: 10px 4px; width: 137px;}
 #sign_in  input[type="text"], #sign_in  input[type="email"], #sign_in  input[type="password"], #sign_in  textarea, #sign_in  select {
     border-color: #C9C6C6 #E8E3E3 #E8E3E3 #C9C6C6;
     border-radius: 4px 4px 4px 4px;
@@ -218,7 +224,7 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
     box-shadow: 1px 1px 1px #E0E0E0 inset;
     padding: 8px;
 }
-#sign_in .sign_in_fill .field input[type="text"], #sign_in .sign_in_fill .field input[type="email"]{color: #545454; float: none; font-size: 15px; font-weight: normal; height: 16px; width: 454px;}
+#sign_in .sign_in_fill .field input[type="text"], #sign_in .sign_in_fill .field input[type="email"]{color: #545454; float: none; font-size: 15px; font-weight: normal; height: 16px; width: 300px;}
 #sign_in .sign_in_fill .field input[type="password"]{color: #545454; float: none; font-size: 15px; font-weight: normal; height: 16px; width: 300px;}
 #sign_in .sign_in_fill .field input[type="submit"], #sign_in .sign_in_fill .field a.signin{
 	background: url("/assets/upgrade_btn.png") no-repeat scroll 0 0 transparent;

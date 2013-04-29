@@ -25,6 +25,7 @@ class MembersController < ApplicationController
   
   def create
     @user1 = User.new(params[:user])
+    
     if @user1.save
       saveduser = User.find_by_fbid(params[:user][:fbid])
       unless saveduser.nil?
@@ -129,6 +130,14 @@ class MembersController < ApplicationController
      @user.state = params[:user][:state]
      @user.country = params[:user][:country]
      @user.fbid = params[:user][:fbid]
+     @user.subscribe = params[:user][:subscribe]
+     if @user.subscribe_token.nil?
+       puts "generated token"
+       @user.subscribe_token = loop do
+        random_token = SecureRandom.urlsafe_base64
+      break random_token unless User.where(subscribe_token: random_token).exists?
+       end  
+    end
      begin 
       @user.save
       session[:user] = @user
@@ -168,5 +177,21 @@ class MembersController < ApplicationController
 #        render_with_scope :contactus
 #      end
   redirect_to "/members/dashboard"
+  end
+  
+  def unsubscribe
+    
+  end
+  
+  def unconfirm
+    user = User.find_by_subscribe_token(params[:token])
+    unless user.nil?
+      user.subscribe=0
+      user.save
+      session[:user] = user
+      current_user= user
+    end
+    
+    redirect_to "/members/dashboard"
   end
 end

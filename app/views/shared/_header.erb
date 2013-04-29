@@ -19,8 +19,9 @@
       <%= form_tag('/posts/browse',:method=>:get) do%>
         <%= submit_tag "Browse Vox" %>
       <% end %>
-      <span> / </span>
+      
       <% if (!current_user.nil? || !session[:user].nil?) %>    
+       <span> / </span>     
        <%= form_tag("/posts", :method=>:get) do %>
         <%= submit_tag "My Umvox" %>
       <% end %>

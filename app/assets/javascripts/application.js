@@ -140,6 +140,45 @@
 //});
 //});
 //
+
+$(function() {
+$("#btn_sign_up").click(function() {
+    var alltrue = true;
+    if($("#user_email").val().length == 0){
+     $("#error_email").show();
+     alltrue= false;
+    }
+    if($("#user_password").val().length == 0){
+     $("#error_pwd").show();
+     alltrue= false;
+    }
+    if($("#user_password_confirmation").val().length == 0){
+     $("#error_pwd_c").show();
+     alltrue= false;
+    }
+    if(alltrue == false)
+        return false;
+})});
+
+$(function(){
+$('#user_email').keyup(function(event) {
+  $("#error_email").hide();
+})
+});
+
+$(function(){
+$('#user_password').keyup(function(event) {
+  $("#error_pwd").hide();
+})
+});
+
+$(function(){
+$('#user_password_confirmation').keyup(function(event) {
+  $("#error_pwd_c").hide();
+})
+});
+
+
 $(function() {
 $("#btnStep1").click(function() {
 
@@ -152,6 +191,20 @@ if($("#post_description").val().length == 0){
      $("#error_description").show();
      alltrue= false;
 }
+
+
+//alert($("#post_scenario_").is(':checked'));
+//if($("#post_scenario_").is(':checked') == false){
+//    $("#error_scenario").show();
+//     alltrue= false;
+//}
+//alert($("#post_compensation_").is(':checked'));
+//if($("#post_compensation_").is(':checked') == false){
+//    $("#error_compensation").show();
+//     alltrue= false;
+//}
+
+
 if(alltrue == false)
     return false;
 var badwords = new Array("shit","fuck","ass","asshole");

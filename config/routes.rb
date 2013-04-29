@@ -4,7 +4,7 @@ Umvox::Application.routes.draw do
     
   end
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+#  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   root :to => "members#dashboard"
   
@@ -42,7 +42,7 @@ Umvox::Application.routes.draw do
  end   
   resources :members do
   collection do
-    get   :filldetails,:dashboard,:signin,:contactus,:userp
+    get   :filldetails,:dashboard,:signin,:contactus,:userp,:unsubscribe,:unconfirm
     put  :updateprofile, :support
     post  :updateprofile,:support
   end

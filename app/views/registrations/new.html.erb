@@ -7,16 +7,28 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email %></div>
+    <%= f.email_field :email %>
+   <div id="error_email"  style="display:none;color:#ff0000">
+                              This is the required field
+                             </div>
+  </div>
   <div class="field"><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <%= f.password_field :password %>
+   <div id="error_pwd"  style="display:none;color:#ff0000">
+  This is the required field
+ </div>
+  </div>
 
   <div class="field"><%= f.label :confirm_password %><br />
   <%= f.password_field :password_confirmation %></div>
-
+  <div id="error_pwd_c"  style="display:none;color:#ff0000">
+    This is the required field
+   </div>
+  <% if Rails.env== 'production' %>
   <%#= recaptcha_tags %>
+  <%  end %>
   <label>By clicking Sign Up, you agree to our <a href="/terms">Terms &Privacy</a> </label></br>
-<br/>  <div class="field"><%= f.submit "Sign up" %></div>
+<br/>  <div class="field"><%= f.submit "Sign up", :id=>"btn_sign_up" %></div>
 <% end %>
   <%= render :partial => "devise/shared/links" %>
 </div>

@@ -82,7 +82,7 @@ font-size:12px;font-family:arial;color:#333;line-height:18px;
 		     <td>
 			    <table  style="background:#5aa200; color:#fff;padding:9px 0;width:600px;margin-top:200px;">
 			       <tr>
-		              <td  style="padding-bottom:10px;" align="center">If you believe this has been sent to you in error, please safely <a style="color:#fff;" href="#">unsubscribe</a>. For more information, please see our <a style="color:#fff;" href="#">privacy policy</a></td>
+		              <td  style="padding-bottom:10px;" align="center">If you believe this has been sent to you in error, please safely <%= link_to "Unsubscribe", "http://www.umvox.com/members/unsubscribe/"+@user.subscribe_token %> . For more information, please see our <a style="color:#fff;" href="#">privacy policy</a></td>
 		           </tr>
 		           <tr>
 				       <td align="center">&#169; 2013 UmVox, Inc.</td>

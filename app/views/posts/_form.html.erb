@@ -44,6 +44,9 @@
           <% end %>
        <% end %> 
 		<div class="clr"></div>
+      <div id="error_scenario"  style="display:none;color:#ff0000">
+                          This is the required field
+                        </div>          
       </div>
       <div class="field">
          <% if !@post.compensation.nil? -%>
@@ -54,6 +57,9 @@
             <% end %>
         <% end %>
 		<div class="clr"></div>
+        <div id="error_compensation"  style="display:none;color:#ff0000">
+             This is the required field
+          </div>        
       </div>
 <%#*end of step1%>
 	<div class="buttons">
@@ -159,14 +165,14 @@
 <p>To help the company resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behalf, please fill this section out as thoroughly as possible.</p>
 <br>
 
-<p>Note: Any information you enter in this area is secure and will only be shared with the company.</p><br>
+<p>Note: Any information you enter in this area is secure and will only be shared with the Umvox.</p><br>
 
 
 <div class="account">
 <%= f.fields_for :detailinfos do |detail_form| %>
 
 <div class="field">
-<div class="full"><label>Enter other details which you want to share with company and not have public</label></div>
+<%#*<div class="full"><label>Enter other details which you want to share with company and not have public</label></div>%>
 <div class="inp_details">
   <%= detail_form.text_area :description  %>
 </div>  
