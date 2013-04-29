@@ -101,13 +101,14 @@ class MembersController < ApplicationController
   end
   
   def show
-    if !session[:user].nil?
-      @user= session[:user]
+    @user= User.find_by_id(params[:id])
+#    if !session[:user].nil?
+#      @user= session[:user]
       openUmvox=@user.posts.where("status=?","Open")
       closeUmvox=@user.posts.where("status=?","Closed")
       @totalopen = openUmvox.size unless openUmvox.nil?
       @totalclosed = closeUmvox.length unless closeUmvox.nil?
-    end
+#    end
   end
   
   def updateprofile
