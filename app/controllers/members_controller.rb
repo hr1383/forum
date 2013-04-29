@@ -102,6 +102,7 @@ class MembersController < ApplicationController
   
   def show
     @user= User.find_by_id(params[:id])
+    session[:user] = @user
 #    if !session[:user].nil?
 #      @user= session[:user]
       openUmvox=@user.posts.where("status=?","Open")

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_filter :authenticate1_user , :only =>[:index,:new,:destroy,:browse]
+  before_filter :authenticate1_user , :only =>[:index,:new,:destroy]
  def index
     
     if !params[:all].nil? and params[:all] == "true"
