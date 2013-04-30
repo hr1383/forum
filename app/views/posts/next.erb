@@ -1,11 +1,29 @@
-<img src="/assets/vox1.png" alt="" title="UmVox" />
+<div class="content">
+<div class="wrapper">
+  
+  <div class="left_section">
+    <div class="left_header">
+      <h1>What's next?</h1>
+    </div>
+    <br>
+    <ol>
+      <li>UmVox team is ready to forward your vox.</li>
+      <li>Share your vox with other users in the same circumstances.</li>
+      <li>UmVox team will let you know once the addressee responds.</li>
+    </ol>
 
-<img src="/assets/vox2.png" alt="" title="UmVox" />
+    <img src="/assets/vox2.png" alt="" title="UmVox">
 
-<div class="create_vox_form">
-<%= form_tag('/members/dashboard',:method=>:get) do%>
-  <div class="left_buttons">          
-  <%= button_tag "Continue", :class=>"left_step_button"%>
+    <div class="create_vox_form">
+      <form accept-charset="UTF-8" action="/members/dashboard" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+        <div class="left_buttons">          
+          <button class="left_step_button" name="button" type="submit">Continue</button>
+        </div>
+      </form>
+    </div>
+
   </div>
- <% end %>
+
+<div class="clr"></div>
+</div>
 </div>
