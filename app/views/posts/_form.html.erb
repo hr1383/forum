@@ -24,13 +24,13 @@
 
       <div class="field">
         <%= f.label :question,"Title" %>
-        <%= f.text_field :question,:class=>"inp_text" %>
+        <%= f.text_field :question,:class=>"inp_text", :placeholder=>"Create some catchy title." %>
         <div id="error_question"  style="display:none;color:#ff0000">
           This is the required field
         </div>
       <div class="field">
         <%= f.label :description %>
-        <%= f.text_area :description,:class=>"inp_area" %>
+        <%= f.text_area :description,:class=>"inp_area", :placeholder="Details out your feedback." %>
          <div id="error_description"  style="display:none;color:#ff0000">
           This is the required field
         </div>
@@ -62,6 +62,7 @@
           </div>        
       </div>
 <%#*end of step1%>
+         <p><b>Please be as detailed as possible about your situation</b>, but be sure to leave out any personal information since your experience will be visible to everyone. You will be given the opportunity to fill out any order or account information that will only be shared with the addressee in the next step.</p>
 	<div class="buttons">
           <%=button_tag "Continue to next Step", :id=>"btnStep1", :class=>"step_button", :remote=>"true" %>
         </div>
@@ -203,7 +204,7 @@ File type: .jpg, .jpeg, .gif, .png</p><br>
 
           <% end %>
   <% end %>
-
+  <p>*Please keep in mind that some companies take longer to respond than others. Unfortunately sometimes even we cannot persuade the addressee to respond to your request. So that is why we urge you to be as clear, concise, and polite as possible to ensure that you get the outcome you are looking for.</p>
 <%= f.hidden_field :user_id  %>
 
 <%#= f.fields_for :location do|location_form|  %>
