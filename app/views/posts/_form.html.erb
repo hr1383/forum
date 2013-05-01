@@ -30,7 +30,7 @@
         </div>
       <div class="field">
         <%= f.label :description %>
-        <%= f.text_area :description,:class=>"inp_area", :placeholder=>"Please be as detailed as possible about your situation, but be sure to leave out any personal information since your experience will be visible to everyone. You will be given the opportunity to fill out any order or account information that will only be shared with the addressee in the next step." %>
+        <%= f.text_area :description,:class=>"inp_area", :placeholder=>"Please be as detailed as possible about your situation, but be sure to leave out any personal information since your experience will be visible to everyone." %>
          <div id="error_description"  style="display:none;color:#ff0000">
           This is the required field
         </div>
@@ -65,7 +65,7 @@
          <p><b>
          </p>
 	<div class="buttons">
-          <%=button_tag "Continue to next Step", :id=>"btnStep1", :class=>"step_button", :remote=>"true" %>
+          <%=button_tag "Continue to next step", :id=>"btnStep1", :class=>"step_button", :remote=>"true" %>
         </div>
   <div class="clr"></div>
 </div>
@@ -147,7 +147,7 @@
   <%#*<div id="locations">%>
   <%#*</div>%>
   <div class="buttons">
-	  <%=button_tag "Continue to next Step", :id=>"btnStep2", :class=>"step_button", :remote=>"true" %>
+	  <%=button_tag "Continue to next step", :id=>"btnStep2", :class=>"step_button", :remote=>"true" %>
 	</div>
 	<div class="clr"></div>
 <%#*end of step2%>
@@ -219,7 +219,7 @@ File type: .jpg, .jpeg, .gif, .png</p><br>
   <%#= location_form.hidden_field :website %>
   
 <%# end %>
- <label>By clicking Create Vox, you agree to our <a href="/terms">Terms &Conditions</a> </label></br>
+ <label>By clicking Create Vox, you agree to our <a href="/terms">Terms & Conditions</a> </label></br>
   <div class="actions buttons">
     <%= f.submit "Create Vox" %>
   </div>
