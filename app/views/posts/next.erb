@@ -6,24 +6,29 @@
       <h1>What's next?</h1>
     </div>
     <br>
-    <ol>
+    <ul style="font-family: arial,helvetica,sans-serif !important;
+    font-size: 20px ;
+    ">
       <li>UmVox team is ready to forward your vox.</li>
-      <li>Share your vox with other users in the same circumstances.</li>
-      <li>UmVox team will let you know once the addressee responds.</li>
-    </ol>
-
-    <img src="/assets/vox2.png" alt="" title="UmVox">
-
-    <div class="create_vox_form">
-      <form accept-charset="UTF-8" action="/members/dashboard" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+      <br/>
+      <li>UmVox team will let you know once the addressee responds.</li><br/>
+      <li>Share your vox.</li><br/>
+      
+    </ul>
+<div class="fb-like" data-href="https://umvox.com/<%=  session[:postid] %>" data-send="true" data-width="450" data-show-faces="true"></div>
+    <%#*<img src="/assets/vox2.png" alt="" title="UmVox">%>
+<br/>
+<br/>
+  <div class="independent">      <form accept-charset="UTF-8" action="/members/dashboard" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
         <div class="left_buttons">          
-          <button class="left_step_button" name="button" type="submit">Continue</button>
+          <%= button_tag "Continue", :class=>"left_step_button"%>
         </div>
       </form>
+  </div>  
     </div>
 
   </div>
 
 <div class="clr"></div>
-</div>
-</div>
+<%#*</div>%>
+<%#*</div>%>

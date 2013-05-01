@@ -27,5 +27,8 @@ def logout
     redirect_to '/members/signin'
 	end
 def terms
+end
+
+def privacy
 end  
 end

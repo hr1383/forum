@@ -259,6 +259,58 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
 	margin:0 auto;
 }
 
+
+#sign_up{ width:615px;}
+#sign_up .sign_up_fb{ padding:50px; text-align:center;}
+#sign_up .or{ height:8px; border-bottom:1px solid #60635D; text-align:center; margin:0 0 50px 0;}
+#sign_up .or span{ padding:0 10px; font-style:italic; background:#F2F3EE;}
+#sign_up .sign_up_fill{}
+#sign_up .sign_up_fill .field{}
+#sign_up .sign_up_fill .field label{ color: #545454; float: left; font-size: 17px; font-weight: normal; padding: 20px 4px; width: 167px;}
+#sign_up  input[type="text"], #sign_up  input[type="email"], #sign_up  input[type="password"], #sign_up  textarea, #sign_up  select {
+    border-color: #C9C6C6 #E8E3E3 #E8E3E3 #C9C6C6;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 1px #E0E0E0 inset;
+    padding: 8px;
+}
+#sign_up .sign_up_fill .field input[type="text"], #sign_up .sign_up_fill .field input[type="email"]{color: #545454; float: none; font-size: 15px; font-weight: normal; height: 16px; width: 300px;}
+#sign_up .sign_up_fill .field input[type="password"]{color: #545454; float: none; font-size: 15px; font-weight: normal; height: 16px; width: 300px;}
+#sign_up .sign_up_fill .field input[type="submit"], #sign_up .sign_up_fill .field a.signin{
+	background: url("/assets/upgrade_btn.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 43px;
+    line-height: 43px;
+    padding-bottom: 6px;
+    text-align: center;
+    text-shadow: 0 0 1px #9A7600;
+    width: 176px;
+}
+
+.sign_up_fill a.signin{
+	background: url("/assets/upgrade_btn.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 43px;
+    line-height: 43px;
+    padding-bottom: 6px;
+    text-align: center;
+    text-shadow: 0 0 1px #9A7600;
+    width: 176px;
+	margin:0 auto;
+}
+
+
 #footer{ background:#5ba300 url(/assets/footer_bg_rpt.gif) repeat-x; min-height:247px;}
 .footer_logo_tagline{ height:75px;}
 .footer_logo_tagline .logo{ margin:17px 0 0 0;}

@@ -30,7 +30,7 @@
         </div>
       <div class="field">
         <%= f.label :description %>
-        <%= f.text_area :description,:class=>"inp_area", :placeholder=>"Details out your feedback." %>
+        <%= f.text_area :description,:class=>"inp_area", :placeholder=>"Please be as detailed as possible about your situation, but be sure to leave out any personal information since your experience will be visible to everyone. You will be given the opportunity to fill out any order or account information that will only be shared with the addressee in the next step." %>
          <div id="error_description"  style="display:none;color:#ff0000">
           This is the required field
         </div>
@@ -62,7 +62,8 @@
           </div>        
       </div>
 <%#*end of step1%>
-         <p><b>Please be as detailed as possible about your situation</b>, but be sure to leave out any personal information since your experience will be visible to everyone. You will be given the opportunity to fill out any order or account information that will only be shared with the addressee in the next step.</p>
+         <p><b>
+         </p>
 	<div class="buttons">
           <%=button_tag "Continue to next Step", :id=>"btnStep1", :class=>"step_button", :remote=>"true" %>
         </div>
@@ -163,10 +164,10 @@
 </div>
 <h2>Supporting Info</h2>
 <br>
-<p>To help the company resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behalf, please fill this section out as thoroughly as possible.</p>
+<p>To help the Umvox resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behalf, please fill this section out as thoroughly as possible.</p>
 <br>
 
-<p>Note: Any information you enter in this area is secure and will only be shared with the Umvox.</p><br>
+<p>Note: Any information you enter in this area is secure and will only be shared with Umvox.</p><br>
 
 
 <div class="account">
@@ -184,7 +185,7 @@
 <h2>File Upload</h2>
 <br>
 <h4>Images</h4>
-<p>You may upload as many images needed as long as the total size of all images is less than 2MB.<br>
+<p>You may upload as 3 images needed as long as the total size of all images is less than 5MB.<br>
 File type: .jpg, .jpeg, .gif, .png</p><br>
 
   <%= f.fields_for :assets do |asset_fields| %>
@@ -204,7 +205,7 @@ File type: .jpg, .jpeg, .gif, .png</p><br>
 
           <% end %>
   <% end %>
-  <p>*Please keep in mind that some companies take longer to respond than others. Unfortunately sometimes even we cannot persuade the addressee to respond to your request. So that is why we urge you to be as clear, concise, and polite as possible to ensure that you get the outcome you are looking for.</p>
+  
 <%= f.hidden_field :user_id  %>
 
 <%#= f.fields_for :location do|location_form|  %>
@@ -218,9 +219,9 @@ File type: .jpg, .jpeg, .gif, .png</p><br>
   <%#= location_form.hidden_field :website %>
   
 <%# end %>
- 
+ <label>By clicking Create Vox, you agree to our <a href="/terms">Terms &Conditions</a> </label></br>
   <div class="actions buttons">
-    <%= f.submit %>
+    <%= f.submit "Create Vox" %>
   </div>
   <div class="clr"></div>
 </div> 
