@@ -1,23 +1,26 @@
 <div class="content">
 <div class="wrapper">
   
-  <div class="left_section">
-    <div class="left_header">
-      <h1>What's next?</h1>
-    </div>
-    <br>
-    <ul style="font-family: arial,helvetica,sans-serif !important;
-    font-size: 20px ;
-    ">
-      <li>UmVox team is ready to forward your vox.</li>
-      <br/>
-      <li>UmVox team will let you know once the addressee responds.</li><br/>
-      <li>Share your vox.</li><br/>
+  <%#*<div class="left_section">%>
+    <%#*<div class="left_header">%>
+      <%#*<h1>What's next?</h1>%>
+    <%#*</div>%>
+    <%#*<br>%>
+    <%#*<ul style="font-family: arial,helvetica,sans-serif !important;%>
+    <%#*font-size: 20px ;%>
+    <%#*">%>
+      <%#*<li>UmVox team is ready to forward your vox.</li>%>
+      <%#*<br/>%>
+      <%#*<li>UmVox team will let you know once the addressee responds.</li><br/>%>
+      <%#*<li>Share your vox.</li><br/>%>
       
-    </ul>
-<div class="fb-like" data-href="https://umvox.com/<%=  session[:postid] %>" data-send="true" data-width="450" data-show-faces="true"></div>
+    <%#*</ul>%>
+
     <%#*<img src="/assets/vox2.png" alt="" title="UmVox">%>
-<br/>
+<%#*<br/>%>
+<img src="/assets/thankyou.jpg" style="">
+<div style="text-align: right;"><%= render "/shared/tweet_button",:post =>@post %>   <div class="fb-like" data-href="https://umvox.com/<%=  session[:postid] %>" data-send="true" data-width="400" data-show-faces="true"></div></div>
+
 <br/>
   <div class="independent">      <form accept-charset="UTF-8" action="/members/dashboard" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
         <div class="left_buttons">          
