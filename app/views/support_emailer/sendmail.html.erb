@@ -111,7 +111,7 @@ outcome.</td>
 
 		<tr>
 
-		   <td align="center"><%= link_to 'Click Here to reply' , 'http://enigmatic-badlands-8436.herokuapp.com/posts'+@post.id.to_s%></td>
+		   <td align="center"><%= link_to 'Click Here to reply' , 'http://enigmatic-badlands-8436.herokuapp.com/posts/'+@post.id.to_s%></td>
 
 		</tr>
 
@@ -222,25 +222,26 @@ outcome.</td>
 
 		
 
-		<table><tr>
+		<table>
+                  <%#*<tr>%>
 
-		  <td align="center"><a href="#0.1.3_"><img src="http://images/reply_btn.png" alt=""></a></td>
+		  <%#*<td align="center"><a href="#0.1.3_"><img src="http://images/reply_btn.png" alt=""></a></td>%>
 
-		</tr>
+		<%#*</tr>%>
 
 		
 
-		  <%#*<tr>%>
+		  <tr>
 
-		     <%#*<td>%>
+		     <td>
 
-			    <%#*<table style="background:#5aa200;color:#fff;padding:9px 0;width:600px;margin-top:20px">%>
+			    <table style="background:#5aa200;color:#fff;padding:9px 0;width:600px;margin-top:20px">
 
-			       <%#*<tr>%>
+			       <tr>
 
-		              <%#*<td style="padding-bottom:10px" align="center">If you believe this has been sent to you in error, please safely <a style="color:#fff" href="#0.1.3_">unsubscribe</a>. For more information, please see our <a style="color:#fff" href="#0.1.3_">privacy policy</a></td>%>
+		              <td style="padding-bottom:10px" align="center">If you believe this has been sent to you in error, please safely send mail to <a href="mailto:support@umvox.com">unsubscribe</a>. For more information, please see our <a style="color:#fff" href="www.umvox.com/welcome/howitworks">Privacy policy</a></td>
 
-		           <%#*</tr>%>
+		           </tr>
 
 		           <tr>
 
@@ -248,11 +249,11 @@ outcome.</td>
 
 				   </tr>
 
-				   <%#*</table>%>
+				   </table>
 
-				 <%#*</td>%>
+				 </td>
 
-		   <%#*</tr>%>
+		   </tr>
 
 		 
 
