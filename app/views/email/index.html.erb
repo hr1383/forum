@@ -27,7 +27,7 @@
     <td><%=  post.location.name %></td>
     <td><%= post.question %></td>  
     <td><%=  text_field_tag 'email',email,:name=>"arr[email_stat_#{post.id}][email]"%></td>
-      <td><%= check_box_tag "arr[email_stat_#{post.id}][isSend]",1,:name=>"arr[email_stat_#{post.id}][isSend]" %></td>
+      <td><%= check_box_tag "arr[email_stat_#{post.id}][isSend]",0,:name=>"arr[email_stat_#{post.id}][isSend]" %></td>
       <%= hidden_field_tag "arr[email_stat_#{post.id}][postid]", post.id %>
       <%= hidden_field_tag "arr[email_stat_#{post.id}][oldemail]", email %>
   </tr>
