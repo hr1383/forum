@@ -26,7 +26,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by_parameterize(params[:id])
+#      Post.find(params[:id])
+    
     @backer = 0
     @backername=Array.new
      if @post.comments !=nil
@@ -77,7 +79,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find_by_parameterize(params[:id])
     @isadmin=User.find(session[:user].id).admin
   end
 
@@ -85,7 +87,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
-    
+    @post.parameterize = @post.question.parameterize
     respond_to do |format|
     if @post.save
     session[:postid]=@post.id

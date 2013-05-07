@@ -7,7 +7,7 @@
 <% end %>    
 	<span class="cat"></span>
 	<div class="padder">
-		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>:<%= post.location.name %></b> </h2>
+		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b> </h2>
 		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
 		<div class="btm_line">
 			<div class="comment">
@@ -25,7 +25,7 @@
 						
 			</div>
                         <div class="read_more flr">
-                              <%= link_to  "Read More","/posts/#{post.id}" %> 
+                              <%= link_to  "Read More","/posts/#{post.parameterize}" %> 
                         </div>
 		</div>
 	</div>

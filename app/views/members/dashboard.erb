@@ -39,47 +39,37 @@
 		  </div>
 		  <div class="left_section_part flt">
 		       <div class="main">
-                                                        <% if (!@totalclose.nil? and @totalclose.size >0) %>
-                                                                          <div class="main">
-                                                                                  <h1 class="title">RECENTLY RESOLVED VOX</h1>
-                                                                                  <div class="body">
-                                                                                          <div class="main_box">
-                                                                                            <% @totalclose.each do |post| %>
-                                                                                                  <%= render "/layouts/displaydashboardpost", :post=>post %> 
-                                                                                            <% end %>
-                                                                                          </div>
-                                                                                  </div>
-                                                                          </div>
-                                                          <% end %> 
-
-                                                          <% if (!@totalopen.nil? and @totalopen.size >0) %>
-                                                              <div class="main">
-                                                                                          <h1 class="title">Latest Vox</h1>
+                                                        
+                                                            <h1 class="title">Latest Vox</h1>
+                                                            <div class="main">
+                                                                                          
                                                                                           <div class="body">
                                                                                                   <div class="main_box">
+                                                              
+                                                          <% if (!@totalopen.nil? and @totalopen.size >0) %>
                                                                                                           <% alreadydisplayed = true %>
                                                                                                           <% @totalopen.each do |post| %>
                                                                                                              <%= render "/layouts/displaydashboardpost", :post=>post %>
                                                                                                           <% end %>
-                                                                                                  </div>
-                                                                                          </div>
-                                                              </div>
+                                                              
                                                           <%  end %>
+                                                            <% if (!@totalclose.nil? and @totalclose.size >0) %>
+                                                                                            <% @totalclose.each do |post| %>
+                                                                                                  <%= render "/layouts/displaydashboardpost", :post=>post %> 
+                                                                                            <% end %>
+                                                          <% end %> 
+                                                                                                                                        </div>
+                                                                                          </div>
+                                                              
 
                                                           <% if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
-                                                                                  <div class="main">
                                                                                           <h1 class="title">Latest Voxs</h1>
-                                                                                          <div class="body">
-                                                                                                  <div class="main_box">
-
                                                                                                           <% @totalopen.each do |post| %>
 
                                                                                                           <%= render "displaydashboardpost", :post=>post %>            
                                                                                                           <% end %>
-                                                                                               </div>
-                                                                                          </div>
-                                                                                  </div>           
                                                           <% end %>
+                                                              </div>
 			   </div>  
 		  </div>
 		  <div class="sidebar flr">
@@ -161,3 +151,45 @@
 </div>
 <div class="clear_footer"></div>
 </div>
+
+ <%# if (!@totalclose.nil? and @totalclose.size >0) %>
+                                                                          <%#*<div class="main">%>
+                                                                                  <%#*<h1 class="title">RECENTLY RESOLVED VOX</h1>%>
+                                                                                  <%#*<div class="body">%>
+                                                                                          <%#*<div class="main_box">%>
+                                                                                            <%# @totalclose.each do |post| %>
+                                                                                                  <%#= render "/layouts/displaydashboardpost", :post=>post %> 
+                                                                                            <%# end %>
+                                                                                          <%#*</div>%>
+                                                                                  <%#*</div>%>
+                                                                          <%#*</div>%>
+                                                          <%# end %> 
+
+                                                          <%# if (!@totalopen.nil? and @totalopen.size >0) %>
+                                                              <%#*<div class="main">%>
+                                                                                          <%#*<h1 class="title">Latest Vox</h1>%>
+                                                                                          <%#*<div class="body">%>
+                                                                                                  <%#*<div class="main_box">%>
+                                                                                                          <%# alreadydisplayed = true %>
+                                                                                                          <%# @totalopen.each do |post| %>
+                                                                                                             <%#= render "/layouts/displaydashboardpost", :post=>post %>
+                                                                                                          <%# end %>
+                                                                                                  <%#*</div>%>
+                                                                                          <%#*</div>%>
+                                                              <%#*</div>%>
+                                                          <%#  end %>
+
+                                                          <%# if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
+                                                                                  <%#*<div class="main">%>
+                                                                                          <%#*<h1 class="title">Latest Voxs</h1>%>
+                                                                                          <%#*<div class="body">%>
+                                                                                                  <%#*<div class="main_box">%>
+
+                                                                                                          <%# @totalopen.each do |post| %>
+
+                                                                                                          <%#= render "displaydashboardpost", :post=>post %>            
+                                                                                                          <%# end %>
+                                                                                               <%#*</div>%>
+                                                                                          <%#*</div>%>
+                                                                                  <%#*</div>%>           
+                                                          <%# end %>
