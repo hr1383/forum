@@ -167,19 +167,19 @@ outcome.</td>
 
 								  </tr>
 
-                                                                <% if @post.detailinfos != nil %>
-								  <tr>
+                                                                <%# if @post.detailinfos != nil %>
+								  <%#*<tr>%>
                                                                    
-								     <td>Additional Details</td>
+								     <%#*<td>Additional Details</td>%>
 
-								  </tr>
+								  <%#*</tr>%>
 
-								  <tr>
+								  <%#*<tr>%>
 
-								     <td><%= @post.detailinfos.first.description %> </td>
+								     <%#*<td><%= @post.detailinfos.first.description </td>%> 
 
-								  </tr>
-                                                                  <% end   %>
+								  <%#*</tr>%>
+                                                                  <%# end   %>
                                                                   <% backers = Array.new %>
 								  <% if  @post.comments != nil %>
                                                                      <% @post.comments.each do |comment|  %> 
