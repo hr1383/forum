@@ -19,7 +19,7 @@
                                  <div class="comment">
                                    <span class="backers">#<%= post.id %> </span>
                                    <span class="date">Created At:<%= post.created_at %> </span>
-                                   <span class="backers">#<%=   %> </span>
+                                   
                                  </div>
                               </div>
                              <p><%= post.description.to_s.force_encoding("UTF-8") %></p>
@@ -27,6 +27,7 @@
                                <div class="btm_line">
                                  <div class="comment">
                                    <span class="backers">Posted By <%= User.find(post.user_id).username %>  </span>
+                                   <span class="backers">Vox for <%= post.location.name  %> </span>
                                  </div>
                               </div>
                                </div>

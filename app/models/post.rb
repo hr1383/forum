@@ -25,6 +25,6 @@ end
     where("status=?",'Open').order("updated_at DESC").limit(5)
   end
   def urlValue
-     Facebook::CALLBACK_URL+id.to_s
+     Facebook::CALLBACK_URL+"/"+parameterize.to_s
   end
 end
