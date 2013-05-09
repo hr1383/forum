@@ -11,7 +11,7 @@ def sendmail(post,location,user)
   @user=user
   puts "sendimail"
 #  attachments.inline['logo'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
-   mail(:to => @location.email, :subject => "You received an opinion on Umvox")
+   mail(:to => @location.email, :subject => "You received an opinion on Umvox", :cc => "umvox1@gmail.com")
 end  
 
 def createvox(post,user)
@@ -28,6 +28,6 @@ def contactus(username,email,subj,message)
   @subj=subj
   @message = message
   puts message
-  mail(:to => "harshit@gogii.net", :subject => "Mail from support")
+  mail(:to => "umvox1@gmail.com", :subject => "Mail from support")
 end
 end
