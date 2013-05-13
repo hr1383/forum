@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
+  before_filter :set_meta_tag
    private
 
   # Overwriting the sign_out redirect path method
@@ -8,12 +8,13 @@ class ApplicationController < ActionController::Base
     session=nil
     root_path
   end
-  
+
+  def set_meta_tag
+    
+    @meta_title = "Umvox, one voice for all."
+   @meta_description = " The voxes and cpmplaints of the user"
+  end
   def authenticate1_user
-    puts "---------------"
-    puts current_user.nil?
-    puts session[:user].nil?
-    puts "--------------"
     if (current_user.nil? && session[:user].nil?)
       redirect_to "/users/sign_in"
     end
