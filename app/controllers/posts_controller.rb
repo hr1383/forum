@@ -92,6 +92,10 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
+    
+    puts @post.compensation
+    puts @post.scenario
+    puts @post.compensation.class
     @post.parameterize = @post.question.parameterize
     respond_to do |format|
     if @post.save

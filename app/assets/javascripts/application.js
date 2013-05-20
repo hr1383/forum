@@ -193,16 +193,16 @@ if($("#post_description").val().length == 0){
 }
 
 
-//alert($("#post_scenario_").is(':checked'));
-//if($("#post_scenario_").is(':checked') == false){
-//    $("#error_scenario").show();
-//     alltrue= false;
-//}
-//alert($("#post_compensation_").is(':checked'));
-//if($("#post_compensation_").is(':checked') == false){
-//    $("#error_compensation").show();
-//     alltrue= false;
-//}
+alert($("#post_scenario_").is(':checked'));
+if($("#post_scenario_").is(':checked') == false){
+    $("#error_scenario").show();
+     alltrue= false;
+}
+alert($("#post_compensation_").is(':checked'));
+if($("#post_compensation_").is(':checked') == false){
+    $("#error_compensation").show();
+     alltrue= false;
+}
 
 
 if(alltrue == false)

@@ -18,7 +18,7 @@
                                <div class="btm_line">
                                  <div class="comment">
                                    <span class="backers">#<%= post.id %> </span>
-                                   <span class="date">Created At:<%= post.created_at %> </span>
+                                   <span class="date">Created At : <%= post.created_at.to_date %> </span>
                                    
                                  </div>
                               </div>
@@ -27,7 +27,7 @@
                                <div class="btm_line">
                                  <div class="comment">
                                    <span class="backers">Posted By <%= User.find(post.user_id).username %>  </span>
-                                     &nbsp;&nbsp;&nbsp;&nbsp;<span class="backers">Vox for <%= post.location.name  %> </span>
+                                     
                                  </div>
                               </div>
                                </div>
@@ -43,8 +43,46 @@
 				</div>
 				<div class="body">
 				  <div class="sb_cat_links">
-					Category : <%= link_to post.location.category %>
+                                    <b>Category</b> : <%= link_to post.location.category %>
 				  </div>
+                                  <div class="sb_cat_links">
+                                    <b>Company :</b>
+                                        <li><ul>
+                                             <%=  post.location.name %><br/>
+                                      <% unless post.location.address == ''  %>
+                                            <%=  post.location.address %><br/>
+                                      <% end %>
+                                      <% unless post.location.city == ''  %>
+					 <%=  post.location.city %><br/>
+                                      <% end %>
+                                  <% unless post.location.zipcode == '' %>
+					<%=  post.location.zipcode %><br/>
+                                  <% end %>
+                                        </ul></li>
+				  </div>
+                                  
+                                  
+                                    <div class="sb_cat_links">
+                                      <b>Looking for : </b>
+                                      <% str = '' %>
+                                      <% Compensation.all.each do |compensation| -%>
+                                        <% if @post.compensation.include?(compensation.name.to_s) -%>
+                                              <% str+= compensation.name.to_s+ " & " %>
+                                        <% end %>
+                                        <% end %>
+                                      <%= label_tag :compensation, str[0..-3] -%>
+				  </div>
+                                  <div class="sb_cat_links">
+                                      <b>Scenario : </b>
+                                      <% str = '' %>
+                                      <% Scenarios.all.each do |scenario| -%>
+                                        <% if @post.scenario.include?(scenario.id.to_s) -%>
+                                              <% str+= scenario.name.to_s+ " & " %>
+                                        <% end %>
+                                        <% end %>
+                                      <%= label_tag :compensation, str[0..-3] -%>
+				  </div>
+                                  
 				</div>
 			  </div>
 			  <div class="brown_box">
