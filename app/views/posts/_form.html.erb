@@ -82,64 +82,75 @@
 </div>
 <h2>This vox is for...</h2>
   <% if @haslocation  %>
-  <b>
+<div id="locationPresent" ><b>
   <%= @post.location.name %><br/>
   <%=@post.location.address %><br/>
   <%=@post.location.city %><br/> 
   <%=@post.location.zipcode %></b>
+  <%= f.fields_for :location do|location_form|  %>
+    <%= location_form.hidden_field :address , :value => @post.location.address %>
+  <%= location_form.hidden_field :name , :value => @post.location.name %>
+  <%= location_form.hidden_field :city , :value => @post.location.city %>
+  <%= location_form.hidden_field :zipcode , :value => @post.location.zipcode %>
+  <div class="field">
+                            <label>Category</label> 
+                            <%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %> 
+                    </div>
+  <% end %>
+</div>
   <% else %>
- <div class="grey_box">
-  <div id="newAddressdiv">
-    <p>Click here for online business, service or organization ?  <%=  check_box :new,:address  %></p>
-	<br>
-  </div>      
-		<p>In order to inform the right personnel, please make sure the contact info is correct.</p><br>
-                <%= f.fields_for :location do|location_form|  %>
-                
-		<div class="field">
-			<label>Name</label> 
-			<%= location_form.text_field :name%> 
-                        <div id="error_loc_name"  style="display:none;color:#ff0000">
-                          This is the required field
-                        </div>
-		</div>
-                <div id="notonline">
+     <div class="grey_box">
+      <div id="newAddressdiv">
+        <p>Click here for online business, service or organization ?  <%=  check_box :new,:address  %></p>
+            <br>
+      </div>      
+                    <p>In order to inform the right personnel, please make sure the contact info is correct.</p><br>
+                    <%= f.fields_for :location do|location_form|  %>
+
                     <div class="field">
-                            <label>Address</label> 
-                            <%= location_form.text_field  :address%> 
-                    </div>
-                    <div class="field">
-                            <label>City</label> 
-                            <%= location_form.text_field  :city%>
-                             <div id="error_loc_city"  style="display:none;color:#ff0000">
+                            <label>Name</label> 
+                            <%= location_form.text_field :name%> 
+                            <div id="error_loc_name"  style="display:none;color:#ff0000">
                               This is the required field
-                             </div>
+                            </div>
+                    </div>
+                    <div id="notonline">
+                        <div class="field">
+                                <label>Address</label> 
+                                <%= location_form.text_field  :address%> 
+                        </div>
+                        <div class="field">
+                                <label>City</label> 
+                                <%= location_form.text_field  :city%>
+                                 <div id="error_loc_city"  style="display:none;color:#ff0000">
+                                  This is the required field
+                                 </div>
+                        </div>
+                        <div class="field">
+                                <label>Zipcode</label> 
+                                <%= location_form.text_field  :zipcode%> 
+                        </div>
                     </div>
                     <div class="field">
-                            <label>Zipcode</label> 
-                            <%= location_form.text_field  :zipcode%> 
+                            <label>Email</label> 
+                            <%= location_form.text_field  :email%> 
+                            <div id="error_loc_email"  style="display:none;color:#ff0000">
+                              This is the required field
+                            </div>
                     </div>
-                </div>
-		<div class="field">
-			<label>Email</label> 
-			<%= location_form.text_field  :email%> 
-                        <div id="error_loc_email"  style="display:none;color:#ff0000">
-                          This is the required field
-                        </div>
-		</div>
-		<div class="field">
-			<label>Website</label> 
-			<%= location_form.text_field :website%> 
-                        <div id="error_loc_website"  style="display:none;color:#ff0000">
-                          This is the required field
-                        </div>
-		</div>
-		<div class="field">
-			<label>Category</label> 
-			<%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %> 
-		</div>
-                <% end %>
-	</div>
+                    <div class="field">
+                            <label>Website</label> 
+                            <%= location_form.text_field :website%> 
+                            <div id="error_loc_website"  style="display:none;color:#ff0000">
+                              This is the required field
+                            </div>
+                    </div>
+                    <div class="field">
+                            <label>Category</label> 
+                            <%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %> 
+                    </div>
+                    <% end %>
+            </div>
   
   <%#end of unless%>
  <% end %> 
@@ -171,7 +182,7 @@
 
 
 <div class="account">
-<%= f.fields_for :detailinfos do |detail_form| %>
+<%= f.fields_for :detailinfo do |detail_form| %>
 
 <div class="field">
 <%#*<div class="full"><label>Enter other details which you want to share with company and not have public</label></div>%>

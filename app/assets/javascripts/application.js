@@ -193,16 +193,16 @@ if($("#post_description").val().length == 0){
 }
 
 
-alert($("#post_scenario_").is(':checked'));
-if($("#post_scenario_").is(':checked') == false){
-    $("#error_scenario").show();
-     alltrue= false;
-}
-alert($("#post_compensation_").is(':checked'));
-if($("#post_compensation_").is(':checked') == false){
-    $("#error_compensation").show();
-     alltrue= false;
-}
+//alert($("#post_scenario_").is(':checked'));
+//if($("#post_scenario_").is(':checked') == false){
+//    $("#error_scenario").show();
+//     alltrue= false;
+//}
+//alert($("#post_compensation_").is(':checked'));
+//if($("#post_compensation_").is(':checked') == false){
+//    $("#error_compensation").show();
+//     alltrue= false;
+//}
 
 
 if(alltrue == false)
@@ -277,6 +277,11 @@ $(function() {
   return $("#btnStep2").click(function() {
     var alltrue;
     alltrue = true;
+    if( $('#locationPresent').length > 0){
+        alert("inside");
+         $("#divstep3").show();
+         return false;
+    }
     if ($("#new_address").is(':checked') == true) {
       if ($("#post_location_attributes_name").val().length == 0) {
         $("#error_loc_name").show();

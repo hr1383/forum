@@ -60,7 +60,7 @@ class PostsController < ApplicationController
     unless session[:user].nil?
       @post.user_id=session[:user].id
     end
-    @post.detailinfos.build
+    @post.detailinfo = Detailinfo.new
     unless params[:name].nil? and params[:addr].nil?
       loc = Location.new
       loc.address = params[:addr].nil? ? "" :params[:addr]
@@ -92,10 +92,6 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
-    
-    puts @post.compensation
-    puts @post.scenario
-    puts @post.compensation.class
     @post.parameterize = @post.question.parameterize
     respond_to do |format|
     if @post.save

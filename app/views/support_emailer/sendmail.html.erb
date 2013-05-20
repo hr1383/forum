@@ -55,7 +55,7 @@
 
 								  <tr>
 
-								     <td>We have received a request on behalf of user <%= @user.firstname %> <%=@user.lastname %></td>
+								     <td>We have received a request on behalf of user <b><%= @user.firstname %> <%=@user.lastname %> </b></td>
 
 								  </tr>
 
@@ -102,20 +102,20 @@
 
 
 								  </tr>
-
-                                                                <%# if @post.detailinfos != nil %>
-								  <%#*<tr>%>
+                                                                  
+                                                                <% if @post.detailinfos != nil && @post.detailinfos.description.length > 0%>
+								  <tr>
                                                                    
-								     <%#*<td>Additional Details</td>%>
+								     <td>Additional Details(Note: These details are just shared with you)</td>
 
-								  <%#*</tr>%>
+								  </tr>
 
-								  <%#*<tr>%>
+								  <tr>
 
-								     <%#*<td><%= @post.detailinfos.first.description </td>%> 
+								     <td><%= @post.detailinfos.first.description %> </td> 
 
-								  <%#*</tr>%>
-                                                                  <%# end   %>
+								  </tr>
+                                                                  <% end   %>
                                                                   <% backers = Array.new %>
 								  <% if  @post.comments != nil %>
                                                                      <% @post.comments.each do |comment|  %> 

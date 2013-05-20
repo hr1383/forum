@@ -1,3 +1,3 @@
 class Detailinfo < ActiveRecord::Base
-  belongs_to :posts
+  belongs_to :post
 end
