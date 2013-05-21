@@ -345,9 +345,9 @@ ul.browse_categories li a:hover{ background:none; text-decoration:underline; col
 
 
 
-#container.help{border:7px solid #fff;width:720px;height:267px; margin: 0 auto 35px;border-radius:5px;}
-#container.help .help_section{border:1px solid #e5e5e5;background:#ececec;border-radius:5px;width:720px;height:265px;}
-#container.help .help_section .help_title{color:#545454;font-size:18px;padding-top:25px;padding-left:50px; line-height:24px;}
+#container.help{border:7px solid #fff;width:720px;height:302px; margin: 0 auto 35px;border-radius:5px;}
+#container.help .help_section{border:1px solid #e5e5e5;background:#ececec;border-radius:5px;width:720px;height:300px;}
+#container.help .help_section .help_title{color:#545454;font-size:13px;padding-top:25px;padding-left:50px; line-height:24px;}
 #container.help .help_section .help_title.normal{ color: #545454;
     float: left;
     font-size: 18px;
