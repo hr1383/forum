@@ -278,7 +278,6 @@ $(function() {
     var alltrue;
     alltrue = true;
     if( $('#locationPresent').length > 0){
-        alert("inside");
          $("#divstep3").show();
          return false;
     }
@@ -287,10 +286,10 @@ $(function() {
         $("#error_loc_name").show();
         alltrue = false;
       }
-      if ($("#post_location_attributes_email").val().length == 0) {
-        $("#error_loc_email").show();
-        alltrue = false;
-      }
+//      if ($("#post_location_attributes_email").val().length == 0) {
+//        $("#error_loc_email").show();
+//        alltrue = false;
+//      }
       if ($("#post_location_attributes_website").val().length == 0) {
         $("#error_loc_website").show();
         alltrue = false;
