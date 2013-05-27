@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:og="http://opengraphprotocol.org/schema/"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+
 <head>
   <title><%= @meta_title %> </title>
  <meta property="og:site_name" content="umvox.com">
  <meta property="og:image" content="https://s3.amazonaws.com/test_local/website/logo.png">
-
+ <meta property ="og:description" content="<%= @meta_description %>" />
    
 <meta name="description" content="<%= @meta_description %>" />
 
