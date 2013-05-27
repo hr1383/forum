@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by_parameterize(params[:id])
 #      Post.find(params[:id])
-    @meta_title = @post.description
+    @meta_title = @post.question
    @meta_description = @post.description
     @backer = 0
     @backername=Array.new
