@@ -22,7 +22,8 @@
                                    
                                  </div>
                               </div>
-                             <p><%= post.description.to_s.force_encoding("UTF-8").gsub(/\n/, '<br/>')  %></p>
+                                  <% post.desciption.gsub(/\n/, '<br/>')  %>
+                             <p><%= post.description.to_s.force_encoding("UTF-8") %></p>
                              <br/>
                                <div class="btm_line">
                                  <div class="comment">
