@@ -178,7 +178,7 @@ class PostsController < ApplicationController
   end
   
   def list
-    locations = Location.find_all_by_address_and_name(params[:address],params[:name])
+    locations = Location.find_all_by_name(params[:name])
 #    locations cannot be nil
     @posts = Array.new
     locations.each do |location|

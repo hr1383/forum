@@ -7,7 +7,7 @@
         <% locationGroupByName.keys.each do |key| %>
           <tr>
             <%#= link_to category.name,"/posts/browse?type=category&search="+category.name %>
-            <td><p><b><%= link_to locationGroupByName[key][2],"/posts/list?address="+key+"&name="+locationGroupByName[key][2]  %></b></p><%=  key %></td>
+            <td><p><b><%= link_to locationGroupByName[key][2],"/posts/list?name="+locationGroupByName[key][2]  %></b></p></td>
             <td><%=  locationGroupByName[key][1] %></td>
             <td><%= locationGroupByName[key][0] %></td>
           </tr>
