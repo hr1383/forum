@@ -166,12 +166,12 @@ class PostsController < ApplicationController
     @locationGroupByName={}
     unless locations.nil?
      locations.each do |location|
-       if @locationGroupByName[location.address].nil?
-         @locationGroupByName[location.address] = [1,location.category,location.name]
+       if @locationGroupByName[location.name].nil?
+         @locationGroupByName[location.name] = [1,location.category,location.name]
        else
-         someObj = @locationGroupByName[location.address]
+         someObj = @locationGroupByName[location.name]
          someObj[0] = someObj[0].to_i+1
-         @locationGroupByName[location.address] = someObj
+         @locationGroupByName[location.name] = someObj
        end
      end
    end
