@@ -62,7 +62,7 @@
                                         </ul></li>
 				  </div>
                                   
-                                  
+                                   <% if post.posttype != 'Compliment' %>
                                     <div class="sb_cat_links">
                                       <b>Looking for : </b>
                                       <% str = '' %>
@@ -73,6 +73,7 @@
                                         <% end %>
                                       <%= label_tag :compensation, str[0..-3] -%>
 				  </div>
+                                  <% end  %>
                                   <div class="sb_cat_links">
                                       <b>Scenario : </b>
                                       <% str = '' %>
