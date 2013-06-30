@@ -12,6 +12,8 @@
   <tr>
     <th>PostType</th>
     <th>Company</th>
+	 <th>Address</th>
+	 <th>Zipcode</th>
     <th>Question</th>
     <%#*<th>Counter</th>%>
     <%#*<th>Lastsent</th>%>
@@ -25,6 +27,8 @@
   <tr>
     <td><%= post.posttype %> </td>
     <td><%=  post.location.name %></td>
+	 <td><%=  post.location.address %></td>
+	 <td><%=  post.location.zipcode %></td>
     <td><%= post.question %></td>  
     <td><%=  text_field_tag 'email',email,:name=>"arr[email_stat_#{post.id}][email]"%></td>
       <td><%= check_box_tag "arr[email_stat_#{post.id}][isSend]",1,:name=>"arr[email_stat_#{post.id}][isSend]" %></td>
