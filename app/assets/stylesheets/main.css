@@ -37,7 +37,7 @@ input, select, textarea{ outline:none;}
 .clear_footer{ height:247px; clear:both;}
 .clear_footer1{ height:147px; clear:both;}
 
-#header{ background:#5ba300 url(/assets/hdr_bg_rpt.gif) repeat-x; height:80px;}
+#header{ background:#5ba300 url(/assets/header_bg.png) repeat-x; height:100px;}
 .logo{ float:left; margin:10px 0 0 0;}
 .logo a:hover{ background:none;}
 .menu_1{ float:left; margin:45px 0 0 23px;}

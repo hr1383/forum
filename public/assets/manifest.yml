@@ -8,7 +8,6 @@ check_btn.png: check_btn-dba3d257a4861dbe01aefe9e810c8a21.png
 complaint_img.png: complaint_img-139f71635ac81bcfecacff4977d4f7a9.png
 compliment_img.png: compliment_img-61fbaaf33706728c4933f9c4323b136c.png
 contact-again.jpg: contact-again-cb2046c6101546c8377cba50ab2f6d61.jpg
-facebook.png: facebook-94ea63ab8c295eb109741986c9284bca.png
 facebooklogin.png: facebooklogin-e34ce72719f5735d50a2aa4f36a2efa7.png
 fb_icon.png: fb_icon-9e7456da87d1b9eb2b91b82d5c5e24ac.png
 fb_login.png: fb_login-7a4e4f6df00a60568853cc8f0f4b3760.png
@@ -16,8 +15,10 @@ footer_bg_rpt.gif: footer_bg_rpt-a6f1bb7579cf6f94c347e27f694cf1b8.gif
 green_btn.png: green_btn-6c50453cc10dfe8d6823cc7b1ffbe7ea.png
 green_title_rpt.png: green_title_rpt-f0158a23332226d22a855c932a510ece.png
 hdr_bg_rpt.gif: hdr_bg_rpt-a5472decd95b2ddc8e4be39bacca1d14.gif
+header_bg.png: header_bg-f351fd24177bbe8e0406e10cfe17cf4f.png
 icon_required_field.gif: icon_required_field-5ab084e859c1cddaf2adcfd4ee096eb2.gif
 logo.png: logo-c8489c2af6911deb26035da53d423bef.png
+logo1.png: logo1-7f62c1bd0c956d638644176e44c28f0c.png
 logo_footer.png: logo_footer-781b1eb6aec520ba0aa0da8b280b3e1b.png
 mail_icon.png: mail_icon-6f53e3048605fb745994f3814247ffb0.png
 my-vox.jpg: my-vox-98783729b26bacfa0c780e6daffc9512.jpg
@@ -36,8 +37,8 @@ upgrade_btn 2.png: upgrade_btn 2-20c9cb7cf87c1041f11713df027550a2.png
 upgrade_btn.png: upgrade_btn-9accbdc72125163363f0694a4c11d34f.png
 vox1.png: vox1-6d91ab1fcbca3e08392abddde52fa3a3.png
 vox2.png: vox2-b2e4e87a84fad28258e1978be45301a8.png
-application.js: application-12cf64c993e82a2726276251ceee0216.js
-application.css: application-58d54ee108b300a4bd0208e59f344e25.css
+application.js: application-6959a148c5e6978e5c55f63a8b5f648b.js
+application.css: application-0aea4d31c7bfacf8f10cf921d9b5156c.css
 style.css_: style-466fb19a514d90a610d29c87ec9ec038.css_
 rails_admin/aristo/images/bg_fallback.png: rails_admin/aristo/images/bg_fallback-3e301a80d41935497a12bda90adeb9ce.png
 rails_admin/aristo/images/icon_sprite.png: rails_admin/aristo/images/icon_sprite-f74599b536861561e208dbc3f62cc99f.png

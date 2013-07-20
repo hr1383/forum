@@ -21,7 +21,7 @@
 						 <div class="submit-help">
 						      
 							  
-							    <%= form_tag('/posts/search',:method=>:get) do%>
+							    <%= form_tag('/posts/new',:method=>:get) do%>
                                                             
                                                             <div class="box_input">
                                                                         <%= hidden_field_tag :type,"post" %>
@@ -29,7 +29,7 @@
                                                                         <%= text_field_tag :search, params[:search] ,:class => "box_text", :placeholder => "Tell us what happened." %>
                                                                                                         </div>
                                                                           <span class="sub-button">                                 
-									<%= submit_tag "Search a Vox", :class=> "create" %>
+									<%= submit_tag "Start a Vox", :class=> "create" %>
                                                                           </span>
                                                                       <span class="note">You may find an existing vox regarding your case, become a backer!</span>
 								  <% end %>

@@ -7,7 +7,7 @@ gem 'rails', '3.1.3'
 
 #gem 'sqlite3'
 gem 'mysql', '~>2.8.1'
-#gem 'rake' '~>10.0.4'
+#gem 'rake' '~>10.1.0'
 gem 'koala'
 gem 'paperclip'
 gem 'aws-s3'
