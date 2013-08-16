@@ -1,5 +1,11 @@
-<div id="sign_in">
-<div class="sign_in_fill">
+
+<div class="header_title">
+    	<div class="container"><h2>Contact Us</h2></div>
+    </div>
+
+	
+<div id="sign_up" class="top_search_pannel1 bot_mag_main_20">
+<div class="sign_up_fill about_section">
 
   <%= form_tag ("support") do  %>
 
@@ -17,11 +23,11 @@
     </div>
   <div class="field">
       <%= label_tag 'message' %><br />
-      <%= text_area_tag  'message', nil, :rows => 20, :cols =>40 %>
+      <%= text_area_tag  'message', nil, :rows => 10, :cols =>40 %>
     </div>
 
   <div>
-    <%= submit_tag 'Send' %>
+    <%= submit_tag 'Send' , :class=>"continues_btn"%>
   </div>
   <% end %>
 </div>

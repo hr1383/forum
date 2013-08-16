@@ -15,10 +15,26 @@
   <%= javascript_include_tag "application" %>
   <%#=  javascript_include_tag  "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"%>
   <%= csrf_meta_tags %>
-<%#*<script type='text/javascript' src="http://jquery.bassistance.de/validate/lib/jquery-1.7.2.js"></script>%>
+<script type='text/javascript' src="http://jquery.bassistance.de/validate/lib/jquery-1.7.2.js"></script>
 <%#*<script type='text/javascript' src="http://jquery.bassistance.de/validate/jquery.validate.js"></script>%>
 <%#=  javascript_include_tag "jquery.form.validator"%>  
-<%= yield :head  %>    
+<%= yield :head  %>   
+ 
+<script src="/assets/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="/assets/bxslider.css" rel="stylesheet" />
+<script>
+$(document).ready(function(){
+  $('.affit_slider').bxSlider({
+    slideWidth: 190,
+    minSlides: 2,
+    maxSlides: 3,
+    slideMargin: 3
+	
+  });
+});
+</script>
+
 </head>
 <body>
    <%= render "shared/header" %>
