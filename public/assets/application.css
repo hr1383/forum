@@ -1181,7 +1181,7 @@ border-radius:5px;}
 .vox_list_main{ width:100%; float:left; height:auto;}
 
 .vox_list_main ul{ width:100%; float:left; height:auto; margin:0 0 20px; padding:0; list-style:none;}
-.vox_list_main ul li{ width:100%; float:left; height:auto; margin:0; padding:22px 0 15px; list-style:none; border-bottom:1px solid #efeeee; }
+.vox_list_main ul li{ width:100%; float:left; height:auto; margin:0; padding: 27px; list-style:none; border-bottom:1px solid #efeeee; }
 
 .vox_type{ width:46px; height:147px; float:left;}
 .vox_main_conte{ width:578px; height:auto; float:right;}
@@ -1228,11 +1228,11 @@ color:#fff; font-size:14px; height:27px; line-height:27px; width:auto; padding:0
 border-radius:5px;
 }
 
-.vox_type.question{ background:url(images/question.png) no-repeat left center;}
+.vox_entry.question .vox_type{ background:url(images/question.png) no-repeat left center;}
 
-.vox_type.complaint{ background:url(images/compliant.png) no-repeat left center;}
+.vox_entry.complaint .vox_type{ background:url(images/compliant.png) no-repeat left center;}
 
-.vox_type.compliment{ background:url(images/compliment.png) no-repeat left center;}
+.vox_entry.compliment .vox_type{ background:url(images/compliment.png) no-repeat left center;}
 
 /*-----------------------------------*/
 
@@ -1351,3 +1351,9 @@ border-radius:10px;}
 -moz-border-radius:10px;
 -webkit-border-radius:10px;
 border-radius:10px;}
+
+
+.vox_manual {
+    padding: 8px;
+    width: 65%;
+}
