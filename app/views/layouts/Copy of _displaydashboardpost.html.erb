@@ -1,0 +1,36 @@
+<% if post.posttype == 'Complaint' %>
+<div class="vox_entry complaint">
+<% elsif post.posttype == 'Compliment' %>  
+  <div class="vox_entry compliment">
+<% else %>  
+  <div class="vox_entry question">
+<% end %>    
+	<span class="cat"></span>
+	<div class="padder">
+		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b> </h2>
+		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
+		<div class="btm_line">
+			<div class="comment">
+				<% backer= 0 %>
+				<% if post.comments.size > 0 %>
+				   <% post.comments.each do |comment| %>
+						<% if comment.is_backer == true %>
+						   <% backer =backer+1 %>
+					   <% end %>
+				   <% end %>  
+				<% end %>
+				
+				<span class="backers"><%= backer %> backers  |  <%= post.comments.size %> comments</span>
+				<span class="date"><%= post.created_at %></span>
+						
+			</div>
+                        <div class="read_more flr">
+                              <%= link_to  "Read More","/posts/#{post.parameterize}" %> 
+                        </div>
+		</div>
+	</div>
+	<%#*<div class="grey">%>
+		<%#*<p class="updated"><strong>Update:</strong> July 21, 2012</p>%>
+		<%#*<p>Case resolved in compensation of $400.00.</p>%>
+	<%#*</div>%>
+</div>

@@ -14542,3 +14542,2696 @@ Mysql::Error (Can't connect to MySQL server on 'localhost' (10061)):
 Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
 Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
 Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-19 19:02:01 +0530
+
+Mysql::Error (Can't connect to MySQL server on 'localhost' (10061)):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-19 19:02:14 +0530
+
+Mysql::Error (Can't connect to MySQL server on 'localhost' (10061)):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (80.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:11:55 +0530
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (70.1ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (100.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:13:21 +0530
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:14:14 +0530
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:16:00 +0530
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:16:00 +0530
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:16:01 +0530
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:17:23 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (20.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 761ms (Views: 350.5ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox" for 127.0.0.1 at 2013-08-20 10:18:38 +0530
+  Processing by WelcomeController#howitworks as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"What is Umvox"}
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+Rendered shared/_header.erb (20.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 50.1ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 10:18:43 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (20.0ms)
+Rendered shared/_header.erb (170.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 240.3ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 10:18:45 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (10.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 230ms (Views: 180.3ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-08-20 10:18:54 +0530
+  Processing by RegistrationsController#new as HTML
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (0.0ms)
+Rendered registrations/new.html.erb within layouts/application (100.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 210.3ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/" for 127.0.0.1 at 2013-08-20 10:19:00 +0530
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.erb within layouts/application (0.0ms)
+Rendered shared/_header.erb (20.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 50.1ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox" for 127.0.0.1 at 2013-08-20 10:19:05 +0530
+  Processing by WelcomeController#howitworks as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"What is Umvox"}
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 130ms (Views: 130.2ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 10:19:06 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (10.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 100ms (Views: 40.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-08-20 10:19:09 +0530
+  Processing by RegistrationsController#new as HTML
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (40.1ms)
+Rendered registrations/new.html.erb within layouts/application (140.2ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (10.0ms)
+Completed 200 OK in 220ms (Views: 180.3ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-08-20 10:19:19 +0530
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E7n+BLJ3pLYKOALWZPJuHo+TRjtPOnSouLTzh1w6tiM=", "user"=>{"email"=>"gurjeets@sarnatechnologies.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'gurjeets@sarnatechnologies.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (0.0ms)
+Rendered registrations/new.html.erb within layouts/application (10.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 491ms (Views: 40.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-08-20 10:19:29 +0530
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E7n+BLJ3pLYKOALWZPJuHo+TRjtPOnSouLTzh1w6tiM=", "user"=>{"email"=>"gurjeets@sarnatechnologies.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'gurjeets@sarnatechnologies.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (10.0ms)
+Rendered registrations/new.html.erb within layouts/application (20.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 50.1ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-08-20 10:19:35 +0530
+  Processing by SessionsController#new as HTML
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (30.0ms)
+Rendered sessions/new.html.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 170ms (Views: 100.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-08-20 10:19:38 +0530
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E7n+BLJ3pLYKOALWZPJuHo+TRjtPOnSouLTzh1w6tiM=", "user"=>{"email"=>"gurjeets@sarnatechnologies.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'gurjeets@sarnatechnologies.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-08-16 13:38:02', `current_sign_in_at` = '2013-08-20 04:49:38', `sign_in_count` = 14, `updated_at` = '2013-08-20 04:49:38' WHERE `users`.`id` = 2
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 441ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:19:39 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mCategory Load (10.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (20.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 200ms (Views: 30.0ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:19:43 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (10.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 20.0ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 10:19:46 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (20.0ms)
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 60.1ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:19:48 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 50.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 10:19:50 +0530
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.0ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.0ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (60.1ms)
+Rendered posts/new.html.erb within layouts/application (70.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 771ms (Views: 80.1ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox" for 127.0.0.1 at 2013-08-20 10:19:53 +0530
+  Processing by WelcomeController#howitworks as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"What is Umvox"}
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (70.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 320ms (Views: 300.4ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:19:55 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 130ms (Views: 20.0ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 10:19:58 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/browse.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 80ms (Views: 70.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:20:01 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+Rendered posts/index.html.erb within layouts/application (0.0ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 20.0ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 10:20:02 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (10.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 180ms (Views: 70.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-08-20 10:21:26 +0530
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E7n+BLJ3pLYKOALWZPJuHo+TRjtPOnSouLTzh1w6tiM=", "commit"=>"(LogOut)"}
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:21:26 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (20.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 100.1ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-08-20 10:21:33 +0530
+  Processing by SessionsController#new as HTML
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (10.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 40.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-08-20 10:21:42 +0530
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2rniy9RriHRIECpPBbktpvDSTD7uSmNnC8z2OL01IU=", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'test@gmail.com' LIMIT 1
+Completed   in 100ms
+  Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2rniy9RriHRIECpPBbktpvDSTD7uSmNnC8z2OL01IU=", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (10.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 190ms (Views: 30.0ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-08-20 10:21:49 +0530
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2rniy9RriHRIECpPBbktpvDSTD7uSmNnC8z2OL01IU=", "user"=>{"email"=>"gurjeets@sarnatechnologies.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'gurjeets@sarnatechnologies.com' LIMIT 1[0m
+  [1m[35mSQL (10.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2013-08-20 04:49:38', `current_sign_in_at` = '2013-08-20 04:51:50', `sign_in_count` = 15, `updated_at` = '2013-08-20 04:51:50' WHERE `users`.`id` = 2[0m
+  [1m[35m (30.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 290ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:21:50 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (20.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 30.0ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 10:22:00 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (40.1ms)
+Rendered posts/new.html.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 491ms (Views: 80.1ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-08-20 10:22:29 +0530
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2rniy9RriHRIECpPBbktpvDSTD7uSmNnC8z2OL01IU=", "post"=>{"posttype"=>"Question", "status"=>"Open", "question"=>"test", "description"=>"test", "location_attributes"=>{"name"=>"test", "address"=>"", "city"=>"", "zipcode"=>"", "email"=>"test", "website"=>"test", "category"=>"test"}, "detailinfo_attributes"=>{"description"=>"test"}, "user_id"=>"2"}, "new"=>{"address"=>"1"}, "commit"=>"Create Vox"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 401ms
+
+NoMethodError (undefined method `parameterize=' for #<Post:0x1f39698>):
+  app/controllers/posts_controller.rb:95:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (50.1ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.1ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:24:16 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (30.0ms)
+Rendered posts/index.html.erb within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 130ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x352b558>):
+    49:                             <div class="vox_main_time_auth">
+    50:                             	<div class="vox_main_time_auth1"><%= post.created_at %></div>
+    51:                                 <div class="vox_main_time_auth2">Posted By : John Deo</div>
+    52:                             	<div class="vox_main_time_auth_B"><a href="<%= "/posts/#{post.parameterize}" %>" class="read_more">Read More
+    53: 								</a></div>
+    54:                             </div>
+    55:                             
+  app/views/posts/_displaymypost.html.erb:52:in `_app_views_posts__displaymypost_html_erb__1030043386_30592812'
+  app/views/posts/index.html.erb:20:in `block in _app_views_posts_index_html_erb__948855227_27331260'
+  app/views/posts/index.html.erb:19:in `each'
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__948855227_27331260'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:27:32 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (10.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x331b408>):
+    49:                             <div class="vox_main_time_auth">
+    50:                             	<div class="vox_main_time_auth1"><%= post.created_at %></div>
+    51:                                 <div class="vox_main_time_auth2">Posted By : John Deo</div>
+    52:                             	<div class="vox_main_time_auth_B"><a href="<%= "/posts/#{post.parameterize}" %>" class="read_more">Read More
+    53: 								</a></div>
+    54:                             </div>
+    55:                             
+  app/views/posts/_displaymypost.html.erb:52:in `_app_views_posts__displaymypost_html_erb__1030043386_30592812'
+  app/views/posts/index.html.erb:20:in `block in _app_views_posts_index_html_erb__948855227_27331260'
+  app/views/posts/index.html.erb:19:in `each'
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__948855227_27331260'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:27:40 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (10.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (100.1ms)
+Rendered posts/index.html.erb within layouts/application (110.2ms)
+Completed 500 Internal Server Error in 230ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x3d9d088>):
+    49:                             <div class="vox_main_time_auth">
+    50:                             	<div class="vox_main_time_auth1"><%= post.created_at %></div>
+    51:                                 <div class="vox_main_time_auth2">Posted By : John Deo</div>
+    52:                             	<div class="vox_main_time_auth_B"><a href="<%= "/posts/#{post.parameterize}" %>" class="read_more">Read More
+    53: 								</a></div>
+    54:                             </div>
+    55:                             
+  app/views/posts/_displaymypost.html.erb:52:in `_app_views_posts__displaymypost_html_erb__1030043386_30592812'
+  app/views/posts/index.html.erb:20:in `block in _app_views_posts_index_html_erb__948855227_27331260'
+  app/views/posts/index.html.erb:19:in `each'
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__948855227_27331260'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (20.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.1ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:27:58 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (10.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 100ms (Views: 30.0ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:28:17 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 50.1ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:28:19 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (100.1ms)
+Rendered posts/index.html.erb within layouts/application (110.2ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 140.2ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:28:50 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (30.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 180ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x1f6b378>):
+    49:                             <div class="vox_main_time_auth">
+    50:                             	<div class="vox_main_time_auth1"><%= post.created_at %></div>
+    51:                                 <div class="vox_main_time_auth2">Posted By : John Deo</div>
+    52:                             	<div class="vox_main_time_auth_B"><a href="<%= "/posts/#{post.parameterize}" %>" class="read_more">Read More
+    53: 								</a></div>
+    54:                             </div>
+    55:                             
+  app/views/posts/_displaymypost.html.erb:52:in `_app_views_posts__displaymypost_html_erb__1030043386_23088132'
+  app/views/posts/index.html.erb:20:in `block in _app_views_posts_index_html_erb__948855227_27331260'
+  app/views/posts/index.html.erb:19:in `each'
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__948855227_27331260'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:29:14 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (10.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 220ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x3f5fe68>):
+    49:                             <div class="vox_main_time_auth">
+    50:                             	<div class="vox_main_time_auth1"><%= post.created_at %></div>
+    51:                                 <div class="vox_main_time_auth2">Posted By : John Deo</div>
+    52:                             	<div class="vox_main_time_auth_B"><!--<a href="<%= "/posts/#{post.parameterize}" %>" class="read_more">-->Read More
+    53: 								</a></div>
+    54:                             </div>
+    55:                             
+  app/views/posts/_displaymypost.html.erb:52:in `_app_views_posts__displaymypost_html_erb__1030043386_32795508'
+  app/views/posts/index.html.erb:20:in `block in _app_views_posts_index_html_erb__948855227_27331260'
+  app/views/posts/index.html.erb:19:in `each'
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__948855227_27331260'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:29:25 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (30.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 120ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x3478590>):
+    49:                             <div class="vox_main_time_auth">
+    50:                             	<div class="vox_main_time_auth1"><%= post.created_at %></div>
+    51:                                 <div class="vox_main_time_auth2">Posted By : John Deo</div>
+    52:                             	<div class="vox_main_time_auth_B"><!--<a href="<%= "/posts/#{post.parameterize}" %>" class="read_more">Read More
+    53: 								</a>--></div>
+    54:                             </div>
+    55:                             
+  app/views/posts/_displaymypost.html.erb:52:in `_app_views_posts__displaymypost_html_erb__1030043386_30582708'
+  app/views/posts/index.html.erb:20:in `block in _app_views_posts_index_html_erb__948855227_27331260'
+  app/views/posts/index.html.erb:19:in `each'
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__948855227_27331260'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:29:45 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (40.1ms)
+Rendered posts/index.html.erb within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 781ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x2f6e458>):
+    49:                             <div class="vox_main_time_auth">
+    50:                             	<div class="vox_main_time_auth1"><%= post.created_at %></div>
+    51:                                 <div class="vox_main_time_auth2">Posted By : John Deo</div>
+    52:                             	<div class="vox_main_time_auth_B"><a href="<%= "/posts/#{post.parameterize}" %>" class="read_more">Read More
+    53: 								</a></div>
+    54:                             </div>
+    55:                             
+  app/views/posts/_displaymypost.html.erb:52:in `_app_views_posts__displaymypost_html_erb__1030043386_26735436'
+  app/views/posts/index.html.erb:20:in `block in _app_views_posts_index_html_erb__948855227_27331260'
+  app/views/posts/index.html.erb:19:in `each'
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__948855227_27331260'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:30:28 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (30.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 110ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x32ea478>):
+    25: 						
+    26: 			</div>
+    27:                         <div class="read_more flr">
+    28:                               <%= link_to  "Read More","/posts/#{post.parameterize}" %> 
+    29:                         </div>
+    30: 		</div>
+    31: 	</div>
+  app/views/posts/_displaymypost.html.erb:28:in `_app_views_posts__displaymypost_html_erb__1030043386_27099492'
+  app/views/posts/index.html.erb:20:in `block in _app_views_posts_index_html_erb__948855227_27331260'
+  app/views/posts/index.html.erb:19:in `each'
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__948855227_27331260'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (20.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:30:50 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (30.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 170ms (Views: 50.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 10:31:14 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 1 LIMIT 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+Rendered members/dashboard.erb within layouts/application (50.1ms)
+Completed 500 Internal Server Error in 120ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    7: <% end %>    
+    8: 	<span class="cat"></span>
+    9: 	<div class="padder">
+    10: 		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b> </h2>
+    11: 		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
+    12: 		<div class="btm_line">
+    13: 			<div class="comment">
+  app/views/layouts/_displaydashboardpost.html.erb:10:in `_app_views_layouts__displaydashboardpost_html_erb__575922853_30737208'
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (60.1ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (70.1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 10:31:18 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (10.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36mLocation Load (0.0ms)[0m  [1mSELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 1 LIMIT 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+Rendered members/dashboard.erb within layouts/application (50.1ms)
+Completed 500 Internal Server Error in 120ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    7: <% end %>    
+    8: 	<span class="cat"></span>
+    9: 	<div class="padder">
+    10: 		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b> </h2>
+    11: 		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
+    12: 		<div class="btm_line">
+    13: 			<div class="comment">
+  app/views/layouts/_displaydashboardpost.html.erb:10:in `_app_views_layouts__displaydashboardpost_html_erb__575922853_30737208'
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (60.1ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (180.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-08-20 10:31:29 +0530
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2rniy9RriHRIECpPBbktpvDSTD7uSmNnC8z2OL01IU=", "commit"=>"(LogOut)"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:31:29 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 1 LIMIT 1
+Rendered layouts/_displaydashboardpost.html.erb (60.1ms)
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+Completed 500 Internal Server Error in 290ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    7: <% end %>    
+    8: 	<span class="cat"></span>
+    9: 	<div class="padder">
+    10: 		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b> </h2>
+    11: 		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
+    12: 		<div class="btm_line">
+    13: 			<div class="comment">
+  app/views/layouts/_displaydashboardpost.html.erb:10:in `_app_views_layouts__displaydashboardpost_html_erb__575922853_30737208'
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:31:33 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35mLocation Load (10.0ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 1 LIMIT 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+Rendered members/dashboard.erb within layouts/application (50.1ms)
+Completed 500 Internal Server Error in 220ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    7: <% end %>    
+    8: 	<span class="cat"></span>
+    9: 	<div class="padder">
+    10: 		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b> </h2>
+    11: 		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
+    12: 		<div class="btm_line">
+    13: 			<div class="comment">
+  app/views/layouts/_displaydashboardpost.html.erb:10:in `_app_views_layouts__displaydashboardpost_html_erb__575922853_30737208'
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:32:26 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 1 LIMIT 1
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+Rendered members/dashboard.erb within layouts/application (50.1ms)
+Completed 500 Internal Server Error in 220ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    7: <% end %>    
+    8: 	<span class="cat"></span>
+    9: 	<div class="padder">
+    10: 		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b> </h2>
+    11: 		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
+    12: 		<div class="btm_line">
+    13: 			<div class="comment">
+  app/views/layouts/_displaydashboardpost.html.erb:10:in `_app_views_layouts__displaydashboardpost_html_erb__575922853_30737208'
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:33:11 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 1 LIMIT 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+Rendered members/dashboard.erb within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 180ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    7: <% end %>    
+    8: 	<span class="cat"></span>
+    9: 	<div class="padder">
+    10: 		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b> </h2>
+    11: 		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
+    12: 		<div class="btm_line">
+    13: 			<div class="comment">
+  app/views/layouts/_displaydashboardpost.html.erb:10:in `_app_views_layouts__displaydashboardpost_html_erb__575922853_30737208'
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:34:06 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+Rendered members/dashboard.erb within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 180ms
+
+ActionView::Template::Error (undefined method `parameterize' for #<Post:0x3a54968>):
+    25: 						
+    26: 			</div>
+    27:                         <div class="read_more flr">
+    28:                               <%= link_to  "Read More","/posts/#{post.parameterize}" %> 
+    29:                         </div>
+    30: 		</div>
+    31: 	</div>
+  app/views/layouts/_displaydashboardpost.html.erb:28:in `_app_views_layouts__displaydashboardpost_html_erb__575922853_17114112'
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:34:19 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (60.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 70.1ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-08-20 10:34:27 +0530
+  Processing by SessionsController#new as HTML
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (10.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 160ms (Views: 40.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-08-20 10:34:30 +0530
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9K/koNkmuXcnnfVDQGAt3WofycaAaDRw2UxutbgCq5s=", "user"=>{"email"=>"gurjeets@sarnatechnologies.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'gurjeets@sarnatechnologies.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-08-20 04:51:50', `current_sign_in_at` = '2013-08-20 05:04:30', `sign_in_count` = 16, `updated_at` = '2013-08-20 05:04:30' WHERE `users`.`id` = 2
+  [1m[36m (30.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 260ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 10:34:31 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (140.2ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 280ms (Views: 160.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-08-20 10:39:20 +0530
+  Processing by RegistrationsController#new as HTML
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-1.4.9/app/views/devise/shared/_links.erb (0.0ms)
+Rendered registrations/new.html.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 100.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 10:39:24 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (20.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 100ms (Views: 90.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 10:39:44 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (30.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (150.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 220ms (Views: 200.3ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 10:40:32 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (30.0ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (60.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 180.3ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 10:40:41 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (30.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 130ms (Views: 60.1ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 10:40:45 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (30.0ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 351ms (Views: 280.4ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?type=category&search=fdg" for 127.0.0.1 at 2013-08-20 10:50:34 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"type"=>"category", "search"=>"fdg"}
+  [1m[35mLocation Load (0.0ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`category` = 'fdg'
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (30.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (120.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 200ms (Views: 170.2ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:17:54 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35mLocation Load (0.0ms)[0m  SELECT `locations`.* FROM `locations` WHERE `locations`.`post_id` = 1 LIMIT 1
+Rendered layouts/_displaydashboardpost.html.erb (120.2ms)
+Rendered members/dashboard.erb within layouts/application (130.2ms)
+Completed 500 Internal Server Error in 190ms
+
+ActionView::Template::Error (undefined method `category' for nil:NilClass):
+    7: <% end %>    
+    8: 	<span class="cat"></span>
+    9: 	<div class="padder">
+    10: 		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>: <%= post.location.name %></b></h2>
+    11: 		<p><%= post.description.to_s.force_encoding("UTF-8").split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
+    12: 		<div class="btm_line">
+    13: 			<div class="comment">
+  app/views/layouts/_displaydashboardpost.html.erb:10:in `_app_views_layouts__displaydashboardpost_html_erb__575922853_30739044'
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (60.1ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (70.1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:18:01 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (100.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 220ms (Views: 130.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:18:28 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (100.1ms)
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (150.2ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 210.3ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:20:50 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (10.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (60.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 210ms (Views: 150.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:21:48 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (120.2ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (160.2ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (60.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 290ms (Views: 240.3ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:22:26 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 130.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:25:30 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (30.0ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (70.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 280ms (Views: 130.2ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:27:47 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (20.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (70.1ms)
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (260.4ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 431ms (Views: 310.4ms | ActiveRecord: 70.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:27:48 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (160.2ms)
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (70.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 300ms (Views: 200.3ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:27:49 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (60.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 110.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:27:49 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (60.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 200ms (Views: 130.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:27:49 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 411ms (Views: 150.2ms | ActiveRecord: 180.3ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:27:50 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (120.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 290ms (Views: 200.3ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:28:26 +0530
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.0ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.0ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (60.1ms)
+Rendered posts/new.html.erb within layouts/application (60.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 391ms (Views: 70.1ms | ActiveRecord: 70.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/contactus" for 127.0.0.1 at 2013-08-20 11:28:43 +0530
+  Processing by MembersController#contactus as HTML
+Rendered members/contactus.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 90.1ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:29:42 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (50.1ms)
+Rendered posts/new.html.erb within layouts/application (60.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 371ms (Views: 90.1ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:29:51 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (70.1ms)
+Rendered posts/new.html.erb within layouts/application (70.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 461ms (Views: 180.3ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/contactus" for 127.0.0.1 at 2013-08-20 11:31:15 +0530
+  Processing by MembersController#contactus as HTML
+Rendered members/contactus.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (60.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 70.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:31:41 +0530
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (10.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.0ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.0ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (50.1ms)
+Rendered posts/new.html.erb within layouts/application (50.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 501ms (Views: 80.1ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/contactus" for 127.0.0.1 at 2013-08-20 11:33:15 +0530
+  Processing by MembersController#contactus as HTML
+Rendered members/contactus.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (380.5ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 541ms (Views: 530.8ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:33:18 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (40.1ms)
+Rendered posts/new.html.erb within layouts/application (50.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 401ms (Views: 70.1ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:33:57 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (10.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (40.1ms)
+Rendered posts/new.html.erb within layouts/application (50.1ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 421ms (Views: 50.1ms | ActiveRecord: 70.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:38:40 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (150.2ms)
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (60.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 320ms (Views: 220.3ms | ActiveRecord: 70.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:43:29 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (100.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (120.2ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 170.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:44:16 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (40.1ms)
+Rendered posts/new.html.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 431ms (Views: 70.1ms | ActiveRecord: 90.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:47:54 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (40.1ms)
+Rendered posts/new.html.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 371ms (Views: 70.1ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 11:49:58 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (10.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (120.2ms)
+Rendered posts/new.html.erb within layouts/application (130.2ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 381ms (Views: 150.2ms | ActiveRecord: 70.1ms | Solr: 0.0ms)
+
+
+Started POST "/members/support" for 127.0.0.1 at 2013-08-20 11:51:47 +0530
+  Processing by MembersController#support as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9K/koNkmuXcnnfVDQGAt3WofycaAaDRw2UxutbgCq5s=", "name"=>"", "email"=>"", "subject"=>"", "message"=>"", "commit"=>"Send"}
+Redirected to http://localhost:3000/members/dashboard
+Completed 302 Found in 10ms
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 11:51:48 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (10.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (60.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 310ms (Views: 130.2ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 12:01:27 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (90.1ms)
+Rendered posts/new.html.erb within layouts/application (90.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 631ms (Views: 120.2ms | ActiveRecord: 190.3ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox" for 127.0.0.1 at 2013-08-20 12:01:31 +0530
+  Processing by WelcomeController#howitworks as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"What is Umvox"}
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (120.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 130.2ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 12:01:36 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (160.2ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (310.4ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 501ms (Views: 390.6ms | ActiveRecord: 110.2ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 12:01:40 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (90.1ms)
+Rendered posts/index.html.erb within layouts/application (90.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 200.3ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 12:03:26 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/browse.html.erb within layouts/application (40.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 80.1ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 12:03:32 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 190ms (Views: 50.1ms | ActiveRecord: 90.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 12:04:39 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (10.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 160.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 12:04:49 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 290ms (Views: 40.1ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 12:04:54 +0530
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (30.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.0ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.0ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (40.1ms)
+Rendered posts/new.html.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 461ms (Views: 60.1ms | ActiveRecord: 70.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 12:08:12 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (250.4ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 431ms (Views: 200.3ms | ActiveRecord: 180.3ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 12:08:33 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (20.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 100ms (Views: 90.1ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 12:08:40 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (20.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 200ms (Views: 110.2ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 12:08:43 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/browse.html.erb within layouts/application (30.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 70.1ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 12:08:47 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (20.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 40.1ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 12:08:54 +0530
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.0ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.0ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (50.1ms)
+Rendered posts/new.html.erb within layouts/application (50.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 330ms (Views: 70.1ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 12:18:01 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (50.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (130.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 310ms (Views: 300.4ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox" for 127.0.0.1 at 2013-08-20 12:18:06 +0530
+  Processing by WelcomeController#howitworks as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"What is Umvox"}
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 90.1ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/2" for 127.0.0.1 at 2013-08-20 12:18:20 +0530
+  Processing by MembersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `posts` WHERE `posts`.`user_id` = 2 AND (status='Open')[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2 AND (status='Closed')
+Rendered members/_form.html.erb (10.0ms)
+Rendered members/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 130ms
+
+ActionView::Template::Error (undefined method `subscribe' for #<User:0x31e9e58>):
+    39: </tr>
+    40: <tr>
+    41:   <%#= @user.subscribe %>
+    42:   <td><%= f.check_box :subscribe  %></td>
+    43:   <td><label>Get Notified about your Vox and latest updates.</label></td>
+    44: </tr>
+    45: <%#*<tr>%>
+  app/views/members/_form.html.erb:42:in `block in _app_views_members__form_html_erb___5290819_30753180'
+  app/views/members/_form.html.erb:2:in `_app_views_members__form_html_erb___5290819_30753180'
+  app/views/members/show.html.erb:1:in `_app_views_members_show_html_erb__667077091_30744888'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 12:18:27 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (100.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (90.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 351ms (Views: 280.4ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 12:18:33 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (80.1ms)
+Rendered posts/index.html.erb within layouts/application (80.1ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 361ms (Views: 70.1ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 12:18:42 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/browse.html.erb within layouts/application (70.1ms)
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (210.3ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 371ms (Views: 340.5ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 12:18:47 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered posts/browse.html.erb within layouts/application (40.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 100.1ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox" for 127.0.0.1 at 2013-08-20 12:18:51 +0530
+  Processing by WelcomeController#howitworks as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"What is Umvox"}
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (70.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (230.3ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 170.2ms | ActiveRecord: 80.1ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox" for 127.0.0.1 at 2013-08-20 12:20:25 +0530
+  Processing by WelcomeController#howitworks as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"What is Umvox"}
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 60.1ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 12:21:22 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 190ms (Views: 140.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 12:25:59 +0530
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+  [1m[35mScenarios Load (0.0ms)[0m  SELECT `scenarios`.* FROM `scenarios` 
+  [1m[36mCompensation Load (0.0ms)[0m  [1mSELECT `compensations`.* FROM `compensations` [0m
+Rendered posts/_form.html.erb (30.0ms)
+Rendered posts/new.html.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 521ms (Views: 50.1ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks" for 127.0.0.1 at 2013-08-20 12:26:22 +0530
+  Processing by WelcomeController#howitworks as HTML
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (130.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 130.2ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-08-20 12:27:25 +0530
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 60ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-20 12:27:26 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 130.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks" for 127.0.0.1 at 2013-08-20 12:29:12 +0530
+  Processing by WelcomeController#howitworks as HTML
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (60.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 130.2ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 12:29:27 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (100.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 381ms (Views: 200.3ms | ActiveRecord: 70.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 12:31:13 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (60.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 280ms (Views: 120.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new?utf8=%E2%9C%93&type=post&search=%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl%7Cl&commit=Start+your+Vox" for 127.0.0.1 at 2013-08-20 12:32:57 +0530
+  Processing by PostsController#new as HTML
+  Parameters: {"utf8"=>"✓", "type"=>"post", "search"=>"|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l", "commit"=>"Start your Vox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.0ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.0ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (120.2ms)
+Rendered posts/new.html.erb within layouts/application (130.2ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 371ms (Views: 170.2ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 12:33:06 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (20.0ms)
+Rendered posts/index.html.erb within layouts/application (20.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 351ms (Views: 140.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 13:17:31 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (300.4ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (350.5ms)
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 701ms (Views: 450.7ms | ActiveRecord: 80.1ms | Solr: 0.0ms)
+
+
+Started GET "/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox" for 127.0.0.1 at 2013-08-20 13:17:33 +0530
+  Processing by WelcomeController#howitworks as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"What is Umvox"}
+Rendered welcome/howitworks.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (70.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 220ms (Views: 210.3ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 13:17:34 +0530
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (10.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.0ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.0ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (150.2ms)
+Rendered posts/new.html.erb within layouts/application (190.3ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 1432ms (Views: 540.8ms | ActiveRecord: 130.2ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 13:17:37 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (60.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (530.8ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 1602ms (Views: 1512.2ms | ActiveRecord: 90.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&type=location&search=fdsafdsafds" for 127.0.0.1 at 2013-08-20 15:58:48 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "type"=>"location", "search"=>"fdsafdsafds"}
+  [1m[32mSOLR Request (1011.5ms)[0m  [ path=#<RSolr::Client:0x2019930> parameters={data: [1m[1mfq=type%3ALocation&q=fdsafdsafds&fl=%2A+score&qf=name_text&defType=dismax&start=0&rows=30[0m, method: [1m[1mpost[0m, params: [1m[1m{:wt=>:ruby}[0m, query: [1m[1mwt=ruby[0m, headers: [1m[1m{"Content-Type"=>"application/x-www-form-urlencoded; charset=UTF-8"}[0m, path: [1m[1mselect[0m, uri: [1m[1mhttp://localhost:8982/solr/select?wt=ruby[0m, open_timeout: [1m[1m[0m, read_timeout: [1m[1m[0m, retry_503: [1m[1m[0m, retry_after_limit: [1m[1m[0m} ]
+Completed 500 Internal Server Error in 1512ms
+
+Errno::ECONNREFUSED (No connection could be made because the target machine actively refused it. - {:data=>"fq=type%3ALocation&q=fdsafdsafds&fl=%2A+score&qf=name_text&defType=dismax&start=0&rows=30", :method=>:post, :params=>{:wt=>:ruby}, :query=>"wt=ruby", :headers=>{"Content-Type"=>"application/x-www-form-urlencoded; charset=UTF-8"}, :path=>"select", :uri=>#<URI::HTTP:0x21fe190 URL:http://localhost:8982/solr/select?wt=ruby>, :open_timeout=>nil, :read_timeout=>nil, :retry_503=>nil, :retry_after_limit=>nil}):
+  app/controllers/posts_controller.rb:158:in `browse'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (50.1ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-08-20 16:27:33 +0530
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+  [1m[36mScenarios Load (0.0ms)[0m  [1mSELECT `scenarios`.* FROM `scenarios` [0m
+  [1m[35mCompensation Load (0.0ms)[0m  SELECT `compensations`.* FROM `compensations` 
+Rendered posts/_form.html.erb (140.2ms)
+Rendered posts/new.html.erb within layouts/application (170.2ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 591ms (Views: 300.4ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:28:28 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (110.2ms)
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (260.4ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (180.3ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 531ms (Views: 420.6ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:32:30 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (60.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (100.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (70.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 280ms (Views: 150.2ms | ActiveRecord: 60.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:36:16 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (180.3ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (240.3ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (110.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 491ms (Views: 240.3ms | ActiveRecord: 190.3ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:36:32 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (160.2ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (230.3ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (70.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 471ms (Views: 330.5ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:36:39 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (70.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (130.2ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (80.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 310ms (Views: 230.3ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:37:36 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (140.2ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (180.3ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 330ms (Views: 230.3ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:38:24 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (110.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 280ms (Views: 200.3ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:39:21 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (100.1ms)
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 190.3ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:40:15 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (80.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 220ms (Views: 150.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:40:37 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (110.2ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (140.2ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 200.3ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:43:03 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 210ms (Views: 140.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:43:24 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (10.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (120.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 280ms (Views: 210.3ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:44:40 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (140.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 330ms (Views: 220.3ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:45:14 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (90.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 210ms (Views: 150.2ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:46:13 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (30.0ms)
+  [1m[36mCategory Load (10.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 210ms (Views: 120.2ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:47:11 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (60.1ms)
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 190ms (Views: 110.2ms | ActiveRecord: 40.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:48:21 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (90.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 150.2ms | ActiveRecord: 80.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:50:53 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+ERROR: compiling _app_views_layouts__displaydashboardpost_html_erb__575922853_30522012 RAISED C:/Ruby/projects/forum/app/views/layouts/_displaydashboardpost.html.erb:37: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ost.description.spli id="new1"t(' ')[0,15].inject{|sum,word|...
+...                               ^
+Function body:           def _app_views_layouts__displaydashboardpost_html_erb__575922853_30522012(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "/layouts/_displaydashboardpost";_old_output_buffer = @output_buffer;displaydashboardpost = local_assigns[:displaydashboardpost];post = local_assigns[:post];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style>
+.vox_entry {
+    background: none !important;
+    border: 0px !important;
+    margin: 0 0 10px 28px;
+    min-height: 141px;
+    position: relative;
+}
+
+.vox_list_main #new1 {
+    border-bottom: 1px solid #EFEEEE;
+    float: left;
+    height: auto;
+    list-style: none outside none;
+    margin: 0;
+    padding: 27px;
+    width: 624px !important;
+}
+</style>
+<div class="vox_manual">
+<div class="vox_li id="new1"st_main">
+            	<ul>
+'); if post.posttype == 'Complaint' 
+@output_buffer.safe_concat('<li id="new1" class="vox_entry complaint">
+'); elsif post.posttype == 'Compli id="new1"ment'   
+@output_buffer.safe_concat('  <li id="new1" class="vox_entry compli id="new1"ment">
+'); else   
+@output_buffer.safe_concat('  <li id="new1" class="vox_entry question">
+'); end     
+@output_buffer.safe_concat('	   <div class="vox_type question">
+                        	
+                        </div>
+
+<div class="vox_main_conte">
+	                        	<div class="vox_main_conte1">
+                            	<div class="vox_conte_cont">
+                                ');@output_buffer.append= ( post.description.spli id="new1"t(' ')[0,15].inject{|sum,word| sum + ' ' + word}  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('                                </div>
+                                <div class="vox_conte_cont1">
+                                <div class="vox_conte_cont_cate">
+                                <ul>
+                                	<li id="new1">Category <span>Service</span></li id="new1">
+                                    <li id="new1">Company <span class="company">Welmart</span></li id="new1">
+                                </ul>
+                                </div>
+                                <div class="vox_conte_cont_comm_b">
+                                	<ul>
+');									 backer= 0 
+				 if post.comments.size > 0 
+				    post.comments.each do |comment| 
+						 if comment.is_backer == true 
+						    backer =backer+1 
+					    end 
+				    end   
+				 end 
+@output_buffer.safe_concat('                                    	<li>');@output_buffer.append= ( post.comments.size );@output_buffer.safe_concat(' comments</li id="new1">
+                                        <li>');@output_buffer.append= ( backer );@output_buffer.safe_concat(' backers</li id="new1">
+                                    </ul>
+                                </div>
+                                </div>
+                                
+                                <div class="vox_main_conte1_arrow">
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="vox_main_time_auth">
+                            	<div class="vox_main_time_auth1">');@output_buffer.append= ( post.created_at );@output_buffer.safe_concat('</div>
+                                <div class="vox_main_time_auth2">Posted By : John Deo</div>
+                            	<div class="vox_main_time_auth_B"><a href="" class="read_more">Read More
+								</a></div>
+                            </div>
+                            
+                        </div>
+		
+		
+		
+</li id="new1">
+
+<!-- -->
+
+</ul>
+</div>
+</div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/partial_renderer.rb:256:in `render_partial'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/partial_renderer.rb:228:in `block (2 levels) in render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/partial_renderer.rb:227:in `block in render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/partial_renderer.rb:219:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/haml-4.0.1/lib/haml/helpers/action_view_mods.rb:12:in `render_with_haml'
+C:/Ruby/projects/forum/app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+C:/Ruby/projects/forum/app/views/members/dashboard.erb:97:in `each'
+C:/Ruby/projects/forum/app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:171:in `block in render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+C:/Ruby/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sunspot_rails-2.0.0/lib/sunspot/rails/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/remotipart-1.0.5/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:425:in `_run__817734914__process_action__205436171__callbacks'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-pjax-0.7.0/lib/rack/pjax.rb:12:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/client_side_validations-3.2.1/lib/client_side_validations/middleware.rb:21:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.0.6/lib/warden/manager.rb:35:in `block in call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.0.6/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.0.6/lib/warden/manager.rb:34:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/etag.rb:23:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/conditionalget.rb:25:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/remotipart-1.0.5/lib/remotipart/middleware.rb:30:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:195:in `context'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/session/abstract/id.rb:190:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/sendfile.rb:101:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+C:/Ruby/projects/forum/config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/runtime.rb:17:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/lock.rb:15:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/content_length.rb:14:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.1.3/lib/rails/rack/log_tailer.rb:14:in `call'
+C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.3.10/lib/rack/handler/webrick.rb:59:in `service'
+C:/Ruby/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/Ruby/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/Ruby/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Rendered layouts/_displaydashboardpost.html.erb (30.0ms)
+Rendered members/dashboard.erb within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 120ms
+
+ActionView::Template::Error (C:/Ruby/projects/forum/app/views/layouts/_displaydashboardpost.html.erb:37: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ost.description.spli id="new1"t(' ')[0,15].inject{|sum,word|...
+...                               ^):
+    34: <div class="vox_main_conte">
+    35: 	                        	<div class="vox_main_conte1">
+    36:                             	<div class="vox_conte_cont">
+    37:                                 <%= post.description.spli id="new1"t(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %>
+    38:                                 </div>
+    39:                                 <div class="vox_conte_cont1">
+    40:                                 <div class="vox_conte_cont_cate">
+  app/views/members/dashboard.erb:98:in `block in _app_views_members_dashboard_erb___355920610_16929936'
+  app/views/members/dashboard.erb:97:in `each'
+  app/views/members/dashboard.erb:97:in `_app_views_members_dashboard_erb___355920610_16929936'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (60.1ms)
+Rendered C:/Ruby/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (80.1ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:53:20 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (140.2ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 330ms (Views: 220.3ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:53:54 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (60.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (100.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (100.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 330ms (Views: 170.2ms | ActiveRecord: 100.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:54:59 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (10.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 190ms (Views: 100.1ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:55:07 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (50.1ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 130.2ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 16:55:22 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (40.1ms)
+Rendered posts/index.html.erb within layouts/application (130.2ms)
+Rendered shared/_header.erb (10.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 160.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 16:55:26 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (20.0ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (120.2ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 320ms (Views: 260.4ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 17:21:04 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 180ms (Views: 110.2ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 17:22:12 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3[0m
+Rendered layouts/_displaydashboardpost.html.erb (0.0ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (60.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 120.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 17:22:33 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (30.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3[0m
+Rendered posts/_displaymypost.html.erb (10.0ms)
+Rendered posts/index.html.erb within layouts/application (40.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 50.1ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 17:22:42 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3
+Rendered layouts/_displaydashboardpost.html.erb (0.0ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (80.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 260ms (Views: 120.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 17:23:40 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3[0m
+Rendered layouts/_displaydashboardpost.html.erb (10.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 4
+Rendered layouts/_displaydashboardpost.html.erb (0.0ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered members/dashboard.erb within layouts/application (90.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (60.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 330ms (Views: 150.2ms | ActiveRecord: 90.1ms | Solr: 0.0ms)
+
+
+Started GET "/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox" for 127.0.0.1 at 2013-08-20 17:23:47 +0530
+  Processing by PostsController#browse as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Browse Vox"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` [0m
+Rendered posts/browse.html.erb within layouts/application (120.2ms)
+  [1m[35mUser Load (10.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered shared/_header.erb (160.2ms)
+Rendered shared/_footer.erb (10.0ms)
+Completed 200 OK in 330ms (Views: 300.4ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 17:23:52 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered posts/_displaymypost.html.erb (20.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3
+Rendered posts/_displaymypost.html.erb (10.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 4[0m
+Rendered posts/_displaymypost.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (30.0ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 270ms (Views: 50.1ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 17:24:02 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (40.1ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3
+Rendered layouts/_displaydashboardpost.html.erb (0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 4[0m
+Rendered layouts/_displaydashboardpost.html.erb (0.0ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (250.4ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 391ms (Views: 310.4ms | ActiveRecord: 30.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 17:25:06 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (30.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3
+Rendered layouts/_displaydashboardpost.html.erb (10.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 4[0m
+Rendered layouts/_displaydashboardpost.html.erb (10.0ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (70.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 180ms (Views: 150.2ms | ActiveRecord: 10.0ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 17:25:55 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (20.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3
+Rendered layouts/_displaydashboardpost.html.erb (10.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 4[0m
+Rendered layouts/_displaydashboardpost.html.erb (0.0ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (60.1ms)
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (40.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 90.1ms | ActiveRecord: 50.1ms | Solr: 0.0ms)
+
+
+Started GET "/members/dashboard" for 127.0.0.1 at 2013-08-20 17:26:35 +0530
+  Processing by MembersController#dashboard as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT `posts`.* FROM `posts` 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1[0m
+Rendered layouts/_displaydashboardpost.html.erb (110.2ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3
+Rendered layouts/_displaydashboardpost.html.erb (0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 4[0m
+Rendered layouts/_displaydashboardpost.html.erb (10.0ms)
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` 
+Rendered members/dashboard.erb within layouts/application (140.2ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered shared/_header.erb (50.1ms)
+Rendered shared/_footer.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 200.3ms | ActiveRecord: 20.0ms | Solr: 0.0ms)
+
+
+Started GET "/posts?utf8=?&commit=My+Umvox" for 127.0.0.1 at 2013-08-20 18:08:26 +0530
+  Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"?", "commit"=>"My Umvox"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 1
+Rendered posts/_displaymypost.html.erb (30.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 3[0m
+Rendered posts/_displaymypost.html.erb (0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 4
+Rendered posts/_displaymypost.html.erb (10.0ms)
+Rendered posts/index.html.erb within layouts/application (60.1ms)
+Rendered shared/_header.erb (0.0ms)
+Rendered shared/_footer.erb (10.0ms)
+Completed 200 OK in 270ms (Views: 130.2ms | ActiveRecord: 30.0ms | Solr: 0.0ms)

@@ -9,7 +9,7 @@ development:
   database: umvox_development
   pool: 5
   username: root
-  password: demo123_123
+  password: 
   host: localhost
   pool: 5
   timeout: 5000
@@ -23,7 +23,7 @@ test:
   database: umvox_test
   pool: 5
   username: root
-  password: demo123_123
+  password: 
   host: localhost
   pool: 5
   timeout: 5000
@@ -34,7 +34,7 @@ production:
   database: umvox_production
   pool: 5
   username: root
-  password: demo123_123
+  password: 
   host: localhost
   pool: 5
   timeout: 5000
