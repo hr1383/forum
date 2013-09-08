@@ -1,6 +1,9 @@
+<div class="header_title">
+    	<div class="container"><h2>Sign In</h2></div>
+    </div>
 
- <div id="sign_in">
- <h2>Sign in</h2>
+<div id="sign_in" class="top_search_pannel bot_mag_main_20">
+<div class="about_section">
  <div class="sign_in_fb">
    <%= form_tag ({:controller=> "welcome", :action=> "login"}) do %>
             
@@ -9,15 +12,17 @@
             </div>
         <% end %>
  </div>
+ 
  <div class="or"><span>OR</span></div>
-		<div class="sign_in_fill">
+
+ <div class="sign_in_fill">
 	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div class="field"><%= f.label :email %>
   <%= f.email_field :email, :autofocus => true %></div>
 
   <div class="field"><%= f.label :password %>
   <%= f.password_field :password %>
-  <span class="">&nbsp;&nbsp;&nbsp;<a href="/users/password/new">Forgot your password?</a></span>
+ <%# <span class="">&nbsp;&nbsp;&nbsp;<a href="/users/password/new">Forgot your password?</a></span> %>
 		  </div>
 				
 	<% if devise_mapping.rememberable? -%>
@@ -31,4 +36,12 @@
 <% end %>
 	</div>
 <%= render "devise/shared/links" %>
+</div>
+	<div class="signup_pannel">
+	<h2 class="signup_title">Join It's Free</h2>
+	<div class="signup_content1">
+	Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.            
+	</div>
+	<div class="signup_btn_top"><a href="/users/sign_up"><span></span>SIGNUP</a></div>
+	</div>
 </div>
