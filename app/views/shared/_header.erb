@@ -1,31 +1,24 @@
 <div id="main">
 <div id="header">
 <div class="wrapper relative">
-<h1 class="logo">
+<div class="container">
+<div class="logo">
 	<a href="/members/dashboard"><img src="/assets/logo1.png" alt="" title="UmVox" /></a>
-</h1>
-<div class="menu_1">
-   <%= form_tag('/welcome/howitworks',:method=>:get) do%>
-        <%= submit_tag "What is Umvox?" %>
-      <% end %>
-	  <span> / </span>
-      <% if (!current_user.nil? || !session[:user].nil?) %>    
-          <%= form_tag('/posts/new',:method=>:get) do%>
-            <%= submit_tag "File Vox" %>
+</div>
+
+<nav class="nav">
+<ul>
+      <li><%= link_to 'Home', '/members/dashboard' %> </li>
+	  <li> <%= link_to 'What is Umvox', '/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox'%></li>
+      <% if (!current_user.nil? || !session[:user].nil?) %>
+         
+          <li> <%= link_to 'File Vox', '/posts/new' %></li>  
           <% end %>
-            <span> / </span>
-          <% end %>
-	
-      <%= form_tag('/posts/browse',:method=>:get) do%>
-        <%= submit_tag "Browse Vox" %>
-      <% end %>
-      
-      <% if (!current_user.nil? || !session[:user].nil?) %>    
-       <span> / </span>     
-       <%= form_tag("/posts", :method=>:get) do %>
-        <%= submit_tag "My Umvox" %>
-      <% end %>
-      <%#*<span> / </span>%>
+		  
+    <li><%= link_to 'Browse Vox', '/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox' %></li>
+     
+	 <% if (!current_user.nil? || !session[:user].nil?) %>  
+      <li><%= link_to 'My Umvox', '/posts?utf8=?&commit=My+Umvox' %></li>
      <% end %> 
     
       <%#= form_tag("/posts", :method=>:get) do %>
@@ -33,18 +26,17 @@
         <%#= submit_tag "All Umvox" %>
       <%# end %>
       
-      <%# if session['user'] %>
-        <%#= form_tag("/members/dashboard", :method=>:get) do %>
-          <%#= submit_tag "Dashboard" %>
-        <%# end %>
-      <%# end %>
+	  
+	  <% if session['user'].present? %>
+		<li><%= link_to 'Dashboard', '/members/dashboard' %></li>
+	  <% end %>
     
-      <%# if session[:user] and session[:user].admin == true  %>
-      <%#= form_tag("/email/view", :method=>:get) do %>
-        <%#= submit_tag "Send email" %>
-      <%# end %>
-      <%# end %>
-    </div>
+	<% if (session[':user'].present? && session[:user].admin.present?) %>
+		<li><%= link_to 'Send email', '/email/view' %></li>
+    <% end %>
+   </ul>
+	</nav>
+	
 	<div class="menu_2">
       <% if session['user'] %>
          <%= link_to session['user'].username, "/members/#{session['user'].id}" %>
@@ -52,12 +44,12 @@
     
     <% if !session['user'] %>
             
-         <%= form_tag("/users/sign_in", :method=>:get) do %>
+         <%# form_tag("/users/sign_in", :method=>:get) do %>
             
-            <div id="signin_button">
-                <%= submit_tag "Sign In" %>
-            </div>
-        <% end %>
+             <%#<div id="signin_button">%>
+                 <%# submit_tag "Sign In" %>
+           <%# </div>%>
+        <%# end %>
        <% else %>
         
           <%= form_tag("/users/sign_out",:method=>:DELETE) do %>
@@ -67,8 +59,11 @@
     <% end %> 
     </div>
 
+	</div>
+<!-- **container close above** -->
 </div>
 </div>
+<div class="container">
 <div class="content">
 <div class="wrapper">
   

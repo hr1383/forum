@@ -7,11 +7,9 @@ development:
   adapter: mysql
   reconnect: false
   database: umvox_development
-  pool: 5
   username: root
   password: 
   host: localhost
-  pool: 5
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +21,7 @@ test:
   database: umvox_test
   pool: 5
   username: root
-  password:
+  password: demo123_123
   host: localhost
   pool: 5
   timeout: 5000
@@ -34,7 +32,7 @@ production:
   database: umvox_production
   pool: 5
   username: root
-  password:
+  password: demo123_123
   host: localhost
   pool: 5
   timeout: 5000

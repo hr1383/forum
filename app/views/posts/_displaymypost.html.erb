@@ -1,17 +1,33 @@
+<div class="vox_manual">
+<div class="vox_list_main">
+            	<ul>
+                
 <% if post.posttype == 'Complaint' %>
-<div class="vox_entry complaint">
+<li class="vox_entry complaint">
 <% elsif post.posttype == 'Complement' %>  
-  <div class="vox_entry compliment">
+  <li class="vox_entry compliment">
 <% else %>  
-  <div class="vox_entry question">
-<% end %>    
-	<span class="cat"></span>
-	<div class="padder">
-		<h2><span class="pre"><%= link_to post.location.category,"/posts/browse?type=category&search="+post.location.category%></span><b>:<%= post.location.name %></b> </h2>
-		<p><%= post.description.split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %></p>
-		<div class="btm_line">
-			<div class="comment">
-				<% backer= 0 %>
+  <li class="vox_entry question">
+<% end %> 
+   <div class="vox_type question">
+                        	
+                        </div>
+
+	<div class="vox_main_conte">
+	                        	<div class="vox_main_conte1">
+                            	<div class="vox_conte_cont">
+                                <%= post.description.split(' ')[0,15].inject{|sum,word| sum + ' ' + word}  %>
+                                </div>
+                                <div class="vox_conte_cont1">
+                                <div class="vox_conte_cont_cate">
+                                <ul>
+                                	<li>Category <span>Service</span></li>
+                                    <li>Company <span class="company">Welmart</span></li>
+                                </ul>
+                                </div>
+                                <div class="vox_conte_cont_comm_b">
+                                	<ul>
+									<% backer= 0 %>
 				<% if post.comments.size > 0 %>
 				   <% post.comments.each do |comment| %>
 						<% if comment.is_backer == true %>
@@ -19,18 +35,30 @@
 					   <% end %>
 				   <% end %>  
 				<% end %>
-				
-				<span class="backers"><%= backer %> backers  |  <%= post.comments.size %> comments</span>
-				<span class="date"><%= post.created_at %></span>
-						
-			</div>
-                        <div class="read_more flr">
-                              <%= link_to  "Read More","/posts/#{post.parameterize}" %> 
+                                    	<li><%= post.comments.size %> comments</li>
+                                        <li><%= backer %> backers</li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <div class="vox_main_time_auth1"><%= post.created_at %></div>
+                                <div class="vox_main_conte1_arrow">
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="vox_main_time_auth">
+                            	
+                                <div class="vox_main_time_auth2">Posted By : <%= User.find(post.user_id).username %></div>
+                            	<div class="vox_main_time_auth_B"><%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
+								</a></div>
+                            </div>
+                            
                         </div>
-		</div>
-	</div>
-	<%#*<div class="grey">%>
-		<%#*<p class="updated"><strong>Update:</strong> July 21, 2012</p>%>
-		<%#*<p>Case resolved in compensation of $400.00.</p>%>
-	<%#*</div>%>
+						
+</li>
+
+<!-- -->
+
+</ul>
+</div>
 </div>

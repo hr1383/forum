@@ -1,4 +1,3 @@
-
 <%= form_for @post,:html =>{:multipart => true} do |f| %>
   <div id="divstep1" class="create_vox_form cvf_step1">     
      <%#*<div class="field">%>
@@ -13,16 +12,15 @@
       <span class="radio"><%= f.radio_button :posttype, 'Compliment' %>
       <%= label :posttype_complement, 'Complement' %></span>
 	  <div class="clr"></div>
-    </div>
-
+      </div>
+	  
 
     <div class="field">
       <%= f.label :status %> 
         <%= f.select("status", options_for_select([['Open', 'Open'],
                      ['Resolved', 'Resolved']], '1')) %>
     </div>
-
-      <div class="field">
+    <div class="field">
         <%= f.label :question,"Title" %>
         <%= f.text_field :question,:class=>"inp_text", :placeholder=>"Create some catchy title." %>
         <div id="error_question"  style="display:none;color:#ff0000">
@@ -147,7 +145,8 @@
                     </div>
                     <div class="field">
                             <label>Category</label> 
-                            <%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %> 
+                          
+							<%= location_form.text_field :category%> 
                     </div>
                     <% end %>
             </div>

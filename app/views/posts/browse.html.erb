@@ -1,18 +1,31 @@
-<div class="left_section">
-<div class="left_header">
-<h1 class="">Browse Vox</h1>
-</div>
-<div class="browse_vox">
+<div class="header_title">
+    	<div class="container"><h2>Browse Vox</h2></div>
+    </div>
+	
+
+
+<div class="top_search_pannel">
+  
+  <div class="search_pannel_M" style="padding-top:0;">
+        
+        	<span class="title_green">
+            Search Your Vow Here !
+            </span>
+            <div class="search_form">
   
   <%= form_tag("/posts/browse", :method=>:get) do %>
     <%= hidden_field_tag :type,"location" %>
-    <div class="search_field">    
+       
 		<%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
-		<div class="clr"></div>
-    </div>
+        <%= submit_tag "SEARCH", :name => nil %>
+		
+    
   <% end %>
-      
+ </div>
+ </div> 
+  <div class="clr"></div>
+ </div> 
+<div class="left_section left_section_new">      
      <%  if @returnsearch && @locationGroupByName.size > 0%> 
       <%= render "renderbrowsepostbysearch", :locationGroupByName=>@locationGroupByName %>            
       <% else %>
@@ -31,6 +44,7 @@
    <% end %>  
 </div>
 </div>
+
 <%#*<div class="sidebar flr">%>
 	<%#*<div class="brown_box">%>
 		<%#*<div class="head">%>
