@@ -1069,7 +1069,7 @@ div.field, div.actions {
 			new stylesheet for new design(16 /aug / 2013)
 ----------------------------------------------------------------*/
 
-body{ background:url(images/body_bg.png) fixed left 240px no-repeat #f2f3ee; font-family:Arial, Helvetica, sans-serif;}
+body{ background:url(assets/body_bg.png) fixed left 240px no-repeat #f2f3ee; font-family:Arial, Helvetica, sans-serif;}
 #wrapper{ width:100%; height:auto; float:left;}
 .container{ width:960px; margin:0 auto; }
 a{ text-decoration:none;}
@@ -1077,7 +1077,7 @@ img{ border:0; outline:none;}
 .relative{ position:relative;}
 .clear{ clear:both;}
 
-header.header, #header{ width:100%; height:121px; float:left; background:url(images/header_bg.png) repeat top left; border-bottom:5px solid #386303; }
+header.header, #header{ width:100%; height:121px; float:left; background:url(assets/header_bg.png) repeat top left; border-bottom:5px solid #386303; }
 .header_main{ width:100%; height:121px; float:left; position:relative;}
 .logo{ width:240px; height:auto; float:left; margin-top:18px;}
 
@@ -1093,11 +1093,11 @@ nav.nav ul li.active{ border-bottom:5px solid #fefffc;}
 nav.nav ul li.active a{ color:#212121}
 
 .loginsign{ width:auto; height:32px; float:right; text-transform:uppercase; font-weight:bold; font-size:15px; position:absolute; right:0; bottom:-37px;}
-.login_btn{ height:32px; width:auto; line-height:32px; background:url(images/login_btn.png) no-repeat 10px center #386303; padding:0 15px 0 40px; float:left; color: #fff; margin-right:5px; }
-.sign_btn{ height:32px; width:auto; line-height:32px; background:url(images/sign_btn.png) no-repeat 10px center #386303; padding:0 15px 0 40px; float:left; color: #fff;}
+.login_btn{ height:32px; width:auto; line-height:32px; background:url(assets/login_btn.png) no-repeat 10px center #386303; padding:0 15px 0 40px; float:left; color: #fff; margin-right:5px; }
+.sign_btn{ height:32px; width:auto; line-height:32px; background:url(assets/sign_btn.png) no-repeat 10px center #386303; padding:0 15px 0 40px; float:left; color: #fff;}
 
 
-footer.footer, #footer{width:100%; height:auto; float:left; background:url(images/header_bg.png) repeat top left; border-top:5px solid #386303; }
+footer.footer, #footer{width:100%; height:auto; float:left; background:url(assets/header_bg.png) repeat top left; border-top:5px solid #386303; }
 
 .footer_1{ width:300px; height:auto; float:left; padding-top:15px;}
 span.copyrigth{ color:#eaf4b6; font-size:14px; line-height:20px; text-align:left; width:100%; display:block; margin-top:10px;}
@@ -1171,7 +1171,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467a08', end
 
 .mid_section_R h2.title_sec { font-size:20px;}
 
-h2.title_sec{ width:100%; display:block; color:#353535; border-bottom:1px solid #d9d9d9; font-size:24px; line-height:42px; height:42px;  background:url(images/head_arrow.png) no-repeat left center; text-indent:24px; font-weight:normal;}
+h2.title_sec{ width:100%; display:block; color:#353535; border-bottom:1px solid #d9d9d9; font-size:24px; line-height:42px; height:42px;  background:url(assets/head_arrow.png) no-repeat left center; text-indent:24px; font-weight:normal;}
 
 .fb_login_section_M{ height:auto; width:90%; float:left; padding:5%; border:1px solid #d1d1d1; background:#d8d8d8; margin-bottom:25px;
 -moz-border-radius:5px;
@@ -1184,7 +1184,7 @@ border-radius:5px;}
 border-radius:5px;}
 
 .vox_categories_M ul{ width:100%; height:auto; float:left; list-style:none; margin:15px 0; padding:0;}
-.vox_categories_M ul li{ width:90%; height:25px; float:left; list-style:none; margin:0 0 0 3%; padding:0 0 0 7%; background:url(images/cate_arroe.png) no-repeat left center; line-height:25px; font-size:14px;}
+.vox_categories_M ul li{ width:90%; height:25px; float:left; list-style:none; margin:0 0 0 3%; padding:0 0 0 7%; background:url(assets/cate_arroe.png) no-repeat left center; line-height:25px; font-size:14px;}
 .vox_categories_M ul li a{ color:#353535;}
 
 .vox_list_main{ width:100%; float:left; height:auto;}
@@ -1215,10 +1215,10 @@ border-radius:15px;	}
 .vox_conte_cont_comm_b ul{ width:auto; float:right; margin:0; padding:0; list-style:none;}
 .vox_conte_cont_comm_b ul li{ width:auto; float:left; margin:0; padding:0; list-style:none; height:35px; font-size:13px; line-height:35px; color:#242424; margin:0 4px; color:#535353; border:none;}
 
-.vox_main_conte1_arrow{ width:23px; height:23px; background:url(images/vox_arrow.png) no-repeat center; float:left; position:absolute; right:40px; bottom:-19px;}
+.vox_main_conte1_arrow{ width:23px; height:23px; background:url(assets/vox_arrow.png) no-repeat center; float:left; position:absolute; right:40px; bottom:-19px;}
 
 .vox_main_time_auth{ width:100%; float:left; height:auto;}
-.vox_main_time_auth1{ width:45%; float:left; font-size:12px; color:#535353; line-height:22px; text-align:left; background:url(images/watch.png) no-repeat left center; text-indent:26px;}
+.vox_main_time_auth1{ width:45%; float:left; font-size:12px; color:#535353; line-height:22px; text-align:left; background:url(assets/watch.png) no-repeat left center; text-indent:26px;}
 .vox_main_time_auth2{ width:45%; float:right; font-size:14px; color:#535353; line-height:30px; text-align:right;}
 .vox_main_time_auth_B{ width:100%; float:left; margin-top:10px;}
 
@@ -1238,11 +1238,11 @@ color:#fff; font-size:14px; height:27px; line-height:27px; width:auto; padding:0
 border-radius:5px;
 }
 
-.vox_entry.question .vox_type{ background:url(images/question.png) no-repeat left center;}
+.vox_entry.question .vox_type{ background:url(assets/question.png) no-repeat left center;}
 
-.vox_entry.complaint .vox_type{ background:url(images/compliant.png) no-repeat left center;}
+.vox_entry.complaint .vox_type{ background:url(assets/compliant.png) no-repeat left center;}
 
-.vox_entry.compliment .vox_type{ background:url(images/compliment.png) no-repeat left center;}
+.vox_entry.compliment .vox_type{ background:url(assets/compliment.png) no-repeat left center;}
 
 /*-----------------------------------*/
 
@@ -1271,7 +1271,7 @@ background: linear-gradient(to bottom,  #ffffff 0%,#cacaca 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cacaca',GradientType=0 ); /* IE6-9 */
 }
 .signup_btn_top a{ color:#5a5a5a;}
-.signup_btn_top span{ width:65px; height:60px; background:url(images/key_sign.png) no-repeat center; border-right:1px solid #d1d1d1; float:left; margin-right:17px; }
+.signup_btn_top span{ width:65px; height:60px; background:url(key_sign.png) no-repeat center; border-right:1px solid #d1d1d1; float:left; margin-right:17px; }
 
 .login_pannel{ width:96%; float:left; height:auto; font-size:17px; font-weight:bold; line-height:30px; font-weight:bold; padding:47px 2% 0; color:#fff;}
 .login_pannel a{ width:auto; float:right; border:1px solid #a06f00; font-size:15px; line-height:30px; height:30px; color:#644900; padding:0 15px;
@@ -1309,7 +1309,7 @@ ul.affit_slider li{ height:135px; vertical-align:middle;}
 
 .step_main_div_in{ width:100%; float:left; margin-bottom:22px; background:#f2f3ee; padding;15px 10px;}
 
-.step_main_div_step{ width:106px; height:127px; background:url(images/step_bg.png) no-repeat right top; float:left; padding:16px 40px; font-size:87px; line-height:127px; text-align:center; font-weight:bold; color:#fff;}
+.step_main_div_step{ width:106px; height:127px; background:url(assets/step_bg.png) no-repeat right top; float:left; padding:16px 40px; font-size:87px; line-height:127px; text-align:center; font-weight:bold; color:#fff;}
 .step_main_content_M{ background:#d8d8d8; width:722px; height:auto; padding:15px; border:1px solid #d1d1d1; float:left;
 -moz-border-radius:10px;
 -webkit-border-radius:10px;
@@ -1333,7 +1333,7 @@ background: -ms-linear-gradient(top,  #4aa805 0%,#4fb705 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #4aa805 0%,#4fb705 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4aa805', endColorstr='#4fb705',GradientType=0 ); /* IE6-9 */
 }
-a.continues_btn span{ background:url(images/contiues_arr.png) no-repeat center; float:right; margin-left:30px;width:29px; height:45px;}
+a.continues_btn span{ background:url(assets/contiues_arr.png) no-repeat center; float:right; margin-left:30px;width:29px; height:45px;}
 .vox_type_main{ width:100%; float:left; margin:0px 0;}
 .vox_type_main ul{ margin:0; padding:0; width:100%; height:auto; float:left; list-style:none;}
 .vox_type_main ul li{ width:100%; float:left; height:auto; margin:4px 0; padding:0; font-size:14px; line-height:24px; }

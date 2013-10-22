@@ -1069,7 +1069,7 @@ div.field, div.actions {
 			new stylesheet for new design(16 /aug / 2013)
 ----------------------------------------------------------------*/
 
-body{ background:url(images/body_bg.png) fixed left 240px no-repeat #f2f3ee; font-family:Arial, Helvetica, sans-serif;}
+body{ background:url(assets/body_bg.png) fixed left 240px no-repeat #f2f3ee; font-family:Arial, Helvetica, sans-serif;}
 #wrapper{ width:100%; height:auto; float:left;}
 .container{ width:960px; margin:0 auto; }
 a{ text-decoration:none;}
@@ -1097,7 +1097,7 @@ nav.nav ul li.active a{ color:#212121}
 .sign_btn{ height:32px; width:auto; line-height:32px; background:url(assets/sign_btn.png) no-repeat 10px center #386303; padding:0 15px 0 40px; float:left; color: #fff;}
 
 
-footer.footer, #footer{width:100%; height:auto; float:left; background:url(images/header_bg.png) repeat top left; border-top:5px solid #386303; }
+footer.footer, #footer{width:100%; height:auto; float:left; background:url(assets/header_bg.png) repeat top left; border-top:5px solid #386303; }
 
 .footer_1{ width:300px; height:auto; float:left; padding-top:15px;}
 span.copyrigth{ color:#eaf4b6; font-size:14px; line-height:20px; text-align:left; width:100%; display:block; margin-top:10px;}
