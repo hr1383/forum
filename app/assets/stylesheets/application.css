@@ -887,13 +887,13 @@ ul.browse_categories li a:hover {
 	height: 122px
 }
 .vox_entry.complaint .cat {
-	background: url(/assets/complaint_img.png) no-repeat
+	background: url(complaint_img.png) no-repeat
 }
 .vox_entry.question .cat {
-	background: url(/assets/question_img.png) no-repeat
+	background: url(question_img.png) no-repeat
 }
 .vox_entry.compliment .cat {
-	background: url(/assets/compliment_img.png) no-repeat
+	background: url(compliment_img.png) no-repeat
 }
 .vox_entry .padder {
 	padding: 10px
@@ -1238,11 +1238,11 @@ color:#fff; font-size:14px; height:27px; line-height:27px; width:auto; padding:0
 border-radius:5px;
 }
 
-.vox_entry.question .vox_type{ background:url(assets/question.png) no-repeat left center;}
+.vox_entry.question .vox_type{ background:url(question.png) no-repeat left center;}
 
-.vox_entry.complaint .vox_type{ background:url(assets/compliant.png) no-repeat left center;}
+.vox_entry.complaint .vox_type{ background:url(compliant.png) no-repeat left center;}
 
-.vox_entry.compliment .vox_type{ background:url(assets/compliment.png) no-repeat left center;}
+.vox_entry.compliment .vox_type{ background:url(compliment.png) no-repeat left center;}
 
 /*-----------------------------------*/
 

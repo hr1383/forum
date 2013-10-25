@@ -887,13 +887,13 @@ ul.browse_categories li a:hover {
 	height: 122px
 }
 .vox_entry.complaint .cat {
-	background: url(/assets/complaint_img.png) no-repeat
+	background: url(complaint_img.png) no-repeat
 }
 .vox_entry.question .cat {
-	background: url(/assets/question_img.png) no-repeat
+	background: url(question_img.png) no-repeat
 }
 .vox_entry.compliment .cat {
-	background: url(/assets/compliment_img.png) no-repeat
+	background: url(compliment_img.png) no-repeat
 }
 .vox_entry .padder {
 	padding: 10px
