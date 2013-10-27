@@ -185,7 +185,7 @@ width:100%; height:auto; float:left;
 	margin: 0 0 25px 0
 }
 .brown_box .head {
-	background: url(/assets/brown_title_bar.gif) repeat-x;
+	background: url(brown_title_bar.gif) repeat-x;
 	height: 43px
 }
 .brown_box .head h2 {
@@ -214,7 +214,7 @@ width:100%; height:auto; float:left;
 	margin: 0 0 5px 0
 }
 .brown_box .body .upgrade {
-	background: url("/assets/upgrade_btn.png") no-repeat scroll 0 0 transparent;
+	background: url("upgrade_btn.png") no-repeat scroll 0 0 transparent;
 	border: medium none;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -265,7 +265,7 @@ width:100%; height:auto; float:left;
 	border-radius: 3px
 }
 .steps li.arrow {
-	background: url(/assets/step_arrow_grey.png) no-repeat;
+	background: url(step_arrow_grey.png) no-repeat;
 	width: 9px
 }
 .steps li.active a {
@@ -379,7 +379,7 @@ create_vox_form .left_buttons {
 	padding-top: 24px
 }
 .independent .left_step_button {
-	background: url("/assets/submit_btn.png") no-repeat scroll 0 0 transparent;
+	background: url("submit_btn.png") no-repeat scroll 0 0 transparent;
 	border: medium none;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -393,7 +393,7 @@ create_vox_form .left_buttons {
 	text-shadow: 0 0 1px #9a7600
 }
 .create_vox_form .step_button {
-	background: url("/assets/submit_btn.png") no-repeat scroll 0 0 transparent;
+	background: url("submit_btn.png") no-repeat scroll 0 0 transparent;
 	border: medium none;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -438,7 +438,7 @@ create_vox_form .left_buttons {
 	font-weight: normal
 }
 .cvf_step2 .grey_box .search_btn {
-	background: url("/assets/green_btn.png") no-repeat scroll 0 0 transparent;
+	background: url("green_btn.png") no-repeat scroll 0 0 transparent;
 	border: medium none;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -485,7 +485,7 @@ create_vox_form .left_buttons {
 	padding: 24px 0
 }
 .cvf_step3 .actions input {
-	background: url("/assets/submit_btn.png") no-repeat scroll 0 0 transparent;
+	background: url("submit_btn.png") no-repeat scroll 0 0 transparent;
 	border: medium none;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -515,7 +515,7 @@ create_vox_form .left_buttons {
 	margin: 0 10px 0 0
 }
 .browse_vox .search_field input[type="submit"] {
-	background: url("/assets/upgrade_btn.png") no-repeat scroll 0 0 transparent;
+	background: url("upgrade_btn.png") no-repeat scroll 0 0 transparent;
 	border: medium none;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -613,7 +613,7 @@ ul.browse_categories li a:hover {
 	width: 176px
 }
 .sign_in_fill a.signin {
-	background: url("/assets/upgrade_btn.png") no-repeat scroll 0 0 transparent;
+	background: url("upgrade_btn.png") no-repeat scroll 0 0 transparent;
 	border: medium none;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -1069,7 +1069,7 @@ div.field, div.actions {
 			new stylesheet for new design(16 /aug / 2013)
 ----------------------------------------------------------------*/
 
-body{ background:url(body_bg.png) fixed left 240px no-repeat #f2f3ee; font-family:Arial, Helvetica, sans-serif;}
+body{ background:#f2f3ee; font-family:Arial, Helvetica, sans-serif;}
 #wrapper{ width:100%; height:auto; float:left;}
 .container{ width:960px; margin:0 auto; }
 a{ text-decoration:none;}
@@ -1242,7 +1242,7 @@ border-radius:5px;
 
 .vox_entry.complaint .vox_type{ background:url(compliant.png) no-repeat left center;}
 
-.vox_entry.compliment .vox_type{ background:url(assets/compliment.png) no-repeat left center;}
+.vox_entry.compliment .vox_type{ background:url(compliment.png) no-repeat left center;}
 
 /*-----------------------------------*/
 
@@ -1309,7 +1309,7 @@ ul.affit_slider li{ height:135px; vertical-align:middle;}
 
 .step_main_div_in{ width:100%; float:left; margin-bottom:22px; background:#f2f3ee; padding:15px 10px;}
 
-.step_main_div_step{ width:106px; height:127px; background:url(assets/step_bg.png) no-repeat right top; float:left; padding:16px 40px; font-size:87px; line-height:127px; text-align:center; font-weight:bold; color:#fff;}
+.step_main_div_step{ width:106px; height:127px; background:url(step_bg.png) no-repeat right top; float:left; padding:16px 40px; font-size:87px; line-height:127px; text-align:center; font-weight:bold; color:#fff;}
 .step_main_content_M{ background:#d8d8d8; width:722px; height:auto; padding:15px; border:1px solid #d1d1d1; float:left;
 -moz-border-radius:10px;
 -webkit-border-radius:10px;
@@ -1333,7 +1333,7 @@ background: -ms-linear-gradient(top,  #4aa805 0%,#4fb705 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #4aa805 0%,#4fb705 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4aa805', endColorstr='#4fb705',GradientType=0 ); /* IE6-9 */
 }
-a.continues_btn span{ background:url(assets/contiues_arr.png) no-repeat center; float:right; margin-left:30px;width:29px; height:45px;}
+a.continues_btn span{ background:url(contiues_arr.png) no-repeat center; float:right; margin-left:30px;width:29px; height:45px;}
 .vox_type_main{ width:100%; float:left; margin:0px 0;}
 .vox_type_main ul{ margin:0; padding:0; width:100%; height:auto; float:left; list-style:none;}
 .vox_type_main ul li{ width:100%; float:left; height:auto; margin:4px 0; padding:0; font-size:14px; line-height:24px; }
