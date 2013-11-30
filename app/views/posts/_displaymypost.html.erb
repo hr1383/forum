@@ -22,7 +22,7 @@
                                 <div class="vox_conte_cont_cate">
                                 <ul>
                                 	<li>Category <span>Service</span></li>
-                                    <li>Company <span class="company">Welmart</span></li>
+                                    <li>Company <span class="company"><%= post.location.name%></span></li>
                                 </ul>
                                 </div>
                                 <div class="vox_conte_cont_comm_b">
@@ -50,6 +50,7 @@
                             	
                                 <div class="vox_main_time_auth2">Posted By : <%= User.find(post.user_id).username %></div>
                             	<div class="vox_main_time_auth_B"><%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
+											<div class="vox_main_time_auth_B"><%= link_to  "Edit ","/posts/#{post.parameterize}/edit",:class=>"read_more" %> 
 								</a></div>
                             </div>
                             
