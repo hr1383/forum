@@ -38,14 +38,14 @@
   <td><%= f.text_field :country %></td>
 </tr>
 <tr>
-  <%#= @user.subscribe %>
+  <%= @user.subscribe %>
   <td><%= f.check_box :subscribe  %></td>
   <td><label>Get Notified about your Vox and latest updates.</label></td>
 </tr>
-<tr>
-  <td><%= f.label :admin %></td>
- <td><%= f.check_box :admin %></td>
-</tr>
+<%#*<tr>%>
+  <%#*<td><%= f.label :admin ></td>%>
+  <%#*<td><%= f.check_box :admin ></td>%>
+<%#*</tr>%>
   <%= f.hidden_field :fbid  %>
   <%=  f.hidden_field :id %>
  </table> 
