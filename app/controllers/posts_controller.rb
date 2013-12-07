@@ -10,7 +10,7 @@ class PostsController < ApplicationController
       @posts = Post.all
     else 
       if !session['user'].nil?
-         if session['user'].username='hrsht13'
+         if session['user'].username == 'hrsht13'
             @posts=Post.all
          else
             @posts = Post.find_all_by_user_id(session["user"].id.to_s)
