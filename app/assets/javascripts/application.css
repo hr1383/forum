@@ -1131,7 +1131,7 @@ span.title_green{ color:#386303; font-size:25px; line-height:40px; text-indent:5
 -moz-border-radius:40px;
 -webkit-border-radius:40px;
 border-radius:40px;}
-.search_form input[type="text"]{ width:620px; height:58px; border:0; outline:none; background:#fff; color:#454544; font-size:23px; line-height:58px; float:left; margin:2px 0;}
+.search_form input[type="text"]{ width:620px; height:58px; border:0; outline:none; background:#fff; color:#454544; font-size:18px; line-height:58px; float:left; margin:2px 0;}
 .search_form input[type="submit"]{ border:1px solid #c39021; float:right; margin:8px 0 0;
 -moz-border-radius:40px;
 -webkit-border-radius:40px;
@@ -1169,9 +1169,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#467a08', end
 .mid_section_L{ width:629px; float:left; background:#f2f3ee; padding:10px;}
 .mid_section_R{ width:293px; float:right;}
 
-.mid_section_R h2.title_sec { font-size:20px;}
+.mid_section_R h2.title_sec { font-size:18px;}
 
-h2.title_sec{ width:100%; display:block; color:#353535; border-bottom:1px solid #d9d9d9; font-size:24px; line-height:42px; height:42px;  background:url(head_arrow.png) no-repeat left center; text-indent:24px; font-weight:normal;}
+h2.title_sec{ width:100%; display:block; color:#353535; border-bottom:1px solid #d9d9d9; font-size:20px; line-height:42px; height:42px;  background:url(head_arrow.png) no-repeat left center; text-indent:24px; font-weight:normal;}
 
 .fb_login_section_M{ height:auto; width:90%; float:left; padding:5%; border:1px solid #d1d1d1; background:#d8d8d8; margin-bottom:25px;
 -moz-border-radius:5px;
