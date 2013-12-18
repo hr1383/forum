@@ -93,8 +93,8 @@ class MembersController < ApplicationController
           end
         end
     end
-    @totalclose = Post.latest_closed
-    @totalopen = Post.latest_open
+    @totalclose = Post.order("updated_at DESC").all
+    # @totalopen = Post.latest_open
     if session[:user].nil?
       session[:user] = current_user
     end
