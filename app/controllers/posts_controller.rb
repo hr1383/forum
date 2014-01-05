@@ -118,7 +118,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
-    @post = Post.find_by_parameterize(params[:id])
+    @post = Post.find(params[:id])
     respond_to do |format|
       if @post.update_attributes(params[:post])
         @post.assets.each do |asset|
