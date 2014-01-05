@@ -8,8 +8,8 @@
     </div>
     <div class="field">
       <%= f.label :status %> 
-        <%= f.select("status", options_for_select([['Open', 'Open'],
-                     ['Resolved', 'Resolved']], '1')) %>
+        <%= f.select :status ,[['Open', 'Open'],
+                     ['Resolved', 'Resolved']]%>
     </div>
       <div class="field">
         <%= f.label :question,"Title" %>

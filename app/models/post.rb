@@ -12,10 +12,10 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :detailinfo, allow_destroy: true
   accepts_nested_attributes_for :assets, allow_destroy: true
   
-  searchable do
+   searchable do
   text :question, :boost => 5
-  text :description
-end
+   text :description
+ end
 
   def self.latest_closed
     where("status=?",'Resolved').order("updated_at DESC").limit(5)

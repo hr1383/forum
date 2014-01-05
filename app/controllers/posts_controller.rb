@@ -35,6 +35,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by_parameterize(params[:id])
 #      Post.find(params[:id])
+if @post.nil?
+   @post=Post.find(params[:id])
+end
     @meta_title = @post.question
    @meta_description = @post.description
     @backer = 0

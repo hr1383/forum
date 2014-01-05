@@ -1,8 +1,8 @@
 class Location < ActiveRecord::Base
   belongs_to :post
-  searchable do
-  text :name
-end
+   searchable do
+   text :name
+ end
 #  attr_accessible :address,:category,:name,:zipcode,:tel,:city,:email,:website
   def setValues(result)
     puts result
