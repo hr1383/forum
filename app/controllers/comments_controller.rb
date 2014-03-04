@@ -40,24 +40,24 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
         #throw error if not valid
-      # @post = Post.find(params[:post_id])
-#       if params[:comment][:comment].to_s.strip.length > 0
-#         unless @post.nil?
-#             @comment = @post.comments.build(params[:comment])
-#             if session[:user] != nil
-#               @comment.username = session[:user][:username]
-#               @comment.userId = session[:user][:id]
-#             end  
-#         end
-#       end  
-#     respond_to do |format|
-#       if @comment.save
-#         format.html { redirect_to @post, notice: 'Comment was successfully created.' }
-#         format.js
-#       else
-#         format.html { render action: "new" }
-#       end
-#     end
+      @post = Post.find(params[:post_id])
+      if params[:comment][:comment].to_s.strip.length > 0
+        unless @post.nil?
+            @comment = @post.comments.build(params[:comment])
+            if session[:user] != nil
+              @comment.username = session[:user][:username]
+              @comment.userId = session[:user][:id]
+            end  
+        end
+      end  
+    respond_to do |format|
+      # if @comment.save
+        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+        format.js
+      # else
+ #        format.html { render action: "new" }
+ #      end
+    end
   end
 
   # PUT /comments/1
