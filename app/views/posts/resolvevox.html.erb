@@ -4,7 +4,7 @@
 <h1 class="flt">Ready to resolve vox !!</h1>
 </div>
 
-<%= form_for @post,:html =>{:multipart => true} do |f| %>
+<%= form_for @post  do |f| %>
   <div id="divstep1" class="create_vox_form cvf_step1">     
 	  <div class="clr"></div>
 	  		<label><b>How was it resolved ?</b></label>
@@ -12,12 +12,6 @@
 		<%= f.hidden_field :status ,:value=>"Resolved"%>		
 
         <%= f.text_area :resolve_vox,:class=>"inp_area", :placeholder=>"Please add a brief description about your experience with the company and umvox." %>
-         
-	  	
-        <div class="left_buttons">          
-          <%= button_tag "Continue", :class=>"left_step_button"%>
-        </div>
-	    
       </div>
     <div class="buttons">
   	  <%=f.submit "Resolve Vox", :id=>"btnStep2", :class=>"step_button", :remote=>"true" %>
