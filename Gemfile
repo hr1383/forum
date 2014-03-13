@@ -30,11 +30,11 @@ group :assets do
   gem 'uglifier'
 end
 group :production do
- # gem 'pg'
+ gem 'pg'
  gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 gem 'jquery-rails'
-gem 'factual-api'
+# gem 'factual-api'
 
 # Use unicorn as the web server
 # gem 'unicorn'
