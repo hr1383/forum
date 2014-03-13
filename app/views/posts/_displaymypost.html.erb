@@ -48,10 +48,10 @@
                             
                             <div class="vox_main_time_auth">
                             	
-                                <div class="vox_main_time_auth2">Posted By : <%= User.find(post.user_id).username %></div>
-                            	<div class="vox_main_time_auth_B"><%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
-											<div class="vox_main_time_auth_B"><%= link_to  "Edit ","/posts/#{post.parameterize}/edit",:class=>"read_more" %> 
-								</a></div>
+                              <div class="vox_main_time_auth2">Posted By : <%=User.find(post.user_id).username%></div>
+                             <div class="vox_main_time_auth_B"><%= link_to "View","/posts/#{post.parameterize}",:class=>"read_more" %> &nbsp;<%= link_to  "Edit 									","/posts/#{post.parameterize}/edit",:class=>"read_more" %> 
+								<%= link_to  "Resolve ","/posts/resolvevox/#{post.parameterize}/",:class=>"read_more" %> 
+								</div>	
                             </div>
                             
                         </div>

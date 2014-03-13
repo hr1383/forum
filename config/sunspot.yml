@@ -5,11 +5,12 @@ production:
     log_level: WARNING
 
 development:
-  solr:
-    hostname: localhost
-    port: 8982
-    log_level: INFO
-
+ solr:
+     hostname: localhost
+     port: 8982
+     log_level: INFO
+     path: /solr/development
+     solr_home: solr
 test:
   solr:
     hostname: localhost

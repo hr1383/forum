@@ -12,13 +12,13 @@
 	  <li> <%= link_to 'What is Umvox', '/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox'%></li>
       <% if (!current_user.nil? || !session[:user].nil?) %>
          
-          <li> <%= link_to 'File Vox', '/posts/new' %></li>  
+          <li> <%= link_to 'Create Vox', '/posts/new' %></li>  
           <% end %>
 		  
-    <li><%= link_to 'Browse Vox', '/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox' %></li>
-     
+    <!-- <li><%= link_to 'Browse Vox', '/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox' %></li>
+   -->   
 	 <% if (!current_user.nil? || !session[:user].nil?) %>  
-      <li><%= link_to 'My Umvox', '/posts?utf8=?&commit=My+Umvox' %></li>
+      <li><%= link_to 'Resolve/View Voxes', '/posts?utf8=?&commit=My+Umvox' %></li>
      <% end %> 
     
       <%#= form_tag("/posts", :method=>:get) do %>
@@ -27,9 +27,9 @@
       <%# end %>
       
 	  
-	  <% if session['user'].present? %>
+	  <!-- <% if session['user'].present? %>
 		<li><%= link_to 'Dashboard', '/members/dashboard' %></li>
-	  <% end %>
+	  <% end %> -->
     
 	<% if (session[':user'].present? && session[:user].admin.present?) %>
 		<li><%= link_to 'Send email', '/email/view' %></li>

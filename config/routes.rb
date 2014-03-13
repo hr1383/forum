@@ -40,7 +40,8 @@ Umvox::Application.routes.draw do
      post :browse
    end
    resources :comments
- end   
+ end 
+ get '/posts/resolvevox/:name', :to => 'posts#resolvevox'  
   resources :members do
   collection do
     get   :filldetails,:dashboard,:signin,:contactus,:userp,:unsubscribe,:unconfirm

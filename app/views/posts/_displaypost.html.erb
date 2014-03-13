@@ -17,26 +17,40 @@
                                 <div class="padder">
                                <div class="btm_line">
                                  <div class="comment">
-                                   <span class="backers">#<%= post.id %> </span>
+                                   <span class="backers">Vox Status: <%= post.status %> </span>
                                    <span class="date">Created At : <%= post.created_at.to_date %> </span>
                                    
                                  </div>
                               </div>
-                                  <p><%=simple_format(post.description)  %></p>
-                             <%#*<p><%= post.description.to_s.force_encoding("UTF-8") </p>%>
-                             <br/>
-                               <div class="btm_line">
-                                 <div class="comment">
-                                   <span class="backers">Posted By <%= User.find(post.user_id).username %>  </span>
-                                     
-                                 </div>
-                              </div>
-                               </div>
+                                  <%=simple_format(post.description)  %>
+						       </div>
+							   <% if post.resolve_vox.nil?%>
+						     	 <div class="btm_line">
+	                            	 <div class="comment">
+	                              	   <span class="backers">Posted By <%= User.find(post.user_id).username %>  </span>
+                                   	</div>
+								 </div>
+							   <% end %>
                            </div>
+						  <% unless post.resolve_vox.nil?%>
+						  <div class="vox_entry complaint">
+							  <div class ="padder">
+								  <b>Yay , Umvox , helped us resolve.</b>
+								  <%=simple_format(post.resolve_vox)  %>
+							      <div class="btm_line">
+		                            <div class="comment">
+		                              <span class="backers">Posted By <%= User.find(post.user_id).username %>  </span>
+                                    </div>
+		                         </div>
+							  </div>	 
+		   				  </div>
+						  <% end %>
                          </div>
                       </div>  
                     </div>
+  				 
                   </div>
+				 
 		  <div class="sidebar flr">
 			  <div class="brown_box">
 				<div class="head">
@@ -44,22 +58,18 @@
 				</div>
 				<div class="body">
 				  <div class="sb_cat_links">
-                                    <b>Category</b> : <%= link_to post.location.category %>
+                                    <b>Category</b> : <%= post.location.category %>
 				  </div>
                                   <div class="sb_cat_links">
                                     <b>Company :</b>
-                                        <li><ul>
+                                      <br/> 
                                              <%=  post.location.name %><br/>
-                                      <% unless post.location.address == ''  %>
-                                            <%=  post.location.address %><br/>
-                                      <% end %>
+                                      
                                       <% unless post.location.city == ''  %>
 					 <%=  post.location.city %><br/>
                                       <% end %>
-                                  <% unless post.location.zipcode == '' %>
-					<%=  post.location.zipcode %><br/>
-                                  <% end %>
-                                        </ul></li>
+                                 
+                                        
 				  </div>
                                   
                                    <% if post.posttype != 'Compliment' %>
@@ -82,7 +92,9 @@
                                               <% str+= scenario.name.to_s+ " & " %>
                                         <% end %>
                                         <% end %>
-                                      <%= label_tag :compensation, str[0..-3] -%>
+                     
+					 
+					                  <%= label_tag :compensation, str[0..-3] -%>
 				  </div>
                                   
 				</div>
@@ -101,7 +113,7 @@
 				</div>
 			  </div>
 		  </div>
-		  <div class="clr"></div>
+		 
 
 </div>
 

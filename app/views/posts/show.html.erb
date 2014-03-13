@@ -2,9 +2,6 @@
 
 <%= render "displaypost", :post=>@post %>         
 
-<%#*<span id="comments_count"><%= pluralize(@post.comments.count, "Comment") %>
-<%#*<div id="comment-notice"></div>%>
-<%#*<br/>%>
 <div id="main">
 <div class="content">
 	<div class="wrapper">
@@ -71,27 +68,11 @@
 </div>            
                                 </div>
                                </div>
-                           <%#*</div>%>
-                         <%#*</div>%>
                       </div>  
                     </div>
                   </div>
-		  <div class="sidebar flr">
-			  <div class="brown_box">
-				<div class="head">
-				  <h2>Vox Status</h2>
-				</div>
-				<div class="body">
-				  <div class="sb_cat_links">
-                                    <% if @post.updatestatus != nil %>
-                                    <p> <%= @post.updatestatus.status %> </p>
-                                    <% else %>
-					NA
-                                    <% end %>    
-				  </div>
-				</div>
-			  </div>
-			  <div class="brown_box">
+		  
+			  <!-- <div class="brown_box">
 				<div class="head">
 				  <h2>Backers <% if @backer >0 %> (<%=@backer %>)  <%  end %> </h2>
 				</div>
@@ -110,7 +91,7 @@
                                           <%end %>
 					</div>
 				</div>
-			  </div>
+			  </div> -->
 		  </div>
 		  <div class="clr"></div>
 

@@ -3,23 +3,9 @@
      <%#*<div class="field">%>
         <%#*<b> <%= f.hidden_field :company,:id=>"post_company" %>
       <%#*</div>%>
-    <div class="field">
-	  <b><label style="padding:0px;">This vox is a...</label></b>
-      <span class="radio"><%= f.radio_button :posttype, 'Complaint' , :checked => true%>
-      <%= label :posttype_complaint, 'Complaint' %></span>
-          <span class="radio"><%= f.radio_button :posttype, 'Question' %> 
-      <%= label :posttype_question, 'Question' %></span>
-      <span class="radio"><%= f.radio_button :posttype, 'Compliment' %>
-      <%= label :posttype_complement, 'Complement' %></span>
-	  <div class="clr"></div>
-      </div>
+	  <b><label style="padding:0px;">We are here to hear your concerns !!</label></b>
 	  
-
-    <div class="field">
-      <%= f.label :status %> 
-        <%= f.select("status", options_for_select([['Open', 'Open'],
-                     ['Resolved', 'Resolved']], '1')) %>
-    </div>
+		<%=f.hidden_field :status, :value=>"Open" %>
     <div class="field">
         <%= f.label :question,"Title" %>
         <%= f.text_field :question,:class=>"inp_text", :placeholder=>"Create some catchy title." %>
@@ -82,14 +68,14 @@
   <% if @haslocation  %>
 <div id="locationPresent" ><b>
   <%= @post.location.name %><br/>
-  <%=@post.location.address %><br/>
+  <!-- <%=@post.location.address %><br/> -->
   <%=@post.location.city %><br/> 
-  <%=@post.location.zipcode %></b>
+  <!-- <%=@post.location.zipcode %></b> -->
   <%= f.fields_for :location do|location_form|  %>
-    <%= location_form.hidden_field :address , :value => @post.location.address %>
+    <!-- <%= location_form.hidden_field :address , :value => @post.location.address %> -->
   <%= location_form.hidden_field :name , :value => @post.location.name %>
   <%= location_form.hidden_field :city , :value => @post.location.city %>
-  <%= location_form.hidden_field :zipcode , :value => @post.location.zipcode %>
+  <!-- <%= location_form.hidden_field :zipcode , :value => @post.location.zipcode %> -->
   <div class="field">
                             <label>Category</label> 
                             <%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %> 
@@ -99,46 +85,47 @@
   <% else %>
      <div class="grey_box">
       <div id="newAddressdiv">
-        <p>Click here for online business, service or organization ?  <%=  check_box :new,:address  %></p>
-            <br>
+        <!-- <p>Click here for online business, service or organization ?  <%=  check_box :new,:address  %></p>
+    -->        
       </div>      
                     <p>In order to inform the right personnel, please make sure the contact info is correct.</p><br>
                     <%= f.fields_for :location do|location_form|  %>
 
                     <div class="field">
                             <label>Name</label> 
-                            <%= location_form.text_field :name%> 
+                            <%= location_form.text_field :name, :placeholder=>'Company Name'%> 
                             <div id="error_loc_name"  style="display:none;color:#ff0000">
                               This is the required field
                             </div>
                     </div>
-                    <div id="notonline">
-                        <div class="field">
+                        <!-- <div class="field">
                                 <label>Address</label> 
                                 <%= location_form.text_field  :address%> 
-                        </div>
+                        </div> -->
+					<div id="notonline">		
                         <div class="field">
                                 <label>City</label> 
-                                <%= location_form.text_field  :city%>
+                                <%= location_form.text_field  :city, :placeholder=>'Company City'%>
                                  <div id="error_loc_city"  style="display:none;color:#ff0000">
                                   This is the required field
                                  </div>
                         </div>
-                        <div class="field">
+						</div>
+                        <!-- <div class="field">
                                 <label>Zipcode</label> 
                                 <%= location_form.text_field  :zipcode%> 
-                        </div>
-                    </div>
+                        </div> -->
+                   
                     <div class="field">
                             <label>Email</label> 
-                            <%= location_form.text_field  :email%> 
+                            <%= location_form.text_field  :email, :placeholder=>'Company Email'%> 
                             <div id="error_loc_email"  style="display:none;color:#ff0000">
                               This is the required field
                             </div>
                     </div>
                     <div class="field">
                             <label>Website</label> 
-                            <%= location_form.text_field :website%> 
+                            <%= location_form.text_field :website, :placeholder=>'Company Email'%> 
                             <div id="error_loc_website"  style="display:none;color:#ff0000">
                               This is the required field
                             </div>
@@ -146,7 +133,7 @@
                     <div class="field">
                             <label>Category</label> 
                           
-							<%= location_form.text_field :category%> 
+							 <%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %>  
                     </div>
                     <% end %>
             </div>

@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :users
-  attr_accessible :assets_attributes,:posttype, :status, :question, :description, :category, :company, :address, :detailinfo_attributes,  :user_id,:scenario,:compensation,:location_attributes
+  attr_accessible :assets_attributes,:posttype, :status, :question, :description, :category, :company, :address, :detailinfo_attributes,  :user_id,:scenario,:compensation,:location_attributes,:resolve_vox
   attr_accessor :url
   validates_presence_of :description,:question,:scenario,:compensation
   has_many :comments , :autosave => true

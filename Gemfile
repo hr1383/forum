@@ -5,8 +5,9 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
-gem 'mysql', '~>2.8.1'
+gem 'sqlite3'
+#gem 'mysql2'
+#, '~>2.8.1'
 #gem 'rake' '~>10.1.1'
 gem 'koala'
 gem 'paperclip'
@@ -29,7 +30,7 @@ group :assets do
   gem 'uglifier'
 end
 group :production do
- gem 'pg'
+ # gem 'pg'
  gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 gem 'jquery-rails'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507201034) do
+ActiveRecord::Schema.define(:version => 20140307090042) do
 
   create_table "assets", :force => true do |t|
     t.integer  "post_id"
@@ -114,14 +114,17 @@ ActiveRecord::Schema.define(:version => 20130507201034) do
     t.string   "posttype"
     t.string   "status"
     t.string   "question"
-    t.text     "description"
+    t.text     "description",  :limit => 255
     t.string   "address"
     t.string   "scenario"
     t.string   "compensation"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "parameterize"
+    t.string   "resolve_vox"
   end
+
+  add_index "posts", ["parameterize"], :name => "index_posts_on_parameterize"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -129,7 +132,7 @@ ActiveRecord::Schema.define(:version => 20130507201034) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 8
+    t.integer  "year",       :limit => 5
     t.datetime "created_at"
     t.datetime "updated_at"
   end

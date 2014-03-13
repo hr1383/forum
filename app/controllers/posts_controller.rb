@@ -98,9 +98,13 @@ end
   # POST /posts
   # POST /posts.json
   def create
+    
+    params[:post][:posttype] ='Complaint'
     @post = Post.new(params[:post])
     @post.parameterize = @post.question.parameterize
+    
     respond_to do |format|
+    
     if @post.save
     session[:postid]=@post.id
     Thread.new{SupportEmailer.createvox(@post,User.find(@post.user_id)).deliver}
@@ -127,7 +131,7 @@ end
         @post.assets.each do |asset|
           asset.save
         end
-        format.html { redirect_to @post, notice: 'post was successfully updated.' }
+        format.html { redirect_to "/members/dashboard"}
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -139,8 +143,8 @@ end
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
+    # @post = Post.find(params[:id])
+ #    @post.destroy
 
     respond_to do |format|
       format.html { redirect_to posts_url }
@@ -152,7 +156,9 @@ end
       @search = Post.search do
         fulltext params[:search]
       end
-      @posts = @search.results
+       @totalclose  = @search.results
+      
+      render "/members/dashboard"
   end
   
 
@@ -191,5 +197,9 @@ end
     locations.each do |location|
       @posts << location.post
     end
+  end
+  
+  def resolvevox
+     @post = Post.find_by_parameterize(params[:name])
   end
 end
