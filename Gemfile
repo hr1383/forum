@@ -6,8 +6,7 @@ gem 'rails', '3.1.3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 #gem 'sqlite3'
-gem 'mysql2'
-#, '~>2.8.1'
+gem 'mysql', '~>2.8.1'
 #gem 'rake' '~>10.1.1'
 gem 'koala'
 gem 'paperclip'
@@ -34,7 +33,7 @@ group :production do
  gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 gem 'jquery-rails'
-# gem 'factual-api'
+gem 'factual-api'
 
 # Use unicorn as the web server
 # gem 'unicorn'
