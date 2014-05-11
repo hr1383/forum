@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+  <title><%= @meta_title %> </title>
+ <meta property="og:site_name" content="umvox.com">
+ <meta property="og:image" content="http://s3.amazonaws.com/test_local/website/logo.png">
+ <meta property ="og:description" content="<%= @meta_description %>" />
+ <meta property="fb:app_id"  content="125615304246694" /> 
+  
+<meta name="description" content="<%= @meta_description %>" />
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "slider" %>
+  <%= javascript_include_tag "script" %>
+  <%= javascript_include_tag "jquery" %>
+  <%= csrf_meta_tags %>
+<%= yield :head  %>   
+
+</head>
+<body>
+<%= render "shared/headerless"%>	
+	<%= yield %>
+<%= render "shared/footer" %> 
+  
+  <div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '125615304246694',                        // App ID from the app dashboard
+      channelUrl : 'www.umvox.com', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+</html>

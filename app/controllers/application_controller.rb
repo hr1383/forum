@@ -9,6 +9,9 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
+  def after_sign_in_path_for(resource)
+        dashboard_members_path
+  end
   def set_meta_tag
     
     @meta_title = "You're Voice, Our Fight!"

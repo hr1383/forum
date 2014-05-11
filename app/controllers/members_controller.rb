@@ -2,8 +2,6 @@ class MembersController < ApplicationController
 
 #   before_filter :authenticate1_user , :only =>[:dashboard]
 
-  layout 'headerless', :only => [:filldetails]
-  layout 'application', :except =>[:filldetails]
   def filldetails
     
     if session['access_token']
@@ -21,7 +19,7 @@ class MembersController < ApplicationController
     else
       @user = current_user
     end
-    return
+    render layout: "headerless"
   end
   
   def create
@@ -77,7 +75,6 @@ class MembersController < ApplicationController
     if(!session[:user].nil?)
       @totalclose = Post.latest_closed
       @totalopen = Post.latest_open
-      
     end
   end
   

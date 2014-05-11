@@ -22,9 +22,15 @@
             <ul class="nav">
                 <li><%= link_to 'What is Umvox', '/welcome/howitworks', class: 'what', title:"What is Umvox?"%></li>
 				<% if (user_signed_in? || !session[:user].nil?) %>
+					<% user = ""%>
+					<% if user_signed_in? %>
+						<% user = current_user %>
+					<% else %>	
+						<% user = session[:user] %>
+					<% end %>
 					<li><a href="/posts/new" class="create" title="Create a Vox">Create a Vox</a></li>
 					<li><%= link_to 'Resolve/View Voxes', '/members/dashboard' %></li>
-					<li><%= link_to session['user'].username, "/members/#{session['user'].id}" %></li>
+					<li><%= link_to user.username, "/members/#{user.id}" %></li>
 					<li> 
 						<%= form_tag("/users/sign_out",:method=>:DELETE, :class=>"log") do %>
 							<%= submit_tag "LogOut", :class=>"buttonLog" %>

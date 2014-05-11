@@ -1,0 +1,15 @@
+    <div class="header">
+        <div class="content">
+            <h1 class="logo"><%= link_to 'UmVox - You\'re Voice, Our Fight!',root_path %></h1>
+            <a class="searchButton" href="#" title="search">search UmVox</a>
+            <div class="searchBar">
+                <form accept-charset="UTF-8" action="/posts/search" method="get">
+                    <input class="search" id="search" name="search" placeholder="Type your search here..." type="text">
+                    <input class="buttonSearch" name="commit" type="submit" value="Search Vox">
+                </form>
+            </div>
+            <ul class="nav">
+                <li><%= link_to 'What is Umvox', '/welcome/howitworks', class: 'what', title:"What is Umvox?"%></li>
+            </ul>
+        </div>
+    </div>

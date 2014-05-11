@@ -4,6 +4,7 @@ class SessionsController < Devise::SessionsController
     super
     puts "Inside session new"
      session[:new_user] = false
+     session[:user] = current_user
   end
   
   def create
