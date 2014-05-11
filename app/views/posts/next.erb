@@ -1,21 +1,19 @@
-<div class="content">
-<div class="wrapper">
-  
-  
-<img src="/assets/thankyou.jpg" style="">
-<div style="text-align: right;"><%= render "/shared/tweet_button",:post =>@post %>   <div class="fb-like" data-href="https://umvox.com/<%=  session[:postid] %>" data-send="true" data-width="400" data-show-faces="true"></div></div>
-
-<br/>
-  <div class="independent">      <form accept-charset="UTF-8" action="/members/dashboard" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-        <div class="left_buttons">          
-          <%= button_tag "Continue", :class=>"left_step_button"%>
-        </div>
-      </form>
-  </div>  
-    </div>
-
-  </div>
-
-<div class="clr"></div>
-<%#*</div>%>
-<%#*</div>%>
+<div class="main">
+        <div class="pageHeader">
+            <h2 class="title"></h2>
+        </div><!-- .banner -->
+        <div class="content">
+            <ul class="inputs">
+              <li class="item">
+					<img src="/assets/thankyou.jpg" style="">
+			 </li>	
+			 <li class="item">
+				 <div style="text-align: right;"><%= render "/shared/tweet_button",:post =>@post %>   <div class="fb-like" data-href="https://umvox.com/<%=  session[:postid] %>" data-send="true" data-width="400" data-show-faces="true"></div></div>
+			</li>
+			<form accept-charset="UTF-8" action="/members/dashboard" method="get">
+				<li class="item">
+					 <%= button_tag "Continue", class: "buttonBlue"%>
+				 </li>
+			</form>
+        </div><!-- .content -->
+    </div><!-- .main -->

@@ -1,221 +1,85 @@
-﻿<div id="container" class="main_content">
-	 <% if ! session[:user] %>  	 
-    <div class="top_search_pannel">
-    	<div class="about_section">
-        	<p>UmVox (one voice, in Latin) is the ONLY proactive complaint site that helps you resolve product or customer service issues you've had with companies or organizations!
-            <br><br>
-            <b>Few simple steps :</b>
-            </p>
-        	<ol>
-            	<li>You have a customer service issue, a compliant, a question that you want heard. </li>
-				<li>You post your Vox(Compliment or Question) giving your voice a wider audience.</li>
-				<li>The UmVox team then reaches out to customer service team and follows up with that company to make sure your Vox is heard.</li>
-				<li>That company then responds and resloves your Vox and gain a satisfied customer.</li>
-				<li>You get back your wonderful life, case closed!</li>
-            </ol>
-        	
-        </div>
-        
-        <div class="signup_pannel">
-        	<h2 class="signup_title">Join It’s Free</h2>
-            <div class="signup_content1">
-            We can help you get your voice heard and your issues resolved.
-            </div>
-            
-            <div class="signup_btn_top"><a href="/users/sign_up"><span></span>SIGNUP</a></div>
-            
-            <div class="login_pannel">
-            If you are already registered 
-            	<a href="/users/sign_in">LOGIN</a>
-            </div>
-            
-        </div>
-        <% end %>
-        <div class="clear"></div>
-    	
-        <div class="search_pannel_M">
-        
-        	<span class="title_green">
-            Now give it a shot, its FREE!
-            </span>
-            <div class="search_form">
-            <%= form_tag('/posts/search',:method=>:get) do%>
-			<%= hidden_field_tag :type,"post" %>
-            <%= text_field_tag :search, params[:search] ,:class => "box_text", :placeholder => "You may find an existing vox regarding your case, become a backer!" %>
-            <%= submit_tag "Search Vox" %>
-                
-            <% end %>
-            </div>
-                  <div class="vox_search_M">
-            	<span>Your complaint, compliment, or question goes here...</span>
-                <a href="/posts/new" class="search_link_btn">Create Vox</a>           
-            
-            </div>
-            
-        </div>
-    	
-    </div>
-    <!-- html section-->
-
-			        
- </div>
- <div class="mid_section_M">
-		  <!-- left section start -->
-	<div class="mid_section_L">
-	
-		<div class="vox_section_M">
-
-			
-			<h2 class="title_sec">Resolved Vox</h2>
-			<div class="vox_list_main">
-				<ul>
-					<li>
-						<% if (!@totalclose.nil? and @totalclose.size >0) %>
-							<% @totalclose.each do |post| %>
-							<%= render "/layouts/displaydashboardpost", :post=>post %> 
-							<% end %>
-						<% end %> 
-					</li>
-				</ul>
-			</div>
-			<h2 class="title_sec">Latest Vox</h2>
-			<div class="vox_list_main">
-
-				<ul>
-					<li>
-						<% if (!@totalopen.nil? and @totalopen.size >0) %>
-						<% alreadydisplayed = true %>
-						<% @totalopen.each do |post| %>
-						<%= render "/layouts/displaydashboardpost", :post=>post %>
-						<% end %>
-						
-						<%  end %>
-					</li>
-				</ul>
-				<% if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
-					<h1 class="title">Latest Voxs</h1>
-					<% @totalopen.each do |post| %>
-
-					<%= render "displaydashboardpost", :post=>post %>            
-					<% end %>
-				<% end %>
-			</div>
-			
-		</div>  
-	</div>
-		  <!-- sidebar  section start -->
-		   <div class="mid_section_R">
-					<div class="fb_login_section_M">
-					<h2 class="title_sec">Review Facebook Check Ins</h2>
-					<div class="body">
-					  <% if @checkinarr.nil? %>
-							<p>No Facebook check in </p>
-							<% else %>
-							 <%# i=0 %>
-							
-							  <% @checkinarr.each do |loc| %>
-									<%# if i== 6 %>
-									   <%# break %>
-									<%# else %>
-									   <%# i=i+1 %>
-									<%# end %>
-						   
-							<%= link_to loc.name,"/posts/new?name=#{loc.name}&addr=#{loc.address}&zip=#{loc.zipcode}&city=#{loc.city}" %><br/>
-													<b> <%= loc.address %>, <%= loc.city %></b>
-							<br/>	
-							<% end %>
-							
-							<% end %>
-							
-						
-					</div>
-					</div>
-								 
-					<div class="vox_categories_M">
-					<h2 class="title_sec">Browse Vox Categories</h2>
-
-					<ul>
-					<% Category.all.each do |category| -%>
-
-							<li><%= link_to category.name,"/posts/browse?type=category&search=#{category.name}" %></li>
-						<% end %>
-					</ul>
-
-
-					</div>
-								  
-					 <%#*div class="vox_categories_M"%>
-					<%#*h2 class="title_sec">Quicks Stats</h2%>
-					<%#*<div class="body">%>
-						<%#*<div class="sb_quick_stats">%>
-						  <%#*<div class="row">%>
-							<%#*<span class="left">683,191</span>%>
-							<%#*<span class="right">Complaints Filed</span>%>
-						  <%#*</div>%>
-						  <%#*<div class="row">%>
-							<%#*<span class="left">29,293</span>%>
-							<%#*<span class="right">Complaints Resolved</span>%>
-						  <%#*</div>%>
-						  <%#*<div class="row">%>
-							<%#*<span class="left">31,312</span>%>
-							<%#*<span class="right">Compliments Given</span>%>
-						  <%#*</div>%>
-						  <%#*<div class="row">%>
-							<%#*<span class="left">2,231</span>%>
-							<%#*<span class="right">Questions Asked</span>%>
-						  <%#*</div>%>
-						  <%#*<div class="row">%>
-							<%#*<span class="left">1,982</span>%>
-							<%#*<span class="right">Questions Answered</span>%>
-						  <%#*</div>%>
-						<%#*</div>%>
-					<%#*</div>%>
-					<%#*</div>%>
-		  </div>
-		  
-	</div>
-		  <div class="clr"></div>
-
-		  <!-- ====== end index contant========== -->
-
-<!--  <%# if (!@totalclose.nil? and @totalclose.size >0) %>
-                                                                          <%#*<div class="main">%>
-                                                                                  <%#*<h1 class="title">RECENTLY RESOLVED VOX</h1>%>
-                                                                                  <%#*<div class="body">%>
-                                                                                          <%#*<div class="main_box">%>
-                                                                                            <%# @totalclose.each do |post| %>
-                                                                                                  <%#= render "/layouts/displaydashboardpost", :post=>post %> 
-                                                                                            <%# end %>
-                                                                                          <%#*</div>%>
-                                                                                  <%#*</div>%>
-                                                                          <%#*</div>%>
-                                                          <%# end %> 
-
-                                                          <%# if (!@totalopen.nil? and @totalopen.size >0) %>
-                                                              <%#*<div class="main">%>
-                                                                                          <%#*<h1 class="title">Latest Vox</h1>%>
-                                                                                          <%#*<div class="body">%>
-                                                                                                  <%#*<div class="main_box">%>
-                                                                                                          <%# alreadydisplayed = true %>
-                                                                                                          <%# @totalopen.each do |post| %>
-                                                                                                             <%#= render "/layouts/displaydashboardpost", :post=>post %>
-                                                                                                          <%# end %>
-                                                                                                  <%#*</div>%>
-                                                                                          <%#*</div>%>
-                                                              <%#*</div>%>
-                                                          <%#  end %>
-
-                                                          <%# if (!@totalopen.nil? and @totalopen.size >0 and alreadydisplayed == false) %>
-                                                                                  <%#*<div class="main">%>
-                                                                                          <%#*<h1 class="title">Latest Voxs</h1>%>
-                                                                                          <%#*<div class="body">%>
-                                                                                                  <%#*<div class="main_box">%>
-
-                                                                                                          <%# @totalopen.each do |post| %>
-
-                                                                                                          <%#= render "displaydashboardpost", :post=>post %>            
-                                                                                                          <%# end %>
-                                                                                               <%#*</div>%>
-                                                                                          <%#*</div>%>
-                                                                                  <%#*</div>%>           
-                                                          <%# end %> -->
+﻿<body id="dashboard">
+<div class="main">
+         <div class="pageHeader"></div><!-- .pageheader -->
+			<div class="main">
+	        	<div class="content">
+	            	<div class="column left">
+	                	<h3>My Recent Open Voxes</h3>
+						<ul class="voxes">
+							<% @totalopen.each do |post| %>
+							<li>
+								 <div class="vox open">
+									 <p class="type">Complaint</p>
+									 <p class="date"><%= post.created_at %></p>	
+									 <p class="text">
+										 <%= post.description.split(' ')[0,10].inject{|sum,word| sum + ' ' + word}  %>
+										 <a href="" class="read_more"> 
+									   	  <%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
+									   </a>
+								   </p> 
+								   <dl>
+	                             	  <dt>Category:</dt>
+									  <dd><%= post.location.category %></dd>
+									 
+								  </dl>
+								  <dl>
+									  <dt>Company:</dt>
+									  <dd><%= post.location.name %></dd>
+									  <dt>Posted By:</dt>
+									  <dd><%= User.find(post.user_id).username %></dd>
+								  </dl>
+								  <%= link_to "View","/posts/#{post.parameterize}",:class=>"buttonVox" %> 
+								  <!-- <%= link_to  "Edit","/posts/#{post.parameterize}/edit",:class=>"buttonVox" %>  -->
+								  <%= link_to "Resolve","/posts/resolvevox/#{post.parameterize}/",:class=>"buttonVox" %>
+	                             
+							  	</div>
+							  </li>
+							  <% end %>
+						  </ul>
+						  <!-- <a class="buttonView" href="" title="view more open Vox">view more</a> -->
+					  </div>
+					  <div class="column right">
+						  <h3>My Recent Resolved Voxes</h3>
+						  <ul class="voxes">
+							  <% @totalclose.each do |post| %>
+							  <li>
+							 	 <div class="vox resolved">
+							 		<p class="type">Complaint</p>
+									<p class="date"><%= post.created_at.to_date %></p>	
+									<p class="text">
+								   	 <%= post.description.split(' ')[0,10].inject{|sum,word| sum + ' ' + word}  %>
+								   </p> 
+								   <dl>
+									   <dt>Category:</dt>
+									   <dd><%= post.location.category %></dd>
+									   <dt>Company:</dt>
+									   <dd><%= post.location.name %></dd>
+								   </dl>
+	                         	  <dl>
+	                             	 <dt>Posted By:</dt>
+									 <dd><%= User.find(post.user_id).username %></dd>
+								 </dl>
+								  <%= link_to "Read More","/posts/#{post.parameterize}",:class=>"buttonVox" %> 
+							 </li>
+							 <% end %>
+						 </ul>
+					 </div>     
+		             <div class="categories">
+		                 <h3>Browse vox by categories</h3>
+		 				<% count = 0%>
+		 				<% Category.all.each do |category| %>
+		 					<%if count == 0%>
+		 						<ul class="items">
+		 					<% end %>
+		 					<% count+=1 %>		
+		 					<li><%= link_to category.name , "/browse?category=#{category.name}"%>
+		 					<%if count == 4 %>
+		 						</ul>
+		 						<% count = 0%>
+		 					<% end %>
+		 				<% end %>
+		             </div>
+				</div><!-- .content -->
+			</div><!-- .main -->
+		</div><!-- .main -->
+</body>

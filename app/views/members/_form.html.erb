@@ -1,66 +1,55 @@
-<h3>User Details</h3>
-<%= form_for @user,:url => { :action => "updateprofile" } do |f| %>
-   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="main">
+        <div class="pageHeader">
+            <h2 class="title">Member Details </h2>
+        </div><!-- .banner -->
+        <div class="content">
+					<%= form_for @user,:url => { :action => "updateprofile" },:html =>{:class=>"form"} do |f| %>
+					   <% if @user.errors.any? %>
+					    <div id="error_explanation">
+					      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+					      <ul>
+					      <% @user.errors.full_messages.each do |msg| %>
+					        <li><%= msg %></li>
+					      <% end %>
+					      </ul>
+					    </div>
+					  <% end %>
+						<ul class="inputs">
+							<li class="item">
+								<%= f.label :username %>
+								<%= f.text_field :username %>
+								<div id="error_username" style="display:none">Username is already taken.</div>
+							</li>	
+							<li class="item">
+								<%= f.label :firstname %>
+								<%= f.text_field :firstname %>
+							</li>
+							<li class="item">
+								<%= f.label :lastname %>
+								<%= f.text_field :lastname %>
+							</li>
+							<li class="item">
+								<%= f.label :email %>	
+								<%= f.text_field :email %>
+							</li>
+							<li class="item">
+								<%= f.label :city %>	
+								<%= f.text_field :country %>
+							</li>
+							<!-- <li class="item">
+								<%= f.check_box :subscribe  %>
+								<label>Get Notified about your Vox and latest updates.</label>
+							</li> -->
+						    <%= f.hidden_field :fbid  %>
+						    <%=  f.hidden_field :id %>
+							 <%= f.submit "Update Info", class: "buttonBlue" %>
+					<% end %>
+	 
 
-<table>
-  <tr>
-    <td><%= f.label :username %></td>
-    <td><%= f.text_field :username %></td>
-    <td><div id="error_username" style="display:none">Username is already taken.</div>
-</tr>
-<tr>
-  <td><%= f.label :firstname %></td>
-  <td><%= f.text_field :firstname %></td>
-</tr>
-<tr>
-  <td><%= f.label :lastname %></td>
-  <td><%= f.text_field :lastname %></td>
-</tr>
-<tr>
-  <td><%= f.label :email %></td>  
-  <td><%= f.text_field :email %></td>
-<tr>  
-  <td><%= f.label :city %></td>
-  <td><%= f.text_field :city %></td>
-</tr>
-<tr>
-  <td><%= f.label :country %></td>
-  <td><%= f.text_field :country %></td>
-</tr>
-<tr>
-  <%= @user.subscribe %>
-  <td><%= f.check_box :subscribe  %></td>
-  <td><label>Get Notified about your Vox and latest updates.</label></td>
-</tr>
-<%#*<tr>%>
-  <%#*<td><%= f.label :admin ></td>%>
-  <%#*<td><%= f.check_box :admin ></td>%>
-<%#*</tr>%>
-  <%= f.hidden_field :fbid  %>
-  <%=  f.hidden_field :id %>
- </table> 
-  <%= f.submit %>
-<% end %>
-<table>
-  <tr>
-  <td>Open Tickets</td>
-  <td><%= @totalopen  %></td>
-</tr>
-<tr>
-  <td>Close Tickets</td>
-  <td><%= @totalclosed %></td>
-  
-</table>
-  
+        </div><!-- .content -->
+    </div><!-- .main -->
+
+
   
  

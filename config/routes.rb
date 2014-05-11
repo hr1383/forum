@@ -6,10 +6,12 @@ Umvox::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  root :to => "members#dashboard"
+  root :to => "welcome#index"
   
   get '/terms', :to =>"welcome#terms"
     get '/privacy', :to =>"welcome#privacy"
+      get '/browse', :to =>"locations#browse"  
+  get '/contact', :to=>"welcome#contact"    
   resources :email_stats
   
   resources :company_emails

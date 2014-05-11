@@ -1,57 +1,53 @@
-<div class="header_title">
-    	<div class="container"><h2>Sign Up</h2></div>
-    </div>
 
-	
-<div id="sign_up" class="top_search_pannel bot_mag_main_20">
-<div class="sign_up_fill about_section">
- 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="main">
+        <div class="pageHeader">
+            <h2 class="title">Sign Up</h2>
+        </div><!-- .banner -->
+        <div class="content">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-   <div id="error_email"  style="display:none;color:#ff0000">
-                              This is the required field
-                             </div>
-  </div>
-  <div class="field"><%= f.label :password %><br />
-  <%= f.password_field :password %>
-   <div id="error_pwd"  style="display:none;color:#ff0000">
-  This is the required field
- </div>
-  </div>
-
-  <div class="field"><%= f.label :confirm_password %><br />
-  <%= f.password_field :password_confirmation %></div>
-  <div id="error_pwd_c"  style="display:none;color:#ff0000">
-    This is the required field
-   </div>
-  <% if Rails.env== 'production' %>
-  <%= recaptcha_tags %>
-  <%  end %>
-  <label>By clicking Sign Up, you agree to our <a href="/terms">Terms &Conditions</a> </label></br>
-<br/>  <div class="field"><%= f.submit "Sign up", :id=>"btn_sign_up" %></div>
-<% end %>
-  <%= render :partial => "devise/shared/links" %>
-</div>
-
-        <div class="signup_pannel">
-        	
+            <div class="sign_in_fb">
+                    <div id="signin_button">
+					    <%= form_tag ({:controller=> "welcome", :action=> "login"}) do %>
             
-            <div class="login_pannel" style="padding:0;">
-            If you are already registered 
-            	
-            </div><div class="clear"></div>
-            <div class="signup_btn_top"><a href="/users/sign_in"><span></span>LOGIN</a></div>
-            
-            
-        </div>
-        
-        <div class="clear"></div>
+					             <div id="signin_button">
+					                 <%= image_submit_tag  ("/assets/fb_login.png") %>
+					             </div>
+					         <% end %>                
+                    </div>
+              </div>
 
+            <p class="or">or</p>
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html =>{:class=>"form"} ) do |f| %>
+			<%= devise_error_messages! %>
+            <ul class="inputs">
+              <li class="item">
+					<%= f.label :email %>
+					<%= f.email_field :email, :autofocus => true %>
+			 </li>	
+			 <li class="item">
+				 <%= f.label :password %>
+				<%= f.password_field :password %>
+			</li>
+			<li>
+				<%= f.label :confirm_password %>
+				  <%= f.password_field :password_confirmation %>
+			</li>
+			<li>
+			    <% if Rails.env== 'production' %>
+			    	<%= recaptcha_tags %>
+			    <%  end %>
+			</li>
+			<li class="item">
+				  <label>By clicking Sign Up, you agree to our <a href="/terms">Terms &Conditions</a> </label>
+			</li>
+				<label>&nbsp;</label>
+				<%= f.submit "Sign Up" , class: "buttonBlue"%>
+			</li>	
+			<% end %>
+				
+                <p><%= render "devise/shared/links" %></p>
+           
 
-
-</div>
+        </div><!-- .content -->
+    </div><!-- .main -->
 

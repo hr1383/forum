@@ -2,7 +2,8 @@ class MembersController < ApplicationController
 
 #   before_filter :authenticate1_user , :only =>[:dashboard]
 
-  
+  layout 'headerless', :only => [:filldetails]
+  layout 'application', :except =>[:filldetails]
   def filldetails
     
     if session['access_token']
@@ -42,13 +43,9 @@ class MembersController < ApplicationController
     if !session['access_token'].nil?
       @graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  @graph.get_object("me")
-      puts "inside"
-      puts userinfo
       fb_id=userinfo['id']
       if fb_id
        userObj = User.find_by_fbid(fb_id.to_s) 
-       puts userObj
-       puts "------------"
         if userObj.nil?
           redirect_to '/members/filldetails'
         else
@@ -74,29 +71,13 @@ class MembersController < ApplicationController
   end
   
   def dashboard
-    @checkinarr = Array.new
-    if (session["access_token"])
-        graph = Koala::Facebook::API.new(session["access_token"])
-        checkinlist = graph.get_connections('me','checkins')
-        unless checkinlist.nil?
-          checkinlist.each do |checkin|
-            place = checkin["place"]
-            loc = Location.new
-            loc.name = place["name"]
-            location = place["location"]
-            unless location.nil?
-              loc.city = location["city"]
-              loc.address = location["street"]
-              loc.zipcode = location["zip"]
-            end
-            @checkinarr << loc
-          end
-        end
-    end
-    @totalclose = Post.latest_closed
-    @totalopen = Post.latest_open
     if session[:user].nil?
       session[:user] = current_user
+    end
+    if(!session[:user].nil?)
+      @totalclose = Post.latest_closed
+      @totalopen = Post.latest_open
+      
     end
   end
   

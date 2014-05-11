@@ -1,108 +1,65 @@
-<p id="notice"><%= notice %></p>
-
-<%= render "displaypost", :post=>@post %>         
-
-<div id="main">
-<div class="content">
-	<div class="wrapper">
-		  <div class="left_section_part flt">
-		       <div class="main">
-                         <%#*<div class="body">%>
-                           <%#*<div class="main_box">%>
-                                <div class="comment_entry">
-                                <div class="padder">
-                               <div class="btm_line">
-                                 <% unless session[:user] == nil %>
-
-    <%= form_for [@post,Comment.new] , :remote=> true do |f| %>
-         <div class="field">                           
-          <%= f.text_area :comment, :cols=>'70', :rows=>"5" %>
-         </div>  
-          <p><%= f.check_box  :is_backer %>
-             <%= label :is_backer, "Backer" %>
-              <%= f.submit 'Add Comment' %>
-            </p>
-    <% end %>
- <% else %>         
-  
-    <!-- <%= form_for [@post,Comment.new] , :remote=> true do |f| %>
-    <table>
-        <tr><td>
-             Name:
-          </td><td>
-             <%= f.text_field :name %>
-          </td>
-        </tr>
-        <tr><td>
-            Email:
-          </td><td>
-             <%= f.text_field :email %>
-          </td>
-        </tr>
-        <tr><td>
-            Comment:
-          </td>
-          <td>
-              <%= f.text_field :comment %>
-          </td>
-        </tr>
-        <tr>
-          <td>
-                 <%= label :is_backer, "Backer" %>
-          </td>
-          <td><%= f.check_box  :is_backer %>
-          </td>
-        </tr>
-        <tr><td>
-                  <%= f.submit 'Add Comment' %>
-          </td>
-       </tr>         
-      </table> 
-     <% end %>  
-            <h4>Or</h4>       
-           <%= link_to 'Sign In' , '/users/sign_in' %>  -->
-<% end %> 
-            <br/></br>
-<div id="comments">
-  <%= render :partial => @post.comments, :locals => { :list => true } %>
-</div>            
-                                </div>
-                               </div>
-                      </div>  
-                    </div>
-                  </div>
-		  
-			  <!-- <div class="brown_box">
-				<div class="head">
-				  <h2>Backers <% if @backer >0 %> (<%=@backer %>)  <%  end %> </h2>
-				</div>
-				<div class="body">
-  					<div class="sb_quick_stats">
-                                          <% if @backername.size > 0 %>
-                                            <% @backername.each do |backer| %>
-                                          <div class="row">
-                                              <%= backer %>
-                                          </div>
-                                            <% end %>
-                                          <% else %>
-                                          <div class="row">
-                                              Be the first one to back.
-                                          </div>
-                                          <%end %>
+    <div class="main">
+        <div class="pageHeader"></div>
+        <div class="content">
+            <div class="column wide left">
+                <div class="complaint">
+                    <h2><%= @post.question%></h2>
+                    <p><%= @post.description %></p>
+                </div>
+				<% unless @post.resolve_vox.nil?%>
+					<div class="complaintComment">
+				
+                    <h3>Yay , Umvox , Helped us resolve.</h3>
+                    <p><%= @post.resolve_vox%></p>
 					</div>
-				</div>
-			  </div> -->
-		  </div>
-		  <div class="clr"></div>
+				<% end %>		
+            </div>
+            <div class="column thin right">
+                <div class="complaintInfo">
+                    <dl>
+                        <dt>Type:</dt>
+                        <dd>Complaint</dd>
+                        <dt>Status:</dt>
+                        <dd class="break"><%= @post.status %></dd>
 
-</div>
+                        <dt>Category:</dt>
+                        <dd><%= @post.location.category%></dd>
+                        <dt>Company:</dt>
+                        <dd class="break"><%= @post.location.name %></dd>
 
-</div>
-<div class="clear_footer"></div>
-</div>
-</div>
-</div>
+                        <dt>Looking for:</dt>
+                        <dd>
+								<% str = '' %>
+								<% Compensation.all.each do |compensation| -%>
+									<% if @post.compensation.include?(compensation.name.to_s) -%>
+                                    	<% str+= compensation.name.to_s+ " & " %>
+                                    <% end %>
+                                <% end %>
+                                <%= label_tag :compensation, str[0..-3] -%>
+						</dd>
+                        <dt>Scenario:</dt>
+                        <dd class="break">
+						<% str = '' %>
+						<% Scenarios.all.each do |scenario| -%>
+							<% if @post.scenario.include?(scenario.id.to_s) -%>
+                            	<% str+= scenario.name.to_s+ " & " %>
+                            <% end %>
+                        <% end %>
+                        <%= label_tag :scenario, str[0..-3] -%>
+						</dd>
 
+                        <dt>Posted By:</dt>
+                        <dd><%= User.find(@post.user_id).username %> </dd>
+                        <dt>Date:</dt>
+                        <dd class="break"><%= @post.created_at.to_date%></dd>
+                    </dl>
+                    <!-- <a class="buttonBlue left" href="#" title="back this vox">back this vox</a> -->
+
+                </div>
+            </div>
+        </div><!-- .content -->
+    </div><!-- .main -->
+	
 
 
 

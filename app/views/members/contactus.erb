@@ -1,34 +1,68 @@
+<body id="contact">
 
-<div class="header_title">
-    	<div class="container"><h2>Contact Us</h2></div>
-    </div>
+    <div class="header">
+        <div class="content">
+            <h1 class="logo"><a href="index.html" title="UmVox &ndash; You're Voice, Our Fight!">UmVox &ndash; You're Voice, Our Fight!</a></h1>
+            <a class="searchButton" href="#" title="search">search UmVox</a>
+            <div class="searchBar">
+                <form accept-charset="UTF-8" action="/posts/search" method="get">
+                    <input class="search" id="search" name="search" placeholder="Type your search here..." type="text">
+                    <input class="buttonSearch" name="commit" type="submit" value="Search Vox">
+                </form>
+            </div>
+            <ul class="log">
+                <li><a class="buttonLog" href="login.html" title="login">login</a></li>
+                <li><a class="buttonSign" href="signup.html" title="signup">signup</a></li>
+            </ul>
+            <ul class="nav">
+                <li><a href="what.html" class="what" title="What is UmVox?">What is UmVox?</a></li>
+                <li><a href="view.html" class="view" title="View Vox">View Vox</a></li>
+                <li><a href="create.html" class="create" title="Create a Vox">Create a Vox</a></li>
+                <li><a href="myvox.html" class="myVox" title="My Vox">My Vox</a></li>
+            </ul>
+        </div>
+    </div><!-- .header -->
 
-	
-<div id="sign_up" class="top_search_pannel1 bot_mag_main_20">
-<div class="sign_up_fill about_section">
+    <div class="main">
+        <div class="pageHeader">
+            <h2 class="title">login</h2>
+        </div><!-- .banner -->
+        <div class="content">
 
-  <%= form_tag ("support") do  %>
+            <%= form_tag ("support", :html=>{:class=>"form"}) do  %>
+                <ul class="inputs">
+                    <li class="item">
+				        <%= label_tag 'name'  %>
+				        <%= text_field_tag 'name' %>
+                    </li>
+                    <li class="item">
+				        <%= label_tag 'email' %>
+				        <%= text_field_tag 'email' %>
+                    </li>
+                    <li class="item">
+						<%= label_tag 'subject' %>
+						      <%= text_field_tag 'subject' %>
+                    </li>
+                    <li class="item">
+			         <%= label_tag 'message' %>
+			         <%= text_area_tag  'message', nil, :rows => 10, :cols =>40 %>
+                    </li>
+                    <li class="item">
+                        <label for="">facebook</label>
+                        <input type="text" id="" name="" placeholder="" value="">
+                    </li>
+                    <li class="item">
+                        <label for="">twitter</label>
+                        <input type="text" id="" name="" placeholder="" value="">
+                    </li>
+                    <li class="item">
+                        <label for="">message</label>
+                        <textarea id="" name="" placeholder="" value=""></textarea>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+					<%= submit_tag 'Send' , :class=>"buttonBlue"%>
+				<% end %>
 
-  <div class="field">
-      <%= label_tag 'name'  %><br />
-      <%= text_field_tag 'name' %>
-    </div>
-    <div class="field">
-      <%= label_tag 'email' %><br />
-      <%= text_field_tag 'email' %>
-    </div>
-  <div class="field">
-      <%= label_tag 'subject' %><br />
-      <%= text_field_tag 'subject' %>
-    </div>
-  <div class="field">
-      <%= label_tag 'message' %><br />
-      <%= text_area_tag  'message', nil, :rows => 10, :cols =>40 %>
-    </div>
-
-  <div>
-    <%= submit_tag 'Send' , :class=>"continues_btn"%>
-  </div>
-  <% end %>
-</div>
-</div>  
+        </div><!-- .content -->
+    </div><!-- .main -->

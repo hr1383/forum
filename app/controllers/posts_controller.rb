@@ -98,8 +98,6 @@ end
   # POST /posts
   # POST /posts.json
   def create
-    
-    params[:post][:posttype] ='Complaint'
     @post = Post.new(params[:post])
     @post.parameterize = @post.question.parameterize
     
@@ -156,9 +154,7 @@ end
       @search = Post.search do
         fulltext params[:search]
       end
-       @totalclose  = @search.results
-      
-      render "/members/dashboard"
+       @voxes  = @search.results
   end
   
 

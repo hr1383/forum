@@ -1,228 +1,111 @@
-<%= form_for @post,:html =>{:multipart => true} do |f| %>
-  <div id="divstep1" class="create_vox_form cvf_step1">     
-     <%#*<div class="field">%>
-        <%#*<b> <%= f.hidden_field :company,:id=>"post_company" %>
-      <%#*</div>%>
-	  <b><label style="padding:0px;">We are here to hear your concerns !!</label></b>
-	  
-		<%=f.hidden_field :status, :value=>"Open" %>
-    <div class="field">
-        <%= f.label :question,"Title" %>
-        <%= f.text_field :question,:class=>"inp_text", :placeholder=>"Create some catchy title." %>
-        <div id="error_question"  style="display:none;color:#ff0000">
-          This is the required field
-        </div>
-      <div class="field">
-        <%= f.label :description %>
-        <%= f.text_area :description,:class=>"inp_area", :placeholder=>"Please be as detailed as possible about your situation, but be sure to leave out any personal information since your experience will be visible to everyone." %>
-         <div id="error_description"  style="display:none;color:#ff0000">
-          This is the required field
-        </div>
-      </div>
-      <div class="field">
-         <% if !@post.scenario.nil? -%>
-            <div class="full"><%= f.label :scenario %></div>
-            <% Scenarios.all.each do |scenario| -%>
-            <span class="check"><%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
-            <%= label_tag :scenario, scenario.name -%></span>
-          <% end %>
-       <% end %> 
-		<div class="clr"></div>
-      <div id="error_scenario"  style="display:none;color:#ff0000">
-                          This is the required field
-                        </div>          
-      </div>
-      <div class="field">
-         <% if !@post.compensation.nil? -%>
-           <div class="full"><label>What are you looking for?</label></div>
-           <% Compensation.all.each do |compensation| -%>
-            <span class="check"><%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
-            <%= label_tag :compensation, compensation.name -%></span>
-            <% end %>
-        <% end %>
-		<div class="clr"></div>
-        <div id="error_compensation"  style="display:none;color:#ff0000">
-             This is the required field
-          </div>        
-      </div>
-<%#*end of step1%>
-         <p><b>
-         </p>
-	<div class="buttons">
-          <%=button_tag "Continue to next step", :id=>"btnStep1", :class=>"step_button", :remote=>"true" %>
-        </div>
-  <div class="clr"></div>
-</div>
+<body id="create">
+    <div class="main">
+        <div class="pageHeader">
+            <h2 class="title">Create a new Vox</h2>
+        </div><!-- .banner -->
+        <div class="content">
+			<%= form_for @post,:html =>{:multipart => true, :class => "form"} do |f| %>
+            <%=f.hidden_field :status, :value=>"Open" %>
+			<%= f.hidden_field :user_id  %>
+                <div class="stageOne">
+                    <ul class="inputs">
+                        <li class="item">
+					        <%= f.label :question,"Title" %>
+					        <%= f.text_field :question,:class=>"inp_text", :placeholder=>"Create some catchy title." %>
+                        </li>
+                        <li class="item">
+					        <%= f.label :description %>
+					        <%= f.text_area :description,:class=>"inp_area", :placeholder=>"Please be as detailed as possible about your situation, but be sure to leave out any personal information since your experience will be visible to everyone." %>
+                        </li>
+                    </ul>
+                    <fieldset>
+                        <legend>Scenario *</legend>
+                        <ul class="checkboxes clear">
+				              <% Scenarios.all.each do |scenario| -%>
+                              <li class="check">
+							  <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
+				              <%= label_tag :scenario, scenario.name -%></span>
+				            <% end %>
+                            </li>
+                         </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>What are you looking for? *</legend>
+                        <ul class="checkboxes clear">
+				            <% Compensation.all.each do |compensation| -%>
+				             <li class="check"><%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
+				             <%= label_tag :compensation, compensation.name -%></span>
+				             <% end %>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- <button class="buttonBlue">next step</button> -->
+                    <img src="/assets/img/progress_1.png" alt="step 1" class"stages"  /> 
+                </ul>
+                </div><!-- .stageOne -->
 
-<div id="divstep2" class="create_vox_form cvf_step2" style="display:none;">
-<div class="form_header" style="border:0px; margin:0px;">
-<ul class="steps flr">
-	<li class="active"><a href="#">Step 1</a></li>
-	<li class="arrow"></li>
-	<li class="active"><a href="#">Step 2</a></li>
-	<li class="arrow grey"></li>
-	<li><a href="#">Step 3</a></li>
-</ul>
-</div>
-<h2>This vox is for...</h2>
-  <% if @haslocation  %>
-<div id="locationPresent" ><b>
-  <%= @post.location.name %><br/>
-  <!-- <%=@post.location.address %><br/> -->
-  <%=@post.location.city %><br/> 
-  <!-- <%=@post.location.zipcode %></b> -->
-  <%= f.fields_for :location do|location_form|  %>
-    <!-- <%= location_form.hidden_field :address , :value => @post.location.address %> -->
-  <%= location_form.hidden_field :name , :value => @post.location.name %>
-  <%= location_form.hidden_field :city , :value => @post.location.city %>
-  <!-- <%= location_form.hidden_field :zipcode , :value => @post.location.zipcode %> -->
-  <div class="field">
-                            <label>Category</label> 
-                            <%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %> 
-                    </div>
-  <% end %>
-</div>
-  <% else %>
-     <div class="grey_box">
-      <div id="newAddressdiv">
-        <!-- <p>Click here for online business, service or organization ?  <%=  check_box :new,:address  %></p>
-    -->        
-      </div>      
-                    <p>In order to inform the right personnel, please make sure the contact info is correct.</p><br>
-                    <%= f.fields_for :location do|location_form|  %>
-
-                    <div class="field">
-                            <label>Name</label> 
-                            <%= location_form.text_field :name, :placeholder=>'Company Name'%> 
-                            <div id="error_loc_name"  style="display:none;color:#ff0000">
-                              This is the required field
-                            </div>
-                    </div>
-                        <!-- <div class="field">
-                                <label>Address</label> 
-                                <%= location_form.text_field  :address%> 
-                        </div> -->
-					<div id="notonline">		
-                        <div class="field">
-                                <label>City</label> 
-                                <%= location_form.text_field  :city, :placeholder=>'Company City'%>
-                                 <div id="error_loc_city"  style="display:none;color:#ff0000">
-                                  This is the required field
-                                 </div>
-                        </div>
-						</div>
-                        <!-- <div class="field">
-                                <label>Zipcode</label> 
-                                <%= location_form.text_field  :zipcode%> 
-                        </div> -->
-                   
-                    <div class="field">
-                            <label>Email</label> 
+                <div class="stageTwo">
+                    <p class="txt"><strong>In order to inform the right personnel, please make sure the contact info is correct.</strong></p>
+					 <%= f.fields_for :location do|location_form|  %>
+                    <ul class="inputs">
+                        <li class="item">
+                            <label for="">Name</label>
+                            <%= location_form.text_field :name, :placeholder=>'Company Name'%>
+                        </li>
+                        <li class="item">
+                            <label for="">City</label>
+							<%= location_form.text_field  :city, :placeholder=>'Company City'%>
+                        </li>
+                        <li class="item">
+                            <label for="">Email</label>
                             <%= location_form.text_field  :email, :placeholder=>'Company Email'%> 
-                            <div id="error_loc_email"  style="display:none;color:#ff0000">
-                              This is the required field
-                            </div>
-                    </div>
-                    <div class="field">
-                            <label>Website</label> 
+                        </li>
+                        <li class="item">
+                            <label for="">Website</label>
                             <%= location_form.text_field :website, :placeholder=>'Company Email'%> 
-                            <div id="error_loc_website"  style="display:none;color:#ff0000">
-                              This is the required field
+                        </li>
+                        <li class="item">
+                            <label for="select">Category</label>
+                            <div class="select-wrap">
+								<%= location_form.select :category, options_from_collection_for_select(Category.all, "name", "name") ,{},{:class=>"select"}%> 
                             </div>
-                    </div>
-                    <div class="field">
-                            <label>Category</label> 
-                          
-							 <%= location_form.select :category, options_from_collection_for_select(@category, "name", "name") %>  
-                    </div>
-                    <% end %>
-            </div>
-  
-  <%#end of unless%>
- <% end %> 
-  <%#*<div id="locationform"></div>%>
-  <%#*<div id="locations">%>
-  <%#*</div>%>
-  <div class="buttons">
-	  <%=button_tag "Continue to next step", :id=>"btnStep2", :class=>"step_button", :remote=>"true" %>
-	</div>
-	<div class="clr"></div>
-<%#*end of step2%>
-</div>
-<div id="divstep3" class="create_vox_form cvf_step3" style="display:none;">
-<div class="form_header" style="border:0px; margin:0px;">
-<ul class="steps flr">
-	<li class="active"><a href="#">Step 1</a></li>
-	<li class="arrow"></li>
-	<li class="active"><a href="#">Step 2</a></li>
-	<li class="arrow grey"></li>
-	<li class="active"><a href="#">Step 3</a></li>
-</ul>
-</div>
-<h2>Supporting Info</h2>
-<br>
-<p>To help the Umvox resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behalf, please fill this section out as thoroughly as possible.</p>
-<br>
+                        </li>
+                    </ul>
+					<% end %>
+                    <!-- <button class="buttonBlue left">previous step</button>
+                    <button class="buttonBlue right">next step</button> -->
+                    <img class"stages" src="/assets/img/progress_2.png" alt="step 2" /> 
+                </div><!-- .stageTwo -->
 
-<p>Note: Any information you enter in this area is secure and will only be shared with Umvox.</p><br>
+                <div class="stageThree">
+                    <p class="txt">To help the Umvox resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behalf, please fill this section out as thoroughly as possible.</p>
 
+                    <p class="txt">Note: Any information you enter in this area is secure and will only be shared with Umvox.</p>
+					<%= f.fields_for :detailinfo do |detail_form| %>
+							<ul class="inputs">
+                        		<li class="item">
+                        			<%= detail_form.text_area :description  %>
+								</li>
+							</ul>
+							<p class="txt">You may upload as <strong>3 images</strong> needed as long as the total size of all images is less than 5MB.</p>
+							<p class="txt">File type: <strong>.jpg, .jpeg, .gif, .png</strong></p>
+							<%= f.fields_for :assets do |asset_fields| %>
+				        		<% if asset_fields.object.new_record? %>
+				                    <p><%= asset_fields.file_field :image %></p>
+								<% end %>
+							<% end %>
+					<% end %>
+                    <p class="txt">By clicking Create Vox, you agree to our <a href="termsandconditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
 
-<div class="account">
-<%= f.fields_for :detailinfo do |detail_form| %>
+                    <!-- <button class="buttonBlue left">previous step</button>
+                    <input type="submit" value="create Vox" class="buttonBlue right"> -->
+                    <img class"stages" src="/assets/img/progress_3.png" alt="final step" />
+					<%= f.submit "Create Vox",:class=>"buttonBlue" %>
+                </div><!-- .stageThree -->
+				<% end %>
+        </div><!-- .content -->
+    </div><!-- .main -->
+</body>
 
-<div class="field">
-<%#*<div class="full"><label>Enter other details which you want to share with company and not have public</label></div>%>
-<div class="inp_details">
-  <%= detail_form.text_area :description  %>
-</div>  
-</div>  
-<% end  %>
-</div>
-<br>
-<h2>File Upload</h2>
-<br>
-<h4>Images</h4>
-<p>You may upload as 3 images needed as long as the total size of all images is less than 5MB.<br>
-File type: .jpg, .jpeg, .gif, .png</p><br>
-
-  <%= f.fields_for :assets do |asset_fields| %>
-          <% if asset_fields.object.new_record? %>
-                  <p><%= asset_fields.file_field :image %></p>
-          <% end %>
-  <% end %>
-  <br>
-  
-  <%#*<h4>Show Old Images</h4>%>
-
-  <%= f.fields_for :assets do |asset_fields| %>
-
-          <% unless asset_fields.object.new_record? %>
-                  <%= link_to image_tag(asset_fields.object.image.url(:thumb)), 
-                                                                  asset_fields.object.image.url(:original) %>
-
-          <% end %>
-  <% end %>
-  
-<%= f.hidden_field :user_id  %>
-
-<%#= f.fields_for :location do|location_form|  %>
-  <%#= location_form.hidden_field :name %>
-  <%#= location_form.hidden_field :address %>
-  <%#= location_form.hidden_field :tel %>
-  <%#= location_form.hidden_field :city %>
-  <%#= location_form.hidden_field :category %>
-  <%#= location_form.hidden_field :zipcode %>
-  <%#= location_form.hidden_field :email %>
-  <%#= location_form.hidden_field :website %>
-  
-<%# end %>
- <label>By clicking Create Vox, you agree to our <a href="/terms">Terms & Conditions</a> </label></br>
-  <div class="actions buttons">
-    <%= f.submit "Create Vox" %>
-  </div>
-  <div class="clr"></div>
-</div> 
-<% end %>
-</div>
   
  

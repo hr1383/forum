@@ -27,4 +27,7 @@ class Post < ActiveRecord::Base
   def urlValue
      Facebook::CALLBACK_URL+"/"+parameterize.to_s
   end
+  def self.testimonials
+    where("resolve_vox!=?","")
+  end
 end

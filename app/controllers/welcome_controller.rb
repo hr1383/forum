@@ -2,9 +2,14 @@ class WelcomeController < ApplicationController
 
 #layout "welcome"
 def index
-    if session['user']
-      redirect_to "/members/dashboard"
-    end
+  if session['user']
+    redirect_to "/members/dashboard"
+  end
+  @totalopen = Post.latest_open
+  @totalclose = Post.latest_closed
+  @testimonials = Post.testimonials
+  @isSearch = false
+  
 end
 
 def logout
@@ -31,4 +36,7 @@ end
 
 def privacy
 end  
+
+def contact
+end
 end

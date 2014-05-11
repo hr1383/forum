@@ -1,0 +1,138 @@
+<body id="home">
+
+    
+    <div class="splash">
+        <div class="content">
+            <h2 class="branding">UmVox is the proactive site that helps resolve complaints, gripes, scams, and ripoffs.</h2>
+        </div>
+    </div><!-- .splash -->
+	<% if !@isSearch %>
+    	<div class="intro">
+        	<div class="content">
+            	<h3>Welcome to UmVox</h3>
+				<p class="txt">UmVox (one voice, in Latin) is the ONLY proactive complaint site that helps you resolve product or customer service issues you've had with companies  or organizations! We can help you get your voice heard and your issues resolved.</p>
+				<div class="cta">
+                	<p>It’s free to join</p>
+					<a class="buttonBlue right" href="/users/sign_up" title="sign up">Sign up here</a>
+				</div>
+			</div>
+		</div><!-- .intro -->
+		<div class="howTo">
+        	<div class="content">
+            	<h3>How it works ?</h3>
+				<div class="col">
+                	<img src="/assets/img/howto_1.png" alt="Do you have a complaint?" />
+				</div>
+				<div class="col">
+                <img src="/assets/img/howto_2.png" alt="Post your Vox (complaint) to the UmVox team" />
+            </div>
+				<div class="col">
+                	<img src="/assets/img/howto_3.png" alt="The UmVox team make sure your Vox is heard" />
+				</div>
+			</div>
+		</div><!-- .howTo -->
+	<% end %>
+    <div class="main">
+        <div class="content">
+            <div class="column left">
+                <h3>Recent Open Voxes</h3>
+                <ul class="voxes">
+					<% @totalopen.each do |post| %>
+					<li>
+						 <div class="vox open">
+						 <p class="type">Complaint</p>
+						 <p class="date"><%= post.created_at.to_date %></p>	
+						 <p class="text">
+							   <%= post.description.split(' ')[0,10].inject{|sum,word| sum + ' ' + word}  %>
+							   <a href="" class="read_more"> 
+								   <%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
+							   </a>
+						 </p> 
+                         <dl>
+                             <dt>Category:</dt>
+                             <dd><%= post.location.category %></dd>
+                             <dt>Company:</dt>
+                             <dd><%= post.location.name %></dd>
+                         </dl>
+                         <dl>
+                             <dt>Posted By:</dt>
+                             <dd><%= User.find(post.user_id).username %></dd>
+                         </dl>
+					</li>
+					<% end %>
+                </ul>
+                <!-- <a class="buttonView" href="" title="view more open Vox">view more</a> -->
+            </div>
+            <div class="column right">
+                <h3>Recent Resolved Vox</h3>
+                <ul class="voxes">
+					<% @totalclose.each do |post| %>
+					<li>
+						 <div class="vox resolved">
+						 <p class="type">Complaint</p>
+						 <p class="date"><%= post.created_at %></p>	
+						 <p class="text">
+							   <%= post.description.split(' ')[0,10].inject{|sum,word| sum + ' ' + word}  %>
+							   <a href="" class="read_more"> 
+								   <%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
+							   </a>
+						 </p> 
+                         <dl>
+                             <dt>Category:</dt>
+                             <dd><%= post.location.category %></dd>
+                             <dt>Company:</dt>
+                             <dd><%= post.location.name %></dd>
+                         </dl>
+                         <dl>
+                             <dt>Posted By:</dt>
+                             <dd><%= User.find(post.user_id).username %></dd>
+                         </dl>
+					</li>
+					<% end %>
+                </ul>
+                <!-- <a class="buttonView" href="" title="view more resolved Vox">view more</a> -->
+            </div>     
+
+            <div class="categories">
+                <h3>Browse vox by categories</h3>
+				<% count = 0%>
+				<% Category.all.each do |category| %>
+					<%if count == 0%>
+						<ul class="items">
+					<% end %>
+					<% count+=1 %>		
+					<li><%= link_to category.name , "/browse?category=#{category.name}"%>
+					<%if count == 4 %>
+						</ul>
+						<% count = 0%>
+					<% end %>
+				<% end %>
+            </div>
+
+        </div><!-- .content -->
+    </div><!-- .main -->
+    
+    <div class="testimonials">
+        <div class="content">
+            <h3>testimonials</h3>
+            <div class="carouselOuter">
+                <div id="carousel">
+                    <div id="scroller">
+                        <ul>
+							<% @testimonials.each do |testi| %>
+	                            <li>
+	                                <p>"<%= testi.resolve_vox %>"</p>
+	                                <p class="name">&ndash; <%= User.find(testi.user_id).firstname %> &nbsp;<%= User.find(testi.user_id).lastname %></p>
+	                            </li>
+							<% end %>
+                        </ul>
+                    </div>
+                </div><!-- .carousel -->
+                <div id="prev" onclick="myScroll.scrollToPage('prev', 0);return false">previous</div>
+                <div id="next" onclick="myScroll.scrollToPage('next', 0);return false">next</div>
+            </div><!-- .carouselOuter -->
+        </div><!-- .content -->
+    </div><!-- .testimonials -->
+    <div class="banner">
+        <h3 class="slogan">Join the users getting their voices heard.</h3>
+    </div><!-- .banner -->

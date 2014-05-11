@@ -1,70 +1,37 @@
-<div id="main">
-<div id="header">
-<div class="wrapper relative">
-<div class="container">
-<div class="logo">
-	<a href="/members/dashboard"><img src="/assets/logo1.png" alt="" title="UmVox" /></a>
-</div>
+    <div class="header">
+        <div class="content">
+            <h1 class="logo"><%= link_to 'UmVox - You\'re Voice, Our Fight!',root_path %></h1>
+            <a class="searchButton" href="#" title="search">search UmVox</a>
+            <div class="searchBar">
+                <form accept-charset="UTF-8" action="/posts/search" method="get">
+                    <input class="search" id="search" name="search" placeholder="Type your search here..." type="text">
+                    <input class="buttonSearch" name="commit" type="submit" value="Search Vox">
+                </form>
+            </div>
+            
+				<% if (user_signed_in? || !session[:user].nil?) %>
+					<ul class="log">    	
+					</ul>	
+                <% else %>
+					<ul class="log">
+						<li><a class="buttonLog" href="/users/sign_in" title="login">Login</a></li>
+						<li><a class="buttonSign" href="/users/sign_up" title="signup">Signup</a></li>
+					</ul>
+				<% end %>
 
-<nav class="nav">
-<ul>
-      <li><%= link_to 'Home', '/members/dashboard' %> </li>
-	  <li> <%= link_to 'What is Umvox', '/welcome/howitworks?utf8=%E2%9C%93&commit=What+is+Umvox'%></li>
-      <% if (!current_user.nil? || !session[:user].nil?) %>
-         
-          <li> <%= link_to 'Create Vox', '/posts/new' %></li>  
-          <% end %>
-		  
-    <!-- <li><%= link_to 'Browse Vox', '/posts/browse?utf8=%E2%9C%93&commit=Browse+Vox' %></li>
-   -->   
-	 <% if (!current_user.nil? || !session[:user].nil?) %>  
-      <li><%= link_to 'Resolve/View Voxes', '/posts?utf8=?&commit=My+Umvox' %></li>
-     <% end %> 
-    
-      <%#= form_tag("/posts", :method=>:get) do %>
-        <%#= hidden_field_tag "all", 'true'%>  
-        <%#= submit_tag "All Umvox" %>
-      <%# end %>
-      
-	  
-	  <!-- <% if session['user'].present? %>
-		<li><%= link_to 'Dashboard', '/members/dashboard' %></li>
-	  <% end %> -->
-    
-	<% if (session[':user'].present? && session[:user].admin.present?) %>
-		<li><%= link_to 'Send email', '/email/view' %></li>
-    <% end %>
-   </ul>
-	</nav>
-	
-	<div class="menu_2">
-      <% if session['user'] %>
-         <%= link_to session['user'].username, "/members/#{session['user'].id}" %>
-      <% end %>
-    
-    <% if !session['user'] %>
-            
-         <%# form_tag("/users/sign_in", :method=>:get) do %>
-            
-             <%#<div id="signin_button">%>
-                 <%# submit_tag "Sign In" %>
-           <%# </div>%>
-        <%# end %>
-       <% else %>
-        
-          <%= form_tag("/users/sign_out",:method=>:DELETE) do %>
-            <%= submit_tag "(LogOut)" %>
-          <% end %>
-      
-    <% end %> 
+            <ul class="nav">
+                <li><%= link_to 'What is Umvox', '/welcome/howitworks', class: 'what', title:"What is Umvox?"%></li>
+				<% if (user_signed_in? || !session[:user].nil?) %>
+					<li><a href="/posts/new" class="create" title="Create a Vox">Create a Vox</a></li>
+					<li><%= link_to 'Resolve/View Voxes', '/members/dashboard' %></li>
+					<li><%= link_to session['user'].username, "/members/#{session['user'].id}" %></li>
+					<li> 
+						<%= form_tag("/users/sign_out",:method=>:DELETE, :class=>"log") do %>
+							<%= submit_tag "LogOut", :class=>"buttonLog" %>
+						<% end %>
+					</li>	
+				<% end %>
+				
+            </ul>
+        </div>
     </div>
-
-	</div>
-<!-- **container close above** -->
-</div>
-</div>
-<div class="container">
-<div class="content">
-<div class="wrapper">
-  
-  
