@@ -47,7 +47,7 @@ body {background-color: #f7f7f7; font-family: Arial, "Helvetica Neue", Helvetica
 .header .searchBar form .search {float: left; border: none; outline: none; height: 50px; width: 85%; background: #fff; padding: 0 10px; font-size: 14px; font-style: italic; color: #b3b3b3;}
 
 /* HEADER - home page */
-#home .header {z-index: 99999; width: 100%; background: #45b3bd; height: 60px; position: fixed; top: -60px; left: 0; display: block; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-out; transition: all 0.5s ease-in-out;}
+#home .header {z-index: 99999; width: 100%; background: #45b3bd; height: 60px position: fixed; top: -60px; left: 0; display: block; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-out; transition: all 0.5s ease-in-out;}
 #home .header.open {display: block; top: 0px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-out; transition: all 0.5s ease-in-out;}
 
 /* SPLASH - home page */
@@ -243,6 +243,15 @@ ul.whatList li.itemFour {background: url(/assets/img/list_item_four.png) left to
 .carouselOuter #next {right: 0; background: url(/assets/img/carousel_right.png) 0 0 no-repeat; background-size: 20px 33px;}
 .carouselOuter #prev:hover,
 .carouselOuter #next:hover {-webkit-transform: scale(0.9); moz-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9);}
+
+/* CUSTOM FOR MYVOX PAGE */
+#myVox .main .content {width: 1100px;}
+#myVox .main .content .column {width: 38%; margin: 0 0 30px 2%;}
+#myVox .main .content .column:first-child {margin: 0 0 30px 0;}
+#myVox .main .content .column.small {width: 16%;}
+#myVox .main .content .column.small h3 {font-size: 22px; text-align: left; margin: 0;}
+#myVox .categories {width: 100%;}
+#myVox .categories .items {width: 100%;}
 
 /* FOOTER */
 .footer {background: #323232; color: #fff; width: 100%; height: auto; overflow: hidden; padding: 20px 10px; font-size: 14px;}

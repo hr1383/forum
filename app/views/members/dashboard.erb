@@ -1,8 +1,7 @@
-﻿<body id="dashboard">
+﻿<body id="myVox">
 <div class="main">
          <div class="pageHeader"></div><!-- .pageheader -->
-			<div class="main">
-	        	<div class="content">
+				<div class="content">
 	            	<div class="column left">
 	                	<h3>My Recent Open Voxes</h3>
 						<ul class="voxes">
@@ -13,10 +12,8 @@
 									 <p class="date"><%= post.created_at %></p>	
 									 <p class="text">
 										 <%= post.description.split(' ')[0,10].inject{|sum,word| sum + ' ' + word}  %>
-										 <a href="" class="read_more"> 
-									   	  <%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
-									   </a>
-								   </p> 
+										  <%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
+								   	 </p> 
 								   <dl>
 	                             	  <dt>Category:</dt>
 									  <dd><%= post.location.category %></dd>
@@ -38,7 +35,7 @@
 						  </ul>
 						  <!-- <a class="buttonView" href="" title="view more open Vox">view more</a> -->
 					  </div>
-					  <div class="column right">
+					  <div class="column left">
 						  <h3>My Recent Resolved Voxes</h3>
 						  <ul class="voxes">
 							  <% @totalclose.each do |post| %>
@@ -63,23 +60,19 @@
 							 </li>
 							 <% end %>
 						 </ul>
-					 </div>     
-		             <div class="categories">
-		                 <h3>Browse vox by categories</h3>
-		 				<% count = 0%>
-		 				<% Category.all.each do |category| %>
-		 					<%if count == 0%>
-		 						<ul class="items">
-		 					<% end %>
-		 					<% count+=1 %>		
-		 					<li><%= link_to category.name , "/browse?category=#{category.name}"%>
-		 					<%if count == 4 %>
-		 						</ul>
-		 						<% count = 0%>
-		 					<% end %>
-		 				<% end %>
-		             </div>
+					 </div>
+					 <div class="column small right">     
+		             	<div class="categories">
+		                	 <h3>Browse by categories</h3>
+							 	<% count = 0%>
+								<ul class="items">
+									<% Category.all.each do |category| %>
+										<li><%= link_to category.name , "/browse?category=#{category.name}"%></li>
+									<% end %>
+								</ul>
+		             	</div>
+				 	</div>
 				</div><!-- .content -->
-			</div><!-- .main -->
+			
 		</div><!-- .main -->
 </body>
