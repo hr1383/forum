@@ -3,7 +3,49 @@
          <div class="pageHeader"></div><!-- .pageheader -->
 				<div class="content">
 	            	<div class="column left">
-	                	<h3>My Recent Open Voxes</h3>
+	                	<h3>My Recent Voxes</h3>
+						<ul class="voxes">
+							<%if @myvoxes.length == 0 %>
+								<li>
+									<div class="cta">
+										<p> Create first Vox</p>
+										<a class="buttonBlue right" href="/posts/new" title="Create First Vox">Create Vox</a>
+									</div>
+								</li>
+							<% end %>
+							<% @myvoxes.each do |post| %>
+							<li>
+								<% if posts.status == 'Open'%>
+								 <div class="vox open">
+								<% else %>
+								 <div class="vox open">
+								<% end%>
+									 <p class="type">Complaint</p>
+									 <p class="date"><%= post.created_at %></p>	
+									 <p class="text">
+										 <%= post.description.split(' ')[0,10].inject{|sum,word| sum + ' ' + word}  %>
+										  <%= link_to  "Read More","/posts/#{post.parameterize}",:class=>"read_more" %> 
+								   	 </p> 
+								   <dl>
+	                             	  <dt>Category:</dt>
+									  <dd><%= post.location.category %></dd>
+									 
+								  </dl>
+								  <dl>
+									  <dt>Company:</dt>
+									  <dd><%= post.location.name %></dd>
+									  <dt>Posted By:</dt>
+									  <dd><%= User.find(post.user_id).username %></dd>
+								  </dl>
+								  <%= link_to "Read More","/posts/#{post.parameterize}",:class=>"buttonVox" %> 
+								  <!-- <%= link_to  "Edit","/posts/#{post.parameterize}/edit",:class=>"buttonVox" %>  -->
+								  <%= link_to "Resolve","/posts/resolvevox/#{post.parameterize}/",:class=>"buttonVox" %>
+	                             
+							  	</div>
+							  </li>
+							  <% end %>
+						  </ul>
+	                	<h3>Recent Open Voxes</h3>
 						<ul class="voxes">
 							<% @totalopen.each do |post| %>
 							<li>
@@ -26,9 +68,6 @@
 									  <dd><%= User.find(post.user_id).username %></dd>
 								  </dl>
 								  <%= link_to "View","/posts/#{post.parameterize}",:class=>"buttonVox" %> 
-								  <!-- <%= link_to  "Edit","/posts/#{post.parameterize}/edit",:class=>"buttonVox" %>  -->
-								  <%= link_to "Resolve","/posts/resolvevox/#{post.parameterize}/",:class=>"buttonVox" %>
-	                             
 							  	</div>
 							  </li>
 							  <% end %>
@@ -36,7 +75,7 @@
 						  <!-- <a class="buttonView" href="" title="view more open Vox">view more</a> -->
 					  </div>
 					  <div class="column left">
-						  <h3>My Recent Resolved Voxes</h3>
+						  <h3>Recent Resolved Voxes</h3>
 						  <ul class="voxes">
 							  <% @totalclose.each do |post| %>
 							  <li>

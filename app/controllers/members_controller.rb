@@ -73,6 +73,7 @@ class MembersController < ApplicationController
       session[:user] = current_user
     end
     if(!session[:user].nil?)
+      @myvoxes = session[:user].posts
       @totalclose = Post.latest_closed
       @totalopen = Post.latest_open
     end

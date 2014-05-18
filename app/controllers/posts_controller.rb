@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   
  def index
    @meta_title = "List of All Voxes"
-   @meta_description = " The voxes and cpmplaints of the user"
+   @meta_description = " The voxes and complaints of the user"
     if !params[:all].nil? and params[:all] == "true"
       @posts = Post.all
     else 
@@ -34,26 +34,11 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find_by_parameterize(params[:id])
-#      Post.find(params[:id])
-if @post.nil?
-   @post=Post.find(params[:id])
-end
+    if @post.nil?
+      @post=Post.find(params[:id])
+    end
     @meta_title = @post.question
-   @meta_description = @post.description
-    @backer = 0
-    @backername=Array.new
-     if @post.comments !=nil
-       @post.comments.each do |comment|
-         if comment.is_backer
-           @backer+=1
-           if comment.username != nil
-             @backername << comment.username
-           else
-             @backername << comment.name
-           end
-         end
-       end
-     end
+    @meta_description = @post.description
   end
 
   # GET /posts/new

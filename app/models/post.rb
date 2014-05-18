@@ -12,9 +12,9 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :detailinfo, allow_destroy: true
   accepts_nested_attributes_for :assets, allow_destroy: true
   
-   searchable do
-  text :question, :boost => 5
-   text :description
+   # searchable do
+ #  text :question, :boost => 5
+ #   text :description
  end
 
   def self.latest_closed
