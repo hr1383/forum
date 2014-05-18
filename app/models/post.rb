@@ -15,7 +15,7 @@ class Post < ActiveRecord::Base
    # searchable do
  #  text :question, :boost => 5
  #   text :description
- end
+ # end
 
   def self.latest_closed
     where("status=?",'Resolved').where("posttype=?",'Complaint').order("updated_at DESC").limit(5)

@@ -87,13 +87,13 @@
                         			<%= detail_form.text_area :description  %>
 								</li>
 							</ul>
-							<p class="txt">You may upload as <strong>3 images</strong> needed as long as the total size of all images is less than 5MB.</p>
+							<!-- <p class="txt">You may upload as <strong>3 images</strong> needed as long as the total size of all images is less than 5MB.</p>
 							<p class="txt">File type: <strong>.jpg, .jpeg, .gif, .png</strong></p>
 							<%= f.fields_for :assets do |asset_fields| %>
 				        		<% if asset_fields.object.new_record? %>
 				                    <p><%= asset_fields.file_field :image %></p>
 								<% end %>
-							<% end %>
+							<% end %> -->
 					<% end %>
                     <p class="txt">By clicking Create Vox, you agree to our <a href="termsandconditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
 

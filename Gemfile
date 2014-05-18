@@ -10,8 +10,6 @@ gem 'mysql', '~>2.8.1'
 #gem 'rake' '~>10.1.1'
 gem 'koala'
 gem 'paperclip'
-gem 'aws-s3'
-gem 'aws-sdk'
 gem 'devise','~>1.4.3'
 # gem 'sunspot_rails'
 # gem 'sunspot_solr'
@@ -24,7 +22,7 @@ gem 'time_diff'
 # in production environments by default.
 group :assets do
   gem 'sprockets'
-  gem 'sass-rails', "3.1.4"
+  gem 'sass', '3.2.13'
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
