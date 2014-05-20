@@ -1,0 +1,22 @@
+<body id="signup">
+<div class="main">
+        <div class="pageHeader">
+            <h2 class="title">Reset Your Password</h2>
+        </div><!-- .banner -->
+        <div class="content">
+			<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post,:class=>"form" }) do |f| %>
+			<%= devise_error_messages! %>
+            <ul class="inputs">
+              <li class="item">
+					<%= f.label :enter_your_email %>
+					<%= f.email_field :email, :autofocus => true %>
+			 </li>	
+			
+			</li>
+				<label>&nbsp;</label>
+				<%= f.submit "Reset Password" , class: "buttonBlue"%>
+			</li>	
+			<% end %>
+        </div><!-- .content -->
+    </div><!-- .main -->
+</body>

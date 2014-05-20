@@ -32,6 +32,13 @@ GEM
     addressable (2.3.6)
     ansi (1.4.3)
     arel (2.2.3)
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
+    aws-sdk (1.40.3)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
     bcrypt-ruby (3.1.5)
@@ -182,12 +189,15 @@ GEM
       json (>= 1.8.0)
     warden (1.0.6)
       rack (>= 1.0)
+    xml-simple (1.1.3)
 
 PLATFORMS
   ruby
   x86-mingw32
 
 DEPENDENCIES
+  aws-s3
+  aws-sdk
   client_side_validations
   coffee-rails (~> 3.1.0)
   devise (~> 1.4.3)

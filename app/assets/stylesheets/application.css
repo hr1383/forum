@@ -51,7 +51,7 @@ body {background-color: #f7f7f7; font-family: Arial, "Helvetica Neue", Helvetica
 #home .header.open {display: block; top: 0px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-out; transition: all 0.5s ease-in-out;}
 
 /* SPLASH - home page */
-.splash {height: 600px; width: 100%; position: relative; background: #45b3bd url(/assets/img/bg_splash.jpg) center center no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.splash {height: 400px; width: 100%; position: relative; background: #45b3bd url(/assets/img/bg_splash.jpg) center center no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 .splash .branding {width: 277px; height: 168px; top: 50%; left: 50%; margin: -84px 0 0 -138.5px; position: absolute; background: transparent url(/assets/img/logo_large.png) center center no-repeat; background-size: 277px 168px;}
 
 /* INTRO - home page */
@@ -60,7 +60,7 @@ body {background-color: #f7f7f7; font-family: Arial, "Helvetica Neue", Helvetica
 .intro p.txt {text-align: center; font-size: 16px; line-height: 24px; width: 640px; margin: 30px auto;}
 
 /* HOW TO - home page */
-.howTo {height: auto; width: 100%; background: #44b2bc; padding: 0 0 94px 0;}
+.howTo {height: auto; width: 100%; background: #44b2bc; padding: 0 0 54px 0;}
 .howTo h3 {text-align: center; font-size: 48px; font-weight: bold; margin: 50px 0 0; color: #fff;}
 .howTo .col {width: 241px; float: left; margin: 0 38px;}
 
