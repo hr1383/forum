@@ -72,11 +72,9 @@ class MembersController < ApplicationController
     if session[:user].nil?
       session[:user] = current_user
     end
-    if(!session[:user].nil?)
-      @myvoxes = session[:user].posts
+      @myvoxes = Post.find_all_by_user_id(session[:user].id)
       @totalclose = Post.latest_closed
       @totalopen = Post.latest_open
-    end
   end
   
   def show
@@ -151,13 +149,13 @@ class MembersController < ApplicationController
       end
   end
   def support
-#     if verify_recaptcha
+    if verify_recaptcha
        Thread.new{SupportEmailer.contactus(params[:name],params[:email],params[:subject],params[:message])}
-#     else
-#        build_resource
-#        flash[:alert] = "There was an error with the recaptcha code below. Please re-enter the code and click submit."
-#        render_with_scope :contactus
-#      end
+    else
+       build_resource
+       flash[:alert] = "There was an error with the recaptcha code below. Please re-enter the code and click submit."
+       render_with_scope :contactus
+     end
   redirect_to "/members/dashboard"
   end
   
