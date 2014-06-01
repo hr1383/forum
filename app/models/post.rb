@@ -30,4 +30,12 @@ class Post < ActiveRecord::Base
   def self.testimonials
     where("resolve_vox!=?","")
   end
+  
+  def self.closed
+    where("status=?",'Resolved').where("posttype=?",'Complaint').order("updated_at DESC")
+  end
+  
+  def self.open
+    where("status=?",'Open').where("posttype=?",'Complaint').order("created_at DESC")
+  end
 end

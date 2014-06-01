@@ -72,10 +72,20 @@ class MembersController < ApplicationController
     if session[:user].nil?
       session[:user] = current_user
     end
-      @myvoxes = Post.find_all_by_user_id(session[:user].id)
+    
+    puts "User is"
+    puts session[:user].admin
+    puts "-----------------"
+    @myvoxes = Post.find_all_by_user_id(session[:user].id)
+    if session[:user].admin
+      @totalclose = Post.closed
+      @totalopen = Post.open
+    else
       @totalclose = Post.latest_closed
       @totalopen = Post.latest_open
   end
+    end
+      
   
   def show
     @user= User.find_by_id(params[:id])
