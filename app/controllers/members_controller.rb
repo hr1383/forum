@@ -72,10 +72,6 @@ class MembersController < ApplicationController
     if session[:user].nil?
       session[:user] = current_user
     end
-    
-    puts "User is"
-    puts session[:user].admin
-    puts "-----------------"
     @myvoxes = Post.find_all_by_user_id(session[:user].id)
     if session[:user].admin
       @totalclose = Post.closed
@@ -90,8 +86,6 @@ class MembersController < ApplicationController
   def show
     @user= User.find_by_id(params[:id])
     session[:user] = @user
-#    if !session[:user].nil?
-#      @user= session[:user]
       openUmvox=@user.posts.where("status=?","Open")
       closeUmvox=@user.posts.where("status=?","Closed")
       @totalopen = openUmvox.size unless openUmvox.nil?

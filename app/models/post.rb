@@ -11,7 +11,13 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :location, allow_destroy: true
   accepts_nested_attributes_for :detailinfo, allow_destroy: true
   accepts_nested_attributes_for :assets, allow_destroy: true
-  
+  # before_save :parameterize
+  # 
+  # def parameterize
+  #   puts 'PARAMTET'
+  #   self.parameterize = self.question.parameterize
+  #   puts "#{self.question}"
+  # end 
    # searchable do
  #  text :question, :boost => 5
  #   text :description
@@ -38,4 +44,9 @@ class Post < ActiveRecord::Base
   def self.open
     where("status=?",'Open').where("posttype=?",'Complaint').order("created_at DESC")
   end
+  
+  def self.search_description(arg)
+    where("description like ?", "%#{arg}%")
+  end
+  
 end

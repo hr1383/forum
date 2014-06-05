@@ -16,24 +16,8 @@ class Location < ActiveRecord::Base
     self.website = result["website"]
   end
   
-  def locationGroupByName(name)
-#    Location.find_by_sql("select count(*), name from locations w")
-   locationByCategory = Locations.find(name)
-   locationGroupByName={}
-   unless locationByCategory.nil?
-     locationByCategory.each do |location|
-       puts locationByCategory
-       puts location
-       if locationGroupByName[location.address].nil?
-         locationGroupByName[location.address] = [1,location.category]
-       else
-         someObj = locationGroupByName[location.address]
-         someObj = someObj[0].to_i+1
-         locationGroupByName[location.address] = someObj
-       end
-     end
-   end
-   return locationGroupByName
-  end
+  def self.search(arg)
+    where("name like ? or category like ?", "%#{arg}%","%#{arg}%")
+  end 
   
 end

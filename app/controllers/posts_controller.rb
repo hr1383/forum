@@ -88,9 +88,9 @@ class PostsController < ApplicationController
     respond_to do |format|
     
     if @post.save
-    session[:postid]=@post.id
-    Thread.new{SupportEmailer.createvox(@post,User.find(@post.user_id)).deliver}
-    format.html {redirect_to :controller=>'posts',:action=>"next"}
+      session[:postid]=@post.id
+      Thread.new{SupportEmailer.createvox(@post,User.find(@post.user_id)).deliver}
+      format.html {redirect_to :controller=>'posts',:action=>"next"}
     else
       if @post.scenario.nil?
         @post.scenario=[]
@@ -135,10 +135,15 @@ class PostsController < ApplicationController
   end
   
   def search
-      @search = Post.search do
-        fulltext params[:search]
-      end
-       @voxes  = @search.results
+     @location_posts = Post.joins(:location).where("name like ? or category like ?", "%#{params[:search]}%","%#{params[:search]}%") 
+      @voxes = Post.search_description(params[:search])
+      puts @location_posts.size    
+      puts @voxes.size
+      if @voxes.any?
+       @voxes.merge(@location_posts)
+     elsif
+       @voxes=@location_posts
+     end
   end
   
 
