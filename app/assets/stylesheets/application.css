@@ -212,7 +212,7 @@ ul.whatList li.itemFour {background: url(/assets/img/list_item_four.png) left to
 .pageHeader {height: 210px; width: 100%; position: relative; background: #45b3bd url(/assets/img/bg_pagetitle.png) center center no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 
 /* CATEGORIES */
-.categories {width: 96%; height: auto; overflow: hidden; margin: 0 auto 40px auto;}
+.categories {width: 96%; height: auto; overflow: hidden; margin: 0 auto 40px auto; padding: 50px 0 0 0;}
 .categories .items {float: left; width: 16.6666%; font-size: 14px; line-height: 18px;}
 .categories .items li {margin: 0 0 3px 0;}
 .categories .items li a {text-decoration: none; color: #323232;}

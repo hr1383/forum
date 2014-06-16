@@ -95,16 +95,16 @@
 
             <div class="categories">
                 <h3>Browse vox by categories</h3>
-				<% count = 0%>
-				<% Category.all.each do |category| %>
-					<%if count == 0%>
+				<% counter = 0%>
+				<% Location.count(:group => :category).each do |name,count| %>
+					<%if counter == 0%>
 						<ul class="items">
 					<% end %>
-					<% count+=1 %>		
-					<li><%= link_to category.name , "/browse?category=#{category.name}"%>
-					<%if count == 4 %>
+					<% counter+=1 %>		
+					<li><%= link_to "#{name}(#{count})" , "/browse?category=#{name}"%>
+					<%if counter == 4 %>
 						</ul>
-						<% count = 0%>
+						<% counter = 0%>
 					<% end %>
 				<% end %>
             </div>
