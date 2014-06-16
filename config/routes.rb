@@ -12,16 +12,14 @@ Umvox::Application.routes.draw do
     get '/privacy', :to =>"welcome#privacy"
       get '/browse', :to =>"locations#browse"  
   get '/contact', :to=>"welcome#contact"    
-  resources :email_stats
-  
-  resources :company_emails
 
-  resources :email do
-    collection do
-      post :sendmail
-      get :view
-    end
-  end
+  # 
+  # resources :email do
+  #   collection do
+  #     post :sendmail
+  #     get :view
+  #   end
+  # end
 
  resources :welcome do
    collection do
@@ -38,8 +36,8 @@ Umvox::Application.routes.draw do
   end
  resources :posts do
    collection do
-     get :search,:browse,:list, :next
-     post :browse
+     get :search, :next, :singlevox
+     post :createsinglevox
    end
    resources :comments
  end 

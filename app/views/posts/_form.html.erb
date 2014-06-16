@@ -4,7 +4,7 @@
             <h2 class="title">Create a new Vox</h2>
         </div><!-- .banner -->
         <div class="content">
-			<%= form_for @post,:html =>{:multipart => true, :class => "form"} do |f| %>
+			<%= form_for @post,:html =>{:class => "form"} do |f| %>
             <%=f.hidden_field :status, :value=>"Open" %>
 			<%=f.hidden_field :posttype, :value=>"Complaint" %>
 			<%= f.hidden_field :user_id  %>
@@ -63,7 +63,7 @@
                         </li>
                         <li class="item">
                             <label for="">Website</label>
-                            <%= location_form.text_field :website, :placeholder=>'Company Email'%> 
+                            <%= location_form.text_field :website, :placeholder=>'Company Website'%> 
                         </li>
                         <li class="item">
                             <label for="select">Category</label>

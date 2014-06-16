@@ -2,14 +2,14 @@ class SessionsController < Devise::SessionsController
   before_filter :already_signed , :only =>[:new]
   def new
     super
-    puts "Inside session new"
+   
      session[:new_user] = false
      session[:user] = current_user
   end
   
   def create
     super
-        puts "Inside session create"
+        
     session[:new_user] = false
   end
   

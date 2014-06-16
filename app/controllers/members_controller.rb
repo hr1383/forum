@@ -114,7 +114,6 @@ class MembersController < ApplicationController
      @user.country = params[:user][:country]
      @user.fbid = params[:user][:fbid]
      @user.subscribe = params[:user][:subscribe]
-     @user.admin = params[:user][:admin]
      if @user.subscribe_token.nil?
        puts "generated token"
        @user.subscribe_token = loop do

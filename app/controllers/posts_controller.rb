@@ -9,15 +9,7 @@ class PostsController < ApplicationController
     if !params[:all].nil? and params[:all] == "true"
       @posts = Post.all
     else 
-      if !session['user'].nil?
-         if session['user'].username == 'hrsht13'
-            @posts=Post.all
-         else
-            @posts = Post.find_all_by_user_id(session["user"].id.to_s)
-         end
-      else
-        puts "ERR session expired"
-      end
+      @posts = Post.find_all_by_user_id(session["user"].id.to_s)
     end
     @openumvox = Array.new
     @closeumvox = Array.new
@@ -53,20 +45,8 @@ class PostsController < ApplicationController
       @post.user_id=session[:user].id
     end
     @post.detailinfo = Detailinfo.new
-    unless params[:name].nil? and params[:addr].nil?
-      loc = Location.new
-      loc.address = params[:addr].nil? ? "" :params[:addr]
-      loc.name = params[:name].nil? ? "" :params[:name]
-      loc.zipcode = params[:zip].nil? ? "" : params[:zip]
-      loc.city = params[:city].nil? ? "" : params[:city]
-      @post.location=loc
-      @haslocation=true
-    else
-      @haslocation=false
-      @post.build_location
-    end
-    @category = Category.all
-    @category = @category.sort! { |a,b| a.name.downcase <=> b.name.downcase }
+    @post.build_location
+    @category = Category.all.sort! { |a,b| a.name.downcase <=> b.name.downcase }
      respond_to do |format|
       format.html
       format.json { render json: @post }
@@ -84,7 +64,26 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     @post.parameterize = @post.question.parameterize
-    
+    unless params[:post][:firstname].nil?
+      unless verify_recaptcha
+        @error_message = "Captcha didnt't match. Please enter again"
+        return
+      end
+      u = User.find_by_email(params[:post][:email])
+      unless u.nil?
+        @error_message = "User already registered with the email."
+        render action: "edit" 
+        return
+      else
+        u = User.new(params[:post])
+      end
+      if !u.save(validate: false)
+          @error_message = "Error while saving, check user details."
+          render action: "edit" 
+          return
+      end
+      @post.user_id = u.id
+    end
     respond_to do |format|
     
     if @post.save
@@ -110,9 +109,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        @post.assets.each do |asset|
-          asset.save
-        end
         format.html { redirect_to "/members/dashboard"}
         format.json { head :ok }
       else
@@ -137,8 +133,6 @@ class PostsController < ApplicationController
   def search
      @location_posts = Post.joins(:location).where("name like ? or category like ?", "%#{params[:search]}%","%#{params[:search]}%") 
       @voxes = Post.search_description(params[:search])
-      puts @location_posts.size    
-      puts @voxes.size
       if @voxes.any?
        @voxes.merge(@location_posts)
      elsif
@@ -146,45 +140,19 @@ class PostsController < ApplicationController
      end
   end
   
-
-  def browse
-    unless params[:type].nil?
-      #:type is always location
-      if params[:type] == 'category'
-        locations = Location.find_all_by_category(params[:search]) 
-      else
-        @search = Location.search do
-         fulltext params[:search]
-        end
-        locations = @search.results
-      end
-      @returnsearch =true
-     end
-     
-    @locationGroupByName={}
-    unless locations.nil?
-     locations.each do |location|
-       if @locationGroupByName[location.name].nil?
-         @locationGroupByName[location.name] = [1,location.category,location.name]
-       else
-         someObj = @locationGroupByName[location.name]
-         someObj[0] = someObj[0].to_i+1
-         @locationGroupByName[location.name] = someObj
-       end
-     end
-   end
-  end
-  
-  def list
-    locations = Location.find_all_by_name(params[:name])
-#    locations cannot be nil
-    @posts = Array.new
-    locations.each do |location|
-      @posts << location.post
-    end
-  end
-  
   def resolvevox
      @post = Post.find_by_parameterize(params[:name])
+  end
+  
+  def singlevox
+    @post = Post.new
+    @post.scenario=[]
+    @post.compensation=[]
+    unless session[:user].nil?
+      @post.user_id=session[:user].id
+    end
+    @post.detailinfo = Detailinfo.new
+    @post.build_location
+    @category = Category.all.sort! { |a,b| a.name.downcase <=> b.name.downcase }
   end
 end
