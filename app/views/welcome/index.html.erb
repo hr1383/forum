@@ -96,7 +96,7 @@
             <div class="categories">
                 <h3>Browse vox by categories</h3>
 				<% counter = 0%>
-				<% Location.count(:group => :category).each do |name,count| %>
+				<% Location.order("category ASC").group("category").count("category").each do |name,count| %>
 					<%if counter == 0%>
 						<ul class="items">
 					<% end %>
