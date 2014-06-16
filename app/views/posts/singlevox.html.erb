@@ -1,0 +1,129 @@
+<body id="create">
+    <div class="main">
+        <div class="pageHeader">
+            <h2 class="title">Create a new Vox</h2>
+        </div><!-- .banner -->
+        <div class="content">
+			<%= form_for @post,:html =>{:class => "form"} do |f| %>
+            <%=f.hidden_field :status, :value=>"Open" %>
+			<%=f.hidden_field :posttype, :value=>"Complaint" %>
+			<%= f.hidden_field :user_id  %>
+			<p style="color:red"><%= @error_message  %> </p>
+                <div class="stageOne">
+                    <ul class="inputs">
+                        <li class="item">
+					        <%= f.label :question,"Title" %>
+					        <%= f.text_field :question,:class=>"inp_text", :placeholder=>"Create a catchy title." %>
+                        </li>
+                        <li class="item">
+					        <%= f.label :description %>
+					        <%= f.text_area :description,:class=>"inp_area", :placeholder=>"Please be as detailed as possible about your situation, be sure to leave out any personal information in this section since your experience will be visible to everyone." %>
+                        </li>
+                    </ul>
+                    <fieldset>
+                        <legend>Scenario *</legend>
+                        <ul class="checkboxes clear">
+				              <% Scenarios.all.each do |scenario| -%>
+                              <li class="check">
+							  <%= check_box_tag 'post[scenario][]', scenario.id, @post.scenario.include?(scenario.id.to_s) -%>
+				              <%= label_tag :scenario, scenario.name -%></span>
+				            <% end %>
+                            </li>
+                         </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>What are you looking for? *</legend>
+                        <ul class="checkboxes clear">
+				            <% Compensation.all.each do |compensation| -%>
+				             <li class="check"><%= check_box_tag 'post[compensation][]', compensation.name, @post.compensation.include?(compensation.name.to_s) -%>
+				             <%= label_tag :compensation, compensation.name -%></span>
+				             <% end %>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- <button class="buttonBlue">next step</button> -->
+                    <img src="/assets/img/progress_1.png" alt="step 1" class"stages"  /> 
+                </ul>
+                </div><!-- .stageOne -->
+
+                <div class="stageTwo">
+                    <p class="txt"><strong>In order to inform the right personnel, please make sure the contact info is correct.</strong></p>
+					 <%= f.fields_for :location do|location_form|  %>
+                    <ul class="inputs">
+                        <li class="item">
+                            <label for="">Name</label>
+                            <%= location_form.text_field :name, :placeholder=>'Company Name'%>
+                        </li>
+                        <li class="item">
+                            <label for="">City</label>
+							<%= location_form.text_field  :city, :placeholder=>'Company City'%>
+                        </li>
+                        <li class="item">
+                            <label for="">Email</label>
+                            <%= location_form.text_field  :email, :placeholder=>'Company Email'%> 
+                        </li>
+                        <li class="item">
+                            <label for="">Website</label>
+                            <%= location_form.text_field :website, :placeholder=>'Company Website'%> 
+                        </li>
+                        <li class="item">
+                            <label for="select">Category</label>
+                            <div class="select-wrap">
+								<%= location_form.select :category, options_from_collection_for_select(Category.all, "name", "name") ,{},{:class=>"select"}%> 
+                            </div>
+                        </li>
+                    </ul>
+					<% end %>
+                    <!-- <button class="buttonBlue left">previous step</button>
+                    <button class="buttonBlue right">next step</button> -->
+                    <img class"stages" src="/assets/img/progress_2.png" alt="step 2" /> 
+                </div><!-- .stageTwo -->
+
+                <div class="stageThree">
+                    <p class="txt">To help the UmVox team resolve your vox, please enter any account or reference number(s) here, if applicable. If you want us to call on your behalf, please fill this section out as thoroughly as possible.</p>
+
+                    <p class="txt">Note: Any information you enter in this area is secure and will only be shared with the Umvox team.</p>
+					<%= f.fields_for :detailinfo do |detail_form| %>
+							<ul class="inputs">
+                        		<li class="item">
+                        			<%= detail_form.text_area :description  %>
+								</li>
+							</ul>
+					<% end %>
+                    
+                </div><!-- .stageThree -->
+				
+                <div class="stageThree">
+					<h3> Personal Information </h3>
+				  <ul class="inputs">
+                    <li class="item">
+				       <legend>First name *</legend>
+				        <%= f.text_field :firstname,:class=>"inp_area" %>
+                    </li>
+                    <li class="item">
+				        <legend>Last name *</legend>
+				        <%= f.text_field :lastname,:class=>"inp_area" %>
+                    </li>
+                    <li class="item">
+				         <legend>Email *</legend>
+				        <%= f.text_field :email,:class=>"inp_area" %>
+                    </li>
+					
+					<li class="item">
+					    <!-- <% if Rails.env== 'production' %> -->
+					    	<%= recaptcha_tags %>
+					    <!-- <%  end %> -->
+					</li>
+				</ul>	
+                    <p class="txt">By clicking Create Vox, you agree to our <a href="termsandconditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
+					<img class"stages" src="/assets/img/progress_3.png" alt="final step" />
+					                   
+					<%= f.submit "Create Vox",:class=>"buttonBlue" %>
+                </div><!-- .stageThree -->
+				<% end %>
+        </div><!-- .content -->
+    </div><!-- .main -->
+</body>
+
+  
+ 
