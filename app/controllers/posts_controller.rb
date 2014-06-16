@@ -67,19 +67,21 @@ class PostsController < ApplicationController
     unless params[:post][:firstname].nil?
       unless verify_recaptcha
         @error_message = "Captcha didnt't match. Please enter again"
+        render action: "singlevox" 
         return
       end
       u = User.find_by_email(params[:post][:email])
       unless u.nil?
         @error_message = "User already registered with the email."
-        render action: "edit" 
+        render action: "singlevox" 
         return
       else
         u = User.new(params[:post])
+        u.username = u.email.split('@')[0]
       end
       if !u.save(validate: false)
           @error_message = "Error while saving, check user details."
-          render action: "edit" 
+          render action: "singlevox" 
           return
       end
       @post.user_id = u.id
