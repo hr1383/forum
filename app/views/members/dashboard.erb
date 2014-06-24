@@ -68,6 +68,9 @@
 									  <dd><%= User.find(post.user_id).username %></dd>
 								  </dl>
 								  <%= link_to "View","/posts/#{post.parameterize}",:class=>"buttonVox" %> 
+								  <%if session[:user].admin?%>
+  								  	<%= link_to "Resolve","/posts/resolvevox/#{post.parameterize}/",:class=>"buttonVox" %>
+								  <%end %>
 							  	</div>
 							  </li>
 							  <% end %>

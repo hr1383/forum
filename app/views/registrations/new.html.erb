@@ -1,8 +1,6 @@
 <body id="signup">
 <div class="main">
-        <div class="pageHeader">
-            <h2 class="title">Sign Up</h2>
-        </div><!-- .banner -->
+   
         <div class="content">
 
             <div class="sign_in_fb">
@@ -44,9 +42,8 @@
 				<%= f.submit "Sign Up" , class: "buttonBlue"%>
 			</li>	
 			<% end %>
-				
-                <p><%= render "devise/shared/links" %></p>
-           
+		
+           	    <p><%= link_to 'Create Vox without login',"/posts/singlevox"%>
 
         </div><!-- .content -->
     </div><!-- .main -->
