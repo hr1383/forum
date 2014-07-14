@@ -36,8 +36,8 @@ class MembersController < ApplicationController
   def signin
     
     if !session['access_token'].nil?
-      @graph = Koala::Facebook::API.new(session["access_token"])
-      userinfo =  @graph.get_object("me")
+      graph = Koala::Facebook::API.new(session["access_token"])
+      userinfo =  graph.get_object("me")
       fb_id=userinfo['id']
       userObj = User.find_by_fbid(fb_id.to_s) 
       if userObj.nil?
@@ -77,26 +77,18 @@ class MembersController < ApplicationController
   
   def show
     @user= User.find(params[:id])
-    session[:user] = @user
-    openUmvox=@user.posts.where("status=?","Open")
-    closeUmvox=@user.posts.where("status=?","Closed")
-    @totalopen = openUmvox.size unless openUmvox.nil?
-    @totalclosed = closeUmvox.length unless closeUmvox.nil?
-    #    end
   end
   
   def updateprofile
     @user = User.find(params[:user][:id])
-    @user.update_attributes(params[:user])
     if @user.subscribe_token.nil?
-      puts "generated token"
       @user.subscribe_token = loop do
         random_token = SecureRandom.urlsafe_base64
         break random_token unless User.where(subscribe_token: random_token).exists?
       end  
     end
     begin 
-      @user.save
+      @user.update_attributes(params[:user])
       session[:user] = @user
       redirect_to "/members/dashboard"
     rescue ActiveRecord::RecordNotSaved => e

@@ -39,4 +39,7 @@ end
 
 def contact
 end
+
+def testimonials
+end
 end

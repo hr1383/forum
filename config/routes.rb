@@ -9,9 +9,10 @@ Umvox::Application.routes.draw do
   root :to => "welcome#index"
   
   get '/terms', :to =>"welcome#terms"
-    get '/privacy', :to =>"welcome#privacy"
-      get '/browse', :to =>"locations#browse"  
-  get '/contact', :to=>"welcome#contact"    
+  get '/privacy', :to =>"welcome#privacy"
+  get '/browse', :to =>"locations#browse"  
+  get '/contact', :to=>"welcome#contact"  
+  get '/testimonials', :to=>"welcome#testimonials"  
 
   # 
   # resources :email do
@@ -21,12 +22,12 @@ Umvox::Application.routes.draw do
   #   end
   # end
 
- resources :welcome do
-   collection do
-    post  :login
-    get  :callback, :howitworks
-   end
- end
+  resources :welcome do
+    collection do
+      post  :login
+      get  :callback, :howitworks
+    end
+  end
 
   resources :locations do
     collection do
@@ -34,22 +35,22 @@ Umvox::Application.routes.draw do
       post :search
     end
   end
- resources :posts do
-   collection do
-     get :search, :next, :singlevox
-     post :createsinglevox
-   end
-   resources :comments
- end 
- get '/posts/resolvevox/:name', :to => 'posts#resolvevox'  
+  resources :posts do
+    collection do
+      get :search, :next, :singlevox
+      post :createsinglevox
+    end
+    resources :comments
+  end 
+  get '/posts/resolvevox/:name', :to => 'posts#resolvevox'  
   resources :members do
-  collection do
-    get   :filldetails,:dashboard,:signin,:contactus,:userp,:unsubscribe,:unconfirm
-    put  :updateprofile, :support
-    post  :updateprofile,:support
+    collection do
+      get   :filldetails,:dashboard,:signin,:contactus,:userp,:unsubscribe,:unconfirm
+      put  :updateprofile, :support
+      post  :updateprofile,:support
+    end
   end
-end
-#  resources :assets
+  #  resources :assets
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
