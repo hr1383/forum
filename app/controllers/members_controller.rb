@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class MembersController < ApplicationController
 
   #   before_filter :authenticate1_user , :only =>[:dashboard]
@@ -7,12 +9,11 @@ class MembersController < ApplicationController
     if session['access_token']
       @graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  @graph.get_object("me")
-      city =""
-      unless userinfo['location'] == nil
-        city = userinfo['location']['name']
-      end 
-      @user = User.new(:firstname=>userinfo['first_name'], :lastname=>userinfo['last_name'],
-      :username=>userinfo['username'], :fbid=>userinfo['id'],:email=>userinfo['email'],:city=>city)
+      fb_id=userinfo['id']
+      userObj = User.find_by_fbid(fb_id.to_s)
+      if userObj.nil?
+        @user = userObj
+      end
     else
       @user = current_user
     end
@@ -41,12 +42,19 @@ class MembersController < ApplicationController
       fb_id=userinfo['id']
       userObj = User.find_by_fbid(fb_id.to_s) 
       if userObj.nil?
-        redirect_to '/members/filldetails'
-      else
-        session[:user] = userObj
-        current_user= userObj
-        redirect_to "/members/dashboard"
+        city = ""
+        unless userinfo['location'] == nil
+          city = userinfo['location']['name']
+        end 
+        @user = User.new(:firstname=>userinfo['first_name'], :lastname=>userinfo['last_name'],
+        :username=>userinfo['username'], :fbid=>userinfo['id'],:email=>userinfo['email'],:city=>city)
+        @user.password = SecureRandom.hex(12)
+        @user.save
+        userObj = @user
       end
+      session[:user] = userObj
+      current_user= userObj
+      redirect_to "/members/dashboard"
     elsif !current_user.nil?
       if session[:new_user] != true
         session[:user] = current_user
@@ -80,7 +88,12 @@ class MembersController < ApplicationController
   end
   
   def updateprofile
-    @user = User.find(params[:user][:id])
+    if  !params[:user][:id].blank?
+      @user = User.find(params[:user][:id])
+    else 
+      @user = User.find(params[:user][:fbid])
+    end
+    
     if @user.subscribe_token.nil?
       @user.subscribe_token = loop do
         random_token = SecureRandom.urlsafe_base64
