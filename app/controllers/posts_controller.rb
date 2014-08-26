@@ -11,15 +11,7 @@ class PostsController < ApplicationController
     else 
       @posts = Post.find_all_by_user_id(session["user"].id.to_s)
     end
-    @openumvox = Array.new
-    @closeumvox = Array.new
-    @posts.each do |post|
-      if !post.status.nil? and post.status == 'Open'
-        @openumvox.push(post)
-      else
-        @closeumvox.push(post)
-      end
-    end
+    @openumvox, @closeumvox = @posts.partition { |p| p.status == 'Open' }
   end
   
   # GET /posts/1
