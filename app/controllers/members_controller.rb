@@ -50,7 +50,7 @@ class MembersController < ApplicationController
         :username=>userinfo['username'], :fbid=>userinfo['id'],:email=>userinfo['email'],:city=>city)
         @user.password = SecureRandom.hex(12)
         @user.save
-        UmvoxEmailer.welcome(@user).deliver
+        # UmvoxEmailer.welcome(@user).deliver
         userObj = @user
       end
       session[:user] = userObj
