@@ -5,8 +5,8 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
-gem 'mysql', '~>2.8.1'
+gem 'sqlite3'
+#gem 'mysql', '~>2.8.1'
 #gem 'rake' '~>10.1.1'
 gem 'koala'
 gem 'paperclip'
@@ -19,6 +19,7 @@ gem 'client_side_validations'
 gem 'recaptcha', :require => 'recaptcha/rails'
 gem 'rails_admin'
 gem 'time_diff'
+gem 'mandrill_mailer'
 #gem 'activerecord-mysql-adapter'
 # Gems used only for assets and not required
 # in production environments by default.

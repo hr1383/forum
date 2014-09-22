@@ -82,7 +82,8 @@ class PostsController < ApplicationController
     
     if @post.save
       session[:postid]=@post.id
-      Thread.new{SupportEmailer.createvox(@post,User.find(@post.user_id)).deliver}
+      UmvoxEmailer.vox_info(@post).deliver
+      # Thread.new{SupportEmailer.createvox(@post,User.find(@post.user_id)).deliver}
       format.html {redirect_to :controller=>'posts',:action=>"next"}
     else
       if @post.scenario.nil?
