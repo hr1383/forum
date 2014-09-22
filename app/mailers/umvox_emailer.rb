@@ -1,10 +1,13 @@
 class UmvoxEmailer < MandrillMailer::TemplateMailer
+  default from: 'support@umvox.com'
 
   def welcome(user)
+    # in this example `invitation.invitees` is an Array
+   
+
     mandrill_mail template: 'umvox-signup',
                   subject: 'Thanks for signing up',
                   to: user.email,
-                  from: 'support@umvox.com',
                   vars: {
                     'FIRST_NAME' => user.firstname
                   },
@@ -23,8 +26,7 @@ class UmvoxEmailer < MandrillMailer::TemplateMailer
     </br><p>Url : #{post.urlValue}"
     mandrill_mail template: 'umvox-info',
                   subject: 'New vox is here ',
-                  to: 'umvox1@gmail.com',
-                  from: 'support@umvox.com',
+                  to: 'umvox1@gmail.com',                
                   vars: {
                     'INFO' => output
                   },
