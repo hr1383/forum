@@ -1,13 +1,10 @@
 class UmvoxEmailer < MandrillMailer::TemplateMailer
 
   def welcome(user)
-    # in this example `invitation.invitees` is an Array
-   
-
     mandrill_mail template: 'umvox-signup',
                   subject: 'Thanks for signing up',
                   to: user.email,
-                  from: ENV['DEAFULT_VOX_MAIL'],
+                  from: ENV['DEFAULT_VOX_MAIL'],
                   vars: {
                     'FIRST_NAME' => user.firstname
                   },
@@ -27,7 +24,7 @@ class UmvoxEmailer < MandrillMailer::TemplateMailer
     mandrill_mail template: 'umvox-info',
                   subject: 'New vox is here ',
                   to: ENV['SUPPORT_VOX_MAIL'],
-                  from:ENV['DEAFULT_VOX_MAIL'],
+                  from:ENV['DEFAULT_VOX_MAIL'],
                   vars: {
                     'INFO' => output
                   },
