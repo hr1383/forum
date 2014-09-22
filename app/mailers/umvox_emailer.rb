@@ -4,7 +4,7 @@ class UmvoxEmailer < MandrillMailer::TemplateMailer
     mandrill_mail template: 'umvox-signup',
                   subject: 'Thanks for signing up',
                   to: user.email,
-                  from: ENV['SUPPORT_VOX_MAIL'],
+                  from: 'support@umvox.com',
                   vars: {
                     'FIRST_NAME' => user.firstname
                   },
@@ -23,8 +23,8 @@ class UmvoxEmailer < MandrillMailer::TemplateMailer
     </br><p>Url : #{post.urlValue}"
     mandrill_mail template: 'umvox-info',
                   subject: 'New vox is here ',
-                  to: ENV['DEFAULT_VOX_MAIL'],
-                  from:ENV['SUPPORT_VOX_MAIL'],
+                  to: 'umvox1@gmail.com',
+                  from: 'support@umvox.com',
                   vars: {
                     'INFO' => output
                   },
