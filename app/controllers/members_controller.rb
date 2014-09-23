@@ -46,7 +46,9 @@ class MembersController < ApplicationController
       fb_id=userinfo['id']
       userObj = User.find_by_fbid(fb_id.to_s) 
       puts "fbid is " +fb_id.to_s
-
+      if userObj.nil? && !userinfo['email'].nil?
+        userObj = User.find_by_email(fb_id.to_s) 
+      end
       if userObj.nil?
         city = ""
         puts "user OBj is empty"
@@ -59,14 +61,12 @@ class MembersController < ApplicationController
         @user.password = SecureRandom.hex(12)
         begin
           @user.save!
+          userObj = @user
         rescue Exception => e
             puts "caught exception #{e}! ohnoes!"
-        end
-        puts "saved user is "
-        puts @user.id
-        puts @user.fbid
+        end       
         # UmvoxEmailer.welcome(@user).deliver
-        userObj = @user
+        
        else 
         puts "user object is "
         puts userObj 
