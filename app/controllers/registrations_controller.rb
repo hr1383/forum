@@ -14,7 +14,7 @@ class RegistrationsController  < Devise::RegistrationsController
 
     def send_mail
     	if !current_user.nil?
-    		# UmvoxEmailer.welcome(current_user).deliver	
+    		UmvoxEmailer.welcome(current_user).deliver	
     	end
     end
 end
