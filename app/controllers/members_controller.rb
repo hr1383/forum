@@ -53,10 +53,17 @@ class MembersController < ApplicationController
         unless userinfo['location'] == nil
           city = userinfo['location']['name']
         end 
+        puts "create user"
         @user = User.new(:firstname=>userinfo['first_name'], :lastname=>userinfo['last_name'],
         :username=>userinfo['username'], :fbid=>userinfo['id'],:email=>userinfo['email'],:city=>city)
         @user.password = SecureRandom.hex(12)
-        @user.save
+        begin
+          @user.save
+        rescue Exception => e
+            puts "caught exception #{e}! ohnoes!"
+        end
+        puts "saved user is "
+        puts @user
         # UmvoxEmailer.welcome(@user).deliver
         userObj = @user
        else 
