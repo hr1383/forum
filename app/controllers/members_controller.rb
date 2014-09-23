@@ -47,7 +47,7 @@ class MembersController < ApplicationController
       userObj = User.find_by_fbid(fb_id.to_s) 
       puts "fbid is " +fb_id.to_s
       if userObj.nil? && !userinfo['email'].nil?
-        userObj = User.find_by_email(fb_id.to_s) 
+        userObj = User.find_by_email(userinfo['email']) 
       end
       if userObj.nil?
         city = ""
