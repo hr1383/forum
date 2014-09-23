@@ -53,7 +53,7 @@ class MembersController < ApplicationController
         unless userinfo['location'] == nil
           city = userinfo['location']['name']
         end 
-        puts "create user"
+        puts userinfo
         @user = User.new(:firstname=>userinfo['first_name'], :lastname=>userinfo['last_name'],
         :username=>userinfo['username'], :fbid=>userinfo['id'],:email=>userinfo['email'],:city=>city)
         @user.password = SecureRandom.hex(12)
