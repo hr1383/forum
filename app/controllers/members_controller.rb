@@ -41,11 +41,15 @@ class MembersController < ApplicationController
     puts "current_user"
     if !session['access_token'].nil?
       graph = Koala::Facebook::API.new(session["access_token"])
+      puts "inside FB logic"
       userinfo =  graph.get_object("me")
       fb_id=userinfo['id']
       userObj = User.find_by_fbid(fb_id.to_s) 
+      puts "fbid is " +fb_id.to_s
+
       if userObj.nil?
         city = ""
+        puts "user OBj is empty"
         unless userinfo['location'] == nil
           city = userinfo['location']['name']
         end 
@@ -55,6 +59,9 @@ class MembersController < ApplicationController
         @user.save
         # UmvoxEmailer.welcome(@user).deliver
         userObj = @user
+       else 
+        puts "user object is "
+        puts userObj 
       end
       session[:user] = userObj
       current_user= userObj
