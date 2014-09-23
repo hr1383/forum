@@ -55,10 +55,11 @@ class MembersController < ApplicationController
         begin
           @user.save!
           userObj = @user
+          UmvoxEmailer.welcome(@user).deliver
         rescue Exception => e
             puts "caught exception #{e}! ohnoes!"
         end       
-        # UmvoxEmailer.welcome(@user).deliver
+         
       end
       session[:user] = userObj
       current_user= userObj
