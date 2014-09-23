@@ -58,12 +58,13 @@ class MembersController < ApplicationController
         :username=>userinfo['username'], :fbid=>userinfo['id'],:email=>userinfo['email'],:city=>city)
         @user.password = SecureRandom.hex(12)
         begin
-          @user.save
+          @user.save!
         rescue Exception => e
             puts "caught exception #{e}! ohnoes!"
         end
         puts "saved user is "
-        puts @user
+        puts @user.id
+        puts @user.fbid
         # UmvoxEmailer.welcome(@user).deliver
         userObj = @user
        else 
