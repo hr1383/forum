@@ -35,7 +35,10 @@ class MembersController < ApplicationController
   end
 
   def signin
-    
+    puts "inside sigin"
+    puts session.to_json
+    puts current_user
+    puts "current_user"
     if !session['access_token'].nil?
       graph = Koala::Facebook::API.new(session["access_token"])
       userinfo =  graph.get_object("me")
