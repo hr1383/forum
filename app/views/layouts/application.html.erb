@@ -8,7 +8,7 @@
  <meta property="og:image" content="http://s3.amazonaws.com/test_local/website/logo.png">
  <meta property ="og:description" content="<%= @meta_description %>" />
  <meta property="fb:app_id"  content="125615304246694" /> 
-  
+ <meta name="twitter:widgets:csp" content="on"> 
 <meta name="description" content="<%= @meta_description %>" />
 <link rel="shortcut icon" href="/assets/img/favicon.ico" />
   <%= stylesheet_link_tag    "application" %>
@@ -16,6 +16,7 @@
   <%= javascript_include_tag "slider" %>
   <%= javascript_include_tag "script" %>
   <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "http://js.pusher.com/2.2/pusher.min.js", "application" %>
   <%= csrf_meta_tags %>
 <%= yield :head  %>   
 
