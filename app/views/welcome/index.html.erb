@@ -94,7 +94,7 @@
             </div>     
 
             <div class="categories">
-                <h3>Browse vox by categories</h3>
+                <h3>Browse Voxes by categories</h3>
 				<% counter = 0%>
 				<% Location.order("category ASC").group("category").count("category").each do |name,count| %>
 					<%if counter == 0%>
@@ -134,5 +134,5 @@
         </div><!-- .content -->
     </div><!-- .testimonials -->
     <div class="banner">
-        <h3 class="slogan">Join the users getting their voices heard.</h3>
+        <h3 class="slogan">Join other users getting their voices heard!</h3>
     </div><!-- .banner -->
