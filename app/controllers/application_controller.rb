@@ -14,8 +14,9 @@ class ApplicationController < ActionController::Base
   end
   def set_meta_tag
     
-    @meta_title = "You're Voice, Our Fight!"
-   @meta_description = " UmVox is a proactive site that helps resolve complaints, gripes, scams, and ripoffs. We also help with reviews, praise, questions, petitions, and protests."
+   @meta_title = "Proactive complaint site ,resolve complaints and customer service issues"
+   @meta_description = " UmVox is a proactive site that helps resolve consumer complaints, ripoffs, scams. We help complaints heard and resolved."
+   @meta_keyword = "consumer comlaints , customer service complaints, customre ripoff"
   end
   def authenticate1_user
     if (current_user.nil? && session[:user].nil?)
