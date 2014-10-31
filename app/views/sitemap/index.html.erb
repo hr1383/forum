@@ -1,8 +1,14 @@
+
 &lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"&gt;
 <br/>
+  &lt;url&gt;</br>
+  &lt;loc&gt;http://www.umvox.com/&lt;&frasl;loc&gt;<br/>  
+  &lt;priority&gt;0.8&lt;&frasl;priority&gt;<br/>
+   &lt;&frasl;url&gt;<br/>
+
 <% @posts.each do |post| %>
   &lt;url&gt;</br>
-  &lt;loc&gt;<%=post.parameterize%>&lt;&frasl;loc&gt;<br/>
+  &lt;loc&gt;<%= @host_url %>/<%=post.parameterize%><%= @file_type %>&lt;&frasl;loc&gt;<br/>
   &lt;lastmod&gt;<%=post.updated_at%>&lt;&frasl;lastmod&gt; <br/>
   &lt;changefreq&gt;weekly&lt;&frasl;changefreq&gt;<br/>
   &lt;priority&gt;0.5&lt;&frasl;priority&gt;<br/>
