@@ -1,17 +1,17 @@
 
-&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
 <br/>
   &lt;url&gt;</br>
-  &lt;loc&gt;http://www.umvox.com/&lt;&frasl;loc&gt;<br/>  
-  &lt;priority&gt;0.8&lt;&frasl;priority&gt;<br/>
-   &lt;&frasl;url&gt;<br/>
+  &lt;loc&gt;http://www.umvox.com/&lt;/loc&gt;<br/>  
+  &lt;priority&gt;0.8&lt;/priority&gt;<br/>
+   &lt;/url&gt;<br/>
 
 <% @posts.each do |post| %>
   &lt;url&gt;</br>
-  &lt;loc&gt;<%= @host_url %>/<%=post.parameterize%><%= @file_type %>&lt;&frasl;loc&gt;<br/>
-  &lt;lastmod&gt;<%=post.updated_at%>&lt;&frasl;lastmod&gt; <br/>
-  &lt;changefreq&gt;weekly&lt;&frasl;changefreq&gt;<br/>
-  &lt;priority&gt;0.5&lt;&frasl;priority&gt;<br/>
-   &lt;&frasl;url&gt;<br/>
+  &lt;loc&gt;<%= @host_url %>/<%=post.parameterize%><%= @file_type %>&lt;/loc&gt;<br/>
+  &lt;lastmod&gt;<%=post.updated_at%>&lt;/lastmod&gt; <br/>
+  &lt;changefreq&gt;weekly&lt;/changefreq&gt;<br/>
+  &lt;priority&gt;0.5&lt;/priority&gt;<br/>
+   &lt;/url&gt;<br/>
 <% end %>
-&lt;urlset&gt;
+&lt;/urlset&gt;
