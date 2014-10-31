@@ -12,7 +12,7 @@ Umvox::Application.routes.draw do
   get '/browse', :to =>"locations#browse"  
   get '/contact', :to=>"welcome#contact"  
   get '/testimonials', :to=>"welcome#testimonials"  
-
+  get '/sitemap', :to=>'sitemap#index'
   # 
   # resources :email do
   #   collection do
