@@ -18,7 +18,7 @@ gem 'devise','~>1.4.3'
 gem 'client_side_validations'
 gem 'recaptcha', :require => 'recaptcha/rails'
 gem 'time_diff'
-gem 'mandrill_mailer'
+gem 'mandrill_mailer', '~>0.4.11'
 #gem 'activerecord-mysql-adapter'
 # Gems used only for assets and not required
 # in production environments by default.
