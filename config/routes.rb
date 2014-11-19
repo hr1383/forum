@@ -36,7 +36,7 @@ Umvox::Application.routes.draw do
   end
   resources :posts do
     collection do
-      get :search, :next, :singlevox
+      get :search, :next, :singlevox, :list
       post :createsinglevox
     end
     resources :comments

@@ -150,4 +150,8 @@ class PostsController < ApplicationController
     @post.build_location
     @category = Category.all.sort! { |a,b| a.name.downcase <=> b.name.downcase }
   end
+
+  def list
+    @posts = Post.order('created_at DESC')
+  end
 end

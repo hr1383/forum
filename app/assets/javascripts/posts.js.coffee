@@ -172,4 +172,12 @@ $ ->
     false
 
 
+$(document).ready ->
+  $(".showButton").click (event) ->
+    event.preventDefault()
+    $(this).siblings(".expandedContent").toggleClass "open"
+    $(this).toggleClass "open"
+    return
+
+  return
 

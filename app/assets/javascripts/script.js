@@ -15,3 +15,11 @@ $(document).ready(function(){
 		$('.searchBar').toggleClass('open');
 	});
 });
+
+$(document).ready(function(){
+	$('.showButton').click(function(event){
+		event.preventDefault();
+		$(this).siblings('.expandedContent').toggleClass('open');
+		$(this).toggleClass('open');
+	});
+});
