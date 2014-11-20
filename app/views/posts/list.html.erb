@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="table">
-                        <% @posts.each do |post| %>
+                    <% @posts.each do |post| %>
                         <div class="row">
                              <div class="block status">
                                 <% if post.status == 'Open'%>
@@ -42,28 +42,26 @@
                                         <dd>Complaint</dd>
                                         <dt>Status:</dt>
                                         <dd class="break"><%= post.status %></dd>
-
                                         <dt>Category:</dt>
                                         <dd><%= post.location.category %></dd>
                                         <dt>Company:</dt>
                                         <dd class="break"><%= post.location.name %></dd>
-
                                         <dt>Looking for:</dt>
                                         <dd>
                                         <% str = '' %>
                                         <% Compensation.all.each do |compensation| -%>
-                                        <% if post.compensation.include?(compensation.name.to_s) -%>
-                                            <% str+= compensation.name.to_s+ " & " %>
-                                        <% end %>
+                                            <% if post.compensation.include?(compensation.name.to_s) -%>
+                                                <% str+= compensation.name.to_s+ " & " %>
+                                            <% end %>
                                         <% end %>
                                         <%= label_tag :compensation, str[0..-3] -%></dd>
                                         <dt>Scenario:</dt>
                                         <dd class="break">
                                         <% str = '' %>
                                         <% Scenarios.all.each do |scenario| -%>
-                                        <% if post.scenario.include?(scenario.id.to_s) -%>
-                                            <% str+= scenario.name.to_s+ " & " %>
-                                        <% end %>
+                                            <% if post.scenario.include?(scenario.id.to_s) -%>
+                                                <% str+= scenario.name.to_s+ " & " %>
+                                            <% end %>
                                         <% end %>
                                         <%= label_tag :scenario, str[0..-3] -%></dd>
                                         <dt>Posted By:</dt>
@@ -73,8 +71,9 @@
                                      </dl>                                    
                                 </div>
                              </div>
+                             </div> <!-- div#row -->
                             <% end %>
-                             </div>
+                             
                     </div><!-- change ul -->
                 </div><!-- .tableContent -->
             </div><!-- .voxTable -->
