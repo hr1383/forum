@@ -301,7 +301,7 @@ ul.whatList li.itemFour {background: url(/assets/img/list_item_four.png) left to
 .voxTable .tableTitles .titles .company {width: 25%;}
 .voxTable .tableTitles .titles .issue {width: 42%;}
 
-.voxTable .tableContent {border-top: 1px solid #8a9090; border-bottom: 1px solid #8a9090; width: 100%; float: left; height: 540px; overflow-y: scroll;}
+.voxTable .tableContent {border-top: 1px solid #8a9090; border-bottom: 1px solid #8a9090; width: 100%; float: left;}
 .voxTable .tableContent div.table {border-left: 1px solid #8a9090;border-right: 1px solid #8a9090; margin: 0; padding: 0; width: 100%; float: left; height: auto; overflow: hidden;}
 .voxTable .tableContent div.table div.row {margin: 0; padding: 0; width: 100%; float: left; font-size: 13px; line-height: 17px; color: #798080;}
 .voxTable .tableContent div.table div.row .block {max-height: 52px;  float: left; height: auto; padding: 18px 5px 18px 15px;}
